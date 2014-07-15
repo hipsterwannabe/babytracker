@@ -12,7 +12,7 @@ class CreateDiaperTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('diaper', function($table)
+		Schema::create('diapers', function($table)
         {
             $table->increments('baby_id');
             $table->timestamp('change_time');
@@ -32,7 +32,7 @@ class CreateDiaperTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('diaper');
+		Schema::drop('diapers');
 	}
 
 }
