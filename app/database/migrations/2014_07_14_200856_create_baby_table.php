@@ -12,10 +12,11 @@ class CreateBabyTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('baby', function($table)
+		Schema::create('babies', function($table)
         {
             $table->increments('id');
             $table->string('name', 100);
+            $table->timestamps();
         });
 	}
 
@@ -26,7 +27,7 @@ class CreateBabyTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('baby');
+		Schema::drop('babies');
 	}
 
 }
