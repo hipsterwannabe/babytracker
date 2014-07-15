@@ -53,31 +53,43 @@ class BabyTableSeeder extends Seeder {
 		$baby = new Baby();
 		$baby->name = 'Chad';
 		$baby->user_id = 1;
+		$baby->gender = 'Boy';
+		$baby->birth_date = '1980-08-02';
 		$baby->save();
 
 		$baby = new Baby();
 		$baby->name = 'Haley';
 		$baby->user_id = 1;
+		$baby->gender = 'Girl';
+		$baby->birth_date = '1998-09-12';
 		$baby->save();
 
 		$baby = new Baby();
 		$baby->name = 'Jasper';
 		$baby->user_id = 2;
+		$baby->gender = 'Boy';
+		$baby->birth_date = '2013-01-29';
 		$baby->save();
 
 		$baby = new Baby();
 		$baby->name = 'Payton';
 		$baby->user_id = 3;
+		$baby->gender = 'Boy';
+		$baby->birth_date = '2001-07-10';
 		$baby->save();
 
 		$baby = new Baby();
 		$baby->name = 'Kade';
 		$baby->user_id = 3;
+		$baby->gender = 'Boy';
+		$baby->birth_date = '2003-06-02';
 		$baby->save();
 
 		$baby = new Baby();
 		$baby->name = 'Carmyn';
 		$baby->user_id = 3;
+		$baby->gender = 'Girl';
+		$baby->birth_date = '2005-11-13';
 		$baby->save();
 	}
 }
@@ -88,43 +100,31 @@ class NapTableSeeder extends Seeder {
 
 		$nap = new Nap();
 		$nap->baby_id = 1;
-		$nap->nap_start = '2014-07-15 14:14:08';
-		$nap->nap_end = '2014-07-15 14:14:08';
 		$nap->notes = 'This was a really good nap.';
 		$nap->save();
 
 		$nap = new Nap();
 		$nap->baby_id = 2;
-		$nap->nap_start = '2014-07-15 14:14:08';
-		$nap->nap_end = '2014-07-15 14:14:08';
 		$nap->notes = 'Woke up cranky.';
 		$nap->save();
 
 		$nap = new Nap();
 		$nap->baby_id = 3;
-		$nap->nap_start = '2014-07-15 14:14:08';
-		$nap->nap_end = '2014-07-15 14:14:08';
 		$nap->notes = 'Went to sleep by himself';
 		$nap->save();
 
 		$nap = new Nap();
 		$nap->baby_id = 4;
-		$nap->nap_start = '2014-07-15 14:14:08';
-		$nap->nap_end = '2014-07-15 14:14:08';
 		$nap->notes = 'Woke up crying';
 		$nap->save();
 
 		$nap = new Nap();
 		$nap->baby_id = 5;
-		$nap->nap_start = '2014-07-15 14:14:08';
-		$nap->nap_end = '2014-07-15 14:14:08';
 		$nap->notes = 'Had to rock to sleep';
 		$nap->save();
 
 		$nap = new Nap();
 		$nap->baby_id = 6;
-		$nap->nap_start = '2014-07-15 14:14:08';
-		$nap->nap_end = '2014-07-15 14:14:08';
 		$nap->notes = 'Woke up happy.';
 		$nap->save();
 	}

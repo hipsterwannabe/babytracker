@@ -20,4 +20,14 @@ class HomeController extends BaseController {
 		return View::make('hello');
 	}
 
+	public function newUser()
+	{
+        $user = new User();
+        $user->name = Input::get('name');
+        $user->email = Input::get('email');
+        $user->password = Hash::make(Input::get('password'));
+        $user->save();
+
+        return View::make('download');
+	}
 }
