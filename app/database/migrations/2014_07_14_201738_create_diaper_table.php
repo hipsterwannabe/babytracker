@@ -22,6 +22,7 @@ class CreateDiaperTable extends Migration {
             $table->integer('color')->nullable();
             $table->boolean('leak')->nullable();
             $table->text('notes')->nullable();
+            $table->timestamps();
         });
 	}
 
