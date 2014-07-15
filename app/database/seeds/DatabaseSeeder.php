@@ -14,6 +14,8 @@ class DatabaseSeeder extends Seeder {
 		$this->call('UserTableSeeder');
 		$this->call('BabyTableSeeder');
 		$this->call('NapTableSeeder');
+		$this->call('DiaperTableSeeder');
+		$this->call('FeedingTableSeeder');
 	}
 
 }
@@ -125,5 +127,47 @@ class NapTableSeeder extends Seeder {
 		$nap->nap_end = '2014-07-15 14:14:08';
 		$nap->notes = 'Woke up happy.';
 		$nap->save();
+	}
+}
+
+class DiaperTableSeeder extends seeder {
+	public function run() {
+		DB::table('diapers')->delete();
+
+		$diaper = new Diaper();
+		$diaper->baby_id = 1;
+		$diaper->number_one = true;
+		$diaper->leak = true;
+		$diaper->save();
+
+		$diaper = new Diaper();
+		$diaper->baby_id = 2;
+		$diaper->number_two = true;
+		$diaper->consistency = 1;
+		$diaper->color = 1;
+		$diaper->notes = 'Breastmilk diaper.';
+		$diaper->save();
+	}
+}
+
+class FeedingTableSeeder extends seeder {
+	public function run() {
+		DB::table('feedings')->delete();
+
+		$feeding = new Feeding();
+		$feeding->breast = true;
+		$feeding->baby_id = 1;
+		$feeding->start_left = '2014-07-15 14:14:08';
+		$feeding->stop_left = '2014-07-15 14:34:08';
+		$feeding->save();
+
+		$feeding = new Feeding();
+		$feeding->bottle = true;
+		$feeding->baby_id = 2;
+		$feeding->start_bottle = '2014-07-15 14:14:08';
+		$feeding->stop_bottle = '2014-07-15 14:34:08';
+		$feeding->bottle_ounces = 5;
+		$feeding->save();
+
 	}
 }
