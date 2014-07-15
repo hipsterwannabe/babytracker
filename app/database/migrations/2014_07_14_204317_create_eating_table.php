@@ -25,6 +25,7 @@ class CreateEatingTable extends Migration {
            	$table->timestamp('stop_bottle')->nullable();
            	$table->decimal('bottle_ounces', 4,2)->nullable();
             $table->text('notes')->nullable();
+            $table->timestamps();
         });
 	}
 
