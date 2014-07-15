@@ -18,6 +18,7 @@ class CreateSleepTable extends Migration {
             $table->timestamp('nap_start');
             $table->timestamp('nap_end');
             $table->text('notes')->nullable();
+            $table->timestamps();
         });
 	}
 
