@@ -6,5 +6,6 @@ class Diaper extends BaseModel {
     {
         return $this->belongsTo('Baby');
     }
+}
 
 ?>
