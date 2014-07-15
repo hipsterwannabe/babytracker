@@ -12,11 +12,11 @@ class CreateSleepTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('sleep', function($table)
+		Schema::create('naps', function($table)
         {
             $table->increments('baby_id');
-            $table->timestamp('sleep_start');
-            $table->timestamp('sleep_end');
+            $table->timestamp('nap_start');
+            $table->timestamp('nap_end');
             $table->text('notes')->nullable();
         });
 	}
@@ -28,7 +28,7 @@ class CreateSleepTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('sleep');
+		Schema::drop('nap');
 	}
 
 }
