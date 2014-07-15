@@ -1,4 +1,4 @@
-<?
+<?php
 
 class Nap extends BaseModel {
 
