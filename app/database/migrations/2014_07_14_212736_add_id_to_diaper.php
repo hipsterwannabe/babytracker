@@ -12,9 +12,9 @@ class AddIdToDiaper extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('diaper', function(Blueprint $table)
+		Schema::table('diapers', function(Blueprint $table)
 		{
-			$table->foreign('baby_id')->references('id')->on('baby');
+			$table->foreign('baby_id')->references('id')->on('babies');
 		});
 	}
 
@@ -25,9 +25,9 @@ class AddIdToDiaper extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('diaper', function(Blueprint $table)
+		Schema::table('diapers', function(Blueprint $table)
 		{
-			$table->dropForeign('diaper_baby_id_foreign');
+			$table->dropForeign('diapers_baby_id_foreign');
 		});
 	}
 
