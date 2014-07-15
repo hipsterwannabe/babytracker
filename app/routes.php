@@ -11,7 +11,19 @@
 |
 */
 
-Route::get('/', function()
+Route::get('/nap', function()
 {
-	return View::make('hello');
+	return View::make('nap');
+});
+Route::get('/eating-prompt', function()
+{
+	return View::make('eating-prompt');
+});
+Route::get('/bottle', function()
+{
+	return View::make('bottle');
+});
+Route::get('/breast', function()
+{
+	return View::make('breast');
 });
