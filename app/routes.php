@@ -16,6 +16,8 @@ Route::get('/', function()
     return View::make('index');
 });
 
+Route::post('/', 'HomeController@newUser');
+
 Route::get('/nap', function()
 {
 	return View::make('nap');
