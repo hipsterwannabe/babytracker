@@ -12,7 +12,7 @@ class CreateEatingTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('eating', function($table)
+		Schema::create('feedings', function($table)
         {
             $table->increments('baby_id');
            	$table->boolean('breast');
@@ -37,8 +37,8 @@ class CreateEatingTable extends Migration {
 	 */
 	public function down()
 	{
-	
-		Schema::drop('eating');
+
+		Schema::drop('feedings');
 
 	}
 
