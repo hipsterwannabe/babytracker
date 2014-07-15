@@ -53,31 +53,43 @@ class BabyTableSeeder extends Seeder {
 		$baby = new Baby();
 		$baby->name = 'Chad';
 		$baby->user_id = 1;
+		$baby->gender = 'Boy';
+		$baby->birth_date = '1980-08-02';
 		$baby->save();
 
 		$baby = new Baby();
 		$baby->name = 'Haley';
 		$baby->user_id = 1;
+		$baby->gender = 'Girl';
+		$baby->birth_date = '1998-09-12';
 		$baby->save();
 
 		$baby = new Baby();
 		$baby->name = 'Jasper';
 		$baby->user_id = 2;
+		$baby->gender = 'Boy';
+		$baby->birth_date = '2013-01-29';
 		$baby->save();
 
 		$baby = new Baby();
 		$baby->name = 'Payton';
 		$baby->user_id = 3;
+		$baby->gender = 'Boy';
+		$baby->birth_date = '2001-07-10';
 		$baby->save();
 
 		$baby = new Baby();
 		$baby->name = 'Kade';
 		$baby->user_id = 3;
+		$baby->gender = 'Boy';
+		$baby->birth_date = '2003-06-02';
 		$baby->save();
 
 		$baby = new Baby();
 		$baby->name = 'Carmyn';
 		$baby->user_id = 3;
+		$baby->gender = 'Girl';
+		$baby->birth_date = '2005-11-13';
 		$baby->save();
 	}
 }
