@@ -15,7 +15,6 @@ class CreateDiaperTable extends Migration {
 		Schema::create('diapers', function($table)
         {
             $table->increments('baby_id');
-            $table->timestamp('change_time');
             $table->boolean('number_one')->nullable();
             $table->boolean('number_two')->nullable();
             $table->integer('consistency')->nullable();
