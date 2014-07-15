@@ -27,5 +27,7 @@ class HomeController extends BaseController {
         $user->email = Input::get('email');
         $user->password = Hash::make(Input::get('password'));
         $user->save();
+
+        return View::make('download');
 	}
 }
