@@ -1,4 +1,4 @@
-<?
+<?php
 
 class Baby extends BaseModel {
 
