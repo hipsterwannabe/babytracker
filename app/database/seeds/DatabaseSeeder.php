@@ -90,5 +90,40 @@ class NapTableSeeder extends Seeder {
 		$nap->nap_end = '2014-07-15 14:14:08';
 		$nap->notes = 'This was a really good nap.';
 		$nap->save();
+
+		$nap = new Nap();
+		$nap->baby_id = 2;
+		$nap->nap_start = '2014-07-15 14:14:08';
+		$nap->nap_end = '2014-07-15 14:14:08';
+		$nap->notes = 'Woke up cranky.';
+		$nap->save();
+
+		$nap = new Nap();
+		$nap->baby_id = 3;
+		$nap->nap_start = '2014-07-15 14:14:08';
+		$nap->nap_end = '2014-07-15 14:14:08';
+		$nap->notes = 'Went to sleep by himself';
+		$nap->save();
+
+		$nap = new Nap();
+		$nap->baby_id = 4;
+		$nap->nap_start = '2014-07-15 14:14:08';
+		$nap->nap_end = '2014-07-15 14:14:08';
+		$nap->notes = 'Woke up crying';
+		$nap->save();
+
+		$nap = new Nap();
+		$nap->baby_id = 5;
+		$nap->nap_start = '2014-07-15 14:14:08';
+		$nap->nap_end = '2014-07-15 14:14:08';
+		$nap->notes = 'Had to rock to sleep';
+		$nap->save();
+
+		$nap = new Nap();
+		$nap->baby_id = 6;
+		$nap->nap_start = '2014-07-15 14:14:08';
+		$nap->nap_end = '2014-07-15 14:14:08';
+		$nap->notes = 'Woke up happy.';
+		$nap->save();
 	}
 }
