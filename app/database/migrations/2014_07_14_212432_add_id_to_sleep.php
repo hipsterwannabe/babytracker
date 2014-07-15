@@ -12,9 +12,9 @@ class AddIdToSleep extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('sleep', function(Blueprint $table)
+		Schema::table('naps', function(Blueprint $table)
 		{
-			$table->foreign('baby_id')->references('id')->on('baby');
+			$table->foreign('baby_id')->references('id')->on('babies');
 		});
 	}
 
@@ -25,9 +25,9 @@ class AddIdToSleep extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('sleep', function(Blueprint $table)
+		Schema::table('naps', function(Blueprint $table)
 		{
-			$table->dropForeign('sleep_baby_id_foreign');
+			$table->dropForeign('naps_baby_id_foreign');
 		});
 	}
 
