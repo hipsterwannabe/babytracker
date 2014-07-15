@@ -13,6 +13,7 @@ class DatabaseSeeder extends Seeder {
 
 		$this->call('UserTableSeeder');
 		$this->call('BabyTableSeeder');
+		$this->call('NapTableSeeder');
 	}
 
 }
@@ -45,7 +46,7 @@ class UserTableSeeder extends Seeder {
 
 class BabyTableSeeder extends Seeder {
 	public function run() {
-		DB::table('baby')->delete();
+		DB::table('babies')->delete();
 
 		$baby = new Baby();
 		$baby->name = 'Chad';
@@ -79,80 +80,15 @@ class BabyTableSeeder extends Seeder {
 	}
 }
 
-class SleepTableSeeder extends Seeder {
+class NapTableSeeder extends Seeder {
 	public function run() {
-		DB::table('sleep')->delete();
+		DB::table('naps')->delete();
 
-		$sleep = new Sleep();
-		$sleep->baby_id = 1;
-		$sleep->sleep_start =
-		$sleep->sleep_end =
-		$sleep->notes = 'This was a really good nap.';
-
-		$sleep = new Sleep();
-		$sleep->baby_id = 1;
-		$sleep->sleep_start =
-		$sleep->sleep_end =
-		$sleep->notes = 'He was fussy during this nap.';
-
-		$sleep = new Sleep();
-		$sleep->baby_id = 2;
-		$sleep->sleep_start =
-		$sleep->sleep_end =
-		$sleep->notes = 'Went down easily by herself.';
-
-		$sleep = new Sleep();
-		$sleep->baby_id = 2;
-		$sleep->sleep_start =
-		$sleep->sleep_end =
-		$sleep->notes = 'Had to rock her for 10 minutes.';
-
-		$sleep = new Sleep();
-		$sleep->baby_id = 3;
-		$sleep->sleep_start =
-		$sleep->sleep_end =
-		$sleep->notes = "Didn't want to nap.";
-
-		$sleep = new Sleep();
-		$sleep->baby_id = 3;
-		$sleep->sleep_start =
-		$sleep->sleep_end =
-		$sleep->notes = 'Slept Soundly.';
-
-		$sleep = new Sleep();
-		$sleep->baby_id = 4;
-		$sleep->sleep_start =
-		$sleep->sleep_end =
-		$sleep->notes = 'Slept all night.';
-
-		$sleep = new Sleep();
-		$sleep->baby_id = 4;
-		$sleep->sleep_start =
-		$sleep->sleep_end =
-		$sleep->notes = 'Woke up cranky.';
-
-		$sleep = new Sleep();
-		$sleep->baby_id = 5;
-		$sleep->sleep_start =
-		$sleep->sleep_end =
-		$sleep->notes = 'Blow out while sleeping.';
-
-		$sleep = new Sleep();
-		$sleep->baby_id = 5;
-		$sleep->sleep_start =
-		$sleep->sleep_end =
-		$sleep->notes = 'Slept without pacifier.';
-
-		$sleep = new Sleep();
-		$sleep->baby_id = 6;
-		$sleep->sleep_start =
-		$sleep->sleep_end =
-		$sleep->notes = 'Shorter nap than normal.';
-
-		$sleep = new Sleep();
-		$sleep->baby_id = 6;
-		$sleep->sleep_start =
-		$sleep->sleep_end =
-		$sleep->notes = 'Slept well.';
+		$nap = new Nap();
+		$nap->baby_id = 1;
+		$nap->nap_start = '2014-07-15 14:14:08';
+		$nap->nap_end = '2014-07-15 14:14:08';
+		$nap->notes = 'This was a really good nap.';
+		$nap->save();
 	}
 }
