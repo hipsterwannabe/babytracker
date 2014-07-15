@@ -11,19 +11,33 @@
 |
 */
 
+Route::get('/', function()
+{
+    return View::make('index');
+});
+
+Route::post('/', 'HomeController@newUser');
+
 Route::get('/nap', function()
 {
 	return View::make('nap');
 });
+
 Route::get('/eating-prompt', function()
 {
 	return View::make('eating-prompt');
 });
+
 Route::get('/bottle', function()
 {
 	return View::make('bottle');
 });
+
 Route::get('/breast', function()
 {
 	return View::make('breast');
+});
+Route::get('/diaper', function()
+{
+	return View::make('diaper');
 });
