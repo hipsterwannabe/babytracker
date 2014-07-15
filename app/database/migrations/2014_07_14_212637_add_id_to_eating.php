@@ -12,9 +12,9 @@ class AddIdToEating extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('eating', function(Blueprint $table)
+		Schema::table('feedings', function(Blueprint $table)
 		{
-			$table->foreign('baby_id')->references('id')->on('baby');
+			$table->foreign('baby_id')->references('id')->on('babies');
 		});
 	}
 
@@ -25,9 +25,9 @@ class AddIdToEating extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('eating', function(Blueprint $table)
+		Schema::table('feedings', function(Blueprint $table)
 		{
-			$table->dropForeign('eating_baby_id_foreign');
+			$table->dropForeign('feedings_baby_id_foreign');
 		});
 	}
 
