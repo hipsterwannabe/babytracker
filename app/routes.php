@@ -27,3 +27,7 @@ Route::get('/breast', function()
 {
 	return View::make('breast');
 });
+Route::get('/diaper', function()
+{
+	return View::make('diaper');
+});
