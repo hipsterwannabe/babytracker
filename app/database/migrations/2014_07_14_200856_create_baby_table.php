@@ -18,8 +18,6 @@ class CreateBabyTable extends Migration {
             $table->string('name', 100);
             $table->string('gender', 100);
             $table->date('birth_date');
-            $table->integer('birth_pounds');
-            $table->integer('birth_ounces');
             $table->timestamps();
         });
 	}
