@@ -16,10 +16,8 @@ class CreateEatingTable extends Migration {
         {
             $table->increments('baby_id');
            	$table->boolean('breast');
-           	$table->boolean('breast_left');
            	$table->timestamp('start_left')->nullable();
            	$table->timestamp('stop_left')->nullable();
-           	$table->boolean('breast_right');
            	$table->timestamp('start_right')->nullable();
            	$table->timestamp('stop_right')->nullable();
            	$table->boolean('bottle');
