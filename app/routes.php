@@ -16,6 +16,10 @@ Route::get('/', 'HomeController@showLogin');
 
 Route::post('/', 'HomeController@doLogin');
 
+Route::get('/new-user', 'HomeController@getNewUser');
+
+Route::post('/new-user', 'HomeController@newUser');
+
 Route::get('/nap', function()
 {
 	return View::make('nap');
