@@ -1,26 +1,21 @@
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+@extends('layouts.master')
 
+
+@section('content')
 	<h1>Nap Form Mockup</h1><br>
-
-	<form action="POST">
-		<label for="napStart">Nap Start</label><br>
-		<button name="napStart" id="napStart">Start</button><br>
-	</form>
-
-	<form action="POST">
-		<label for="napStop">Nap Stop</label><br>
-		<button name="napStop" id="napStop">Stop</button><br>
-	</form>
+	<!-- laravel form helper here -->
+	<!-- button to start nap timer -->
+    <div>
+    	<button type="button" class="btn btn-primary">{{ Form::submit('START NAP') }}</button>
+    
+	</div>
+    <br>
 	
-	<form>
-		<label for="notes">Notes</label><br>
-		<textarea name="notes" id="notes" type="text"></textarea><br>
-		<button type="submit" id="submit">Submit</button>
-	</form>
-
-</body>
-</html>
+	{{ Form::label('notes', 'Notes') }}
+	<br>
+	{{ Form::textarea('notes', null, array('cols'=>'45', 'rows'=>'10', 'placeholder'=>'Write any notes here.', 'class'=>'wmd-input', 'id'=> 'wmd-input')) }}
+	<div>
+    	<button type="button" class="btn btn-primary">{{ Form::submit('Submit') }}</button>
+    
+	</div>
+@stop
