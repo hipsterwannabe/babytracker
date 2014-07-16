@@ -15,19 +15,41 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	public function showLogin()
 	{
-		return View::make('hello');
+		return View::make('index');
+	}
+
+	public function doLogin()
+	{
+		$email = Input::get('email');
+		$password = Input::get('password');
+
+		if (Auth::attempt(array('email' => $email, 'password' => $password), Input::has('remember')))
+		{
+			Session::flash('successMessage', 'You have logged in successfully');
+			return Redirect::to('/home');
+		}
+		else
+		{
+			Session::flash('errorMessage', 'Login credentials not valid.');
+			return Redirect::action('HomeController@showLogin');
+		}
+	}
+
+	public function getNewUser()
+	{
+		return View::make('new-user');
 	}
 
 	public function newUser()
 	{
         $user = new User();
         $user->name = Input::get('name');
-        $user->email = Input::get('email');
+        $user->email = Input::get('new_email');
         $user->password = Hash::make(Input::get('password'));
         $user->save();
 
-        return View::make('download');
+		return Redirect::to('/home');
 	}
 }

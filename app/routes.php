@@ -11,12 +11,14 @@
 |
 */
 
-Route::get('/', function()
-{
-    return View::make('index');
-});
 
-Route::post('/', 'HomeController@newUser');
+Route::get('/', 'HomeController@showLogin');
+
+Route::post('/', 'HomeController@doLogin');
+
+Route::get('/new-user', 'HomeController@getNewUser');
+
+Route::post('/new-user', 'HomeController@newUser');
 
 Route::get('/nap', function()
 {
@@ -41,6 +43,10 @@ Route::get('/diaper', function()
 {
 	return View::make('diaper');
 });
+Route::get('/home', function()
+{
+    return View::make('menu');
+});
 
 Route::get('test', function () {
 
@@ -57,7 +63,7 @@ Route::get('test', function () {
     $image = new Imagick($inputFile);
 
     // get the current image dimensions
-    $currentWidth = $image->getImageWidth(); 
+    $currentWidth = $image->getImageWidth();
     $currentHeight = $image->getImageHeight();
 
     // determine what the new height and width should be based on the type of photo
@@ -83,13 +89,13 @@ Route::get('test', function () {
     }
 
     // perform the image resize
-    $image->resizeImage($newWidth, $newHeight, Imagick::FILTER_LANCZOS, true);  
+    $image->resizeImage($newWidth, $newHeight, Imagick::FILTER_LANCZOS, true);
 
     // write out the new image
     $image->writeImage($outputFile);
 
     // clear memory resources
-    $image->clear(); 
+    $image->clear();
     $image->destroy();
 
     return 'Done';
