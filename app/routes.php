@@ -11,12 +11,10 @@
 |
 */
 
-Route::get('/', function()
-{
-    return View::make('index');
-});
 
-Route::post('/', 'HomeController@newUser');
+Route::get('/', 'HomeController@showLogin');
+
+Route::post('/', 'HomeController@doLogin');
 
 Route::get('/nap', function()
 {
