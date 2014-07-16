@@ -14,7 +14,8 @@ class CreateLengthsTable extends Migration {
 	{
 		Schema::create('lengths', function($table)
         {
-        	$table->integer('baby_id');
+        	$table->increments('id');
+            $table->integer('baby_id')->unsigned();
             $table->float('length');
             $table->timestamps();
         });

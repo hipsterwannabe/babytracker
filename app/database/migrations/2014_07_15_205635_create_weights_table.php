@@ -14,7 +14,8 @@ class CreateWeightsTable extends Migration {
 	{
 		Schema::create('weights', function($table)
         {
-        	$table->integer('baby_id');
+        	$table->increments('id');
+            $table->integer('baby_id')->unsigned();
             $table->integer('pounds');
             $table->integer('ounces');
             $table->timestamps();

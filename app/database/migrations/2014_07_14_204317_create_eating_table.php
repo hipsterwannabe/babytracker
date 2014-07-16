@@ -14,7 +14,8 @@ class CreateEatingTable extends Migration {
 	{
 		Schema::create('feedings', function($table)
         {
-            $table->increments('baby_id');
+            $table->increments('id');
+            $table->integer('baby_id')->unsigned();
            	$table->boolean('breast');
            	$table->timestamp('start_left')->nullable();
            	$table->timestamp('stop_left')->nullable();

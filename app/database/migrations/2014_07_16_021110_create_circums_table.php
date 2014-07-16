@@ -14,7 +14,8 @@ class CreateCircumsTable extends Migration {
 	{
 		Schema::create('circums', function($table)
         {
-        	$table->integer('baby_id');
+        	$table->increments('id');
+            $table->integer('baby_id')->unsigned();
             $table->float('circum');
             $table->timestamps();
         });
