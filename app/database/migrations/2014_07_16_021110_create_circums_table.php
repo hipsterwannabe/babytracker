@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWeightsTable extends Migration {
+class CreateCircumsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,12 +12,11 @@ class CreateWeightsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('weights', function($table)
+		Schema::create('circums', function($table)
         {
         	$table->increments('id');
             $table->integer('baby_id')->unsigned();
-            $table->integer('pounds');
-            $table->integer('ounces');
+            $table->float('circum');
             $table->timestamps();
         });
 	}
@@ -29,7 +28,7 @@ class CreateWeightsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('weights');
+		Schema::drop('circums');
 	}
 
 }

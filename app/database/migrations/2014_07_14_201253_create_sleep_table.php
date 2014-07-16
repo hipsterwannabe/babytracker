@@ -14,7 +14,8 @@ class CreateSleepTable extends Migration {
 	{
 		Schema::create('naps', function($table)
         {
-            $table->increments('baby_id');
+            $table->increments('id');
+            $table->integer('baby_id')->unsigned();
             $table->text('notes')->nullable();
             $table->timestamps();
         });
