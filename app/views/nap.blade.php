@@ -5,6 +5,7 @@
 	<h1>Nap Form Mockup</h1><br>
 	<!-- laravel form helper here -->
 	<!-- button to start nap timer -->
+	<!-- buttong should change to STOP onclick -->
     <div>
     	<button type="button" class="btn btn-primary">{{ Form::submit('START NAP') }}</button>
     
