@@ -37,6 +37,11 @@ class HomeController extends BaseController {
 		}
 	}
 
+	public function getNewUser()
+	{
+		return View::make('new-user');
+	}
+
 	public function newUser()
 	{
         $user = new User();
@@ -45,6 +50,6 @@ class HomeController extends BaseController {
         $user->password = Hash::make(Input::get('password'));
         $user->save();
 
-        return View::make('download');
+		return Redirect::to('menu');
 	}
 }
