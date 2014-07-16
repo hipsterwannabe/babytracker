@@ -1,1184 +1,0 @@
-TCordovaLib
-v6
-r1
-cCheck dependencies
-cCpHeader Classes/NSDictionary+Extensions.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h
-cCpHeader Classes/CDVInvokedUrlCommand.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-cCpHeader Classes/NSData+Base64.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h
-cCpHeader Classes/CDVPluginResult.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-cCpHeader Classes/CDVPlugin.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-cCpHeader Classes/CDVDebug.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVDebug.h
-cCpHeader Classes/NSMutableArray+QueueAdditions.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-cCpHeader Classes/CDVWhitelist.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
-cCpHeader Classes/CDVURLProtocol.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h
-cCpHeader Classes/CDVViewController.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
-cCpHeader Classes/CDVCommandDelegate.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-cCpHeader Classes/CDV.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDV.h
-cCpHeader Classes/CDVAvailability.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-cCpHeader Classes/CDVLocalStorage.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h
-cCpHeader Classes/UIDevice+Extensions.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h
-cCpHeader Classes/NSArray+Comparisons.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h
-cCpHeader Classes/CDVCommandQueue.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
-cCpHeader Classes/CDVCommandDelegateImpl.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h
-cCpHeader Classes/CDVShared.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVShared.h
-cCpHeader Classes/CDVScreenOrientationDelegate.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
-cCpHeader Classes/CDVConfigParser.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h
-cCpHeader Classes/CDVJSON.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVJSON.h
-cCpHeader Classes/CDVWebViewDelegate.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h
-cCpHeader Classes/CDVUserAgentUtil.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h
-cCpHeader Classes/CDVTimer.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVTimer.h
-cProcessPCH /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch.pch CordovaLib_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSData+Base64.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPluginResult.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPlugin.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWhitelist.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVConfigParser.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVJSON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVTimer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVShared.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-cLibtool /Users/danieljimenez/babytracker/platforms/ios/build/emulator/libCordova.a normal i386
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk
-c00000000534877140000000000000198
-t1397258004
-s408
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/SDKSettings.plist
-c0000000053322AC600000000000003B4
-t1395796678
-s948
-
-N/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk/System/Library/CoreServices/SystemVersion.plist
-c0000000053322AF5000000000000019E
-t1395796725
-s414
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDV.h
-c0000000053C54FD70000000000000516
-t1405439959
-s1302
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVAvailability.h
-c0000000053C54FD70000000000000D19
-t1405439959
-s3353
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandDelegate.h
-c0000000053C54FD700000000000008BA
-t1405439959
-s2234
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.h
-c0000000053C54FD700000000000004E2
-t1405439959
-s1250
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m
-c0000000053C54FD7000000000000183A
-t1405439959
-s6202
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandQueue.h
-c0000000053C54FD70000000000000503
-t1405439959
-s1283
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m
-c0000000053C54FD70000000000001ED0
-t1405439959
-s7888
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVConfigParser.h
-c0000000053C54FD700000000000004CB
-t1405439959
-s1227
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVConfigParser.m
-c0000000053C54FD70000000000000EBF
-t1405439959
-s3775
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVDebug.h
-c0000000053C54FD70000000000000401
-t1405439959
-s1025
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h
-c0000000053C54FD700000000000007E6
-t1405439959
-s2022
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m
-c0000000053C54FD70000000000000DDE
-t1405439959
-s3550
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVJSON.h
-c0000000053C54FD700000000000003DA
-t1405439959
-s986
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVJSON.m
-c0000000053C54FD700000000000009A1
-t1405439959
-s2465
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVLocalStorage.h
-c0000000053C54FD700000000000006CF
-t1405439959
-s1743
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m
-c0000000053C54FD70000000000004E02
-t1405439959
-s19970
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPlugin.h
-c0000000053C54FD700000000000008F3
-t1405439959
-s2291
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPlugin.m
-c0000000053C54FD7000000000000173C
-t1405439959
-s5948
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPluginResult.h
-c0000000053C54FD70000000000000C13
-t1405439959
-s3091
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPluginResult.m
-c0000000053C54FD70000000000001B29
-t1405439959
-s6953
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVScreenOrientationDelegate.h
-c0000000053C54FD70000000000000408
-t1405439959
-s1032
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVShared.h
-c0000000053C54FD700000000000003E6
-t1405439959
-s998
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVShared.m
-c0000000053C54FD700000000000006BD
-t1405439959
-s1725
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVTimer.h
-c0000000053C54FD7000000000000038D
-t1405439959
-s909
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVTimer.m
-c0000000053C54FD70000000000000AA2
-t1405439959
-s2722
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVURLProtocol.h
-c0000000053C54FD7000000000000041C
-t1405439959
-s1052
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m
-c0000000053C54FD7000000000000259E
-t1405439959
-s9630
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.h
-c0000000053C54FD70000000000000421
-t1405439959
-s1057
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m
-c0000000053C54FD70000000000001361
-t1405439959
-s4961
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVViewController.h
-c0000000053C54FD70000000000000ACC
-t1405439959
-s2764
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVViewController.m
-c0000000053C54FD70000000000008FD2
-t1405439959
-s36818
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.h
-c0000000053C54FD70000000000000689
-t1405439959
-s1673
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m
-c0000000053C54FD70000000000003992
-t1405439959
-s14738
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWhitelist.h
-c0000000053C54FD700000000000004B4
-t1405439959
-s1204
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWhitelist.m
-c0000000053C54FD700000000000029D2
-t1405439959
-s10706
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.h
-c0000000053C54FD70000000000000392
-t1405439959
-s914
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m
-c0000000053C54FD700000000000004D8
-t1405439959
-s1240
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSData+Base64.h
-c0000000053C54FD7000000000000037D
-t1405439959
-s893
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSData+Base64.m
-c0000000053C54FD700000000000022CC
-t1405439959
-s8908
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.h
-c0000000053C54FD700000000000005DA
-t1405439959
-s1498
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m
-c0000000053C54FD70000000000001059
-t1405439959
-s4185
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h
-c0000000053C54FD700000000000003A0
-t1405439959
-s928
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m
-c0000000053C54FD70000000000000584
-t1405439959
-s1412
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.h
-c0000000053C54FD70000000000000476
-t1405439959
-s1142
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m
-c0000000053C54FD70000000000000620
-t1405439959
-s1568
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/CordovaLib_Prefix.pch
-c0000000053C54FD70000000000000346
-t1405439959
-s838
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o
-t1405439990
-s64888
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.o
-t1405439990
-s61364
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o
-t1405439990
-s27424
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o
-t1405439983
-s18224
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o
-t1405439990
-s10552
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o
-t1405439989
-s106708
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o
-t1405439986
-s57528
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o
-t1405439984
-s36616
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o
-t1405439991
-s9024
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o
-t1405439991
-s22584
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o
-t1405439987
-s68864
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o
-t1405439991
-s50736
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o
-t1405439988
-s162920
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o
-t1405439991
-s69016
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o
-t1405439987
-s43096
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/Cordova.LinkFileList
-c0000000053C54FEA0000000000000C67
-t1405439978
-s3175
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o
-t1405439989
-s7196
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o
-t1405439983
-s10888
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.o
-t1405439983
-s17308
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.o
-t1405439986
-s6752
-
-N/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o
-t1405439989
-s9172
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDV.h
-t1405439978
-s1302
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-t1405439978
-s3353
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-t1405439978
-s2234
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h
-t1405439978
-s1250
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
-t1405439978
-s1283
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h
-t1405439978
-s1227
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVDebug.h
-t1405439978
-s1025
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-t1405439978
-s2022
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVJSON.h
-t1405439979
-s986
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h
-t1405439978
-s1743
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-t1405439978
-s2291
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-t1405439978
-s3091
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
-t1405439978
-s1032
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVShared.h
-t1405439978
-s998
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVTimer.h
-t1405439979
-s909
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h
-t1405439978
-s1052
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h
-t1405439979
-s1057
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
-t1405439978
-s2764
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h
-t1405439979
-s1673
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
-t1405439978
-s1204
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h
-t1405439978
-s914
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h
-t1405439978
-s893
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h
-t1405439978
-s1498
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-t1405439978
-s928
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h
-t1405439978
-s1142
-
-N/Users/danieljimenez/babytracker/platforms/ios/build/emulator/libCordova.a
-t1405439991
-s868688
-
-N/var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch.pch
-t1405439983
-s3241708
-
-CCheck dependencies
-r0
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies18"Check dependencies57cc5cfea975b941^d4b98efea975b941^---0#1#1#--18"Check dependencies36"3FE1C4E6-E8A6-4B30-BC92-EC304D96E9D7-
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427132790.060348
-e427132790.473216
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o
-x/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandDelegate.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVAvailability.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVJSON.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandQueue.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPluginResult.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVViewController.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWhitelist.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVScreenOrientationDelegate.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPlugin.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Compile /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m216"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o Classes/CDVCommandDelegateImpl.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler72a40f768775b941^bb2979768775b941^---0#0#1#-19%DVTDocumentLocation2@97"file:///Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m0000000000000000^4003"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o Classes/CDVCommandDelegateImpl.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/danieljimenez/babytracker/platforms/ios/build/emulator -DDEBUG -include /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.d --serialize-diagnostics /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.dia -c /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.m -o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandDelegateImpl.o36"7782CD4D-3B08-4760-B221-B464AA5F1DA2-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427132789.614552
-e427132790.058365
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.o
-x/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDV.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVAvailability.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPlugin.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPluginResult.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandDelegate.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVViewController.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandQueue.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWhitelist.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVScreenOrientationDelegate.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVURLProtocol.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVDebug.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVLocalStorage.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVTimer.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSData+Base64.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVJSON.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m202"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.o Classes/CDVCommandQueue.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler478d9d758775b941^5af40e768775b941^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m0000000000000000^3961"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.o Classes/CDVCommandQueue.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/danieljimenez/babytracker/platforms/ios/build/emulator -DDEBUG -include /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.d --serialize-diagnostics /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.dia -c /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandQueue.m -o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVCommandQueue.o36"36D07734-5CEF-48BC-AEF9-45F4B1CDC61A-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVConfigParser.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427132790.474837
-e427132790.554825
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o
-x/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVConfigParser.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVConfigParser.m
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVConfigParser.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVConfigParser.m202"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o Classes/CDVConfigParser.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler3fff79768775b941^5e498e768775b941^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVConfigParser.m0000000000000000^3961"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o Classes/CDVConfigParser.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/danieljimenez/babytracker/platforms/ios/build/emulator -DDEBUG -include /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.d --serialize-diagnostics /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.dia -c /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVConfigParser.m -o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVConfigParser.o36"EBB90E04-4F6A-42A1-9A81-CF8C83B0939D-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427132783.668393
-e427132783.834789
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o
-x/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVJSON.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSData+Base64.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Compile /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m212"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o Classes/CDVInvokedUrlCommand.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler9b59ab6f8775b941^560dd66f8775b941^---0#0#1#-19%DVTDocumentLocation2@95"file:///Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m0000000000000000^3991"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o Classes/CDVInvokedUrlCommand.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/danieljimenez/babytracker/platforms/ios/build/emulator -DDEBUG -include /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.d --serialize-diagnostics /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.dia -c /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.m -o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVInvokedUrlCommand.o36"4BE2A79E-21D7-479A-9A94-6305B4F8C072-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVJSON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427132790.555312
-e427132790.612435
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o
-x/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVJSON.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVJSON.m
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVJSON.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVJSON.m186"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o Classes/CDVJSON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler8b718e768775b941^b1fd9c768775b941^---0#0#1#-19%DVTDocumentLocation2@82"file:///Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVJSON.m0000000000000000^3913"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o Classes/CDVJSON.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/danieljimenez/babytracker/platforms/ios/build/emulator -DDEBUG -include /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.d --serialize-diagnostics /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.dia -c /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVJSON.m -o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVJSON.o36"E13757AA-1967-4693-923E-88B670F20DE1-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427132788.656536
-e427132789.216470
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o
-x/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVLocalStorage.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPlugin.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPluginResult.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandDelegate.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVAvailability.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDV.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVViewController.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandQueue.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWhitelist.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVScreenOrientationDelegate.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVURLProtocol.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVDebug.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVTimer.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSData+Base64.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVJSON.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m202"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o Classes/CDVLocalStorage.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler7c44a8748775b941^f46b37758775b941^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m0000000000000000^3961"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o Classes/CDVLocalStorage.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/danieljimenez/babytracker/platforms/ios/build/emulator -DDEBUG -include /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.d --serialize-diagnostics /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.dia -c /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVLocalStorage.m -o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVLocalStorage.o36"F64D2D38-A63C-4B37-8232-6793C0D9B2F4-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPlugin.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427132784.181019
-e427132786.886500
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o
-x/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPlugin.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPlugin.m
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPlugin.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPluginResult.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandDelegate.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVAvailability.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPlugin.m190"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o Classes/CDVPlugin.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler118d2e708775b941^b282e3728775b941^---0#0#1#-19%DVTDocumentLocation2@84"file:///Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPlugin.m0000000000000000^3925"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o Classes/CDVPlugin.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/danieljimenez/babytracker/platforms/ios/build/emulator -DDEBUG -include /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.d --serialize-diagnostics /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.dia -c /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPlugin.m -o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPlugin.o36"2A1D7BA3-D571-4B56-BB57-462B1432D86B-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPluginResult.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427132783.982156
-e427132784.179572
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o
-x/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPluginResult.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPluginResult.m
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPluginResult.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVJSON.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVDebug.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSData+Base64.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPluginResult.m202"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o Classes/CDVPluginResult.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerc5acfb6f8775b941^bc052e708775b941^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPluginResult.m0000000000000000^3961"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o Classes/CDVPluginResult.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/danieljimenez/babytracker/platforms/ios/build/emulator -DDEBUG -include /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.d --serialize-diagnostics /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.dia -c /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPluginResult.m -o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVPluginResult.o36"85A6338A-9DFA-46C9-A9EE-E39B089331BC-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVShared.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427132791.588199
-e427132791.667065
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o
-x/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVShared.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVShared.m
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVShared.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVShared.m190"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o Classes/CDVShared.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler39d196778775b941^69c6aa778775b941^---0#0#1#-19%DVTDocumentLocation2@84"file:///Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVShared.m0000000000000000^3925"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o Classes/CDVShared.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/danieljimenez/babytracker/platforms/ios/build/emulator -DDEBUG -include /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.d --serialize-diagnostics /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.dia -c /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVShared.m -o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVShared.o36"5543E092-DE44-4929-AA7F-504013C6C38F-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVTimer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427132791.588161
-e427132791.685315
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o
-x/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVTimer.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVTimer.m
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVTimer.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVTimer.m188"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o Classes/CDVTimer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler901697778775b941^4f95af778775b941^---0#0#1#-19%DVTDocumentLocation2@83"file:///Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVTimer.m0000000000000000^3919"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o Classes/CDVTimer.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/danieljimenez/babytracker/platforms/ios/build/emulator -DDEBUG -include /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.d --serialize-diagnostics /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.dia -c /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVTimer.m -o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVTimer.o36"BA9B6B75-77E5-4471-9D1E-DFEA184C4DEF-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427132787.069747
-e427132787.585970
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o
-x/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVURLProtocol.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVAvailability.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandQueue.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWhitelist.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVViewController.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandDelegate.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVScreenOrientationDelegate.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPlugin.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPluginResult.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection90"Compile /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m200"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o Classes/CDVURLProtocol.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler990d12738775b941^4f0396738775b941^---0#0#1#-19%DVTDocumentLocation2@89"file:///Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m0000000000000000^3955"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o Classes/CDVURLProtocol.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/danieljimenez/babytracker/platforms/ios/build/emulator -DDEBUG -include /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.d --serialize-diagnostics /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.dia -c /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVURLProtocol.m -o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVURLProtocol.o36"FB3F7FF6-BC4A-47F2-B176-F803A3648FF6-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427132790.614017
-e427132791.025941
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o
-x/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Compile /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m204"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o Classes/CDVUserAgentUtil.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler73689d768775b941^16a706778775b941^---0#0#1#-19%DVTDocumentLocation2@91"file:///Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m0000000000000000^3967"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o Classes/CDVUserAgentUtil.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/danieljimenez/babytracker/platforms/ios/build/emulator -DDEBUG -include /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.d --serialize-diagnostics /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.dia -c /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.m -o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVUserAgentUtil.o36"7BDAFCE5-26C0-4B5A-895F-534B1346042A-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427132787.587531
-e427132788.655735
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o
-x/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVViewController.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVViewController.m
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDV.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVAvailability.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPlugin.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPluginResult.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandDelegate.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVViewController.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandQueue.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWhitelist.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVScreenOrientationDelegate.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVURLProtocol.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVDebug.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVLocalStorage.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVTimer.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSData+Base64.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVJSON.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVConfigParser.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Compile /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVViewController.m206"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o Classes/CDVViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler6b9f96738775b941^cee0a7748775b941^---0#0#1#-19%DVTDocumentLocation2@92"file:///Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVViewController.m0000000000000000^3973"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o Classes/CDVViewController.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/danieljimenez/babytracker/platforms/ios/build/emulator -DDEBUG -include /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.d --serialize-diagnostics /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.dia -c /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVViewController.m -o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVViewController.o36"68E56A47-40A2-4F2E-B01F-2948B44D291C-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427132791.028196
-e427132791.587381
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o
-x/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.h
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVAvailability.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m208"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o Classes/CDVWebViewDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler1a6b07778775b941^d46096778775b941^---0#0#1#-19%DVTDocumentLocation2@93"file:///Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m0000000000000000^3979"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o Classes/CDVWebViewDelegate.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/danieljimenez/babytracker/platforms/ios/build/emulator -DDEBUG -include /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.d --serialize-diagnostics /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.dia -c /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.m -o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWebViewDelegate.o36"9660CAAD-975D-467F-B729-60DE72B77661-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWhitelist.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427132786.945026
-e427132787.069261
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o
-x/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWhitelist.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWhitelist.m
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWhitelist.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Compile /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWhitelist.m196"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o Classes/CDVWhitelist.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler3c2ef2728775b941^6e1712738775b941^---0#0#1#-19%DVTDocumentLocation2@87"file:///Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWhitelist.m0000000000000000^3943"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o Classes/CDVWhitelist.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/danieljimenez/babytracker/platforms/ios/build/emulator -DDEBUG -include /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.d --serialize-diagnostics /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.dia -c /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWhitelist.m -o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/CDVWhitelist.o36"ED53A26F-23E4-47B5-87C9-BCD5405F9D5C-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427132789.554304
-e427132789.612862
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o
-x/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compile /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m210"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o Classes/NSArray+Comparisons.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerdc4b8e758775b941^d1e69c758775b941^---0#0#1#-19%DVTDocumentLocation2@94"file:///Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m0000000000000000^3985"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o Classes/NSArray+Comparisons.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/danieljimenez/babytracker/platforms/ios/build/emulator -DDEBUG -include /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.d --serialize-diagnostics /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.dia -c /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.m -o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSArray+Comparisons.o36"CF922735-31EF-4EA5-A584-300C8264C669-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSData+Base64.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427132783.835225
-e427132783.981699
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o
-x/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSData+Base64.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSData+Base64.m
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSData+Base64.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection89"Compile /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSData+Base64.m198"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o Classes/NSData+Base64.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerc503d66f8775b941^3db8fb6f8775b941^---0#0#1#-19%DVTDocumentLocation2@88"file:///Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSData+Base64.m0000000000000000^3949"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o Classes/NSData+Base64.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/danieljimenez/babytracker/platforms/ios/build/emulator -DDEBUG -include /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.d --serialize-diagnostics /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.dia -c /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSData+Base64.m -o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSData+Base64.o36"40F03807-BF0F-4422-8F03-72C9FB83BF1E-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427132783.229984
-e427132783.667211
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.o
-x/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Compile /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m218"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.o Classes/NSDictionary+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler01143b6f8775b941^14edaa6f8775b941^---0#0#1#-19%DVTDocumentLocation2@98"file:///Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m0000000000000000^4009"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.o Classes/NSDictionary+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/danieljimenez/babytracker/platforms/ios/build/emulator -DDEBUG -include /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.d --serialize-diagnostics /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.dia -c /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.m -o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSDictionary+Extensions.o36"C38750A8-8724-47C7-904F-7DFDA895B1BB-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427132786.887459
-e427132786.943424
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.o
-x/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Compile /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m230"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.o Classes/NSMutableArray+QueueAdditions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler4870e3728775b941^ad85f1728775b941^---0#0#1#-19%DVTDocumentLocation2@104"file:///Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m0000000000000000^4045"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.o Classes/NSMutableArray+QueueAdditions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/danieljimenez/babytracker/platforms/ios/build/emulator -DDEBUG -include /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.d --serialize-diagnostics /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.dia -c /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.m -o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/NSMutableArray+QueueAdditions.o36"C6159A7A-C998-42A5-AF70-B8B6D9C2C5E4-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427132789.217060
-e427132789.553787
-r1
-xCompileC
-xbuild/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o
-x/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Compile /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m210"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o Classes/UIDevice+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compilerd40d38758775b941^1ae18d758775b941^---0#0#1#-19%DVTDocumentLocation2@94"file:///Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m0000000000000000^3985"CompileC build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o Classes/UIDevice+Extensions.m normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/danieljimenez/babytracker/platforms/ios/build/emulator -DDEBUG -include /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch -MMD -MT dependencies -MF /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.d --serialize-diagnostics /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.dia -c /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.m -o /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/UIDevice+Extensions.o36"F225D542-D45F-446B-856A-6ECD7FE1089D-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/CDV.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDV.h
-s427132778.950279
-e427132778.954371
-r1
-xCpHeader
-xClasses/CDV.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDV.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection88"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDV.h106"CpHeader Classes/CDV.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDV.hc766f36a8775b941^90874a6b8775b941^---0#0#1#-19%DVTDocumentLocation2@90"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDV.h003440a5dfffdf42^951"CpHeader Classes/CDV.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDV.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDV.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"2A02B406-5D10-4108-AB12-9F04E3E8B4A6-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/CDVAvailability.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-s427132778.954662
-e427132778.958795
-r1
-xCpHeader
-xClasses/CDVAvailability.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h130"CpHeader Classes/CDVAvailability.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h2f88f46a8775b941^61de4b6b8775b941^---0#0#1#-19%DVTDocumentLocation2@102"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h003440a5dfffdf42^987"CpHeader Classes/CDVAvailability.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVAvailability.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVAvailability.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"541C7F33-0E49-4B45-B8D4-93AFBF248C46-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/CDVCommandDelegate.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-s427132778.948163
-e427132778.954397
-r1
-xCpHeader
-xClasses/CDVCommandDelegate.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h136"CpHeader Classes/CDVCommandDelegate.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h7409f36a8775b941^978d4a6b8775b941^---0#0#1#-19%DVTDocumentLocation2@105"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h003440a5dfffdf42^996"CpHeader Classes/CDVCommandDelegate.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegate.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandDelegate.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"7DBE966E-3F5D-4910-AE97-6E09089150B6-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/CDVCommandDelegateImpl.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h
-s427132778.986919
-e427132778.988994
-r1
-xCpHeader
-xClasses/CDVCommandDelegateImpl.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection107"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h144"CpHeader Classes/CDVCommandDelegateImpl.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h3bc7fc6a8775b941^45f54e6b8775b941^---0#0#1#-19%DVTDocumentLocation2@109"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h003440a5dfffdf42^1008"CpHeader Classes/CDVCommandDelegateImpl.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandDelegateImpl.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandDelegateImpl.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"4B9C76DB-F67A-4FDD-BBF9-CEDC1F43B679-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/CDVCommandQueue.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
-s427132778.983714
-e427132778.986670
-r1
-xCpHeader
-xClasses/CDVCommandQueue.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h130"CpHeader Classes/CDVCommandQueue.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.hf0f7fb6a8775b941^74ea4e6b8775b941^---0#0#1#-19%DVTDocumentLocation2@102"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h003440a5dfffdf42^987"CpHeader Classes/CDVCommandQueue.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVCommandQueue.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVCommandQueue.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"48A127E9-89B3-4772-80B0-6D764AE03C86-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/CDVConfigParser.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h
-s427132778.992217
-e427132778.996552
-r1
-xCpHeader
-xClasses/CDVConfigParser.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h130"CpHeader Classes/CDVConfigParser.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h7d78fe6a8775b941^44184f6b8775b941^---0#0#1#-19%DVTDocumentLocation2@102"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h003440a5dfffdf42^987"CpHeader Classes/CDVConfigParser.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVConfigParser.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVConfigParser.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"B39D74EB-F34F-4DAF-96D5-3D74AA7A8FBA-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/CDVDebug.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVDebug.h
-s427132778.933060
-e427132778.937399
-r1
-xCpHeader
-xClasses/CDVDebug.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVDebug.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVDebug.h116"CpHeader Classes/CDVDebug.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVDebug.h2504ef6a8775b941^cfbb496b8775b941^---0#0#1#-19%DVTDocumentLocation2@95"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVDebug.h003440a5dfffdf42^966"CpHeader Classes/CDVDebug.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVDebug.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVDebug.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"FF5B2F55-98FF-40B2-AEDF-656FFDEAEC84-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/CDVInvokedUrlCommand.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-s427132778.913773
-e427132778.918696
-r1
-xCpHeader
-xClasses/CDVInvokedUrlCommand.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection105"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h140"CpHeader Classes/CDVInvokedUrlCommand.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.hf110ea6a8775b941^58fe486b8775b941^---0#0#1#-19%DVTDocumentLocation2@107"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h003440a5dfffdf42^1002"CpHeader Classes/CDVInvokedUrlCommand.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVInvokedUrlCommand.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVInvokedUrlCommand.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"E88C62A4-FA83-4476-8356-433E1487EDDA-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/CDVJSON.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVJSON.h
-s427132778.993872
-e427132779.001802
-r1
-xCpHeader
-xClasses/CDVJSON.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVJSON.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection92"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVJSON.h114"CpHeader Classes/CDVJSON.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVJSON.hf9f6fe6a8775b941^9a234f6b8775b941^---0#0#1#-19%DVTDocumentLocation2@94"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVJSON.h003440a5dfffdf42^963"CpHeader Classes/CDVJSON.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVJSON.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVJSON.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"4E234448-6375-4F62-8076-FE5767049D6E-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/CDVLocalStorage.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h
-s427132778.958127
-e427132778.980887
-r1
-xCpHeader
-xClasses/CDVLocalStorage.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h130"CpHeader Classes/CDVLocalStorage.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.he469f56a8775b941^faed4b6b8775b941^---0#0#1#-19%DVTDocumentLocation2@102"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h003440a5dfffdf42^987"CpHeader Classes/CDVLocalStorage.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVLocalStorage.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVLocalStorage.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"CB3D861A-5B4A-4B88-97DD-5E5E22765ED9-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/CDVPlugin.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-s427132778.924968
-e427132778.936282
-r1
-xCpHeader
-xClasses/CDVPlugin.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h118"CpHeader Classes/CDVPlugin.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVPlugin.hc233ed6a8775b941^6cb3496b8775b941^---0#0#1#-19%DVTDocumentLocation2@96"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h003440a5dfffdf42^969"CpHeader Classes/CDVPlugin.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVPlugin.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPlugin.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"8A6F6021-1C93-46B6-93F1-CA6EBB09E6E1-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/CDVPluginResult.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-s427132778.920142
-e427132778.923088
-r1
-xCpHeader
-xClasses/CDVPluginResult.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h130"CpHeader Classes/CDVPluginResult.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.hc4b0eb6a8775b941^779d496b8775b941^---0#0#1#-19%DVTDocumentLocation2@102"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h003440a5dfffdf42^987"CpHeader Classes/CDVPluginResult.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVPluginResult.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVPluginResult.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"6EFB0FD0-E7DF-4A61-831B-5B7E4D48DCAB-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/CDVScreenOrientationDelegate.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
-s427132778.989242
-e427132778.992370
-r1
-xCpHeader
-xClasses/CDVScreenOrientationDelegate.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection113"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h156"CpHeader Classes/CDVScreenOrientationDelegate.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h4da3fd6a8775b941^c70d4f6b8775b941^---0#0#1#-19%DVTDocumentLocation2@115"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h003440a5dfffdf42^1026"CpHeader Classes/CDVScreenOrientationDelegate.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVScreenOrientationDelegate.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVScreenOrientationDelegate.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"A050D8CC-0D25-4680-9E2D-BFB74BED5FD7-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/CDVShared.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVShared.h
-s427132778.988021
-e427132778.989959
-r1
-xCpHeader
-xClasses/CDVShared.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVShared.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVShared.h118"CpHeader Classes/CDVShared.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVShared.h3c14fd6a8775b941^75014f6b8775b941^---0#0#1#-19%DVTDocumentLocation2@96"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVShared.h003440a5dfffdf42^969"CpHeader Classes/CDVShared.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVShared.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVShared.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"7A534889-C626-4AFC-A954-B174D16FBCF9-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/CDVTimer.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVTimer.h
-s427132779.007145
-e427132779.028151
-r1
-xCpHeader
-xClasses/CDVTimer.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVTimer.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection93"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVTimer.h116"CpHeader Classes/CDVTimer.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVTimer.h44fa016b8775b941^f2414f6b8775b941^---0#0#1#-19%DVTDocumentLocation2@95"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVTimer.h003440a5dfffdf42^966"CpHeader Classes/CDVTimer.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVTimer.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVTimer.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"62CDA906-13C5-4FED-9495-F5555F0245AE-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/CDVURLProtocol.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h
-s427132778.941246
-e427132778.947044
-r1
-xCpHeader
-xClasses/CDVURLProtocol.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection99"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h128"CpHeader Classes/CDVURLProtocol.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h452df16a8775b941^274e4a6b8775b941^---0#0#1#-19%DVTDocumentLocation2@101"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h003440a5dfffdf42^984"CpHeader Classes/CDVURLProtocol.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVURLProtocol.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVURLProtocol.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"29694C42-F24E-4563-995E-BB6399B1EE59-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/CDVUserAgentUtil.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h
-s427132779.002515
-e427132779.005557
-r1
-xCpHeader
-xClasses/CDVUserAgentUtil.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection101"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h132"CpHeader Classes/CDVUserAgentUtil.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h6616016b8775b941^ca374f6b8775b941^---0#0#1#-19%DVTDocumentLocation2@103"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h003440a5dfffdf42^990"CpHeader Classes/CDVUserAgentUtil.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVUserAgentUtil.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVUserAgentUtil.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"7238817A-9045-4F0E-B68E-5581A2FCF271-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/CDVViewController.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
-s427132778.945952
-e427132778.949963
-r1
-xCpHeader
-xClasses/CDVViewController.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVViewController.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection102"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVViewController.h134"CpHeader Classes/CDVViewController.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVViewController.h4050f26a8775b941^925c4a6b8775b941^---0#0#1#-19%DVTDocumentLocation2@104"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVViewController.h003440a5dfffdf42^993"CpHeader Classes/CDVViewController.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVViewController.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVViewController.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"D17B2E69-7B7F-4492-BC75-04B36AB03816-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/CDVWebViewDelegate.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h
-s427132778.999534
-e427132779.002824
-r1
-xCpHeader
-xClasses/CDVWebViewDelegate.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection103"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h136"CpHeader Classes/CDVWebViewDelegate.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h6c0a006b8775b941^802d4f6b8775b941^---0#0#1#-19%DVTDocumentLocation2@105"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h003440a5dfffdf42^996"CpHeader Classes/CDVWebViewDelegate.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVWebViewDelegate.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWebViewDelegate.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"4E35FC74-B30B-4A64-83CD-5154633BC61D-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/CDVWhitelist.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
-s427132778.940115
-e427132778.945634
-r1
-xCpHeader
-xClasses/CDVWhitelist.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h124"CpHeader Classes/CDVWhitelist.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h39d3f06a8775b941^ad334a6b8775b941^---0#0#1#-19%DVTDocumentLocation2@99"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h003440a5dfffdf42^978"CpHeader Classes/CDVWhitelist.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/CDVWhitelist.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/CDVWhitelist.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"8CE79A0B-F914-4762-A691-0B7F9299F4BA-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/NSArray+Comparisons.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h
-s427132778.981266
-e427132778.987767
-r1
-xCpHeader
-xClasses/NSArray+Comparisons.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h138"CpHeader Classes/NSArray+Comparisons.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h1958fb6a8775b941^8be14e6b8775b941^---0#0#1#-19%DVTDocumentLocation2@106"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h003440a5dfffdf42^999"CpHeader Classes/NSArray+Comparisons.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSArray+Comparisons.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSArray+Comparisons.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"8D05CA60-B97E-44A3-970C-715BE8DEDE4F-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/NSData+Base64.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h
-s427132778.919708
-e427132778.925147
-r1
-xCpHeader
-xClasses/NSData+Base64.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection98"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h126"CpHeader Classes/NSData+Base64.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h50e2eb6a8775b941^15a8496b8775b941^---0#0#1#-19%DVTDocumentLocation2@100"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h003440a5dfffdf42^981"CpHeader Classes/NSData+Base64.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSData+Base64.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSData+Base64.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"FE0C340A-CF30-4961-A89A-4B89565DEFE6-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/NSDictionary+Extensions.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h
-s427132778.910288
-e427132778.918389
-r1
-xCpHeader
-xClasses/NSDictionary+Extensions.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection108"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h146"CpHeader Classes/NSDictionary+Extensions.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.hc7b9e96a8775b941^ab96486b8775b941^---0#0#1#-19%DVTDocumentLocation2@110"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h003440a5dfffdf42^1011"CpHeader Classes/NSDictionary+Extensions.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSDictionary+Extensions.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSDictionary+Extensions.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"E65FA9BD-B0F9-499C-86B7-BEBFD7A5BFE6-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/NSMutableArray+QueueAdditions.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-s427132778.936577
-e427132778.940958
-r1
-xCpHeader
-xClasses/NSMutableArray+QueueAdditions.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection114"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h158"CpHeader Classes/NSMutableArray+QueueAdditions.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.hf7eaef6a8775b941^b3f0496b8775b941^---0#0#1#-19%DVTDocumentLocation2@116"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h003440a5dfffdf42^1029"CpHeader Classes/NSMutableArray+QueueAdditions.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/NSMutableArray+QueueAdditions.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/NSMutableArray+QueueAdditions.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"9B71015B-B7FE-4232-87BC-B072B282FF73-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CCpHeader Classes/UIDevice+Extensions.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h
-s427132778.960206
-e427132778.981156
-r1
-xCpHeader
-xClasses/UIDevice+Extensions.h
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection104"Copy /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h138"CpHeader Classes/UIDevice+Extensions.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h9833f76a8775b941^0bd44e6b8775b941^---0#0#1#-19%DVTDocumentLocation2@106"file:///Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h003440a5dfffdf42^999"CpHeader Classes/UIDevice+Extensions.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova/UIDevice+Extensions.h    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -resolve-src-symlinks /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/Classes/UIDevice+Extensions.h /Users/danieljimenez/babytracker/platforms/ios/build/emulator/include/Cordova36"A55CCA09-675E-4CC1-860E-16973FD17B15-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CLibtool /Users/danieljimenez/babytracker/platforms/ios/build/emulator/libCordova.a normal i386
-s427132791.689840
-e427132791.723875
-r1
-xLibtool
-x/Users/danieljimenez/babytracker/platforms/ios/build/emulator/libCordova.a
-xnormal
-xi386
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Libtool /Users/danieljimenez/babytracker/platforms/ios/build/emulator/libCordova.a normal i38694"Libtool /Users/danieljimenez/babytracker/platforms/ios/build/emulator/libCordova.a normal i3861cceb0778775b941^ec50b9778775b941^---0#0#1#--1283"Libtool /Users/danieljimenez/babytracker/platforms/ios/build/emulator/libCordova.a normal i386    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export IPHONEOS_DEPLOYMENT_TARGET=6.0    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -static -arch_only i386 -syslibroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -L/Users/danieljimenez/babytracker/platforms/ios/build/emulator -filelist /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Objects-normal/i386/Cordova.LinkFileList -o /Users/danieljimenez/babytracker/platforms/ios/build/emulator/libCordova.a36"5FCD076E-1FEA-4D8E-9D63-A0128171D328-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
-CProcessPCH /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch.pch CordovaLib_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler
-s427132779.034487
-e427132783.228220
-r1
-xProcessPCH
-x/var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch.pch
-xCordovaLib_Prefix.pch
-xnormal
-xi386
-xobjective-c
-xcom.apple.compilers.llvm.clang.1_0.compiler
-d/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/CordovaLib_Prefix.pch
-lSLF06#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection32"Precompile CordovaLib_Prefix.pch291"ProcessPCH /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch.pch CordovaLib_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler2a1c096b8775b941^a7913a6f8775b941^---0#0#1#-19%DVTDocumentLocation2@86"file:///Users/danieljimenez/babytracker/platforms/ios/CordovaLib/CordovaLib_Prefix.pch0000000000000000^3952"ProcessPCH /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch.pch CordovaLib_Prefix.pch normal i386 objective-c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/danieljimenez/babytracker/platforms/ios/CordovaLib    export LANG=en_US.US-ASCII    export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1/bin:/Users/danieljimenez/.rvm/gems/ruby-2.1.1@global/bin:/Users/danieljimenez/.rvm/rubies/ruby-2.1.1/bin:/Users/danieljimenez/.rbenv/shims:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/Users/danieljimenez/.rbenv/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/Users/danieljimenez/.rvm/bin"    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x objective-c-header -arch i386 -fmessage-length=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit=0 -std=c99 -fobjc-arc -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-implicit-atomic-properties -Wno-receiver-is-weak -Wno-arc-repeated-use-of-weak -Wduplicate-method-match -Wno-missing-braces -Wparentheses -Wswitch -Wunused-function -Wno-unused-label -Wno-unused-parameter -Wunused-variable -Wunused-value -Wempty-body -Wuninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wconstant-conversion -Wint-conversion -Wbool-conversion -Wenum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -Wno-selector -Wno-strict-selector-match -Wundeclared-selector -Wno-deprecated-implementations -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.1.sdk -fexceptions -fasm-blocks -fstrict-aliasing -Wprotocol -Wdeprecated-declarations -g -Wno-sign-conversion -fobjc-abi-version=2 -fobjc-legacy-dispatch -mios-simulator-version-min=6.0 -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-generated-files.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-own-target-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-all-target-headers.hmap -iquote /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/Cordova-project-headers.hmap -I/Users/danieljimenez/babytracker/platforms/ios/build/emulator/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources/i386 -I/Users/danieljimenez/babytracker/platforms/ios/CordovaLib/build/CordovaLib.build/Debug-iphonesimulator/CordovaLib.build/DerivedSources -F/Users/danieljimenez/babytracker/platforms/ios/build/emulator -DDEBUG --serialize-diagnostics /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch.dia -MMD -MT dependencies -MF /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch.d -c /Users/danieljimenez/babytracker/platforms/ios/CordovaLib/CordovaLib_Prefix.pch -o /var/folders/wd/0qsns1jx69x__1rh64s2xm_00000gn/C/com.apple.DeveloperTools/5.1.1-5B1008/Xcode/SharedPrecompiledHeaders/CordovaLib_Prefix-brvejeksoueplsgujxjtxwucnvxx/CordovaLib_Prefix.pch.pch36"70060D73-679B-42CB-B1A3-5D003834C1A4-
-b5724A47C-BCFB-4073-8DFD-0CCC5EADEC65
-
