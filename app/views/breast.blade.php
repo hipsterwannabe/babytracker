@@ -1,8 +1,6 @@
-<html>
-<head>
-	<title>Breast View</title>
-</head>
-<body>
+@extends('layouts.master')
+
+@section('content')
 
 	<h1>Breast View</h1>
 
@@ -35,5 +33,4 @@
 		<button type="submit" class="submit">Submit</button>
 	</form>
 
-</body>
-</html>
+@stop

@@ -1,8 +1,6 @@
-<html>
-<head>
-	<title>Eating Prompt View</title>
-</head>
-<body>
+@extends('layouts.master')
+
+@section('content')
 
 	<h1>How is your baby fed?</h1>
 
@@ -15,5 +13,4 @@
 		<button type="submit" class="submit">Submit</button>
 	</form>
 
-</body>
-</html>
+@stop
