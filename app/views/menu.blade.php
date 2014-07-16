@@ -1,10 +1,7 @@
-<html>
-<head>
-	<title>Main Menu</title>
-</head>
-<body>
+@extends('layouts.master')
+
+@section('content')
+
 	<h1>Main Menu</h1>
 	
-
-</body>
-</html>
+@stop
