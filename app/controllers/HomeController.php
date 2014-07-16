@@ -28,7 +28,7 @@ class HomeController extends BaseController {
 		if (Auth::attempt(array('email' => $email, 'password' => $password), Input::has('remember')))
 		{
 			Session::flash('successMessage', 'You have logged in successfully');
-			return Redirect::to('menu');
+			return Redirect::to('/home');
 		}
 		else
 		{
@@ -50,6 +50,6 @@ class HomeController extends BaseController {
         $user->password = Hash::make(Input::get('password'));
         $user->save();
 
-		return Redirect::to('menu');
+		return Redirect::to('/home');
 	}
 }
