@@ -1,76 +1,100 @@
-        <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-        <!-- Latest compiled and minified CSS -->
+<head>
+
+    <meta charset="utf-8">
+
+    <title>BabyTracker</title>
+
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <style>body { padding-top: 70px; }</style>
+
     <!-- moment.js -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script> 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
+
     <!-- jQuery -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js">
-    </script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 
     <!-- Optional theme -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
     <!-- Latest compiled and minified JavaScript -->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js">
-    </script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
     <!-- CSS for the website -->
     <link href="assets/css/style.css" rel="stylesheet">
-  </head>
-    
-<body data-spy="scroll" data-offset="0" data-target="#theMenu"> 
+
+</head>
+
+<body data-spy="scroll" data-offset="0" data-target="#theMenu">
 
     <div class="container">
-        <nav class="navbar navbar-default navbar-static-top" role="navigation">
-            <ul class="nav navbar-nav">
-                <li><a href="/home">Menu</a></li>
-                <li><a href="/nap">Nap</a></li>
-                <li><a href="/diaper">Diaper</a></li>
-                <li><a href="/eating">Eating</a></li>
-            </ul>
-            <div class="pull-right">
-                <ul class="nav pull-right">
-                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, User <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/user/preferences"><i class="icon-cog"></i> Preferences</a></li>
-                            <li><a href="/help/support"><i class="icon-envelope"></i> Contact Support</a></li>
-                            <li class="divider"></li>
-                            <li><a href="/auth/logout"><i class="icon-off"></i> Logout</a></li>
-                        </ul>
-                    </li>
-                </ul>
-              </div>
-        </nav>   
-        <div>
-    	    @if (Session::has('successMessage'))
-    	    	<div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
-    		@endif
-    		@if (Session::has('errorMessage'))
-    		    <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
-    		@endif
-        </div>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/menu">Menu</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        @if (Auth::check())
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}<span class="caret"></span></a>
+                                <ul class="dropdown-menu" role="menu">
+                                    @foreach ( Auth::user()->babies as $baby)
+                                        <li><a href="/home/{{$baby->id}}" >{{ $baby->name }}</a></li>
+                                    @endforeach
+                                    <li><a href="/logout">Logout</a></li>
+                                </ul>
+                            </li>
+                        @endif
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container -->
+        </nav>
+
+        @if (Session::has('successMessage'))
+            <div class="alert alert-success" role="alert">
+                {{{ Session::get('successMessage') }}}
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
+            </div>
+        @endif
+        @if (Session::has('errorMessage'))
+            <div class="alert alert-danger" role="alert">
+                {{{ Session::get('errorMessage') }}}
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
+            </div>
+        @endif
+
+        @yield('content')
+
+    </div>
 
 
-    @yield('content')
-    
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="assets/js/classie.js"></script>
+    <script src="assets/js/classie.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/smoothscroll.js"></script>
-	<script src="assets/js/jquery.stellar.min.js"></script>
-	<script src="assets/js/fancybox/jquery.fancybox.js"></script>    
-	<script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.stellar.min.js"></script>
+    <script src="assets/js/fancybox/jquery.fancybox.js"></script>
+    <script src="assets/js/main.js"></script>
 
-    @yield('bottom-script')
-
-
-    </div>
-
-    
+    @yield('bottomscript')
 </body>
 </html>

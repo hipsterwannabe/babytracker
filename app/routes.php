@@ -12,9 +12,11 @@
 */
 
 
-Route::get('/', 'HomeController@showLogin');
+Route::get('/login', 'HomeController@showLogin');
 
-Route::post('/', 'HomeController@doLogin');
+Route::post('/login', 'HomeController@doLogin');
+
+Route::get('/logout', 'HomeController@logout');
 
 Route::get('/new-user', 'HomeController@getNewUser');
 
@@ -23,6 +25,21 @@ Route::post('/new-user', 'HomeController@newUser');
 Route::get('/diaper/{id}', 'EventController@showDiaper');
 
 Route::post('/diaper/{id}', 'EventController@doDiaper');
+
+Route::get('/menu', function()
+{
+    if (Auth::check()) {
+        return View::make('child-menu');
+    }
+    else {
+        return Redirect::action('HomeController@showLogin');
+    }
+});
+
+Route::get('/menu/{id}', function()
+{
+    return View::make('menu');
+});
 
 Route::get('/add-child', function()
 {
@@ -48,10 +65,7 @@ Route::get('/breast', function()
 {
 	return View::make('breast');
 });
-Route::get('/home', function()
-{
-    return View::make('menu');
-});
+
 Route::get('/baby-stats', function()
 {
     return View::make('baby-stats');
