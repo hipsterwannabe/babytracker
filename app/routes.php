@@ -28,7 +28,12 @@ Route::post('/diaper/{id}', 'EventController@doDiaper');
 
 Route::get('/home', function()
 {
-    return View::make('menu');
+    if (Auth::check()) {
+        return View::make('menu');
+    }
+    else {
+        return Redirect::action('HomeController@showLogin');
+    }
 });
 
 Route::get('/home/{id}', function()
