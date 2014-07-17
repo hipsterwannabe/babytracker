@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-	<h2>Diaper Change! </h2>
+    <h2>Diaper Change! </h2>
 
     <h2>What was inside?</h2>
 
