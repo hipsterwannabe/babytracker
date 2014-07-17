@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
-	
+
 	<style>
 
 		.babyImage {
@@ -14,6 +14,8 @@
 
 		<h1>Main Menu</h1>
 
+		<!-- Select child to log data to -->
+
 		<!-- TODO: add a view to add a child -->
 		<button>Add Child</button><br>
 
@@ -22,5 +24,5 @@
 		</div>
 
 	</div>
-	
+
 @stop
