@@ -40,29 +40,22 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/menu">Home</a>
+                    <a class="navbar-brand" href="/menu">Menu</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        @foreach ( Auth::user()->babies as $baby)
-                            <li><a href="/nap/{{$baby->id}}">Nap</a></li>
-                            <li><a href="/diaper/{{$baby->id}}">Diaper</a></li>
-                            <li><a href="/eating/{{$baby->id}}">Eating</a></li>
-                        @endforeach
                         @if (Auth::check())
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}<span class="caret"></span></a>
-                                <ul class="dropdown-menu list-group" role="menu">
+                                <ul class="dropdown-menu" role="menu">
                                     @foreach ( Auth::user()->babies as $baby)
-                                        <li class="list-group-item"><a href="/home/{{$baby->id}}" >{{ $baby->name }}</a></li>
+                                        <li><a href="/home/{{$baby->id}}" >{{ $baby->name }}</a></li>
                                     @endforeach
                                     <li><a href="/logout">Logout</a></li>
                                 </ul>
                             </li>
-                        @else
-                            <li><a href="/login">Log In</a></li>
                         @endif
                     </ul>
                 </div><!-- /.navbar-collapse -->
@@ -102,5 +95,8 @@
     <script src="assets/js/fancybox/jquery.fancybox.js"></script>
     <script src="assets/js/main.js"></script>
  -->
+
+    @yield('bottomscript')
+
 </body>
 </html>
