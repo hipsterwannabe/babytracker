@@ -37,6 +37,12 @@ class HomeController extends BaseController {
 		}
 	}
 
+	public function logout()
+	{
+		Auth::logout();
+		return Redirect::action('HomeController@showLogin');
+	}
+
 	public function getNewUser()
 	{
 		return View::make('new-user');
@@ -52,4 +58,5 @@ class HomeController extends BaseController {
 
 		return Redirect::to('/home');
 	}
+
 }
