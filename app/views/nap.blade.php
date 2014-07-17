@@ -13,10 +13,24 @@
 	    		var startNap = null;
 		    	var stopNap = null;
 		        $('document').ready(function() {
+		        	// click event logs timestamp and changes button
+		        	if (startNap == null && stopNap == null) {
 		            $('#timer').click(function() {
 		               startNap = moment();
-		               $(this).class = "btn btn-danger";
+		               $(this).removeClass("btn btn-success").addClass("btn btn-danger");
+		               $(this).text("STOP NAP");
+		               console.log(startNap).;
 		            });
+		        	}
+		        	// second click even logs stop time, changes text. button should prevent extra clicks
+		        	if ((typeof(startNap) != "undefined" && startNap !== null) && stopNap == null){
+		        	   $('#timer').click(function() {
+		               stopNap = moment();
+		               $(this).removeClass("btn btn-danger").addClass("btn btn-success");
+		               $(this).text("Wakey Wakey!");
+		               console.log(stopNap).;
+		            });
+		        	}
 		        });
 		    </script>
 	    	<button type="button" class="btn btn-success" id="timer">START NAP</button>
