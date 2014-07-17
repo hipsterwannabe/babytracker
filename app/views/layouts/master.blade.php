@@ -28,7 +28,7 @@
                 <li><a href="/home">Menu</a></li>
                 <li><a href="/nap">Nap</a></li>
                 <li><a href="/diaper">Diaper</a></li>
-                <li><a href="/eating-prompt">Eating</a></li>
+                <li><a href="/eating">Eating</a></li>
             </ul>
             <div class="pull-right">
                 <ul class="nav pull-right">
@@ -42,29 +42,30 @@
                     </li>
                 </ul>
               </div>
-        </nav>
-    </div>
-    <div>
-	    @if (Session::has('successMessage'))
-	    	<div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
-		@endif
-		@if (Session::has('errorMessage'))
-		    <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
-		@endif
-    </div>
+        </nav>   
+        <div>
+    	    @if (Session::has('successMessage'))
+    	    	<div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
+    		@endif
+    		@if (Session::has('errorMessage'))
+    		    <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
+    		@endif
+        </div>
 
-    @yield('content')
-    
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-	<script src="assets/js/classie.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/smoothscroll.js"></script>
-	<script src="assets/js/jquery.stellar.min.js"></script>
-	<script src="assets/js/fancybox/jquery.fancybox.js"></script>    
-	<script src="assets/js/main.js"></script>
+        @yield('content')
+        
+        <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    	<script src="assets/js/classie.js"></script>
+        <script src="assets/js/bootstrap.min.js"></script>
+        <script src="assets/js/smoothscroll.js"></script>
+    	<script src="assets/js/jquery.stellar.min.js"></script>
+    	<script src="assets/js/fancybox/jquery.fancybox.js"></script>    
+    	<script src="assets/js/main.js"></script>
+
+    </div>
     
 </body>
 </html>
