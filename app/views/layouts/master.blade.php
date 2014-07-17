@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="en">
   <head>
         <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
+    <!-- moment.js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
     <!-- jQuery -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js">
     </script>
@@ -24,7 +25,7 @@
                 <li><a href="/home">Menu</a></li>
                 <li><a href="/nap">Nap</a></li>
                 <li><a href="/diaper">Diaper</a></li>
-                <li><a href="/eating">Eating</a></li>
+                <li><a href="/eating-prompt">Eating</a></li>
             </ul>
         </nav>
     </div>
