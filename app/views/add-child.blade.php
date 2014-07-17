@@ -6,6 +6,7 @@
 		<h1>Add Child</h1>
 		<hr>
 	</div>
+
 	<form action="POST">
 		<input class="form-control" type="text" placeholder="Name"><br>
 
@@ -17,9 +18,7 @@
   
         {{ Form::radio('gender', 'F') }}
         {{ Form::label('gender', 'F') }}
-        <br>
-
-		
+        <br>		
 
 		<button type="submit" class="btn btn-primary">Submit</button>
 	</form>
