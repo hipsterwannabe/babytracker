@@ -9,7 +9,17 @@
 	<!-- buttong should change to STOP onclick -->
     
 	    <div>
-	    	<button type="button" class="btn btn-success">{{ Form::submit('START NAP') }}</button>
+	    	<script>
+	    		var startNap = null;
+		    	var stopNap = null;
+		        $('document').ready(function() {
+		            $('#timer').click(function() {
+		               startNap = moment();
+		               $(this).class = "btn btn-danger";
+		            });
+		        });
+		    </script>
+	    	<button type="button" class="btn btn-success" id="timer">START NAP</button>
 	    
 		</div>
 	    <br>
