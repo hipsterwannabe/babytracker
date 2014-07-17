@@ -20,9 +20,9 @@ Route::get('/new-user', 'HomeController@getNewUser');
 
 Route::post('/new-user', 'HomeController@newUser');
 
-Route::get('/diaper', 'EventController@showDiaper');
+Route::get('/diaper/{id}', 'EventController@showDiaper');
 
-Route::post('/diaper', 'EventController@doDiaper');
+Route::post('/diaper/{id}', 'EventController@doDiaper');
 
 Route::get('/add-child', function()
 {
