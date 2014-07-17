@@ -26,6 +26,16 @@ Route::get('/diaper/{id}', 'EventController@showDiaper');
 
 Route::post('/diaper/{id}', 'EventController@doDiaper');
 
+Route::get('/home', function()
+{
+    return View::make('menu');
+});
+
+Route::get('/home/{id}', function()
+{
+    return View::make('menu');
+});
+
 Route::get('/add-child', function()
 {
    return View::make('add-child');
@@ -50,10 +60,7 @@ Route::get('/breast', function()
 {
 	return View::make('breast');
 });
-Route::get('/home', function()
-{
-    return View::make('menu');
-});
+
 Route::get('/baby-stats', function()
 {
     return View::make('baby-stats');
