@@ -18,6 +18,9 @@
     <!-- CSS for the website -->
     <link href="assets/css/style.css" rel="stylesheet">
   </head>
+    
+<body data-spy="scroll" data-offset="0" data-target="#theMenu"> 
+
     <div class="container">
         <nav class="navbar navbar-default navbar-static-top" role="navigation">
             <ul class="nav navbar-nav">
@@ -26,9 +29,20 @@
                 <li><a href="/diaper">Diaper</a></li>
                 <li><a href="/eating">Eating</a></li>
             </ul>
+            <div class="pull-right">
+                <ul class="nav pull-right">
+                    <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Welcome, User <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/user/preferences"><i class="icon-cog"></i> Preferences</a></li>
+                            <li><a href="/help/support"><i class="icon-envelope"></i> Contact Support</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/auth/logout"><i class="icon-off"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+              </div>
         </nav>
     </div>
-    <body data-spy="scroll" data-offset="0" data-target="#theMenu">    
     <div>
 	    @if (Session::has('successMessage'))
 	    	<div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>

@@ -1,6 +1,14 @@
 @extends('layouts.master')
 
 @section('content')
+	
+	<style>
+
+		.babyImage {
+			text-align: center;
+		}
+
+	</style>
 
 	<div class="container">
 
@@ -9,8 +17,10 @@
 		<!-- TODO: add a view to add a child -->
 		<button>Add Child</button><br>
 
-		<a href="baby-stats"><img src="assets/img/baby-face.jpg"></a><br>
-	
+		<div class="babyImage">
+			<a href="baby-stats"><img class="img-circle" src="assets/img/baby-face.jpg"></a><br>
+		</div>
+
 	</div>
 	
 @stop

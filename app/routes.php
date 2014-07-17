@@ -25,7 +25,7 @@ Route::get('/nap', function()
 	return View::make('nap');
 });
 
-Route::get('/eating-prompt', function()
+Route::get('/eating', function()
 {
 	return View::make('eating-prompt');
 });

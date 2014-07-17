@@ -7,12 +7,9 @@
 
 		<!-- depending on input, user will be taken to appropriate view -->
 		<form>
-			<label for="bottle">Bottle</label><br>
-			<input type="radio" name="feeding" value="Bottle"><br>
-			<label for="breast">Breast</label><br>
-			<input type="radio" name="feeding" value="Breast"><br>
-			<button type="submit" class="submit">Submit</button>
+			<a class="btn btn-block btn-info" href="breast">Breast</a>
+			<a class="btn btn-block btn-warning" href="bottle">Bottle</a>
 		</form>
 	</div>
-	
+
 @stop
