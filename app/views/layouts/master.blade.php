@@ -46,15 +46,17 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/nap">Nap</a></li>
-                        <li><a href="/diaper">Diaper</a></li>
-                        <li><a href="/eating">Eating</a></li>
+                        @foreach ( Auth::user()->babies as $baby)
+                            <li><a href="/nap/{{$baby->id}}">Nap</a></li>
+                            <li><a href="/diaper/{{$baby->id}}">Diaper</a></li>
+                            <li><a href="/eating/{{$baby->id}}">Eating</a></li>
+                        @endforeach
                         @if (Auth::check())
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}<span class="caret"></span></a>
                                 <ul class="dropdown-menu list-group" role="menu">
                                     @foreach ( Auth::user()->babies as $baby)
-                                        <li class="list-group-item">{{ $baby->name }}</li>
+                                        <li class="list-group-item"><a href="/home/{{$baby->id}}" >{{ $baby->name }}</a></li>
                                     @endforeach
                                     <li><a href="/logout">Logout</a></li>
                                 </ul>
