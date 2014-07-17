@@ -13,17 +13,13 @@
     <!-- moment.js -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
 
-    <!-- jQuery -->
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-
     <!-- Optional theme -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
     <!-- CSS for the website -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <link href="/assets/css/style.css" rel="stylesheet">
+
+    @yield('topscript')
 
 </head>
 
@@ -44,14 +40,14 @@
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         @if (Auth::check())
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}<span class="caret"></span></a>
                                 <ul class="dropdown-menu" role="menu">
                                     @foreach ( Auth::user()->babies as $baby)
-                                        <li><a href="/home/{{$baby->id}}" >{{ $baby->name }}</a></li>
+                                        <li><a href="/menu/{{$baby->id}}" >{{ $baby->name }}</a></li>
                                     @endforeach
                                     <li><a href="/logout">Logout</a></li>
                                 </ul>
@@ -88,12 +84,12 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="assets/js/classie.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/smoothscroll.js"></script>
-    <script src="assets/js/jquery.stellar.min.js"></script>
-    <script src="assets/js/fancybox/jquery.fancybox.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="/assets/js/classie.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/smoothscroll.js"></script>
+    <script src="/assets/js/jquery.stellar.min.js"></script>
+    <script src="/assets/js/fancybox/jquery.fancybox.js"></script>
+    <script src="/assets/js/main.js"></script>
 
     @yield('bottomscript')
 </body>
