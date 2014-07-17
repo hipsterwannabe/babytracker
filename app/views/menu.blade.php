@@ -9,7 +9,7 @@
 		<!-- TODO: add a view to add a child -->
 		<button>Add Child</button><br>
 
-		<img src="assets/img/baby-face.jpg"><br>
+		<a href="baby-stats"><img src="assets/img/baby-face.jpg"></a><br>
 	
 	</div>
 	

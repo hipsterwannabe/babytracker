@@ -21,7 +21,7 @@
     <div class="container">
         <nav class="navbar navbar-default navbar-static-top" role="navigation">
             <ul class="nav navbar-nav">
-                <li><a href="/">Menu</a></li>
+                <li><a href="/home">Menu</a></li>
                 <li><a href="/nap">Nap</a></li>
                 <li><a href="/diaper">Diaper</a></li>
                 <li><a href="/eating">Eating</a></li>
