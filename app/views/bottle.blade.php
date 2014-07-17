@@ -1,6 +1,7 @@
 @extends('layouts.master')
 
 @section('content')
+
 	<div class="container">
 		<h1>Bottle View</h1>
 
