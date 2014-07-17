@@ -24,7 +24,7 @@
                 <li><a href="/">Menu</a></li>
                 <li><a href="/nap">Nap</a></li>
                 <li><a href="/diaper">Diaper</a></li>
-                <li><a href="/eating">Eating</a></li>
+                <li><a href="/eating-prompt">Eating</a></li>
             </ul>
         </nav>
     </div>
