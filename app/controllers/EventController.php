@@ -2,15 +2,6 @@
 
 class EventController extends BaseController {
 
-    // public function __construct()
-    // {
-    //     // call base controller constructor
-    //     parent::__construct();
-
-    //     // run auth filter before all methods on this controller except index and show
-    //     $this->beforeFilter('auth');
-    // }
-
     public function showDiaper($id)
     {
         return View::make('diaper');
@@ -19,7 +10,7 @@ class EventController extends BaseController {
     public function doDiaper($id)
     {
         $diaper = new Diaper();
-        $diaper->baby_id =
+        $diaper->baby_id = $id;
 
         if (Input::get('type') == '#1') {
             $diaper->number_one == true;
