@@ -11,16 +11,15 @@ class EventController extends BaseController {
     //     $this->beforeFilter('auth');
     // }
 
-    public function showDiaper()
+    public function showDiaper($id)
     {
         return View::make('diaper');
     }
 
-    public function doDiaper()
+    public function doDiaper($id)
     {
         $diaper = new Diaper();
-        $diaper->id = Input::get('');
-        $diaper->baby_id = Input::get('');
+        $diaper->baby_id =
 
         if (Input::get('type') == '#1') {
             $diaper->number_one == true;
@@ -44,7 +43,5 @@ class EventController extends BaseController {
         $diaper->notes = Input::get('notes');
         $diaper->save();
     }
-
-
 
 }
