@@ -69,14 +69,22 @@
             </div><!-- /.container -->
         </nav>
 
-        <div>
-            @if (Session::has('successMessage'))
-                <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
-            @endif
-            @if (Session::has('errorMessage'))
-                <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
-            @endif
-        </div>
+        @if (Session::has('successMessage'))
+            <div class="alert alert-success" role="alert">
+                {{{ Session::get('successMessage') }}}
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
+            </div>
+        @endif
+        @if (Session::has('errorMessage'))
+            <div class="alert alert-danger" role="alert">
+                {{{ Session::get('errorMessage') }}}
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                </button>
+            </div>
+        @endif
 
         @yield('content')
 
