@@ -47,6 +47,10 @@ Route::get('/home', function()
 {
     return View::make('menu');
 });
+Route::get('/baby-stats', function()
+{
+    return View::make('baby-stats');
+});
 
 Route::get('test', function () {
 
