@@ -26,17 +26,17 @@ Route::get('/diaper/{id}', 'EventController@showDiaper');
 
 Route::post('/diaper/{id}', 'EventController@doDiaper');
 
-Route::get('/home', function()
+Route::get('/menu', function()
 {
     if (Auth::check()) {
-        return View::make('menu');
+        return View::make('child-menu');
     }
     else {
         return Redirect::action('HomeController@showLogin');
     }
 });
 
-Route::get('/home/{id}', function()
+Route::get('/menu/{id}', function()
 {
     return View::make('menu');
 });
