@@ -20,6 +20,15 @@ Route::get('/new-user', 'HomeController@getNewUser');
 
 Route::post('/new-user', 'HomeController@newUser');
 
+Route::get('/diaper/{id}', 'EventController@showDiaper');
+
+Route::post('/diaper/{id}', 'EventController@doDiaper');
+
+Route::get('/add-child', function()
+{
+   return View::make('add-child');
+});
+
 Route::get('/nap', function()
 {
 	return View::make('nap');
@@ -38,10 +47,6 @@ Route::get('/bottle', function()
 Route::get('/breast', function()
 {
 	return View::make('breast');
-});
-Route::get('/diaper', function()
-{
-	return View::make('diaper');
 });
 Route::get('/home', function()
 {
