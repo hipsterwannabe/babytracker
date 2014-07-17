@@ -7,6 +7,8 @@
 
     <h2>What was inside?</h2>
 
+    {{ Form::open(array('action' => 'EventController@doDiaper')) }}
+
     {{ Form::select('type', array('number_one' => '#1', 'number_two' => '#2', 'both' => 'Both')) }}
 
     <h2>What consistency was the poop?</h2>
@@ -26,6 +28,8 @@
     <textarea name="notes" rows="4" cols="50">Diaper Notes</textarea>
     <br>
     {{ Form::submit('SUBMIT') }}
+
+    {{ Form::close() }}
 </div>
 
 @stop
