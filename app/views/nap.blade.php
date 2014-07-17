@@ -9,7 +9,7 @@
 	<!-- buttong should change to STOP onclick -->
     
 	    <div>
-	    	<button type="button" class="btn btn-primary">{{ Form::submit('START NAP') }}</button>
+	    	<button type="button" class="btn btn-success">{{ Form::submit('START NAP') }}</button>
 	    
 		</div>
 	    <br>
