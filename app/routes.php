@@ -12,9 +12,11 @@
 */
 
 
-Route::get('/', 'HomeController@showLogin');
+Route::get('/login', 'HomeController@showLogin');
 
-Route::post('/', 'HomeController@doLogin');
+Route::post('/login', 'HomeController@doLogin');
+
+Route::get('/logout', 'HomeController@logout');
 
 Route::get('/new-user', 'HomeController@getNewUser');
 
