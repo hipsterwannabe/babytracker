@@ -31,6 +31,12 @@
             <h2 class="featurette-heading">Baby Name. <span class="text-muted">other info.</span></h2>
             <p class="lead">anything else you want to put here.</p>
         </div>
+
+        <div class="btn-group-vertical">
+            <a href="#" class="btn btn-primary" role="button">Diaper</a>
+            <a href="#" class="btn btn-primary" role="button">Eat</a>
+            <a href="#" class="btn btn-primary" role="button">Sleep</a>
+        </div>
     </div>
 
 @stop
