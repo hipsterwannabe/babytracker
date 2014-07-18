@@ -44,4 +44,26 @@ class EventController extends BaseController {
         return Redirect::action('EventController@showMenu', $id);
     }
 
+    public function showBottle($id)
+    {
+        $baby = Baby::findOrFail($id);
+        return View::make('bottle')->with('baby', $baby);
+    }
+
+    public function doBottle($id)
+    {
+        $bottle = new Feeding();
+        $bottle->baby_id = $id;
+
+        $feeding->bottle = true;
+        $feeding->start_bottle = Input::get('bottleStart');
+        $feeding->stop_bottle = Input::get('bottleStop');
+        $feeding->bottle_ounces = Input::get('ounces');
+        $fedding->notes = Input::get('notes');
+        $feeding->save();
+
+        return Redirect::action('EventController@showMenu', $id);
+
+    }
+
 }

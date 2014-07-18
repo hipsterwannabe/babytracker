@@ -26,6 +26,10 @@ Route::get('/diaper/{id}', 'EventController@showDiaper');
 
 Route::post('/diaper/{id}', 'EventController@doDiaper');
 
+Route::get('/bottle/{id}', 'EventController@showBottle');
+
+Route::post('/bottle/{id}', 'EventController@doBottle');
+
 Route::get('/menu/{id}', 'EventController@showMenu');
 
 Route::get('/menu', function()
@@ -51,11 +55,6 @@ Route::get('/nap', function()
 Route::get('/eating', function()
 {
 	return View::make('eating-prompt');
-});
-
-Route::get('/bottle', function()
-{
-	return View::make('bottle');
 });
 
 Route::get('/breast', function()
