@@ -2,6 +2,12 @@
 
 class EventController extends BaseController {
 
+    public function showMenu($id)
+    {
+        $baby = Baby::findOrFail($id);
+        return View::make('menu')->with('baby', $baby);
+    }
+
     public function showDiaper($id)
     {
         $baby = Baby::findOrFail($id);
@@ -14,9 +20,9 @@ class EventController extends BaseController {
         $diaper->baby_id = $id;
 
         if (Input::get('type') == 'number_one') {
-            $diaper->number_one == true;
+            $diaper->number_one = true;
         }
-        elseif (Input::get('type') == '#2') {
+        elseif (Input::get('type') == 'number_two') {
             $diaper->number_two = true;
             $diaper->consistency = Input::get('consistency');
             $diaper->color = Input::get('color');
@@ -35,7 +41,7 @@ class EventController extends BaseController {
         $diaper->notes = Input::get('notes');
         $diaper->save();
 
-        return Redirect::to('/menu');
+        return Redirect::action('EventController@showMenu', $id);
     }
 
 }

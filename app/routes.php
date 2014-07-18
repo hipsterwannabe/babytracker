@@ -26,6 +26,8 @@ Route::get('/diaper/{id}', 'EventController@showDiaper');
 
 Route::post('/diaper/{id}', 'EventController@doDiaper');
 
+Route::get('/menu/{id}', 'EventController@showMenu');
+
 Route::get('/menu', function()
 {
     if (Auth::check()) {
@@ -34,11 +36,6 @@ Route::get('/menu', function()
     else {
         return Redirect::action('HomeController@showLogin');
     }
-});
-
-Route::get('/menu/{id}', function()
-{
-    return View::make('menu');
 });
 
 Route::get('/add-child', function()
