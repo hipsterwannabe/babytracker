@@ -16,9 +16,6 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
-    <!-- CSS for the website -->
-    <link href="/assets/css/style.css" rel="stylesheet">
-
     @yield('topscript')
 
 </head>
@@ -37,6 +34,8 @@
                     <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="/menu">Menu</a>
+                    <a class="navbar-brand" href="/graphs">Graphs</a>
+                    <a class="navbar-brand" href="/about">About Us</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
