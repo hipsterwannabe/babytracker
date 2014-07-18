@@ -37,6 +37,8 @@
                     <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="/menu">Menu</a>
+                    <a class="navbar-brand" href="/graphs">Graphs</a>
+                    <a class="navbar-brand" href="/about">About Us</a>
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
