@@ -2,8 +2,7 @@
 
 @section('content')
 
-<h1>Here is (child name's) stats</h1>
-<hr>
+<h1>Here is {{ $baby->name }} stats</h1>
 
 @stop
 

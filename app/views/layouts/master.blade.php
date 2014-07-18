@@ -13,8 +13,11 @@
     <!-- moment.js -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <!-- Amelia stylesheet -->
+    <link rel="stylesheet" href="/css/amelia.css">
+
+    <!-- flipclock styling -->
+    <link rel="stylesheet" type="text/css" href="/assets/FlipClock-master/compiled/flipclock.css">
 
     @yield('topscript')
 

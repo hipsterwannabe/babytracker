@@ -4,43 +4,72 @@
 
 <div class="container">
     <h1>Bottle View</h1>
-
+    <div class="col-md-6" id="bottleTimer"></div>
     {{ Form::open(array('action' => array('EventController@doBottle', $baby->id))) }}
 
-    {{ Form::label('start', 'Start Bottle') }}
-    {{ Form::button('start', array('id' => 'start')) }}
-
-    {{ Form::label('stop', 'Finish Bottle') }}
-    {{ Form::button('stop', array('id' => 'stop')) }}
-
+    {{ Form::button('Start', array('class' => 'btn btn-success', 'id' => 'timer')) }}
+    
     {{ Form::label('ounces', 'Ounces:') }}
     {{ Form::selectRange('ounces', 0, 10) }}
-
+    
     {{ Form::label('notes', 'Notes') }}
     {{ Form::textarea('notes', null, array('placeholder' => 'feeding notes...')) }}
-
+    <!-- hidden inputs, for start and end times -->
+    {{ Form::hidden('startNap', null, array('id' => 'beginTime')) }}
+    {{ Form::hidden('stopNap', null, array('id' => 'endTime')) }}
+    
     {{ Form::submit('Submit')}}
 
     {{ Form::close() }}
+   
 </div>
 
 @stop
 
 @section('bottomscript')
+<script type="text/javascript" src="/assets/FlipClock-master/compiled/flipclock.js"></script>
 
 <script>
-
-    // Grab timestamp on click
-    $('#start').click(function() {
-        start = event.timeStamp;
-        console.log(start);
+    //initialize values
+    var startBottle = null;
+    var stopBottle = null;
+    var flipClock = null;
+    $(document).ready(function() {
+        // Click event logs timestamp and changes button
+        // below will be a live event upon a click
+        $(document).on('click', "#timer", function() {
+        if (startBottle == null && stopBottle == null) {
+            startBottle = moment();
+            $(this).removeClass("btn btn-success").addClass("btn btn-danger");
+            $(this).text("END FEEDING");
+            console.log(startBottle);
+            $("#begintime").val(startBottle);
+            //timer to go here, using flipclock
+            flipClock = $('#bottleTimer').FlipClock({ 
+            });
+        } else if (startBottle !== null && stopBottle == null) {
+            // logs time of stopBottle, disables button
+            stopBottle = moment();
+            $(this).text("TUMMY'S FULL!");
+            $(this).attr("disabled", "disabled");
+            console.log(stopBottle);
+            $("#endtime").val(stopBottle);
+            //stop the flipclock timer
+            flipClock.stop();
+            }
+      });
     });
+    // // Grab timestamp on click
+    // $('#start').click(function() {
+    //     start = event.timeStamp;
+    //     console.log(start);
+    // });
 
-    // Grab timestamp on click
-    $('#stop').click(function() {
-        stop = event.timeStamp;
-        console.log(stop);
-    });
+    // // Grab timestamp on click
+    // $('#stop').click(function() {
+    //     stop = event.timeStamp;
+    //     console.log(stop);
+    // });
 
 </script>
 @stop
