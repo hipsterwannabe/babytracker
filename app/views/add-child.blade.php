@@ -10,6 +10,7 @@
 <form action="POST">
     <input class="form-control" type="text" placeholder="Name"><br>
 
+    <!-- change this input to be 3 dropdowns for YYYY/MM/DD -->
     <input class="form-control" type="text" placeholder="Date of birth"><br>
 
     <label>Gender: </label>

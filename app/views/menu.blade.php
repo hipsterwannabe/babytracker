@@ -14,13 +14,6 @@
 
         <h1>Main Menu</h1>
 
-        <!-- Select child to log data to -->
-        <form>
-                <a class="btn btn-lg btn-info pull-right" href="add-child">Add Child</a>
-        </form>
-
-        <hr class="featurette-divider">
-
         <!-- Baby picture and info -->
         <div class="featurette">
             <div class="babyImage featurette-image img-circle pull-left">
@@ -28,15 +21,14 @@
                 <p class="text-muted">click to edit info</p>
             </div>
             <!-- use logic to display info based on baby id instead of hard-code info -->
-            <h2 class="featurette-heading">Baby Name. <span class="text-muted">other info.</span></h2>
-            <p class="lead">anything else you want to put here.</p>
+            <h2 class="featurette-heading"> {{ $baby->name }} <span class="text-muted">other info.</span></h2>
         </div>
 
         <div class="btn-group-vertical">
-            <a href="{{{ action('EventController@showDiaper', $baby->id) }}}" class="btn btn-primary" role="button">Diaper</a>
-            <a href="{{{ action('EventController@showBottle', $baby->id) }}}" class="btn btn-primary" role="button">Bottle</a>
-            <a href="{{{ action('EventController@showBreast', $baby->id) }}}" class="btn btn-primary" role="button">Nurse</a>
-            <a href="#" class="btn btn-primary" role="button">Sleep</a>
+            <a href="{{{ action('EventController@showDiaper', $baby->id) }}}" class="btn btn-block btn-info" role="button">Diaper</a>
+            <a href="{{{ action('EventController@showBottle', $baby->id) }}}" class="btn btn-block btn-info" role="button">Bottle</a>
+            <a href="{{{ action('EventController@showBreast', $baby->id) }}}" class="btn btn-block btn-info" role="button">Nurse</a>
+            <a href="#" class="btn btn-block btn-info" role="button">Sleep</a>
         </div>
     </div>
 
