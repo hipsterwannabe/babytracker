@@ -16,6 +16,8 @@ class CreateSleepTable extends Migration {
         {
             $table->increments('id');
             $table->integer('baby_id')->unsigned();
+            $table->timestamp('start');
+            $table->timestamp('end');
             $table->text('notes')->nullable();
             $table->timestamps();
         });

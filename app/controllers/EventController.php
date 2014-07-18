@@ -89,4 +89,24 @@ class EventController extends BaseController {
 
     }
 
+    public function showNap($id)
+    {
+        $baby = Baby::findOrFail($id);
+        return View::make('nap')->with('baby', $baby);
+    }
+
+    public function doNap($id)
+    {
+        $nap = new Nap();
+        $nap->baby_id = $id;
+
+        $nap->start =
+        $nap->end =
+        $nap->notes = Input::get('notes');
+        $nap->save();
+
+        return Redirect::action('EventController@showMenu', $id);
+
+    }
+
 }
