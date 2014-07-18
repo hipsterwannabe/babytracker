@@ -33,8 +33,9 @@
         </div>
 
         <div class="btn-group-vertical">
-            <a href="#" class="btn btn-primary" role="button">Diaper</a>
-            <a href="#" class="btn btn-primary" role="button">Eat</a>
+            <a href="{{{ action('EventController@showDiaper', $baby->id) }}}" class="btn btn-primary" role="button">Diaper</a>
+            <a href="{{{ action('EventController@showBottle', $baby->id) }}}" class="btn btn-primary" role="button">Bottle</a>
+            <a href="{{{ action('EventController@showBreast', $baby->id) }}}" class="btn btn-primary" role="button">Nurse</a>
             <a href="#" class="btn btn-primary" role="button">Sleep</a>
         </div>
     </div>
