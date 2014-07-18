@@ -42,6 +42,16 @@ Route::get('/menu', function()
     }
 });
 
+Route::get('/graphs', function()
+{
+   return View::make('graphs');
+});
+
+Route::get('/about', function()
+{
+   return View::make('about');
+});
+
 Route::get('/add-child', function()
 {
    return View::make('add-child');
