@@ -30,6 +30,10 @@ Route::get('/bottle/{id}', 'EventController@showBottle');
 
 Route::post('/bottle/{id}', 'EventController@doBottle');
 
+Route::get('/breast/{id}', 'EventController@showBreast');
+
+Route::post('/breast/{id}', 'EventController@doBreast');
+
 Route::get('/menu/{id}', 'EventController@showMenu');
 
 Route::get('/menu', function()
