@@ -34,6 +34,10 @@ Route::get('/breast/{id}', 'EventController@showBreast');
 
 Route::post('/breast/{id}', 'EventController@doBreast');
 
+Route::get('/nap/{id}', 'EventController@showNap');
+
+Route::post('/nap/{id}', 'EventController@doNap');
+
 Route::get('/menu/{id}', 'EventController@showMenu');
 
 Route::get('/menu', function()
@@ -46,7 +50,7 @@ Route::get('/menu', function()
     }
 });
 
-Route::get('/graphs', function()
+Route::get('/graphs/{id}', function()
 {
    return View::make('graphs');
 });
@@ -59,11 +63,6 @@ Route::get('/about', function()
 Route::get('/add-child', function()
 {
    return View::make('add-child');
-});
-
-Route::get('/nap', function()
-{
-	return View::make('nap');
 });
 
 Route::get('/eating', function()
