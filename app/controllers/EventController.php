@@ -34,6 +34,8 @@ class EventController extends BaseController {
 
         $diaper->notes = Input::get('notes');
         $diaper->save();
+
+        return View::make('menu');
     }
 
 }
