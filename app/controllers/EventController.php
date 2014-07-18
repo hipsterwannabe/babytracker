@@ -13,7 +13,7 @@ class EventController extends BaseController {
         $diaper = new Diaper();
         $diaper->baby_id = $id;
 
-        if (Input::get('type') == '#1') {
+        if (Input::get('type') == 'number_one') {
             $diaper->number_one == true;
         }
         elseif (Input::get('type') == '#2') {
@@ -35,7 +35,7 @@ class EventController extends BaseController {
         $diaper->notes = Input::get('notes');
         $diaper->save();
 
-        return View::make('menu');
+        return Redirect::to('/menu');
     }
 
 }
