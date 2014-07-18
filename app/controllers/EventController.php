@@ -55,12 +55,12 @@ class EventController extends BaseController {
         $bottle = new Feeding();
         $bottle->baby_id = $id;
 
-        $feeding->bottle = true;
-        $feeding->start_bottle = Input::get('bottleStart');
-        $feeding->stop_bottle = Input::get('bottleStop');
-        $feeding->bottle_ounces = Input::get('ounces');
-        $fedding->notes = Input::get('notes');
-        $feeding->save();
+        $bottle->bottle = true;
+        $bottle->start_bottle = Input::get('start');
+        $bottle->stop_bottle = Input::get('stop');
+        $bottle->bottle_ounces = Input::get('ounces');
+        $bottle->notes = Input::get('notes');
+        $bottle->save();
 
         return Redirect::action('EventController@showMenu', $id);
 
