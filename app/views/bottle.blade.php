@@ -8,10 +8,10 @@
     {{ Form::open(array('action' => array('EventController@doBottle', $baby->id))) }}
 
     {{ Form::label('start', 'Start Bottle') }}
-    {{ Form::button('start') }}
+    {{ Form::button('start', array('id' => 'start')) }}
 
     {{ Form::label('stop', 'Finish Bottle') }}
-    {{ Form::button('stop') }}
+    {{ Form::button('stop', array('id' => 'stop')) }}
 
     {{ Form::label('ounces', 'Ounces:') }}
     {{ Form::selectRange('ounces', 0, 10) }}
@@ -24,4 +24,23 @@
     {{ Form::close() }}
 </div>
 
+@stop
+
+@section('bottomscript')
+
+<script>
+
+    // Grab timestamp on click
+    $('#start').click(function() {
+        start = event.timeStamp;
+        console.log(start);
+    });
+
+    // Grab timestamp on click
+    $('#stop').click(function() {
+        stop = event.timeStamp;
+        console.log(stop);
+    });
+
+</script>
 @stop
