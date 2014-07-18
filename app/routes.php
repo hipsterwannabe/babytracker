@@ -26,6 +26,16 @@ Route::get('/diaper/{id}', 'EventController@showDiaper');
 
 Route::post('/diaper/{id}', 'EventController@doDiaper');
 
+Route::get('/bottle/{id}', 'EventController@showBottle');
+
+Route::post('/bottle/{id}', 'EventController@doBottle');
+
+Route::get('/breast/{id}', 'EventController@showBreast');
+
+Route::post('/breast/{id}', 'EventController@doBreast');
+
+Route::get('/menu/{id}', 'EventController@showMenu');
+
 Route::get('/menu', function()
 {
     if (Auth::check()) {
@@ -36,9 +46,14 @@ Route::get('/menu', function()
     }
 });
 
-Route::get('/menu/{id}', function()
+Route::get('/graphs', function()
 {
-    return View::make('menu');
+   return View::make('graphs');
+});
+
+Route::get('/about', function()
+{
+   return View::make('about');
 });
 
 Route::get('/add-child', function()
@@ -54,11 +69,6 @@ Route::get('/nap', function()
 Route::get('/eating', function()
 {
 	return View::make('eating-prompt');
-});
-
-Route::get('/bottle', function()
-{
-	return View::make('bottle');
 });
 
 Route::get('/breast', function()

@@ -5,28 +5,42 @@
 <div class="container">
     <h1>Bottle View</h1>
 
-    <form action="POST">
-        <label for="bottleStart"></label>
-        <button name="bottleStart" id="bottleStart">Bottle Start</button><br>
-    </form>
+    {{ Form::open(array('action' => array('EventController@doBottle', $baby->id))) }}
 
-    <form action="POST">
-        <label for="bottleStop"></label>
-        <button name="bottleStop" id="bottleStop">Bottle Stop</button><br>
-    </form>
+    {{ Form::label('start', 'Start Bottle') }}
+    {{ Form::button('start', array('id' => 'start')) }}
 
-    <hr>
+    {{ Form::label('stop', 'Finish Bottle') }}
+    {{ Form::button('stop', array('id' => 'stop')) }}
 
-    <form>
+    {{ Form::label('ounces', 'Ounces:') }}
+    {{ Form::selectRange('ounces', 0, 10) }}
 
-        <label for="ounces">Ounces</label><br>
-        <input type="text" name="ounces" id="ounces" size="5" maxlength="5"><br>
+    {{ Form::label('notes', 'Notes') }}
+    {{ Form::textarea('notes', null, array('placeholder' => 'feeding notes...')) }}
 
-        <label for="notes">Notes</label><br>
-        <textarea name="notes" class="notes" type="text"></textarea><br>
-        <button type="submit" class="submit">Submit</button>
+    {{ Form::submit('Submit')}}
 
-    </form>
+    {{ Form::close() }}
 </div>
 
+@stop
+
+@section('bottomscript')
+
+<script>
+
+    // Grab timestamp on click
+    $('#start').click(function() {
+        start = event.timeStamp;
+        console.log(start);
+    });
+
+    // Grab timestamp on click
+    $('#stop').click(function() {
+        stop = event.timeStamp;
+        console.log(stop);
+    });
+
+</script>
 @stop
