@@ -33,7 +33,7 @@
         </div>
 
         <div class="btn-group-vertical">
-            <a href="#" class="btn btn-primary" role="button">Diaper</a>
+            <a href="/diaper/{id}" class="btn btn-primary" role="button">Diaper</a>
             <a href="#" class="btn btn-primary" role="button">Eat</a>
             <a href="#" class="btn btn-primary" role="button">Sleep</a>
         </div>
