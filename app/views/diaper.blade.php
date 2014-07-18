@@ -24,9 +24,9 @@
     {{ Form::label('leak', 'NO') }}
     {{ Form::radio('leak', 'NO') }}
 
-    <h2>Enter any notes below.</h2>
-    <textarea name="notes" rows="4" cols="50">Diaper Notes</textarea>
-    <br>
+    {{ Form::label('notes', 'Notes') }}
+    {{ Form::textarea('notes', null, array('placeholder' => 'diaper notes...')) }}
+
     {{ Form::submit('SUBMIT') }}
 
     {{ Form::close() }}
