@@ -7,7 +7,7 @@
 
     <h2>What was inside?</h2>
 
-    {{ Form::open(array('action' => 'EventController@doDiaper')) }}
+    {{ Form::open(array('action' => array('EventController@doDiaper', $baby->id))) }}
 
     {{ Form::select('type', array('number_one' => '#1', 'number_two' => '#2', 'both' => 'Both')) }}
 
