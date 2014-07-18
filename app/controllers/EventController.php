@@ -4,7 +4,8 @@ class EventController extends BaseController {
 
     public function showDiaper($id)
     {
-        return View::make('diaper');
+        $baby = Baby::findOrFail($id);
+        return View::make('diaper')->with('baby', $baby);
     }
 
     public function doDiaper($id)
