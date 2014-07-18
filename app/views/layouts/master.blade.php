@@ -16,9 +16,6 @@
     <!-- Optional theme -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
 
-    <!-- CSS for the website -->
-    <link href="/assets/css/style.css" rel="stylesheet">
-
     @yield('topscript')
 
 </head>
