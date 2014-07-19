@@ -11,7 +11,7 @@
 |
 */
 
-
+// Login & Logout
 Route::get('/login', 'HomeController@showLogin');
 
 Route::post('/login', 'HomeController@doLogin');
@@ -19,6 +19,7 @@ Route::post('/login', 'HomeController@doLogin');
 Route::get('/logout', 'HomeController@logout');
 
 
+// Add new profiles
 Route::get('/new-user', 'HomeController@getNewUser');
 
 Route::post('/new-user', 'HomeController@newUser');
@@ -28,11 +29,13 @@ Route::get('/add-baby/{id}', 'HomeController@showBaby');
 Route::post('/add-baby/{id}', 'HomeController@newBaby');
 
 
+// Change diaper
 Route::get('/diaper/{id}', 'EventController@showDiaper');
 
 Route::post('/diaper/{id}', 'EventController@doDiaper');
 
 
+// Feedings
 Route::get('/bottle/{id}', 'EventController@showBottle');
 
 Route::post('/bottle/{id}', 'EventController@doBottle');
@@ -42,11 +45,13 @@ Route::get('/breast/{id}', 'EventController@showBreast');
 Route::post('/breast/{id}', 'EventController@doBreast');
 
 
+// Take a nap
 Route::get('/nap/{id}', 'EventController@showNap');
 
 Route::post('/nap/{id}', 'EventController@doNap');
 
 
+// Show the menu
 Route::get('/menu/{id}', 'EventController@showMenu');
 
 Route::get('/menu', function()
