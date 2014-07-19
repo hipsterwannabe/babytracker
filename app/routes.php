@@ -23,9 +23,9 @@ Route::get('/new-user', 'HomeController@getNewUser');
 
 Route::post('/new-user', 'HomeController@newUser');
 
-Route::get('/add-baby/{$id}', 'HomeController@showBaby');
+Route::get('/add-baby/{id}', 'HomeController@showBaby');
 
-Route::post('/add-baby/{$id}', 'HomeController@newBaby');
+Route::post('/add-baby/{id}', 'HomeController@newBaby');
 
 
 Route::get('/diaper/{id}', 'EventController@showDiaper');

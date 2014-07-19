@@ -12,15 +12,14 @@
     {{ Form::text('name', null, array('placeholder' => 'baby name...')) }}
 
     {{ Form::label('gender', 'Gender:') }}
-    {{ Form::select('gender', array('Boy', 'Girl')) }}
+    {{ Form::select('gender', array('Boy' => 'Boy', 'Girl' => 'Girl')) }}
 
-    {{ Form::label('birth_date') }}
-    {{ Form::date('birth_date', array('placeholder' => 'YYYY-MM-DD')) }}
+    {{ Form::label('birth_date', 'Birthday:') }}
+    {{ Form::text('birth_date', null, array('placeholder' => 'YYYY-MM-DD')) }}
 
-    {{ Form::submit('Submit') }}
+    {{ Form::submit('Submit', array('class' => 'btn btn-primary')) }}
 
     {{ Form::close() }}
-
 
 
 </div>
