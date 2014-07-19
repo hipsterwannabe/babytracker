@@ -13,6 +13,8 @@
 	    @endforeach
 	</div>
 
+	<a href="{{{ action('EventController@showBaby', Auth::id()) }}}" class="btn btn-block btn-info" role="button">Add Baby</a>
+
 </div>
 
 @stop
