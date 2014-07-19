@@ -28,7 +28,7 @@
             <a href="{{{ action('EventController@showDiaper', $baby->id) }}}" class="btn btn-block btn-info" role="button">Diaper</a>
             <a href="{{{ action('EventController@showBottle', $baby->id) }}}" class="btn btn-block btn-info" role="button">Bottle</a>
             <a href="{{{ action('EventController@showBreast', $baby->id) }}}" class="btn btn-block btn-info" role="button">Nurse</a>
-            <a href="#" class="btn btn-block btn-info" role="button">Sleep</a>
+            <a href="{{{ action('EventController@showNap', $baby->id) }}}" class="btn btn-block btn-info" role="button">Sleep</a>
         </div>
     </div>
 
