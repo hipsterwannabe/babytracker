@@ -2,8 +2,6 @@
 
 @section('content')
 
-
-
 <div class="container">
 	
 	<!-- content of the view -->
@@ -15,11 +13,6 @@
 	    @endforeach
 	</div>
 
-	<form>
-	    <a id="addChild" class="btn btn-lg btn-block btn-warning" href="add-child">Add Child</a>
-	</form>
-
 </div>
-
 
 @stop
