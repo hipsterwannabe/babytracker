@@ -11,7 +11,7 @@
 
 
 <!-- nap graph -->
-<div id="container" style="width:100%; height:400px;"></div>
+<div id="container" style="width:90%; height:400px;"></div>
 
 
 
@@ -25,7 +25,7 @@
 
 @section('bottomscript')
 <script type="text/javascript">
-	$(function () { 
+	$(document).ready(function () { 
 	    $('#container').highcharts({
 	        chart: {
 	            type: 'bar'
@@ -49,5 +49,7 @@
 	            data: [5, 7, 3]
 	        }]
 	    });
+
+	});
 </script>
-});
+@stop
