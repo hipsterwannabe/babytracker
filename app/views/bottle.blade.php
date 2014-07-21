@@ -14,10 +14,11 @@
     
     {{ Form::label('notes', 'Notes') }}
     {{ Form::textarea('notes', null, array('placeholder' => 'feeding notes...')) }}
-    <!-- hidden inputs, for start and end times -->
+    <!-- hidden inputs, for start, end times and feeding length -->
     {{ Form::hidden('startNap', null, array('id' => 'beginTime')) }}
     {{ Form::hidden('stopNap', null, array('id' => 'endTime')) }}
-    
+    {{ Form::hidden('length', null, array('id' => 'lengthOfBottleFeeding')) }}
+
     {{ Form::submit('Submit')}}
 
     {{ Form::close() }}
@@ -56,6 +57,9 @@
             $("#endtime").val(stopBottle);
             //stop the flipclock timer
             flipClock.stop();
+            var bottleLength = stopBottle.diff(startBottle, 'minutes');
+            $("lengthOfBottleFeeding").val(bottleLength);
+            console.log(bottleLength);
             }
       });
     });

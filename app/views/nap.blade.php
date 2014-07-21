@@ -25,6 +25,8 @@
 
     {{ Form::hidden('stopNap', null, array('id' => 'endTime')) }}
 
+    {{ Form::hidden('stopNap', null, array('id' => 'lengthOfNap')) }}
+
     {{ Form::submit('Submit', array('class' => ('btn btn-primary'))) }}
 
     {{ Form::close() }}
@@ -65,6 +67,9 @@
                 $("#endTime").val(stopNap);
                 //stop the flipclock timer
                 flipClock.stop();
+                var napLength = stopNap.diff(startNap, 'minutes');
+                console.log(napLength);
+                $("#lengthOfNap").val(napLength);
             }
         });
     });

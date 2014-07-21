@@ -56,8 +56,9 @@ class EventController extends BaseController {
         $bottle->baby_id = $id;
 
         $bottle->bottle = true;
-        $bottle->start_bottle =
-        $bottle->stop_bottle =
+        $bottle->start_bottle = Input::get('beginTime');
+        $bottle->stop_bottle = Input::get('endTime');
+        // $bottle->length_bottle = Input::get('lengthOfBottleFeeding');
         $bottle->bottle_ounces = Input::get('ounces');
         $bottle->notes = Input::get('notes');
         $bottle->save();
@@ -100,8 +101,9 @@ class EventController extends BaseController {
         $nap = new Nap();
         $nap->baby_id = $id;
 
-        $nap->start =
-        $nap->end =
+        $nap->start = Input::get('beginTime');
+        $nap->end = Input::get('endTime');
+        //$nap->length = Input::get('lengthOfNap');
         $nap->notes = Input::get('notes');
         $nap->save();
 
@@ -112,7 +114,24 @@ class EventController extends BaseController {
     public function showGraphs($id)
     {
         $baby = Baby::findOrFail($id);
-        return View::make('graphs')->with('baby', $baby);
+
+        $napData = array();
+        $naps = $baby->naps;
+
+        foreach ($naps as $nap)
+        {
+            $napData[] = "[" . $nap->start . ',' . $nap->length . "]";
+        }
+
+        $napData = join($napData, ',');
+
+        $data = array(
+            'baby' => $baby,
+            'napData' => $napData,
+        );
+
+
+        return View::make('graphs')->with($data);
     }
 
 }
