@@ -16,7 +16,7 @@
 
     {{ Form::open(array('action' => array('EventController@doNap', $baby->id))) }}
 
-    {{ Form::button('Start', array('class' => 'btn btn-success', 'id' => 'timer')) }}
+    {{ Form::button('Start', array('class' => 'btn btn-primary', 'id' => 'timer')) }}
 
     {{ Form::label('notes', 'Notes') }}
     {{ Form::textarea('notes', null, array('placeholder' => 'Nap notes...')) }}
@@ -48,7 +48,7 @@
         $(document).on('click', "#timer", function() {
             if (startNap == null && stopNap == null) {
                 startNap = moment();
-                $(this).removeClass("btn btn-success").addClass("btn btn-danger");
+                $(this).removeClass("btn btn-primary").addClass("btn btn-danger");
                 $(this).text("STOP NAP");
                 console.log(startNap);
                 $("#beginTime").val(startNap);
