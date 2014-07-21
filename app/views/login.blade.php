@@ -172,7 +172,7 @@ html,body {
                     <div class="col-md-offset-1 col-md-10">
                         <a href="/new-user">Create new user</a>
                     </div>
-        </div>
+                </div>
         </div>
     </div>
 
