@@ -109,4 +109,13 @@ class EventController extends BaseController {
 
     }
 
+    public function showGraphs($id)
+    {
+        $graph = new Graph();
+        $graph->baby_id = $id;
+        
+
+        return Redirect::action('EventController@showMenu', $id);
+
+    }
 }
