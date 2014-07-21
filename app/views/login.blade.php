@@ -5,6 +5,10 @@
 
 <style type="text/css">
 
+body {
+    background-color: #F3F3F3;
+}
+
 html,body {
     position: relative;
     height: 100%;
@@ -64,7 +68,7 @@ html,body {
     width: 100px;height: 100px;
     margin: 10px auto 30px;
     border-radius: 100%;
-    border: 2px solid #aaa;
+    border: 1.7px solid #F3F3F3;
     background-size: cover;
 }
 
@@ -143,33 +147,55 @@ html,body {
 
 </style>
 
-    <div class="container">
-        <div class="login-container">
-            <div id="output"></div>
-            <div class="avatar"></div>
-                <!-- <form action="" method="">
-                    <input name="user" type="text" placeholder="username">
-                    <input type="password" placeholder="password">
-                    <button class="btn btn-info btn-block login" type="submit">Login</button>
-                </form> -->
+    <div class="container text-center">
+        <div class="login-container btn-group pagination-centered">
+                        
+        <div id="output"></div>
+        <div class="avatar"></div>
 
-                {{ Form::open(array('action' => 'HomeController@doLogin', 'class' => 'form-inline')) }}
+            <ul class="nav">
+                <li class="divider-vertical"></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In</a>
+                    <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+                        
 
-                {{ Form::label('email', 'Email', array('class' => 'sr-only btn-block')) }}
-                {{ Form::text('email', null, array('class' => 'form-control', 'placeholder' => 'Enter email')) }}
+                        {{ Form::open(array('action' => 'HomeController@doLogin', 'class' => 'form-inline')) }}
 
-                {{ Form::label('password', 'Password', array('class' => 'sr-only btn-block')) }}
-                {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Enter password')) }}
+                        {{ Form::label('email', 'Email', array('class' => 'sr-only btn-block')) }}
+                        {{ Form::text('email', null, array('class' => 'form-control', 'placeholder' => 'Enter email')) }}
 
-                {{ Form::submit('Log In', array('class' => 'btn btn-info btn-block login')) }}
+                        {{ Form::label('password', 'Password', array('class' => 'sr-only btn-block')) }}
+                        {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Enter password')) }}
 
-                {{ Form::close() }}
-                <div class="row">
-                    <div class="col-md-offset-1 col-md-10">
-                        <a href="/new-user">Create new user</a>
+                        {{ Form::submit('Log In', array('class' => 'btn btn-info btn-block login')) }}
+
+                        {{ Form::close() }}
+
+                        
                     </div>
-                </div>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign Up</a>
+                    <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
+
+                        {{ Form::open(array('action' => 'HomeController@newUser', 'class' => 'form-inline')) }}
+
+                        {{ Form::label('name', 'Name', array('class' => 'sr-only')) }}
+                        {{ Form::text('name', null, array('class' => 'form-control', 'placeholder' => 'Enter name')) }}
+
+                        {{ Form::label('new_email', 'Email', array('class' => 'sr-only')) }}
+                        {{ Form::text('new_email', null, array('class' => 'form-control', 'placeholder' => 'Enter email')) }}
+
+                        {{ Form::label('password', 'Password', array('class' => 'sr-only')) }}
+                        {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Enter password')) }}
+
+                        {{ Form::submit('Create User', array('class' => 'btn btn-info btn-block')) }}
+
+                        {{ Form::close() }}
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
-
 @stop
