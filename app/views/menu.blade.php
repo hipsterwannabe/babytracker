@@ -2,35 +2,31 @@
 
 @section('content')
 
-    <style>
 
-        .babyImage {
-            text-align: center;
-        }
+<div class="container">
 
-    </style>
-
-    <div class="container">
-
-        <h1>Main Menu</h1>
-
-        <!-- Baby picture and info -->
-        <div class="featurette">
-            <div class="babyImage featurette-image img-circle pull-left">
-                <a href="baby-stats"><img class="img-circle" src="/assets/img/baby-face.jpg"></a><br>
-                <p class="text-muted">click to edit info</p>
+    <div class="row">
+        <div class="col-lg-6">
+            <!-- Baby picture and info -->
+            <div class="media pull-left">
+                <a href="baby-stats"><img class="medie-object img-circle img-responsive" src="/assets/img/baby-face.jpg"></a>
             </div>
-            <!-- use logic to display info based on baby id instead of hard-code info -->
-            <h2 class="featurette-heading"> {{ $baby->name }} <span class="text-muted">other info.</span></h2>
-        </div>
 
-        <div class="btn-group-vertical">
-            <a href="{{{ action('EventController@showDiaper', $baby->id) }}}" class="btn btn-block btn-info" role="button">Diaper</a>
-            <a href="{{{ action('EventController@showBottle', $baby->id) }}}" class="btn btn-block btn-info" role="button">Bottle</a>
-            <a href="{{{ action('EventController@showBreast', $baby->id) }}}" class="btn btn-block btn-info" role="button">Nurse</a>
-            <a href="{{{ action('EventController@showNap', $baby->id) }}}" class="btn btn-block btn-info" role="button">Sleep</a>
+            <div class="col-lg-6">
+                <h2 class="featurette-heading"> {{ $baby->name }}</h2>
+                <p class="text-muted">{{ $baby->birth_date }}</p>
+                <!-- Select event to log -->
+                <div class="btn-group-vertical">
+                    <a href="{{{ action('EventController@showDiaper', $baby->id) }}}" class="btn btn-block btn-primary" role="button">Diaper</a>
+                    <a href="{{{ action('EventController@showBottle', $baby->id) }}}" class="btn btn-block btn-primary" role="button">Bottle</a>
+                    <a href="{{{ action('EventController@showBreast', $baby->id) }}}" class="btn btn-block btn-primary" role="button">Nurse</a>
+                    <a href="{{{ action('EventController@showNap', $baby->id) }}}" class="btn btn-block btn-primary" role="button">Sleep</a>
+                </div>
+            </div>
         </div>
     </div>
+
+</div>
 
 @stop
 
