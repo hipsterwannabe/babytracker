@@ -9,7 +9,7 @@
         <div class="col-lg-6">
             <!-- Baby picture and info -->
             <div class="media pull-left">
-                <a href="baby-stats"><img class="medie-object img-circle img-responsive" src="/assets/img/baby-face.jpg"></a>
+                <a href="/baby-stats"><img class="media-object img-circle img-responsive" src="{{{ $baby->img_path }}}"></a>
             </div>
 
             <div class="col-lg-6">

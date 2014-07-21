@@ -73,6 +73,8 @@ class HomeController extends BaseController {
         $baby->name = Input::get('name');
         $baby->gender = Input::get('gender');
         $baby->birth_date = Input::get('birth_date');
+        $baby->save();
+
 
 
         if (Input::hasFile('image') && Input::file('image')->isValid()) {
@@ -82,8 +84,12 @@ class HomeController extends BaseController {
             $newHeight = 0;
             $newWidth = 0;
 
-            $inputFile = public_path() . Input::file('image');
-            $outputFile = public_path() . Input::file('image');
+            $uploadedImage = Input::file('image');
+
+            $inputFile = $uploadedImage->getRealPath();
+            $imageName = $baby->name . '-' . $uploadedImage->getClientOriginalName();
+            $outputFile = public_path() . '/' . 'baby_profiles' . '/' . $imageName;
+
 
             // load the image to be manipulated
             $image = new Imagick($inputFile);
@@ -124,11 +130,12 @@ class HomeController extends BaseController {
             $image->clear();
             $image->destroy();
 
-            $baby->addUploadedImage($outputFile);
-            return 'Done';
+            $baby->addUploadedImage($uploadedImage);
+            $baby->img_path = $outputFile;
+            $baby->save();
+
         }
 
-        $baby->save();
 
         return Redirect::to('/menu');
     }
