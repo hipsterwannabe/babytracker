@@ -73,6 +73,61 @@ class HomeController extends BaseController {
         $baby->name = Input::get('name');
         $baby->gender = Input::get('gender');
         $baby->birth_date = Input::get('birth_date');
+
+
+        if (Input::hasFile('image') && Input::file('image')->isValid()) {
+            $maxHeight = 100;
+            $maxWidth = 100;
+
+            $newHeight = 0;
+            $newWidth = 0;
+
+            $inputFile = public_path() . Input::file('image');
+            $outputFile = public_path() . Input::file('image');
+
+            // load the image to be manipulated
+            $image = new Imagick($inputFile);
+
+            // get the current image dimensions
+            $currentWidth = $image->getImageWidth();
+            $currentHeight = $image->getImageHeight();
+
+            // determine what the new height and width should be based on the type of photo
+            if ($currentWidth > $currentHeight)
+            {
+                // landscape photo
+                // width should be resized to max and height should be resized proportionally
+                $newWidth = $maxWidth;
+                $newHeight = ceil($currentHeight * ($newWidth / $currentWidth));
+            }
+            else if ($currentHeight > $currentWidth)
+            {
+                // portrait photo
+                // height should be resized to max and width should be resized proportionally
+                $newHeight = $maxHeight;
+                $newWidth = ceil($currentWidth * ($newHeight / $currentHeight));
+            }
+            else
+            {
+                // square photo
+                // resize image to max dimensions
+                $newHeight = $newWidth = $maxHeight;
+            }
+
+            // perform the image resize
+            $image->resizeImage($newWidth, $newHeight, Imagick::FILTER_LANCZOS, true);
+
+            // write out the new image
+            $image->writeImage($outputFile);
+
+            // clear memory resources
+            $image->clear();
+            $image->destroy();
+
+            $baby->addUploadedImage($outputFile);
+            return 'Done';
+        }
+
         $baby->save();
 
         return Redirect::to('/menu');

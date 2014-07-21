@@ -11,6 +11,9 @@
     {{ Form::label('name', 'Baby Name:') }}
     {{ Form::text('name', null, array('placeholder' => 'baby name...')) }}
 
+    {{ Form::label('image', 'Image') }}
+    {{ Form::file('image') }}
+
     {{ Form::label('gender', 'Gender:') }}
     {{ Form::select('gender', array('Boy' => 'Boy', 'Girl' => 'Girl')) }}
 
