@@ -12,9 +12,9 @@
 */
 
 // Login & Logout
-Route::get('/login', 'HomeController@showLogin');
+Route::get('/', 'HomeController@showLogin');
 
-Route::post('/login', 'HomeController@doLogin');
+Route::post('/', 'HomeController@doLogin');
 
 Route::get('/logout', 'HomeController@logout');
 

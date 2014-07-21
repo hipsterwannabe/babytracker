@@ -20,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="/assets/FlipClock-master/compiled/flipclock.css">
 
     @yield('topscript')
+    @yield('topstyle')
 
 </head>
 
@@ -36,8 +37,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/menu">Menu</a>
-                    <a class="navbar-brand" href="/graphs">Graphs</a>
+                    @if (Auth::check())
+                        <a class="navbar-brand" href="/menu">Menu</a>
+                        <a class="navbar-brand" href="/graphs/{id}">Graphs</a>
+                    @endif
                     <a class="navbar-brand" href="/about">About Us</a>
                 </div>
 
