@@ -8,7 +8,6 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <style>body { padding-top: 70px; }</style>
 
     <!-- moment.js -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
@@ -53,7 +52,8 @@
                                     @foreach ( Auth::user()->babies as $baby)
                                         <li><a href="/menu/{{$baby->id}}" >{{ $baby->name }}</a></li>
                                     @endforeach
-                                    <li><a href="/logout">Logout</a></li>
+                                    <li><a href="{{{ action('HomeController@showBaby', Auth::id()) }}}">Add Baby</a></li>
+                                    <li><a href="{{{ action('HomeController@logout') }}}">Logout</a></li>
                                 </ul>
                             </li>
                         @endif
