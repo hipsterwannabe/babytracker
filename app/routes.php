@@ -12,9 +12,9 @@
 */
 
 // Login & Logout
-Route::get('/login', 'HomeController@showLogin');
+Route::get('/', 'HomeController@showLogin');
 
-Route::post('/login', 'HomeController@doLogin');
+Route::post('/', 'HomeController@doLogin');
 
 Route::get('/logout', 'HomeController@logout');
 
@@ -77,58 +77,4 @@ Route::get('/about', function()
 Route::get('/baby-stats', function()
 {
     return View::make('baby-stats');
-});
-
-Route::get('test', function () {
-
-    $maxHeight = 200;
-    $maxWidth = 200;
-
-    $newHeight = 0;
-    $newWidth = 0;
-
-    $inputFile = public_path() . '/uploads/afterlight.jpeg';
-    $outputFile = public_path() . '/uploads/afterlight-small.jpeg';
-
-    // load the image to be manipulated
-    $image = new Imagick($inputFile);
-
-    // get the current image dimensions
-    $currentWidth = $image->getImageWidth();
-    $currentHeight = $image->getImageHeight();
-
-    // determine what the new height and width should be based on the type of photo
-    if ($currentWidth > $currentHeight)
-    {
-        // landscape photo
-        // width should be resized to max and height should be resized proportionally
-        $newWidth = $maxWidth;
-        $newHeight = ceil($currentHeight * ($newWidth / $currentWidth));
-    }
-    else if ($currentHeight > $currentWidth)
-    {
-        // portrait photo
-        // height should be resized to max and width should be resized proportionally
-        $newHeight = $maxHeight;
-        $newWidth = ceil($currentWidth * ($newHeight / $currentHeight));
-    }
-    else
-    {
-        // square photo
-        // resize image to max dimensions
-        $newHeight = $newWidth = $maxHeight;
-    }
-
-    // perform the image resize
-    $image->resizeImage($newWidth, $newHeight, Imagick::FILTER_LANCZOS, true);
-
-    // write out the new image
-    $image->writeImage($outputFile);
-
-    // clear memory resources
-    $image->clear();
-    $image->destroy();
-
-    return 'Done';
-
 });
