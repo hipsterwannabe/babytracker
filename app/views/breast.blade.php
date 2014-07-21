@@ -9,12 +9,12 @@
     <div class="row">
         <div class="col-md-6">
             <!-- refactored to have one start/stop button -->
-           {{ Form::button('Start Left', array('class' => 'btn btn-success', 'id' => 'leftButton')) }}
+           {{ Form::button('Start Left', array('class' => 'btn btn-primary', 'id' => 'leftButton')) }}
         </div>
         
         <div class="col-md-6">
             <!-- refactored to have one start/stop button -->
-            {{ Form::button('Start Right', array('class' => 'btn btn-success', 'id' => 'rightButton')) }}
+            {{ Form::button('Start Right', array('class' => 'btn btn-primary', 'id' => 'rightButton')) }}
         </div>
     </div>
     <div class="row">
@@ -62,8 +62,8 @@
             if (startLeft == null && stopLeft == null && startRight == null && stopRight == null) {
                 startLeft = moment();
                 // make right side button invisible
-                $("#rightButton").removeClass("btn btn-success").addClass("invisible");
-                $(this).removeClass("btn btn-success").addClass("btn btn-danger");
+                $("#rightButton").removeClass("btn btn-primary").addClass("invisible");
+                $(this).removeClass("btn btn-primary").addClass("btn btn-danger");
                 $(this).text("END FEEDING");
                 console.log(startLeft);
                 $("#beginLeft").val(startLeft);
@@ -78,13 +78,13 @@
                 $("#endLeft").val(stopLeft);
                 //stop the flipclock timer
                 flipClock.stop();
-                $("#rightButton").removeClass("invisible").addClass("btn btn-success");
+                $("#rightButton").removeClass("invisible").addClass("btn btn-primary");
                 $("#rightButton").text("SWITCH SIDES");
                 $(document).on('click', "#rightButton", function() {
                     if (startRight == null && stopRight == null) {
                         $("#leftButton").hide;
                         startRight = moment();
-                        $(this).removeClass("btn btn-success").addClass("btn btn-danger");
+                        $(this).removeClass("btn btn-primary").addClass("btn btn-danger");
                         $(this).text("END FEEDING");
                         console.log(startRight);
                         $("#beginRight").val(startRight);
@@ -107,9 +107,9 @@
             if (startLeft == null && stopLeft == null && startRight == null && stopRight == null) {
                 startRight = moment();
                 // make leftt side button invisible
-                $("#leftButton").removeClass("btn btn-success").addClass("invisible");
+                $("#leftButton").removeClass("btn btn-primary").addClass("invisible");
                 // changes class of clicked right button
-                $(this).removeClass("btn-success").addClass("btn-danger");
+                $(this).removeClass("btn-primary").addClass("btn-danger");
                 $(this).text("END FEEDING");
                 console.log(startRight);
                 $("#beginRight").val(startRight);
@@ -124,13 +124,13 @@
                 $("#endRight").val(stopRight);
                 //stop the flipclock timer
                 flipClock.stop();
-                $("#leftButton").removeClass("invisible").addClass("btn btn-success");
+                $("#leftButton").removeClass("invisible").addClass("btn btn-primary");
                 $("#leftButton").text("SWITCH SIDES");
                 $(document).on('click', "#leftButton", function() {
                     if (startLeft == null && stopLeft == null) {
                         $("#rightButton").hide;
                         startLeft = moment();
-                        $(this).removeClass("btn btn-success").addClass("btn btn-danger");
+                        $(this).removeClass("btn btn-primary").addClass("btn btn-danger");
                         $(this).text("END FEEDING");
                         console.log(startLeft);
                         $("#beginLeft").val(startLeft);
