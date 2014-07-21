@@ -5,10 +5,6 @@
 
 <style type="text/css">
 
-body {
-    background-color: #F3F3F3;
-}
-
 html,body {
     position: relative;
     height: 100%;
