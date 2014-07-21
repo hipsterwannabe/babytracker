@@ -7,7 +7,7 @@
     <div class="col-md-6" id="bottleTimer"></div>
     {{ Form::open(array('action' => array('EventController@doBottle', $baby->id))) }}
 
-    {{ Form::button('Start', array('class' => 'btn btn-success', 'id' => 'timer')) }}
+    {{ Form::button('Start', array('class' => 'btn btn-primary', 'id' => 'timer')) }}
     
     {{ Form::label('ounces', 'Ounces:') }}
     {{ Form::selectRange('ounces', 0, 10) }}
@@ -40,7 +40,7 @@
         $(document).on('click', "#timer", function() {
         if (startBottle == null && stopBottle == null) {
             startBottle = moment();
-            $(this).removeClass("btn btn-success").addClass("btn btn-danger");
+            $(this).removeClass("btn btn-primary").addClass("btn btn-danger");
             $(this).text("END FEEDING");
             console.log(startBottle);
             $("#begintime").val(startBottle);

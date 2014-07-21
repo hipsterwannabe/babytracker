@@ -64,10 +64,7 @@ Route::get('/menu', function()
     }
 });
 
-Route::get('/graphs/{id}', function()
-{
-   return View::make('graphs');
-});
+Route::get('/graphs/{id}', 'EventController@showGraphs');
 
 Route::get('/about', function()
 {
