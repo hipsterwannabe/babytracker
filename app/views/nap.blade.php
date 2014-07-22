@@ -25,7 +25,7 @@
 
     {{ Form::hidden('stopNap', null, array('id' => 'endTime')) }}
 
-    {{ Form::hidden('stopNap', null, array('id' => 'lengthOfNap')) }}
+    {{ Form::hidden('lengthOfNap', null, array('id' => 'lengthOfNap')) }}
 
     {{ Form::submit('Submit', array('class' => ('btn btn-primary'))) }}
 

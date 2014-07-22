@@ -101,8 +101,11 @@ class EventController extends BaseController {
         $nap = new Nap();
         $nap->baby_id = $id;
 
-        $nap->start = Input::get('beginTime');
-        $nap->end = Input::get('endTime');
+        //date_default_timezone_set('America/Chicago');
+        $startNap = date('Y-m-d H:i:s', strtotime(Input::get('startNap')));
+        $stopNap = date('Y-m-d H:i:s', strtotime(Input::get('stopNap')));
+        $nap->start = $startNap;
+        $nap->end = $stopNap;
         $nap->length = Input::get('lengthOfNap');
         $nap->notes = Input::get('notes');
         $nap->save();
