@@ -19,8 +19,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <div id="leftTimer" style="display: inline-block"></div>
-            <div id="rightTimer" style="display: inline-block"></div>
+            <div id="feedingTimer" style="display: inline-block"></div>
         </div>
     </div>
     <div class="col-md-6">
@@ -59,6 +58,10 @@
     var timeLeft = null;
     var timeRight = null;
     $(document).ready(function() {
+        // shows timer at page load
+        flipClock = $('#feedingTimer').FlipClock({
+            autoStart: false
+        });
         // Click event logs timestamp and changes button
         // below will be a live event upon a click
         // block for beginning feeding on left side
@@ -72,8 +75,7 @@
                 $(this).text("END FEEDING");
                 console.log(startLeft);
                 $("#beginLeft").val(startLeft);
-                //timer to go here, using flipclock
-                flipClock = $('#leftTimer').FlipClock({});
+                flipClock.start();
             } else if (startLeft !== null && stopLeft == null && startRight == null && stopRight == null) {
             // logs time of stopBottle, shows switch/stop buttons
                 stopLeft = moment();
@@ -122,8 +124,7 @@
                 $(this).text("END FEEDING");
                 console.log(startRight);
                 $("#beginRight").val(startRight);
-                //timer to go here, using flipclock
-                flipClock = $('#rightTimer').FlipClock({});
+                flipClock.start();
             } else if (startLeft == null && stopLeft == null && startRight !== null && stopRight == null) {
                 // logs time of stopBottle, shows switch/stop buttons
                 stopRight = moment();

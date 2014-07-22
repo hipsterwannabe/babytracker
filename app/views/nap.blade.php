@@ -44,6 +44,10 @@
     var stopNap = null;
     var flipClock = null;
     $(document).ready(function() {
+        //timer to go here, using flipclock
+        flipClock = $('#napTimer').FlipClock({
+            autoStart: false
+          });
         // Click event logs timestamp and changes button
         // .click is being phased out
         // below will be a live event upon a click
@@ -54,9 +58,7 @@
                 $(this).text("STOP NAP");
                 console.log(startNap);
                 $("#beginTime").val(startNap);
-              //timer to go here, using flipclock
-              flipClock = $('#napTimer').FlipClock({
-              });
+                flipClock.start();
 
           } else if (startNap !== null && stopNap == null) {
                 // logs time of stopNap, disables button
@@ -69,7 +71,6 @@
                 flipClock.stop();
                 var napLength = stopNap.diff(startNap);
                 console.log(napLength);
-                
                 $("#lengthOfNap").val(napLength);
             }
         });
