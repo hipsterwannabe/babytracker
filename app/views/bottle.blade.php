@@ -62,8 +62,8 @@
             </div>
 
             <!-- hidden inputs, for start and end times -->
-            {{ Form::hidden('startNap', null, array('id' => 'beginTime')) }}
-            {{ Form::hidden('stopNap', null, array('id' => 'endTime')) }}
+            {{ Form::hidden('start_bottle', null, array('id' => 'beginTime')) }}
+            {{ Form::hidden('end_bottle', null, array('id' => 'endTime')) }}
 
             <hr>
 
@@ -106,15 +106,17 @@
             $(this).removeClass("btn btn-primary").addClass("btn btn-danger");
             $(this).text("END FEEDING");
             console.log(startBottle);
-            $("#begintime").val(startBottle);
-            flipClock.start();
+            $("#beginTime").val(startBottle);
+            //timer to go here, using flipclock
+            flipClock = $('#bottleTimer').FlipClock({
+            });
         } else if (startBottle !== null && stopBottle == null) {
             // logs time of stopBottle, disables button
             stopBottle = moment();
             $(this).text("TUMMY'S FULL!");
             $(this).attr("disabled", "disabled");
             console.log(stopBottle);
-            $("#endtime").val(stopBottle);
+            $("#endTime").val(stopBottle);
             //stop the flipclock timer
             flipClock.stop();
             var bottleLength = stopBottle.diff(startBottle);

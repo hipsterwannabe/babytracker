@@ -51,12 +51,12 @@
                 </div>
             </div>
 
-            {{ Form::hidden('startLeft', null, array('id' => 'beginLeft')) }}
-            {{ Form::hidden('stopLeft', null, array('id' => 'endLeft')) }}
+            {{ Form::hidden('beginLeft', null, array('id' => 'beginLeft')) }}
+            {{ Form::hidden('endLeft', null, array('id' => 'endLeft')) }}
 
-            {{ Form::hidden('startRight', null, array('id' => 'beginRight')) }}
-            {{ Form::hidden('stopRight', null, array('id' => 'endRight')) }}
-            {{ Form::hidden('totalTime', null, array('id' => 'feedTime')) }}
+            {{ Form::hidden('beginRight', null, array('id' => 'beginRight')) }}
+            {{ Form::hidden('endRight', null, array('id' => 'endRight')) }}
+            {{ Form::hidden('feedTime', null, array('id' => 'feedTime')) }}
 
             <hr>
 

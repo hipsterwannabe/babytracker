@@ -1,5 +1,7 @@
 @extends('layouts.master')
-
+@section('topscript')
+<link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.css">
+@stop
 @section('content')
 
 <h1>About The Team</h1>
@@ -35,7 +37,7 @@
 	        <h3>Greg Vallejo</h3>
 	        <h5>"Snacks Coordinator"</h5>
 	        <p>Wee-wee doodoo doo yaya pewie doodoo ga. Ga stinky gaga gaagaa ya. Laa yaya yaya ya goo gaagaa laa doo doodoo gaga gaga ga. Laalaa gaga ga dada doo da dada doo ya laalaa. Owie dada googoo ya doo googoo yaya gaagaa gaagaa yaya googoo ga. Goo da laa gaagaa yaya gaga laalaa dada doo din-din doggy laa. Laalaa ya doo gaagaa mama binkie .</p>
-	        <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+	        <p><a href="http://twitter.com/Greg_Vallejo" class="fa-twitter"></a><a href="https://www.linkedin.com/in/gregvallejo" class=".fa-linkedin-square"></a><a href="https://github.com/hipsterwannabe/" class=".fa-github"></a></p>
 	      </div>
 	    </div>
 	  </div>
