@@ -58,7 +58,7 @@ class EventController extends BaseController {
         $bottle->bottle = true;
         $bottle->start_bottle = Input::get('beginTime');
         $bottle->stop_bottle = Input::get('endTime');
-        // $bottle->length_bottle = Input::get('lengthOfBottleFeeding');
+        $bottle->length_bottle = Input::get('lengthOfBottleFeeding');
         $bottle->bottle_ounces = Input::get('ounces');
         $bottle->notes = Input::get('notes');
         $bottle->save();
@@ -103,7 +103,7 @@ class EventController extends BaseController {
 
         $nap->start = Input::get('beginTime');
         $nap->end = Input::get('endTime');
-        //$nap->length = Input::get('lengthOfNap');
+        $nap->length = Input::get('lengthOfNap');
         $nap->notes = Input::get('notes');
         $nap->save();
 
