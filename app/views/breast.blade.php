@@ -56,6 +56,7 @@
 
             {{ Form::hidden('startRight', null, array('id' => 'beginRight')) }}
             {{ Form::hidden('stopRight', null, array('id' => 'endRight')) }}
+            {{ Form::hidden('totalTime', null, array('id' => 'feedTime')) }}
 
             <hr>
 
@@ -87,6 +88,9 @@
     var startRight = null;
     var stopRight = null;
     var flipClock = null;
+    var totalTime = null;
+    var timeLeft = null;
+    var timeRight = null;
     $(document).ready(function() {
         // Click event logs timestamp and changes button
         // below will be a live event upon a click
@@ -112,6 +116,7 @@
                 $("#endLeft").val(stopLeft);
                 //stop the flipclock timer
                 flipClock.stop();
+                timeLeft = stopLeft.diff(startLeft);
                 $("#rightButton").removeClass("invisible").addClass("btn btn-primary");
                 $("#rightButton").text("SWITCH SIDES");
                 $(document).on('click', "#rightButton", function() {
@@ -132,6 +137,9 @@
                         flipClock.stop();
                         $(this).text("TUMMY FULL!");
                         $(this).attr("disabled", "disabled");
+                        timeRight = stopRight.diff(startRight);
+                        totalTime = timeRight + timeLeft;
+                        console.log(totalTime);
                     }
                 });
             }
@@ -158,6 +166,7 @@
                 $("#endRight").val(stopRight);
                 //stop the flipclock timer
                 flipClock.stop();
+                timeRight = stopRight.diff(startRight);
                 $("#leftButton").removeClass("invisible").addClass("btn btn-primary");
                 $("#leftButton").text("SWITCH SIDES");
                 $(document).on('click', "#leftButton", function() {
@@ -178,6 +187,9 @@
                         flipClock.stop();
                         $(this).text("TUMMY FULL!");
                         $(this).attr("disabled", "disabled");
+                        timeLeft = stopLeft.diff(startLeft);
+                        totalTime = timeRight + timeLeft;
+                        console.log(totalTime);
                     }
                 });
             }

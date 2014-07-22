@@ -71,6 +71,7 @@
                 <div class="form-group">
                     <div class="col-lg-offset-1 col-lg-1">
                         {{ Form::submit('Submit', array('class' => 'btn btn-info'))}}
+                        {{ Form::hidden('length', null, array('id' => 'lengthOfBottleFeeding')) }}
                     </div>
                 </div>
             </div>
@@ -114,6 +115,9 @@
             $("#endtime").val(stopBottle);
             //stop the flipclock timer
             flipClock.stop();
+            var bottleLength = stopBottle.diff(startBottle, 'minutes');
+            $("lengthOfBottleFeeding").val(bottleLength);
+            console.log(bottleLength);
             }
         });
     });
