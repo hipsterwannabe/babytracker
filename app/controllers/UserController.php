@@ -85,8 +85,8 @@ class UserController extends BaseController {
 
     public function editBaby($id)
     {
-        $baby = Baby::findOrFail($id);
-        return View::make('update-baby')->with('baby', $baby);
+        $baby = Baby::find($id);
+        return View::make('add-baby')->with('baby', $baby);
     }
 
     public function updateBaby($id)
