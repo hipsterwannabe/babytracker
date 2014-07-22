@@ -58,7 +58,7 @@ class EventController extends BaseController {
         $bottle->bottle = true;
         $bottle->start_bottle = Input::get('beginTime');
         $bottle->stop_bottle = Input::get('endTime');
-        $bottle->length_bottle = Input::get('lengthOfBottleFeeding');
+        $bottle->bottle_length = Input::get('length');
         $bottle->bottle_ounces = Input::get('ounces');
         $bottle->notes = Input::get('notes');
         $bottle->save();
@@ -79,10 +79,11 @@ class EventController extends BaseController {
         $breast->baby_id = $id;
 
         $breast->breast = true;
-        $breast->start_left =
-        $breast->stop_left =
-        $breast->start_right =
-        $breast->stop_right =
+        $breast->start_left = Input::get('beginLeft');
+        $breast->stop_left = Input::get('endLeft');
+        $breast->start_right = Input::get('beginRight');
+        $breast->stop_right = Input::get('endRight');
+        $breast->nursing_time = Input::get('feedTime');
         $breast->notes = Input::get('notes');
         $breast->save();
 
@@ -122,16 +123,16 @@ class EventController extends BaseController {
         function time_to_decimal($time) {
             $timeArr = explode(':', $time);
             $decTime = ($timeArr[0]*60) + ($timeArr[1]) + ($timeArr[2]/60);
-         
+
             return $decTime;
         }
         // building nap data for graph
         $napData = array();
         $naps = $baby->naps;
-        
+
         foreach ($naps as $nap)
         {
-            
+
             $napData[] = "['" . date('Y-m-d H:i:s', strtotime($nap->start)) . "'," . time_to_decimal($nap->length) . "]";
         }
 
@@ -145,16 +146,14 @@ class EventController extends BaseController {
             if ($feedings->bottle){
                 $feedingData[] = "['" . date('Y-m-d H:i:s', strtotime($feedings->start_bottle)) . "'," . time_to_decimal($feedings->bottle_length) . "]";
             } else {
-                
+
             }
         }
-
 
         $data = array(
             'baby' => $baby,
             'napData' => $napData,
         );
-
 
         return View::make('graphs')->with($data);
     }
