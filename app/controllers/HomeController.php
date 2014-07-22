@@ -33,7 +33,7 @@ class HomeController extends BaseController {
         else
         {
             Session::flash('errorMessage', 'Login credentials not valid.');
-            return Redirect::action('HomeController@showLogin');
+            return Redirect::action('HomeController@showLogin')->withInput();
         }
     }
 

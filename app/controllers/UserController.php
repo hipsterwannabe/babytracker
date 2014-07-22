@@ -1,6 +1,6 @@
 <?php
 
-class UserController extends baseController {
+class UserController extends BaseController {
 
         public function getNewUser()
     {
@@ -14,7 +14,8 @@ class UserController extends baseController {
         $user->email = Input::get('new_email');
         $user->password = Hash::make(Input::get('password'));
         $user->save();
-        return Redirect::action('HomeController@doLogin');
+        Auth::login($user);
+        return View::make('new-user-menu')->with('user', $user);
     }
 
     public function showBaby($id)
@@ -25,7 +26,7 @@ class UserController extends baseController {
 
     public function newBaby($id)
     {
-        $baby = new Baby();
+        $baby = new Baby;
         $baby->user_id = $id;
 
         $baby->name = Input::get('name');

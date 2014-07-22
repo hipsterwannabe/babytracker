@@ -36,8 +36,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    @if (Auth::check())
-                        <a class="navbar-brand" href="/menu/{{$baby->id}}">Events</a>
+                    @if (Auth::check()) 
                     @else
                         <a class="navbar-brand" href="/">Sign In</a>
                     @endif
