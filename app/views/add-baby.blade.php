@@ -2,30 +2,87 @@
 
 @section('content')
 
-<div class="container">
+    <!-- Event Sidebar -->
 
-    <h1>Add Baby</h1>
+    <div class="col-lg-offset-1 col-lg-8">
 
-    {{ Form::open(array('action' => array('UserController@newBaby'), 'files' => true)) }}
+        <div class="row">
+            <div class="col-lg-4">
+                <h3>Child Details</h3>
+            </div>
+        </div>
 
-    {{ Form::label('name', 'Baby Name:') }}
-    {{ Form::text('name', null, array('placeholder' => 'baby name...')) }}
+        <div class="well well-sm">
 
-    {{ Form::label('image', 'Image') }}
-    {{ Form::file('image') }}
+            {{ Form::open(array('action' => array('UserController@newBaby'), 'files' => true)) }}
 
-    {{ Form::label('gender', 'Gender:') }}
-    {{ Form::select('gender', array('Boy' => 'Boy', 'Girl' => 'Girl')) }}
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-lg-1">
+                        {{ Form::label('name', 'Name: ') }}
+                    </div>
+                    <div class="col-lg-6">
+                        {{ Form::text('name', null, array('placeholder' => 'Baby name...')) }}<br>
+                    </div>
+                </div>
+            </div>
 
-    {{ Form::label('birth_date', 'Birthday:') }}
-    {{ Form::text('birth_date', null, array('placeholder' => 'YYYY-MM-DD')) }}
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-lg-1">
+                        {{ Form::label('image', 'Image: ') }} 
+                    </div>
+                    <div class="col-lg-6">
+                        {{ Form::file('image') }}
+                    </div>
+                </div>
+            </div>
 
-    {{ Form::submit('Submit', array('class' => 'btn btn-primary')) }}
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-lg-1" >
+                        {{ Form::label('gender', 'Gender:') }}
+                    </div>
+                    <div class="col-lg-6">
+                        {{ Form::select('gender', array('Boy' => 'Boy', 'Girl' => 'Girl')) }}<br>
+                    </div>
+                </div>
+            </div>
 
-    {{ Form::close() }}
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-lg-1">
+                        {{ Form::label('birth_date', 'Birthday: ') }}
+                    </div>
+                    <div class="col-lg-6">
+                        {{ Form::text('birth_date', null, array('placeholder' => 'YYYY-MM-DD')) }}<br>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-lg-offset-1 col-lg-1">
+                        {{ Form::submit('Submit', array('class' => 'btn btn-info')) }}
+                    </div>
+                </div>
+            </div>
+
+            {{ Form::close() }}
+
+        </div> <!-- well -->
+    </div> <!-- column -->
 
 
-</div>
+
+
+
+
+
+
+
 
 
 @stop
