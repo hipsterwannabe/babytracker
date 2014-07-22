@@ -24,9 +24,9 @@ Route::get('/new-user', 'UserController@getNewUser');
 
 Route::post('/new-user', 'UserController@newUser');
 
-Route::get('/add-baby/{id}', 'UserController@showBaby');
+Route::get('/add-baby', 'UserController@showCreateBaby');
 
-Route::post('/add-baby/{id}', 'UserController@newBaby');
+Route::post('/add-baby', 'UserController@newBaby');
 
 Route::get('/update/{id}', 'UserController@editBaby');
 

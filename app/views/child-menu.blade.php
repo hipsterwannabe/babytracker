@@ -30,7 +30,7 @@
         </div>
         <br>
         <div class="row">
-            <a href="{{{ action('UserController@showBaby', Auth::id()) }}}" class="btn btn-danger btn-lg" role="button">Add Baby</a>
+            <a href="{{{ action('UserController@showCreateBaby', Auth::id()) }}}" class="btn btn-danger btn-lg" role="button">Add Baby</a>
         </div>
     </div>
 
