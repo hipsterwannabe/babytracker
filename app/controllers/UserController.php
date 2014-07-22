@@ -14,8 +14,7 @@ class UserController extends baseController {
         $user->email = Input::get('new_email');
         $user->password = Hash::make(Input::get('password'));
         $user->save();
-
-        return Redirect::action('UserController@showBaby');
+        return Redirect::action('HomeController@doLogin');
     }
 
     public function showBaby($id)
