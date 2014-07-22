@@ -34,13 +34,14 @@ class EventController extends BaseController {
             $diaper->color = Input::get('color');
         }
 
-        if (Input::get('leak') == 'YES') {
+        if (Input::get('leak') == 'Yes') {
             $diaper->leak = true;
         }
 
         $diaper->notes = Input::get('notes');
         $diaper->save();
 
+        Session::flash('successMessage', 'Logged diaper change.');
         return Redirect::action('EventController@showMenu', $id);
     }
 
@@ -56,13 +57,14 @@ class EventController extends BaseController {
         $bottle->baby_id = $id;
 
         $bottle->bottle = true;
-        $bottle->start_bottle = Input::get('beginTime');
-        $bottle->stop_bottle = Input::get('endTime');
+        $bottle->start_bottle = Input::get('start_bottle');
+        $bottle->stop_bottle = Input::get('end_bottle');
         $bottle->bottle_length = Input::get('length');
         $bottle->bottle_ounces = Input::get('ounces');
         $bottle->notes = Input::get('notes');
         $bottle->save();
 
+        Session::flash('successMessage', 'Bootle feeding logged.');
         return Redirect::action('EventController@showMenu', $id);
 
     }
@@ -79,13 +81,14 @@ class EventController extends BaseController {
         $breast->baby_id = $id;
 
         $breast->breast = true;
-        $breast->start_left = Input::get('beginLeft');
-        $breast->stop_left = Input::get('endLeft');
-        $breast->start_right = Input::get('beginRight');
-        $breast->stop_right = Input::get('endRight');
+        $breast->start_left = Input::get('start_left');
+        $breast->stop_left = Input::get('end_left');
+        $breast->start_right = Input::get('start_right');
+        $breast->stop_right = Input::get('end_right');
         $breast->nursing_time = Input::get('feedTime');
         $breast->notes = Input::get('notes');
         $breast->save();
+
 
         return Redirect::action('EventController@showMenu', $id);
 
