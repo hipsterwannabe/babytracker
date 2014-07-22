@@ -22,7 +22,7 @@
         <div class="row">
             <div class="col-md-offset-1 col-md-10">
                 <!-- Create new user form -->
-                {{ Form::open(array('action' => 'HomeController@newUser', 'class' => 'form-inline')) }}
+                {{ Form::open(array('action' => 'UserController@newUser', 'class' => 'form-inline')) }}
 
                 <div class="form-group">
                     {{ Form::label('name', 'Name', array('class' => 'sr-only')) }}
