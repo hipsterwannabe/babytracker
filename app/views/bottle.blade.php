@@ -94,6 +94,10 @@
     var stopBottle = null;
     var flipClock = null;
     $(document).ready(function() {
+        //timer to go here, using flipclock
+        flipClock = $('#bottleTimer').FlipClock({ 
+            autoStart: false
+        });
         // Click event logs timestamp and changes button
         // below will be a live event upon a click
         $(document).on('click', "#timer", function() {
@@ -103,9 +107,7 @@
             $(this).text("END FEEDING");
             console.log(startBottle);
             $("#begintime").val(startBottle);
-            //timer to go here, using flipclock
-            flipClock = $('#bottleTimer').FlipClock({
-            });
+            flipClock.start();
         } else if (startBottle !== null && stopBottle == null) {
             // logs time of stopBottle, disables button
             stopBottle = moment();
