@@ -2,6 +2,8 @@
 
 @section('content')
 
+<!-- Add labels to the form!! -->
+
 <div class="container">
     <h2>Diaper Change! </h2>
 
@@ -20,14 +22,14 @@
     <h2>Did the diaper leak?</h2>
     {{ Form::label('leak', 'YES') }}
     {{ Form::radio('leak', 'YES') }}
-    <br>
+
     {{ Form::label('leak', 'NO') }}
     {{ Form::radio('leak', 'NO') }}
 
     {{ Form::label('notes', 'Notes') }}
     {{ Form::textarea('notes', null, array('placeholder' => 'diaper notes...')) }}
 
-    {{ Form::submit('SUBMIT') }}
+    {{ Form::submit('SUBMIT', array('class' => 'btn btn-info')) }}
 
     {{ Form::close() }}
 </div>

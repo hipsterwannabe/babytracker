@@ -20,13 +20,17 @@ Route::get('/logout', 'HomeController@logout');
 
 
 // Add new profiles
-Route::get('/new-user', 'HomeController@getNewUser');
+Route::get('/new-user', 'UserController@getNewUser');
 
-Route::post('/new-user', 'HomeController@newUser');
+Route::post('/new-user', 'UserController@newUser');
 
-Route::get('/add-baby/{id}', 'HomeController@showBaby');
+Route::get('/add-baby/{id}', 'UserController@showBaby');
 
-Route::post('/add-baby/{id}', 'HomeController@newBaby');
+Route::post('/add-baby/{id}', 'UserController@newBaby');
+
+Route::get('/update/{id}', 'UserController@editBaby');
+
+Route::post('/update/{id}', 'UserController@updateBaby');
 
 
 // Change diaper

@@ -6,7 +6,7 @@
 
     <h1>Add Baby</h1>
 
-    {{ Form::open(array('action' => array('UserController@newBaby', $user->id), 'files' => true)) }}
+    {{ Form::open(array('action' => array('UserController@updateBaby', $baby->id), 'files' => true)) }}
 
     {{ Form::label('name', 'Baby Name:') }}
     {{ Form::text('name', null, array('placeholder' => 'baby name...')) }}
