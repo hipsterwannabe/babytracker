@@ -37,7 +37,7 @@
 	        <h3>Greg Vallejo</h3>
 	        <h5>"Snacks Coordinator"</h5>
 	        <p>Wee-wee doodoo doo yaya pewie doodoo ga. Ga stinky gaga gaagaa ya. Laa yaya yaya ya goo gaagaa laa doo doodoo gaga gaga ga. Laalaa gaga ga dada doo da dada doo ya laalaa. Owie dada googoo ya doo googoo yaya gaagaa gaagaa yaya googoo ga. Goo da laa gaagaa yaya gaga laalaa dada doo din-din doggy laa. Laalaa ya doo gaagaa mama binkie .</p>
-	        <p><a href="http://twitter.com/Greg_Vallejo" class="fa-twitter"></a><a href="https://www.linkedin.com/in/gregvallejo" class=".fa-linkedin-square"></a><a href="https://github.com/hipsterwannabe/" class=".fa-github"></a></p>
+	        <p><a href="http://twitter.com/Greg_Vallejo" class="fa fa-5x fa-twitter"></a><span></span><a href="https://www.linkedin.com/in/gregvallejo" class="fa fa-5x fa-linkedin-square"></a><span></span><a href="https://github.com/hipsterwannabe/" class="fa fa-5x fa-github"></a></p>
 	      </div>
 	    </div>
 	  </div>
