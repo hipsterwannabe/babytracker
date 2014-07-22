@@ -15,7 +15,7 @@ class UserController extends baseController {
         $user->password = Hash::make(Input::get('password'));
         $user->save();
 
-        return Redirect::action('HomeController@showBaby');
+        return Redirect::action('UserController@showBaby');
     }
 
     public function showBaby($id)

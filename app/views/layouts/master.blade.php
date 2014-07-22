@@ -13,7 +13,7 @@
     <!-- moment.js -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
 
-    <!-- Amelia stylesheet -->
+    <!-- Bootstrap stylesheet -->
     <link rel="stylesheet" href="/bootstrap-src/dist/css/bootstrap-theme.min.css">
 
     <!-- flipclock styling -->
@@ -53,7 +53,7 @@
                                         <li><a href="/menu/{{$baby->id}}" >{{ $baby->name }}</a></li>
                                     @endforeach
                                     <li class="divider"></li>
-                                    <li><a href="{{{ action('HomeController@showBaby', Auth::id()) }}}">Add Baby</a></li>
+                                    <li><a href="{{{ action('UserController@showBaby', Auth::id()) }}}">Add Baby</a></li>
                                     <li class="divider"></li>
                                     <li><a href="{{{ action('HomeController@logout') }}}">Logout</a></li>
                                 </ul>
