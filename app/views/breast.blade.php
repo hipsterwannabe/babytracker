@@ -20,7 +20,7 @@
 
         <div class="row">
             <div class="col-lg-4">
-                <h3>Bottle Feeding</h3>
+                <h3>Nursing Session</h3>
             </div>
         </div>
 
