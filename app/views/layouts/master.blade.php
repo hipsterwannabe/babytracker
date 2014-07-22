@@ -7,13 +7,14 @@
     <title>BabyTracker</title>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/bootstrap-src/dist/css/bootstrap.css">
+    <style> body{padding-top: 70px;} </style>
 
     <!-- moment.js -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
 
     <!-- Amelia stylesheet -->
-    <link rel="stylesheet" href="/css/amelia.css">
+    <link rel="stylesheet" href="/bootstrap-src/dist/css/bootstrap-theme.min.css">
 
     <!-- flipclock styling -->
     <link rel="stylesheet" type="text/css" href="/assets/FlipClock-master/compiled/flipclock.css">
@@ -40,7 +41,6 @@
                         <a class="navbar-brand" href="{{{ action('EventController@showGraphs', $baby->id ) }}}">Graphs</a>
                     @else
                         <a class="navbar-brand" href="/">Sign In</a>
-
                     @endif
                     <a class="navbar-brand" href="/about">About Us</a>
                 </div>
@@ -55,7 +55,9 @@
                                     @foreach ( Auth::user()->babies as $baby)
                                         <li><a href="/menu/{{$baby->id}}" >{{ $baby->name }}</a></li>
                                     @endforeach
+                                    <li class="divider"></li>
                                     <li><a href="{{{ action('HomeController@showBaby', Auth::id()) }}}">Add Baby</a></li>
+                                    <li class="divider"></li>
                                     <li><a href="{{{ action('HomeController@logout') }}}">Logout</a></li>
                                 </ul>
                             </li>
