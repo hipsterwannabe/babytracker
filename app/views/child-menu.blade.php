@@ -21,7 +21,7 @@
             @foreach ( Auth::user()->babies as $baby)
                 <a href="/menu/{{$baby->id}}" class="btn btn-primary btn-lg" role="button">{{ $baby->name }}</a>
             @endforeach
-            <a href="{{{ action('UserController@showBaby', Auth::id()) }}}" class="btn btn-info btn-lg" role="button">Add Baby</a>
+            <a href="{{{ action('UserController@showCreateBaby', Auth::id()) }}}" class="btn btn-info btn-lg" role="button">Add Baby</a>
         </div>
     </div>
 

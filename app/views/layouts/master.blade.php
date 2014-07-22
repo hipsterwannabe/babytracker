@@ -54,7 +54,7 @@
                                         <li><a href="/menu/{{$baby->id}}" >{{ $baby->name }}</a></li>
                                     @endforeach
                                     <li class="divider"></li>
-                                    <li><a href="{{{ action('UserController@showBaby', Auth::id()) }}}">Add Baby</a></li>
+                                    <li><a href="{{{ action('UserController@showCreateBaby') }}}">Add Baby</a></li>
                                     <li class="divider"></li>
                                     <li><a href="{{{ action('HomeController@logout') }}}">Logout</a></li>
                                 </ul>
