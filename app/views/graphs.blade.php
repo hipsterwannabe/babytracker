@@ -22,90 +22,91 @@
 	<script type="text/javascript">
 	$(function () { 
 		//nap chart
-    $('#napContainer').highcharts({
-        title: {
-        	text: 'Nap Chart'
-        },
-        chart: {
-            type: 'line'
-        },
-        xAxis: {
-            title: {
-                text: 'Time of Nap'
-            }
-        },
-        yAxis: {
-            title: {
-                text: 'Nap Length'
-            }
-        },
-        tooltip: {
-		    backgroundColor: '#FCFFC5',
-		    borderColor: 'black',
-		    borderRadius: 10,
-		    borderWidth: 3,
-		    shared: true,
-		},
-		series: [{
-        	data: [{{ $napData }}]
-		}]
-    });
+	    $('#napContainer').highcharts({
+	        title: {
+	        	text: 'Nap Chart'
+	        },
+	        chart: {
+	            type: 'line'
+	        },
+	        xAxis: {
+	            title: {
+	                text: 'Time of Nap'
+	            }
+	        },
+	        yAxis: {
+	            title: {
+	                text: 'Nap Length'
+	            }
+	        },
+	        tooltip: {
+			    backgroundColor: '#FCFFC5',
+			    borderColor: 'black',
+			    borderRadius: 10,
+			    borderWidth: 3,
+			    shared: true,
+			},
+			series: [{
+	        	// data: [{{ $napData }}]
+	        	data: [['0000-00-00 00:00:00',15], ['0000-00-00 00:00:00',30]]
+			}]
+	    });
 
-});
+	});
 
-//diaper chart
-$(function () { 
-    $('#diaperContainer').highcharts({
-        title: {
-        	text: 'Diaper Chart'
-        },
-        chart: {
-            type: 'bar'
-        },
-        xAxis: {
-            categories: ['Apples', 'Bananas', 'Oranges']
-        },
-        yAxis: {
-            title: {
-                text: 'Fruit eaten'
-            }
-        },
-        tooltip: {
-		    backgroundColor: '#FCFFC5',
-		    borderColor: 'black',
-		    borderRadius: 10,
-		    borderWidth: 3,
-		    shared: true,
-		},
-    });
-});
+	// //diaper chart
+	// $(function () { 
+	//     $('#diaperContainer').highcharts({
+	//         title: {
+	//         	text: 'Diaper Chart'
+	//         },
+	//         chart: {
+	//             type: 'bar'
+	//         },
+	//         xAxis: {
+	//             categories: ['Apples', 'Bananas', 'Oranges']
+	//         },
+	//         yAxis: {
+	//             title: {
+	//                 text: 'Fruit eaten'
+	//             }
+	//         },
+	//         tooltip: {
+	// 		    backgroundColor: '#FCFFC5',
+	// 		    borderColor: 'black',
+	// 		    borderRadius: 10,
+	// 		    borderWidth: 3,
+	// 		    shared: true,
+	// 		},
+	//     });
+	// });
 
-//feeding chart
-$(function () { 
-    $('#feedingContainer').highcharts({
-        title: {
-        	text: 'Feeding Chart'
-        },
-        chart: {
-            type: 'bar'
-        },
-        xAxis: {
-            categories: ['Apples', 'Bananas', 'Oranges']
-        },
-        yAxis: {
-            title: {
-                text: 'Fruit eaten'
-            }
-        },
-        tooltip: {
-		    backgroundColor: '#FCFFC5',
-		    borderColor: 'black',
-		    borderRadius: 10,
-		    borderWidth: 3,
-		    shared: true,
-		},
-    });
-});
+	// //feeding chart
+	// $(function () { 
+	//     $('#feedingContainer').highcharts({
+	//         title: {
+	//         	text: 'Feeding Chart'
+	//         },
+	//         chart: {
+	//             type: 'bar'
+	//         },
+	//         xAxis: {
+	//             categories: ['Apples', 'Bananas', 'Oranges']
+	//         },
+	//         yAxis: {
+	//             title: {
+	//                 text: 'Fruit eaten'
+	//             }
+	//         },
+	//         tooltip: {
+	// 		    backgroundColor: '#FCFFC5',
+	// 		    borderColor: 'black',
+	// 		    borderRadius: 10,
+	// 		    borderWidth: 3,
+	// 		    shared: true,
+	// 		},
+	//     });
+	// });
 
 		// $(document).ready(function () { 
 		//     $('#diaperContainer').highcharts({

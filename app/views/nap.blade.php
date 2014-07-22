@@ -67,8 +67,9 @@
                 $("#endTime").val(stopNap);
                 //stop the flipclock timer
                 flipClock.stop();
-                var napLength = stopNap.diff(startNap, 'minutes');
+                var napLength = stopNap.diff(startNap);
                 console.log(napLength);
+                
                 $("#lengthOfNap").val(napLength);
             }
         });

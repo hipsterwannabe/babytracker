@@ -104,9 +104,10 @@ class EventController extends BaseController {
         //date_default_timezone_set('America/Chicago');
         $startNap = date('Y-m-d H:i:s', strtotime(Input::get('startNap')));
         $stopNap = date('Y-m-d H:i:s', strtotime(Input::get('stopNap')));
+        $napLength = Input::get('lengthOfNap');
         $nap->start = $startNap;
         $nap->end = $stopNap;
-        $nap->length = Input::get('lengthOfNap');
+        $nap->length = $napLength/1000;
         $nap->notes = Input::get('notes');
         $nap->save();
 
