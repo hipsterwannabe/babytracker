@@ -121,10 +121,16 @@ class EventController extends BaseController {
 
         $napData = array();
         $naps = $baby->naps;
-
+        function time_to_decimal($time) {
+            $timeArr = explode(':', $time);
+            $decTime = ($timeArr[0]*60) + ($timeArr[1]) + ($timeArr[2]/60);
+         
+            return $decTime;
+        }
         foreach ($naps as $nap)
         {
-            $napData[] = "[" . $nap->start . ',' . $nap->length . "]";
+            
+            $napData[] = "['" . date('Y-m-d H:i:s', strtotime($nap->start)) . "'," . time_to_decimal($nap->length) . "]";
         }
 
         $napData = join($napData, ',');

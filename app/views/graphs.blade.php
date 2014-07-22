@@ -1,6 +1,5 @@
 @extends('layouts.master')
 
-
 @section('content')
 
 	<h1>Here is {{ $baby->name }} stats</h1>
@@ -47,8 +46,8 @@
 			    shared: true,
 			},
 			series: [{
-	        	// data: [{{ $napData }}]
-	        	data: [['0000-00-00 00:00:00',15], ['0000-00-00 00:00:00',30]]
+	        	data: [{{ $napData }}]
+	        	// data: [['0000-00-00 00:00:00',15], ['0000-00-00 00:00:00',30]]
 			}]
 	    });
 
