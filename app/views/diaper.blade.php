@@ -5,33 +5,101 @@
 <!-- Add labels to the form!! -->
 
 <div class="container">
-    <h2>Diaper Change! </h2>
 
-    <h2>What was inside?</h2>
+    <!-- Event Sidebar -->
+    <div class="col-lg-3">
+        <div class="row">
+            <img src="{{{ $baby->img_path }}}" alt="">
+        </div>
 
-    {{ Form::open(array('action' => array('EventController@doDiaper', $baby->id))) }}
+        <div class="row">
+            <h2>{{{ $baby->name }}}</h2>
+        </div>
+    </div>
+    <!-- Event Sidebar -->
 
-    {{ Form::select('type', array('number_one' => '#1', 'number_two' => '#2', 'both' => 'Both')) }}
+    <div class="col-lg-offset-1 col-lg-8">
 
-    <h2>What consistency was the poop?</h2>
-    {{ Form::select('consistency', array('0' => '-----',  '1' => 'Loose', '2' => 'Seedy', '3' => 'Thick', '4' => 'Sticky', '5' => 'Chunky', '6' => 'Hard' )) }}
+        <div class="row">
+            <div class="col-lg-4">
+                <h3>Diaper Change</h3>
+            </div>
+        </div>
 
-    <h2>What color was the poop?</h2>
-    {{ Form::select('color', array('0' => '-----',  '1' => 'White', '2' => 'Beige', '3' => 'Light Green', '4' => 'Dark Green', '5' => 'Light Brown', '6' => 'Dark Brown' )) }}
+        <div class="well well-sm">
 
-    <h2>Did the diaper leak?</h2>
-    {{ Form::label('leak', 'YES') }}
-    {{ Form::radio('leak', 'YES') }}
+            {{ Form::open(array('action' => array('EventController@doDiaper', $baby->id))) }}
 
-    {{ Form::label('leak', 'NO') }}
-    {{ Form::radio('leak', 'NO') }}
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-lg-1">
+                        {{ Form::label('type', 'Diaper:') }}
+                    </div>
+                    <div class="col-lg-6">
+                        {{ Form::select('type', array('0' => '-----', 'number_one' => 'Wet', 'number_two' => 'Dirty', 'both' => 'Both')) }}
+                    </div>
+                </div>
+            </div>
 
-    {{ Form::label('notes', 'Notes') }}
-    {{ Form::textarea('notes', null, array('placeholder' => 'diaper notes...')) }}
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-lg-1">
+                        {{ Form::label('consistency', 'Texture:') }}
+                    </div>
+                    <div class="col-lg-6">
+                        {{ Form::select('consistency', array('0' => '-----', '1' => 'Loose', '2' => 'Seedy', '3' => 'Thick', '4' => 'Sticky', '5' => 'Chunky', '6' => 'Hard' )) }}
+                    </div>
+                </div>
+            </div>
 
-    {{ Form::submit('SUBMIT', array('class' => 'btn btn-info')) }}
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-lg-1" >
+                        {{ Form::label('color', 'Color:') }}
+                    </div>
+                    <div class="col-lg-6">
+                        {{ Form::select('color', array('0' => '-----',  '1' => 'White', '2' => 'Beige', '3' => 'Light Green', '4' => 'Dark Green', '5' => 'Light Brown', '6' => 'Dark Brown' )) }}
+                    </div>
+                </div>
+            </div>
 
-    {{ Form::close() }}
-</div>
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-lg-1">
+                        {{ Form::label('leak', 'Leaked?') }}
+                    </div>
+                    <div class="col-lg-6">
+                        {{ Form::checkbox('leak', 'Yes') }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-lg-1">
+                        {{ Form::label('notes', 'Notes:') }}
+                    </div>
+                    <div class="col-lg-6">
+                        {{ Form::textarea('notes', null, array('class' => 'form-control', 'rows' => '3', 'cols' => '6', 'placeholder' => 'diaper notes...')) }}
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-lg-offset-1 col-lg-1">
+                        {{ Form::submit('Submit', array('class' => 'btn btn-info')) }}
+                    </div>
+                </div>
+            </div>
+
+            {{ Form::close() }}
+
+        </div> <!-- well -->
+    </div> <!-- column -->
+
+</div> <!-- container -->
 
 @stop
