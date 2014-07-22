@@ -28,6 +28,10 @@ Route::get('/add-baby/{id}', 'HomeController@showBaby');
 
 Route::post('/add-baby/{id}', 'HomeController@newBaby');
 
+Route::get('/update/{id}', 'UserController@editBaby');
+
+Route::post('/update/{id}', 'UserController@updateBaby');
+
 
 // Change diaper
 Route::get('/diaper/{id}', 'EventController@showDiaper');
