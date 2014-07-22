@@ -17,6 +17,7 @@ html,body {
 .login-container{
     position: relative;
     width: 300px;
+    height: 488px;
     margin: 80px auto;
     padding: 20px 40px 40px;
     text-align: center;
@@ -65,7 +66,7 @@ html,body {
 
 .avatar{
     background: url(http://images.sodahead.com/polls/002145007/1156654708_450x316_alg_crying_baby_xlarge.jpeg);
-    width: 100px;height: 100px;
+    width: 160px;height: 160px;
     margin: 10px auto 30px;
     border-radius: 100%;
     border: 1.7px solid #F3F3F3;
