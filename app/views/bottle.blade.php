@@ -57,23 +57,12 @@
             $("#endtime").val(stopBottle);
             //stop the flipclock timer
             flipClock.stop();
-            var bottleLength = stopBottle.diff(startBottle, 'minutes');
+            var bottleLength = stopBottle.diff(startBottle);
             $("lengthOfBottleFeeding").val(bottleLength);
             console.log(bottleLength);
             }
       });
     });
-    // // Grab timestamp on click
-    // $('#start').click(function() {
-    //     start = event.timeStamp;
-    //     console.log(start);
-    // });
-
-    // // Grab timestamp on click
-    // $('#stop').click(function() {
-    //     stop = event.timeStamp;
-    //     console.log(stop);
-    // });
 
 </script>
 @stop

@@ -118,15 +118,17 @@ class EventController extends BaseController {
     public function showGraphs($id)
     {
         $baby = Baby::findOrFail($id);
-
-        $napData = array();
-        $naps = $baby->naps;
+        // use this to convert time
         function time_to_decimal($time) {
             $timeArr = explode(':', $time);
             $decTime = ($timeArr[0]*60) + ($timeArr[1]) + ($timeArr[2]/60);
          
             return $decTime;
         }
+        // building nap data for graph
+        $napData = array();
+        $naps = $baby->naps;
+        
         foreach ($naps as $nap)
         {
             
@@ -134,6 +136,19 @@ class EventController extends BaseController {
         }
 
         $napData = join($napData, ',');
+        // building feeding data for graph
+
+        $feedingData = array();
+        $feedings = $baby->feedings;
+
+        foreach ($feedings as $feeding) {
+            if ($feedings->bottle){
+                $feedingData[] = "['" . date('Y-m-d H:i:s', strtotime($feedings->start_bottle)) . "'," . time_to_decimal($feedings->bottle_length) . "]";
+            } else {
+                
+            }
+        }
+
 
         $data = array(
             'baby' => $baby,
