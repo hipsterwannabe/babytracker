@@ -115,7 +115,7 @@
             $("#endtime").val(stopBottle);
             //stop the flipclock timer
             flipClock.stop();
-            var bottleLength = stopBottle.diff(startBottle, 'minutes');
+            var bottleLength = stopBottle.diff(startBottle);
             $("lengthOfBottleFeeding").val(bottleLength);
             console.log(bottleLength);
             }

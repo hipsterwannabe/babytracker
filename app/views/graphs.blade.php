@@ -47,38 +47,42 @@
 			},
 			series: [{
 	        	data: [{{ $napData }}]
-	        	// data: [['0000-00-00 00:00:00',15], ['0000-00-00 00:00:00',30]]
 			}]
 	    });
 
 	});
 
-	// //diaper chart
-	// $(function () { 
-	//     $('#diaperContainer').highcharts({
-	//         title: {
-	//         	text: 'Diaper Chart'
-	//         },
-	//         chart: {
-	//             type: 'bar'
-	//         },
-	//         xAxis: {
-	//             categories: ['Apples', 'Bananas', 'Oranges']
-	//         },
-	//         yAxis: {
-	//             title: {
-	//                 text: 'Fruit eaten'
-	//             }
-	//         },
-	//         tooltip: {
-	// 		    backgroundColor: '#FCFFC5',
-	// 		    borderColor: 'black',
-	// 		    borderRadius: 10,
-	// 		    borderWidth: 3,
-	// 		    shared: true,
-	// 		},
-	//     });
-	// });
+	//diaper chart
+	$(function () { 
+	    $('#diaperContainer').highcharts({
+	        title: {
+	        	text: 'Diaper Chart'
+	        },
+	        chart: {
+	            type: 'line'
+	        },
+	        xAxis: {
+	            title: {
+	                text: 'Time of Diaper Change'
+	            }
+	        },
+	        yAxis: {
+	            title: {
+	                text: 'Type of Change'
+	            }
+	        },
+	        tooltip: {
+			    backgroundColor: '#FCFFC5',
+			    borderColor: 'black',
+			    borderRadius: 10,
+			    borderWidth: 3,
+			    shared: true,
+			},
+			series: [{
+				data: [{{ $diaperData}}]
+			}]
+	    });
+	});
 
 	// //feeding chart
 	// $(function () { 
