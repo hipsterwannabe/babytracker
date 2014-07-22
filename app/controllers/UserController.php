@@ -1,6 +1,6 @@
 <?php
 
-class UserController extends baseController {
+class UserController extends BaseController {
 
         public function getNewUser()
     {
@@ -14,20 +14,19 @@ class UserController extends baseController {
         $user->email = Input::get('new_email');
         $user->password = Hash::make(Input::get('password'));
         $user->save();
-
-        return Redirect::action('UserController@showBaby');
+        Auth::login($user);
+        return View::make('new-user-menu')->with('user', $user);
     }
 
-    public function showBaby($id)
+    public function showCreateBaby()
     {
-        $user = User::findOrFail($id);
-        return View::make('add-baby')->with('user', $user);
+        return View::make('add-baby');
     }
 
-    public function newBaby($id)
+    public function newBaby()
     {
         $baby = new Baby();
-        $baby->user_id = $id;
+        $baby->user_id = Auth::id();
 
         $baby->name = Input::get('name');
         $baby->gender = Input::get('gender');
@@ -86,7 +85,7 @@ class UserController extends baseController {
             $image->clear();
             $image->destroy();
         }
-        return Redirect::action('EventController@showMenu', $id);
+        return Redirect::action('EventController@showMenu', $baby->id);
     }
 
     public function editBaby($id)

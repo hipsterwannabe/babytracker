@@ -3,26 +3,84 @@
 @section('content')
 
 <div class="container">
-    <h1>Bottle View</h1>
-    <div class="col-md-6" id="bottleTimer"></div>
-    {{ Form::open(array('action' => array('EventController@doBottle', $baby->id))) }}
 
-    {{ Form::button('Start', array('class' => 'btn btn-primary', 'id' => 'timer')) }}
-    
-    {{ Form::label('ounces', 'Ounces:') }}
-    {{ Form::selectRange('ounces', 0, 10) }}
-    
-    {{ Form::label('notes', 'Notes') }}
-    {{ Form::textarea('notes', null, array('placeholder' => 'feeding notes...')) }}
-    <!-- hidden inputs, for start, end times and feeding length -->
-    {{ Form::hidden('startNap', null, array('id' => 'beginTime')) }}
-    {{ Form::hidden('stopNap', null, array('id' => 'endTime')) }}
-    {{ Form::hidden('length', null, array('id' => 'lengthOfBottleFeeding')) }}
+    <!-- Event Sidebar -->
+    <div class="col-lg-3">
+        <div class="row">
+            <img src="{{{ $baby->img_path }}}" alt="">
+        </div>
 
-    {{ Form::submit('Submit')}}
+        <div class="row">
+            <h2>{{{ $baby->name }}}</h2>
+        </div>
+    </div>
+    <!-- Event Sidebar -->
 
-    {{ Form::close() }}
-   
+    <div class="col-lg-offset-1 col-lg-8">
+
+        <div class="row">
+            <div class="col-lg-4">
+                <h3>Bottle Feeding</h3>
+            </div>
+        </div>
+
+        <div class="well well-sm">
+            <div class="row">
+                <div class="col-lg-6" id="bottleTimer"></div>
+            </div>
+
+            {{ Form::open(array('action' => array('EventController@doBottle', $baby->id))) }}
+
+            <div class="row">
+                <div class="col-lg-offset-2 col-lg-1">
+                    {{ Form::button('Start', array('class' => 'btn btn-primary', 'id' => 'timer')) }}
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-lg-1">
+                        {{ Form::label('ounces', 'Ounces:') }}
+                    </div>
+                    <div class="col-lg-6">
+                        {{ Form::selectRange('ounces', 1, 10) }}
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-lg-1">
+                        {{ Form::label('notes', 'Notes:') }}
+                    </div>
+                    <div class="col-lg-6">
+                        {{ Form::textarea('notes', null, array('class' => 'form-control', 'rows' => '3', 'cols' => '6', 'placeholder' => 'feeding notes...')) }}
+                    </div>
+                </div>
+            </div>
+
+            <!-- hidden inputs, for start and end times -->
+            {{ Form::hidden('startNap', null, array('id' => 'beginTime')) }}
+            {{ Form::hidden('stopNap', null, array('id' => 'endTime')) }}
+
+            <hr>
+
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-lg-offset-1 col-lg-1">
+                        {{ Form::submit('Submit', array('class' => 'btn btn-info'))}}
+                        {{ Form::hidden('length', null, array('id' => 'lengthOfBottleFeeding')) }}
+                    </div>
+                </div>
+            </div>
+
+            {{ Form::close() }}
+
+        </div>
+    </div>
+
 </div>
 
 @stop
@@ -50,7 +108,6 @@
             console.log(startBottle);
             $("#begintime").val(startBottle);
             flipClock.start();
-            
         } else if (startBottle !== null && stopBottle == null) {
             // logs time of stopBottle, disables button
             stopBottle = moment();
@@ -64,7 +121,7 @@
             $("lengthOfBottleFeeding").val(bottleLength);
             console.log(bottleLength);
             }
-      });
+        });
     });
 
 </script>

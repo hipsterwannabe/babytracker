@@ -3,44 +3,78 @@
 @section('content')
 
 <div class="container">
-    <h1>Breast View</h1>
 
-    {{ Form::open(array('action' => array('EventController@doBreast', $baby->id))) }}
-    <div class="row">
-        <div class="col-md-6">
-            <!-- refactored to have one start/stop button -->
-           {{ Form::button('Start Left', array('class' => 'btn btn-primary', 'id' => 'leftButton')) }}
+    <!-- Event Sidebar -->
+    <div class="col-lg-3">
+        <div class="row">
+            <img src="{{{ $baby->img_path }}}" alt="">
         </div>
-        
-        <div class="col-md-6">
+
+        <div class="row">
+            <h2>{{{ $baby->name }}}</h2>
+        </div>
+    </div>
+    <!-- Event Sidebar -->
+
+    <div class="col-lg-offset-1 col-lg-8">
+
+        <div class="row">
+            <div class="col-lg-4">
+                <h3>Nursing Session</h3>
+            </div>
+        </div>
+
+        <div class="well well-sm">
+
+            <div id="leftTimer" style="display: inline-block"></div>
+            <div id="rightTimer" style="display: inline-block"></div>
+
+            {{ Form::open(array('action' => array('EventController@doBreast', $baby->id))) }}
+
+            <!-- refactored to have one start/stop button -->
+            {{ Form::button('Start Left', array('class' => 'btn btn-primary', 'id' => 'leftButton')) }}
             <!-- refactored to have one start/stop button -->
             {{ Form::button('Start Right', array('class' => 'btn btn-primary', 'id' => 'rightButton')) }}
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div id="feedingTimer" style="display: inline-block"></div>
-        </div>
-    </div>
-    <div class="col-md-6">
-        <!-- switch sides button, invisible at first -->
-        {{ Form::button('Switch Sides', array('class' => 'invisible', 'id' => 'switchSides')) }}
-    </div>
-    {{ Form::label('notes', 'Notes') }}
-    {{ Form::textarea('notes', null, array('placeholder' => 'feeding notes...')) }}
+            <!-- switch sides button, invisible at first -->
+            {{ Form::button('Switch Sides', array('class' => 'invisible', 'id' => 'switchSides')) }}
 
-    {{ Form::hidden('startLeft', null, array('id' => 'beginLeft')) }}
-    {{ Form::hidden('stopLeft', null, array('id' => 'endLeft')) }}
+            <hr>
 
-    {{ Form::hidden('startRight', null, array('id' => 'beginRight')) }}
-    {{ Form::hidden('stopRight', null, array('id' => 'endRight')) }}
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-lg-1">
+                        {{ Form::label('notes', 'Notes:') }}
+                    </div>
+                    <div class="col-lg-6">
+                        {{ Form::textarea('notes', null, array('class' => 'form-control', 'rows' => '3', 'cols' => '6', 'placeholder' => 'feeding notes...')) }}
+                    </div>
+                </div>
+            </div>
 
-    {{ Form::hidden('totalTime', null, array('id' => 'feedTime')) }}
+            {{ Form::hidden('startLeft', null, array('id' => 'beginLeft')) }}
+            {{ Form::hidden('stopLeft', null, array('id' => 'endLeft')) }}
 
-    {{ Form::submit('Submit')}}
+            {{ Form::hidden('startRight', null, array('id' => 'beginRight')) }}
+            {{ Form::hidden('stopRight', null, array('id' => 'endRight')) }}
+            {{ Form::hidden('totalTime', null, array('id' => 'feedTime')) }}
 
-    {{ Form::close() }}
-</div>
+            <hr>
+
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-lg-offset-1 col-lg-1">
+                        {{ Form::submit('Submit', array('class' => 'btn btn-info'))}}
+                    </div>
+                </div>
+            </div>
+
+            {{ Form::close() }}
+
+        </div> <!-- Well -->
+
+    </div> <!-- Column -->
+
+</div> <!-- Container -->
 
 @stop
 
@@ -65,7 +99,7 @@
         // Click event logs timestamp and changes button
         // below will be a live event upon a click
         // block for beginning feeding on left side
-        // note to self- try $(this).hide 
+        // note to self- try $(this).hide
         $("#leftButton").on('click', function() {
             if (startLeft == null && stopLeft == null && startRight == null && stopRight == null) {
                 startLeft = moment();
@@ -163,31 +197,6 @@
             }
         });
     });
-// <script>
-
-//     // Grab timestamp on click
-//     $('#startLeft').click(function() {
-//         startLeft = event.timeStamp;
-//         console.log(startLeft);
-//     });
-
-//     // Grab timestamp on click
-//     $('#stopLeft').click(function() {
-//         stopLeft = event.timeStamp;
-//         console.log(stopLeft);
-//     });
-//     // Grab timestamp on click
-//     $('#startRight').click(function() {
-//         startRight = event.timeStamp;
-//         console.log(startRight);
-//     });
-
-//     // Grab timestamp on click
-//     $('#stopRight').click(function() {
-//         stopRight = event.timeStamp;
-//         console.log(stopRight);
-//     });
-
-// </script>
+</script>
 
 @stop

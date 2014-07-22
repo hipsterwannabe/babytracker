@@ -36,9 +36,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    @if (Auth::check())
-                        <a class="navbar-brand" href="/menu">Menu</a>
-                        <a class="navbar-brand" href="{{{ action('EventController@showGraphs', $baby->id ) }}}">Graphs</a>
+                    @if (Auth::check()) 
                     @else
                         <a class="navbar-brand" href="/">Sign In</a>
                     @endif
@@ -56,7 +54,7 @@
                                         <li><a href="/menu/{{$baby->id}}" >{{ $baby->name }}</a></li>
                                     @endforeach
                                     <li class="divider"></li>
-                                    <li><a href="{{{ action('UserController@showBaby', Auth::id()) }}}">Add Baby</a></li>
+                                    <li><a href="{{{ action('UserController@showCreateBaby') }}}">Add Baby</a></li>
                                     <li class="divider"></li>
                                     <li><a href="{{{ action('HomeController@logout') }}}">Logout</a></li>
                                 </ul>

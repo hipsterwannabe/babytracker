@@ -1,4 +1,4 @@
-@extends('layouts/master')
+@extends('layouts.master')
 
 
 @section('content')
@@ -180,7 +180,7 @@ html,body {
                     <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign Up</a>
                     <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
 
-                        {{ Form::open(array('action' => 'HomeController@newUser', 'class' => 'form-inline')) }}
+                        {{ Form::open(array('action' => 'UserController@newUser', 'class' => 'form-inline')) }}
 
                         {{ Form::label('name', 'Name', array('class' => 'sr-only')) }}
                         {{ Form::text('name', null, array('class' => 'form-control', 'placeholder' => 'Enter name')) }}
