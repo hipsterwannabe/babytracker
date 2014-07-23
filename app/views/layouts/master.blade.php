@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 
+    <!-- This is the template branch!!! -->
+
     <meta charset="utf-8">
 
     <title>BabyTracker</title>
