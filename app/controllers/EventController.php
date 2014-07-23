@@ -191,17 +191,17 @@ class EventController extends BaseController {
         }
         $feedingData = join($feedingData, ',');
 
-        //  building changing dats for graph
+        //  building changing data for graph
         $diaperData = array();
         $diapers = $baby->diapers;
 
         foreach ($diapers as $diaper) {
             if ($diaper->number_one && $diaper->number_two){
-                array_push($diaperData, "['3', '" . date('Y-m-d H:i:s', strtotime($diaper->created_at)) . "']");
+                array_push($diaperData, "['" . date('Y-m-d H:i:s', strtotime($diaper->created_at)) . "', 3]");
             } elseif ($diaper->number_one){
-                array_push($diaperData, "['1', '" . date('Y-m-d H:i:s', strtotime($diaper->created_at)) . "']");
+                array_push($diaperData, "['" . date('Y-m-d H:i:s', strtotime($diaper->created_at)) . "', 1]");
             } elseif ($diaper->number_two) {
-                array_push($diaperData, "['2', '" . date('Y-m-d H:i:s', strtotime($diaper->created_at)) . "']");
+                array_push($diaperData, "['" . date('Y-m-d H:i:s', strtotime($diaper->created_at)) . "', 2]");
             }
         }
         $diaperData = join($diaperData, ',');

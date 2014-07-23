@@ -61,6 +61,7 @@
 	            type: 'line'
 	        },
 	        xAxis: {
+	        	type: 'datetime',
 	            title: {
 	                text: 'Time of Diaper Change'
 	            }
