@@ -84,32 +84,40 @@
 	    });
 	});
 
-	// //feeding chart
-	// $(function () { 
-	//     $('#feedingContainer').highcharts({
-	//         title: {
-	//         	text: 'Feeding Chart'
-	//         },
-	//         chart: {
-	//             type: 'bar'
-	//         },
-	//         xAxis: {
-	//             categories: ['Apples', 'Bananas', 'Oranges']
-	//         },
-	//         yAxis: {
-	//             title: {
-	//                 text: 'Fruit eaten'
-	//             }
-	//         },
-	//         tooltip: {
-	// 		    backgroundColor: '#FCFFC5',
-	// 		    borderColor: 'black',
-	// 		    borderRadius: 10,
-	// 		    borderWidth: 3,
-	// 		    shared: true,
-	// 		},
-	//     });
-	// });
+	//feeding chart
+	$(function () { 
+	    $('#feedingContainer').highcharts({
+	        title: {
+	        	text: 'Feeding Chart'
+	        },
+	        chart: {
+	            type: 'line',
+	        },
+	        xAxis: {
+	        	type: 'datetime',
+	            title: {
+	            	text: 'Time of Feeding'
+	            }
+	        },
+	        yAxis: [{ //--- Primary yAxis
+			    title: {
+			        text: 'Length of Nursing Time'
+			    }
+			}, { //--- Secondary yAxis
+			    title: {
+			        text: 'Length of Bottle Time'
+			    },
+			    opposite: true
+			}],
+	        tooltip: {
+			    backgroundColor: '#FCFFC5',
+			    borderColor: 'black',
+			    borderRadius: 10,
+			    borderWidth: 3,
+			    shared: true,
+			},
+	    });
+	});
 
 		// $(document).ready(function () { 
 		//     $('#diaperContainer').highcharts({
