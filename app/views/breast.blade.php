@@ -107,7 +107,6 @@
                 $("#rightButton").removeClass("btn btn-primary").addClass("invisible");
                 $(this).removeClass("btn btn-primary").addClass("btn btn-danger");
                 $(this).text("Stop Left Side.");
-                console.log(startLeft);
                 $("#beginLeft").val(startLeft);
                 // Flipclock Timer
                 flipClock.start();
@@ -116,7 +115,6 @@
                 stopLeft = moment();
                 $(this).text("Left Side Done.");
                 $(this).attr("disabled", "disabled");
-                console.log(stopLeft);
                 $("#endLeft").val(stopLeft);
                 // Stop the timer
                 flipClock.stop();
@@ -131,7 +129,6 @@
                         startRight = moment();
                         $(this).removeClass("btn btn-primary").addClass("btn btn-danger");
                         $(this).text("Stop Right Side.");
-                        console.log(startRight);
                         $("#beginRight").val(startRight);
                         // Restart timer
                         flipClock.start();
@@ -139,14 +136,12 @@
                         stopRight = moment();
                         $(this).text("Tummy's Full!");
                         $(this).attr("disabled", "disabled");
-                        console.log(stopRight);
                         $('#endRight').val(stopRight);
                         // Stop the timer
                         flipClock.stop();
                         timeRight = stopRight.diff(startRight);
                         totalTime = timeRight + timeLeft;
                         $("feedingLength").val(totalTime);
-                        console.log(totalTime);
                     }
                 });
             }
@@ -160,7 +155,6 @@
                 // Changes class of clicked right button
                 $(this).removeClass("btn-primary").addClass("btn-danger");
                 $(this).text("Stop Right Side.");
-                console.log(startRight);
                 $("#beginRight").val(startRight);
                 flipClock.start();
             } else if (startLeft == null && stopLeft == null && startRight !== null && stopRight == null) {
@@ -168,7 +162,6 @@
                 stopRight = moment();
                 $(this).text("Right Side Done.");
                 $(this).attr("disabled", "disabled");
-                console.log(stopRight);
                 $("#endRight").val(stopRight);
                 // Stop timer
                 flipClock.stop();
@@ -183,7 +176,6 @@
                         startLeft = moment();
                         $(this).removeClass("btn btn-primary").addClass("btn btn-danger");
                         $(this).text("Stop Left Side.");
-                        console.log(startLeft);
                         $("#beginLeft").val(startLeft);
                         // Restart Timer
                         flipClock.start();
@@ -191,14 +183,12 @@
                         stopLeft = moment();
                         $(this).text("Tummy's Full!");
                         $(this).attr("disabled", "disabled");
-                        console.log(stopLeft);
                         $('#endLeft').val(stopLeft);
                         // Stop the timer
                         flipClock.stop();
                         timeLeft = stopLeft.diff(startLeft);
                         totalTime = timeRight + timeLeft;
                         $("feedingLength").val(totalTime);
-                        console.log(totalTime);
                     }
                 });
             }
