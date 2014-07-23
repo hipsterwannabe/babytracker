@@ -2,6 +2,16 @@
 
 class UserController extends BaseController {
 
+    // public function __construct()
+    // {
+    //     // call base controller constructor
+    //     parent::__construct();
+
+    //     // run auth filter before all methods on this controller except login
+    //     $this->beforeFilter('auth.basic', array('except' => array('login')));
+
+    // }
+
     public function newUser()
     {
         $user = new User();
@@ -86,6 +96,8 @@ class UserController extends BaseController {
     public function editBaby($id)
     {
         $baby = Baby::find($id);
+        Input::old('name');
+        Input::old('username');
         return View::make('add-baby')->with('baby', $baby);
     }
 
