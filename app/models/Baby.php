@@ -20,11 +20,11 @@ class Baby extends BaseModel {
     {
         return $this->hasMany('Nap');
     }
-    public function naps()
+    public function feedings()
     {
         return $this->hasMany('Feeding');
     }
-    public function naps()
+    public function diapers()
     {
         return $this->hasMany('Diaper');
     }
