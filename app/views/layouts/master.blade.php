@@ -9,14 +9,13 @@
     <title>BabyTracker</title>
 
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="/bootstrap-src/dist/css/bootstrap.css">
-    <style> body{padding-top: 70px;} </style>
+    <link rel="stylesheet" href="sheldon/theme/css/bootstrap.css">
+
+    <!-- Sheldon stylesheet -->
+    <link rel="stylesheet" href="/sheldon/theme/css/style.css">
 
     <!-- moment.js -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
-
-    <!-- Bootstrap stylesheet -->
-    <link rel="stylesheet" href="/bootstrap-src/dist/css/bootstrap-theme.min.css">
 
     <!-- flipclock styling -->
     <link rel="stylesheet" type="text/css" href="/assets/FlipClock-master/compiled/flipclock.css">
