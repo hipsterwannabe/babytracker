@@ -20,6 +20,8 @@ class UserController extends BaseController {
         $user->password = Hash::make(Input::get('password'));
         $user->save();
         Auth::login($user);
+
+        Session::flash('successMessage', "$user->name has been created successfully.");
         return View::make('new-user-menu')->with('user', $user);
     }
 
@@ -90,6 +92,7 @@ class UserController extends BaseController {
             $image->clear();
             $image->destroy();
         }
+        Session::flash('successMessage', "$baby->name has been added successfully.");
         return Redirect::action('EventController@showMenu', $baby->id);
     }
 
