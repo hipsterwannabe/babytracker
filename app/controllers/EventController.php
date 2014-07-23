@@ -41,7 +41,7 @@ class EventController extends BaseController {
         $diaper->notes = Input::get('notes');
         $diaper->save();
 
-        Session::flash('successMessage', 'Logged diaper change.');
+        Session::flash('successMessage', 'Diaper change charted.');
         return Redirect::action('EventController@showMenu', $id);
     }
 
@@ -65,7 +65,7 @@ class EventController extends BaseController {
         $bottle->notes = Input::get('notes');
         $bottle->save();
 
-        Session::flash('successMessage', 'Bootle feeding logged.');
+        Session::flash('successMessage', 'Bottle feeding charted.');
         return Redirect::action('EventController@showMenu', $id);
 
     }
@@ -92,6 +92,7 @@ class EventController extends BaseController {
         $breast->save();
 
 
+        Session::flash('successMessage', 'Nursing session charted.');
         return Redirect::action('EventController@showMenu', $id);
 
     }
@@ -114,8 +115,31 @@ class EventController extends BaseController {
         $nap->notes = Input::get('notes');
         $nap->save();
 
+        Session::flash('successMessage', 'Nap charted.');
         return Redirect::action('EventController@showMenu', $id);
 
+    }
+
+    public function showStats($id)
+    {
+        $baby = Baby::findOrFail($id);
+        return View::make('baby-stats')->with('baby', $baby);
+    }
+
+    public function doStats($id)
+    {
+        $stat = new BabyStat();
+        $stat->baby_id = $id;
+
+        $stat->pounds = Input::get('pounds');
+        $stat->ounces = Input::get('ounces');
+        $stat->length = Input::get('length');
+        $stat->head = Input::get('head');
+
+        $stat->save();
+
+        Session::flash('successMessage', 'Growth charted.');
+        return Redirect::action('EventController@showMenu', $id);
     }
 
     public function showGraphs($id)

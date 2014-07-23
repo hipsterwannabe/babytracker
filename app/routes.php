@@ -53,6 +53,12 @@ Route::get('/nap/{id}', 'EventController@showNap');
 Route::post('/nap/{id}', 'EventController@doNap');
 
 
+// Add growth stats
+Route::get('/growth/{id}', 'EventController@showStats');
+
+Route::post('/growth/{id}', 'EventController@doStats');
+
+
 // Show the menu
 Route::get('/menu/{id}', 'EventController@showMenu');
 

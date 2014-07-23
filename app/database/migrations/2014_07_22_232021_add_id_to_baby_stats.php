@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AddIdToCircums extends Migration {
+class AddIdToBabyStats extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,7 +12,7 @@ class AddIdToCircums extends Migration {
 	 */
 	public function up()
 	{
-		Schema::table('circums', function(Blueprint $table)
+		Schema::table('baby_stats', function(Blueprint $table)
 		{
 			$table->foreign('baby_id')->references('id')->on('babies');
 		});
@@ -25,9 +25,9 @@ class AddIdToCircums extends Migration {
 	 */
 	public function down()
 	{
-		Schema::table('circums', function(Blueprint $table)
+		Schema::table('baby_stats', function(Blueprint $table)
 		{
-			$table->dropForeign('circums_baby_id_foreign');
+			$table->dropForeign('baby_stats_baby_id_foreign');
 		});
 	}
 
