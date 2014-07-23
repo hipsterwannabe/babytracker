@@ -10,6 +10,20 @@ class EventController extends BaseController {
         // run auth filter before all methods on this controller
         $this->beforeFilter('auth.basic');
 
+        $this->beforeFilter(function($route) {
+            $babyId = $route->getParameter('id');
+
+            // look up baby by ID
+            // check that baby->user->id == Auth::id()
+            // if not, kick that hacker out
+
+            $baby = Baby::findOrFail($babyId);
+            if ($baby->user->id != Auth::id()) {
+                Session::flash('errorMessage', "You don't have access to that.");
+                return Redirect::to('/menu');
+            }
+        });
+
     }
 
     public function showMenu($id)
