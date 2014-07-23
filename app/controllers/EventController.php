@@ -181,11 +181,11 @@ class EventController extends BaseController {
 
         foreach ($diapers as $diaper) {
             if (number_one && number_two){
-                $diaperData[] = "['3', '" . date('Y-m-d H:i:s', strtotime($diapers->created_at)) . "]";
+                array_push($diaperData, "['3', '" . date('Y-m-d H:i:s', strtotime($diapers->created_at)) . "]");
             } elseif (number_one){
-                $diaperData[] = "['1', '" . date('Y-m-d H:i:s', strtotime($diapers->created_at)) . "]";
+                array_push($diaperData, "['1', '" . date('Y-m-d H:i:s', strtotime($diapers->created_at)) . "]");
             } elseif (number_two) {
-                $diaperData[] = "['2', '" . date('Y-m-d H:i:s', strtotime($diapers->created_at)) . "]";
+                array_push($diaperData, "['2', '" . date('Y-m-d H:i:s', strtotime($diapers->created_at)) . "]");
             }
         }
         $data = array(
