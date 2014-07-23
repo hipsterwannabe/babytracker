@@ -13,6 +13,10 @@
         <div class="row">
             <h2>{{{ $baby->name }}}</h2>
         </div>
+
+        <div class="row">
+            <h4>{{{ $baby->birth_date }}}</h4>
+        </div>
     </div>
     <!-- Event Sidebar -->
 
@@ -26,7 +30,7 @@
 
         <div class="well well-sm">
             <div class="row">
-                <div class="col-lg-6" id="bottleTimer"></div>
+                <div id="bottleTimer"></div>
             </div>
 
             {{ Form::open(array('action' => array('EventController@doBottle', $baby->id))) }}
@@ -65,13 +69,14 @@
             {{ Form::hidden('start_bottle', null, array('id' => 'beginTime')) }}
             {{ Form::hidden('end_bottle', null, array('id' => 'endTime')) }}
 
+            {{ Form::hidden('length', null, array('id' => 'feedingLength')) }}
+
             <hr>
 
             <div class="row">
                 <div class="form-group">
                     <div class="col-lg-offset-1 col-lg-1">
                         {{ Form::submit('Submit', array('class' => 'btn btn-info'))}}
-                        {{ Form::hidden('length', null, array('id' => 'lengthOfBottleFeeding')) }}
                     </div>
                 </div>
             </div>
@@ -89,39 +94,37 @@
 <script type="text/javascript" src="/assets/FlipClock-master/compiled/flipclock.js"></script>
 
 <script>
-    //initialize values
+    // Initialize values
     var startBottle = null;
     var stopBottle = null;
     var flipClock = null;
     $(document).ready(function() {
-        //timer to go here, using flipclock
-        flipClock = $('#bottleTimer').FlipClock({ 
+        // Flipclock Timer
+        flipClock = $('#bottleTimer').FlipClock({
             autoStart: false
         });
         // Click event logs timestamp and changes button
-        // below will be a live event upon a click
         $(document).on('click', "#timer", function() {
-        if (startBottle == null && stopBottle == null) {
-            startBottle = moment();
-            $(this).removeClass("btn btn-primary").addClass("btn btn-danger");
-            $(this).text("END FEEDING");
-            console.log(startBottle);
-            $("#beginTime").val(startBottle);
-            //timer to go here, using flipclock
-            flipClock = $('#bottleTimer').FlipClock({
-            });
-        } else if (startBottle !== null && stopBottle == null) {
-            // logs time of stopBottle, disables button
-            stopBottle = moment();
-            $(this).text("TUMMY'S FULL!");
-            $(this).attr("disabled", "disabled");
-            console.log(stopBottle);
-            $("#endTime").val(stopBottle);
-            //stop the flipclock timer
-            flipClock.stop();
-            var bottleLength = stopBottle.diff(startBottle);
-            $("lengthOfBottleFeeding").val(bottleLength);
-            console.log(bottleLength);
+            if (startBottle == null && stopBottle == null) {
+                startBottle = moment();
+                $(this).removeClass("btn btn-primary").addClass("btn btn-danger");
+                $(this).text("End Feeding");
+                console.log(startBottle);
+                $("#beginTime").val(startBottle);
+                // Flipclock Timer
+                flipClock.start();
+            } else if (startBottle !== null && stopBottle == null) {
+                // logs time of stopBottle, disables button
+                stopBottle = moment();
+                $(this).text("Tummy's Full!");
+                $(this).attr("disabled", "disabled");
+                console.log(stopBottle);
+                $("#endTime").val(stopBottle);
+                //stop the flipclock timer
+                flipClock.stop();
+                var bottleLength = stopBottle.diff(startBottle);
+                $("#feedingLength").val(bottleLength);
+                console.log(bottleLength);
             }
         });
     });

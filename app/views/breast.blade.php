@@ -26,6 +26,7 @@
 
         <div class="well well-sm">
 
+            <div id="feedingTimer" style="display: inline-block"></div>
             <div id="leftTimer" style="display: inline-block"></div>
             <div id="rightTimer" style="display: inline-block"></div>
 
@@ -51,12 +52,14 @@
                 </div>
             </div>
 
-            {{ Form::hidden('beginLeft', null, array('id' => 'beginLeft')) }}
-            {{ Form::hidden('endLeft', null, array('id' => 'endLeft')) }}
+            <!-- Hidden inputs for start and end times -->
+            {{ Form::hidden('start_left', null, array('id' => 'beginLeft')) }}
+            {{ Form::hidden('end_left', null, array('id' => 'endLeft')) }}
 
-            {{ Form::hidden('beginRight', null, array('id' => 'beginRight')) }}
-            {{ Form::hidden('endRight', null, array('id' => 'endRight')) }}
-            {{ Form::hidden('feedTime', null, array('id' => 'feedTime')) }}
+            {{ Form::hidden('start_right', null, array('id' => 'beginRight')) }}
+            {{ Form::hidden('end_right', null, array('id' => 'endRight')) }}
+
+            {{ Form::hidden('length', null, array('id' => 'feedingLength')) }}
 
             <hr>
 
@@ -88,109 +91,113 @@
     var startRight = null;
     var stopRight = null;
     var flipClock = null;
-    var totalTime = null;
     var timeLeft = null;
     var timeRight = null;
+    var totalTime = null;
     $(document).ready(function() {
-        // shows timer at page load
+        //Shows timer at page load
         flipClock = $('#feedingTimer').FlipClock({
             autoStart: false
         });
         // Click event logs timestamp and changes button
-        // below will be a live event upon a click
-        // block for beginning feeding on left side
-        // note to self- try $(this).hide
-        $("#leftButton").on('click', function() {
+        $(document).on('click', "#leftButton", function() {
             if (startLeft == null && stopLeft == null && startRight == null && stopRight == null) {
                 startLeft = moment();
                 // make right side button invisible
                 $("#rightButton").removeClass("btn btn-primary").addClass("invisible");
                 $(this).removeClass("btn btn-primary").addClass("btn btn-danger");
-                $(this).text("END FEEDING");
+                $(this).text("Stop Left Side.");
                 console.log(startLeft);
                 $("#beginLeft").val(startLeft);
+                // Flipclock Timer
                 flipClock.start();
             } else if (startLeft !== null && stopLeft == null && startRight == null && stopRight == null) {
-            // logs time of stopBottle, shows switch/stop buttons
+                // Logs time of stopBottle, shows switch/stop buttons
                 stopLeft = moment();
-                $(this).text("LEFT SIDE DONE");
+                $(this).text("Left Side Done.");
                 $(this).attr("disabled", "disabled");
                 console.log(stopLeft);
                 $("#endLeft").val(stopLeft);
-                //stop the flipclock timer
+                // Stop the timer
                 flipClock.stop();
                 timeLeft = stopLeft.diff(startLeft);
+                totalTime = timeLeft;
+                $("feedingLength").val(totalTime);
                 $("#rightButton").removeClass("invisible").addClass("btn btn-primary");
-                $("#rightButton").text("SWITCH SIDES");
+                $("#rightButton").text("Switch Sides.");
                 $(document).on('click', "#rightButton", function() {
                     if (startRight == null && stopRight == null) {
                         $("#leftButton").hide;
                         startRight = moment();
                         $(this).removeClass("btn btn-primary").addClass("btn btn-danger");
-                        $(this).text("END FEEDING");
+                        $(this).text("Stop Right Side.");
                         console.log(startRight);
                         $("#beginRight").val(startRight);
-                        // restart clock
+                        // Restart timer
                         flipClock.start();
                     } else if (startRight !== null && stopRight == null) {
                         stopRight = moment();
-                        $(this).text("TUMMY'S FULL!");
+                        $(this).text("Tummy's Full!");
                         $(this).attr("disabled", "disabled");
                         console.log(stopRight);
+                        $('#endRight').val(stopRight);
+                        // Stop the timer
                         flipClock.stop();
-                        $(this).text("TUMMY FULL!");
-                        $(this).attr("disabled", "disabled");
                         timeRight = stopRight.diff(startRight);
                         totalTime = timeRight + timeLeft;
+                        $("feedingLength").val(totalTime);
                         console.log(totalTime);
                     }
                 });
             }
         });
         // block for beginning feeding on right side
-        $("#rightButton").on('click', function() {
+        $(document).on('click', "#rightButton", function() {
             if (startLeft == null && stopLeft == null && startRight == null && stopRight == null) {
                 startRight = moment();
-                // make leftt side button invisible
+                // Make leftt side button invisible
                 $("#leftButton").removeClass("btn btn-primary").addClass("invisible");
-                // changes class of clicked right button
+                // Changes class of clicked right button
                 $(this).removeClass("btn-primary").addClass("btn-danger");
-                $(this).text("END FEEDING");
+                $(this).text("Stop Right Side.");
                 console.log(startRight);
                 $("#beginRight").val(startRight);
                 flipClock.start();
             } else if (startLeft == null && stopLeft == null && startRight !== null && stopRight == null) {
-                // logs time of stopBottle, shows switch/stop buttons
+                // Logs time of stopBottle, shows switch/stop buttons
                 stopRight = moment();
-                $(this).text("RIGHT SIDE DONE");
+                $(this).text("Right Side Done.");
                 $(this).attr("disabled", "disabled");
                 console.log(stopRight);
                 $("#endRight").val(stopRight);
-                //stop the flipclock timer
+                // Stop timer
                 flipClock.stop();
                 timeRight = stopRight.diff(startRight);
+                totalTime = timeRight;
+                $("feedingLength").val(totalTime);
                 $("#leftButton").removeClass("invisible").addClass("btn btn-primary");
-                $("#leftButton").text("SWITCH SIDES");
+                $("#leftButton").text("Switch Sides.");
                 $(document).on('click', "#leftButton", function() {
                     if (startLeft == null && stopLeft == null) {
                         $("#rightButton").hide;
                         startLeft = moment();
                         $(this).removeClass("btn btn-primary").addClass("btn btn-danger");
-                        $(this).text("END FEEDING");
+                        $(this).text("Stop Left Side.");
                         console.log(startLeft);
                         $("#beginLeft").val(startLeft);
-                        // restart clock
+                        // Restart Timer
                         flipClock.start();
                     } else if (startLeft !== null && stopLeft == null) {
                         stopLeft = moment();
-                        $(this).text("TUMMY'S FULL!");
+                        $(this).text("Tummy's Full!");
                         $(this).attr("disabled", "disabled");
                         console.log(stopLeft);
+                        $('#endLeft').val(stopLeft);
+                        // Stop the timer
                         flipClock.stop();
-                        $(this).text("TUMMY FULL!");
-                        $(this).attr("disabled", "disabled");
                         timeLeft = stopLeft.diff(startLeft);
                         totalTime = timeRight + timeLeft;
+                        $("feedingLength").val(totalTime);
                         console.log(totalTime);
                     }
                 });

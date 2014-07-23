@@ -21,11 +21,11 @@
     {{ Form::label('notes', 'Notes') }}
     {{ Form::textarea('notes', null, array('placeholder' => 'Nap notes...')) }}
 
-    {{ Form::hidden('startNap', null, array('id' => 'beginTime')) }}
+    {{ Form::hidden('start_nap', null, array('id' => 'beginTime')) }}
 
-    {{ Form::hidden('stopNap', null, array('id' => 'endTime')) }}
+    {{ Form::hidden('end_nap', null, array('id' => 'endTime')) }}
 
-    {{ Form::hidden('lengthOfNap', null, array('id' => 'lengthOfNap')) }}
+    {{ Form::hidden('length', null, array('id' => 'napLength')) }}
 
     {{ Form::submit('Submit', array('class' => ('btn btn-primary'))) }}
 
@@ -40,30 +40,29 @@
 <script type="text/javascript" src="/assets/FlipClock-master/compiled/flipclock.js"></script>
 
 <script>
+    // Initialize values
     var startNap = null;
     var stopNap = null;
     var flipClock = null;
     $(document).ready(function() {
-        //timer to go here, using flipclock
+        //Shows timer on page load
         flipClock = $('#napTimer').FlipClock({
             autoStart: false
-          });
+        });
         // Click event logs timestamp and changes button
-        // .click is being phased out
-        // below will be a live event upon a click
         $(document).on('click', "#timer", function() {
             if (startNap == null && stopNap == null) {
                 startNap = moment();
                 $(this).removeClass("btn btn-primary").addClass("btn btn-danger");
-                $(this).text("STOP NAP");
+                $(this).text("Stop Nap");
                 console.log(startNap);
                 $("#beginTime").val(startNap);
                 flipClock.start();
 
-          } else if (startNap !== null && stopNap == null) {
+            } else if (startNap !== null && stopNap == null) {
                 // logs time of stopNap, disables button
                 stopNap = moment();
-                $(this).text("Wakey Wakey!");
+                $(this).text("Wakey! Wakey!");
                 $(this).attr("disabled", "disabled");
                 console.log(stopNap);
                 $("#endTime").val(stopNap);
@@ -71,7 +70,7 @@
                 flipClock.stop();
                 var napLength = stopNap.diff(startNap);
                 console.log(napLength);
-                $("#lengthOfNap").val(napLength);
+                $("#napLength").val(napLength);
             }
         });
     });

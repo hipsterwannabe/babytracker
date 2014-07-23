@@ -57,9 +57,10 @@ class EventController extends BaseController {
         $bottle->baby_id = $id;
 
         $bottle->bottle = true;
-        $bottle->start_bottle = Input::get('start_bottle');
-        $bottle->stop_bottle = Input::get('end_bottle');
-        $bottle->bottle_length = Input::get('length');
+        $bottle->start_bottle = date('Y-m-d H:i:s', strtotime(Input::get('start_bottle')));
+        $bottle->stop_bottle = date('Y-m-d H:i:s', strtotime(Input::get('end_bottle')));
+        $length = Input::get('length');
+        $bottle->bottle_length = $length / 1000;
         $bottle->bottle_ounces = Input::get('ounces');
         $bottle->notes = Input::get('notes');
         $bottle->save();
@@ -81,11 +82,12 @@ class EventController extends BaseController {
         $breast->baby_id = $id;
 
         $breast->breast = true;
-        $breast->start_left = Input::get('start_left');
-        $breast->stop_left = Input::get('end_left');
-        $breast->start_right = Input::get('start_right');
-        $breast->stop_right = Input::get('end_right');
-        $breast->nursing_time = Input::get('feedTime');
+        $breast->start_left = date('Y-m-d H:i:s', strtotime(Input::get('start_left')));
+        $breast->stop_left = date('Y-m-d H:i:s', strtotime(Input::get('end_left')));
+        $breast->start_right = date('Y-m-d H:i:s', strtotime(Input::get('start_right')));
+        $breast->stop_right = date('Y-m-d H:i:s', strtotime(Input::get('end_right')));
+        $length = Input::get('length');
+        $breast->nursing_time = $length / 1000;
         $breast->notes = Input::get('notes');
         $breast->save();
 
@@ -105,13 +107,10 @@ class EventController extends BaseController {
         $nap = new Nap();
         $nap->baby_id = $id;
 
-        //date_default_timezone_set('America/Chicago');
-        $startNap = date('Y-m-d H:i:s', strtotime(Input::get('startNap')));
-        $stopNap = date('Y-m-d H:i:s', strtotime(Input::get('stopNap')));
-        $napLength = Input::get('lengthOfNap');
-        $nap->start = $startNap;
-        $nap->end = $stopNap;
-        $nap->length = $napLength/1000;
+        $nap->start = date('Y-m-d H:i:s', strtotime(Input::get('start_nap')));
+        $nap->end = date('Y-m-d H:i:s', strtotime(Input::get('end_nap')));
+        $length = Input::get('length');
+        $nap->length = $length / 1000;
         $nap->notes = Input::get('notes');
         $nap->save();
 
