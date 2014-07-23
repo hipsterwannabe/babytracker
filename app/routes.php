@@ -11,7 +11,7 @@
 |
 */
 
-// Login & Logout
+// Login, Create New User, & Logout
 Route::get('/', 'HomeController@showLogin');
 
 Route::post('/', 'HomeController@doLogin');
