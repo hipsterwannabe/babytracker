@@ -2,6 +2,16 @@
 
 class UserController extends BaseController {
 
+    public function __construct()
+    {
+        // call base controller constructor
+        parent::__construct();
+
+        // run auth filter before all methods on this controller except new user
+        $this->beforeFilter('auth.basic', array('except' => array('newUser')));
+
+    }
+
     public function newUser()
     {
         $user = new User();
@@ -10,6 +20,8 @@ class UserController extends BaseController {
         $user->password = Hash::make(Input::get('password'));
         $user->save();
         Auth::login($user);
+
+        Session::flash('successMessage', "$user->name has been created successfully.");
         return View::make('new-user-menu')->with('user', $user);
     }
 
@@ -80,12 +92,15 @@ class UserController extends BaseController {
             $image->clear();
             $image->destroy();
         }
+        Session::flash('successMessage', "$baby->name has been added successfully.");
         return Redirect::action('EventController@showMenu', $baby->id);
     }
 
     public function editBaby($id)
     {
         $baby = Baby::find($id);
+        Input::old('name');
+        Input::old('username');
         return View::make('add-baby')->with('baby', $baby);
     }
 

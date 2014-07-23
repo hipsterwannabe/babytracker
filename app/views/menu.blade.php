@@ -26,6 +26,7 @@
             <a href="{{{ action('EventController@showBottle', $baby->id) }}}" class="btn btn-primary btn-lg" role="button">Bottle</a>
             <a href="{{{ action('EventController@showBreast', $baby->id) }}}" class="btn btn-primary btn-lg" role="button">Nurse</a>
             <a href="{{{ action('EventController@showNap', $baby->id) }}}" class="btn btn-primary btn-lg" role="button">Sleep</a>
+            <a href="{{{ action('EventController@showStats', $baby->id) }}}" class="btn btn-info btn-lg" role="button">Growth Stats</a>
         </div>
     </div>
 

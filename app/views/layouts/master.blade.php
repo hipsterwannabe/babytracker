@@ -36,9 +36,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    @if (!Auth::check()) 
-                        <a class="navbar-brand" href="/">Sign In</a>
-                    @endif
+                    <a class="navbar-brand" href="/menu">Menu</a>
                     <a class="navbar-brand" href="/about">About Us</a>
                 </div>
 
