@@ -2,13 +2,11 @@
 
 class BaseController extends Controller {
 
-    // public function __construct()
- //    {
-
- //        // run auth filter before all methods on this controller except index and show
- //        $this->beforeFilter('auth.basic', array('except' => array('login')));
-
- //    }
+    public function __construct()
+    {
+        // require csrf token for all post, delete, and put actions
+        $this->beforeFilter('csrf', array('on' => array('post', 'delete', 'put')));
+    }
     /**
      * Setup the layout used by the controller.
      *

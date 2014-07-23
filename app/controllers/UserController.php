@@ -2,15 +2,15 @@
 
 class UserController extends BaseController {
 
-    // public function __construct()
-    // {
-    //     // call base controller constructor
-    //     parent::__construct();
+    public function __construct()
+    {
+        // call base controller constructor
+        parent::__construct();
 
-    //     // run auth filter before all methods on this controller except login
-    //     $this->beforeFilter('auth.basic', array('except' => array('login')));
+        // run auth filter before all methods on this controller except new user
+        $this->beforeFilter('auth.basic', array('except' => array('newUser')));
 
-    // }
+    }
 
     public function newUser()
     {
