@@ -29,6 +29,7 @@
 	            type: 'line'
 	        },
 	        xAxis: {
+	        	type: 'datetime',
 	            title: {
 	                text: 'Time of Nap'
 	            }
@@ -36,7 +37,8 @@
 	        yAxis: {
 	            title: {
 	                text: 'Nap Length'
-	            }
+	            },
+	            floor: 0,
 	        },
 	        tooltip: {
 			    backgroundColor: '#FCFFC5',
