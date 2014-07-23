@@ -72,7 +72,7 @@ Route::get('/menu', function()
     }
 });
 
-Route::get('/graphs/{id}', 'EventController@showGraphs');
+Route::get('/charts/{id}', 'EventController@showCharts');
 
 Route::get('/about', function()
 {

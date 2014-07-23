@@ -166,7 +166,7 @@ class EventController extends BaseController {
         return Redirect::action('EventController@showMenu', $id);
     }
 
-    public function showGraphs($id)
+    public function showCharts($id)
     {
         $baby = Baby::findOrFail($id);
         // use this to convert time

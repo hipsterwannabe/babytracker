@@ -36,7 +36,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/menu">Menu</a>
+                    <a class="navbar-brand" href="/menu">Dashboard</a>
                     <a class="navbar-brand" href="/about">About Us</a>
                 </div>
 
