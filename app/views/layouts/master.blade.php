@@ -5,14 +5,35 @@
     <!-- This is the template branch!!! -->
 
     <meta charset="utf-8">
+    <title>ChartBabe</title>
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your,Keywords">
+    <meta name="author" content="Ashley Webb, Greg Vallejo, Danny Jimenez">
 
-    <title>BabyTracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="sheldon/theme/css/bootstrap.css">
+    <!-- Styles -->
+    <!-- Bootstrap CSS -->
+    <link href="sheldon/theme/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery UI -->
+    <link href="/sheldon/theme/css/jquery-ui.css" rel="stylesheet">
 
-    <!-- Sheldon stylesheet -->
-    <link rel="stylesheet" href="/sheldon/theme/css/style.css">
+    <!-- jQuery Gritter -->
+    <link href="/sheldon/theme/css/jquery.gritter.css" rel="stylesheet">
+    <!-- Bootstrap Switch -->
+    <link href="/sheldon/theme/css/bootstrap-switch.css" rel="stylesheet">
+    <!-- jQuery Datatables -->
+    <link href="/sheldon/theme/css/jquery.dataTables.css" rel="stylesheet">
+    <!-- Rateit -->
+    <link href="/sheldon/theme/css/rateit.css" rel="stylesheet">
+    <!-- jQuery prettyPhoto -->
+    <link href="/sheldon/theme/css/prettyPhoto.css" rel="stylesheet">
+    <!-- Full calendar -->
+    <link href="/sheldon/theme/css/fullcalendar.css" rel="stylesheet">
+    <!-- Font awesome CSS -->
+    <link href="/sheldon/theme/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/sheldon/theme/css/style.css" rel="stylesheet">
 
     <!-- moment.js -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>

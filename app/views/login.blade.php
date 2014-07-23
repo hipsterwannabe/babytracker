@@ -1,202 +1,151 @@
-@extends('layouts.master')
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Login/Register - Sheldon</title>
+    <!-- Description, Keywords and Author -->
+    <meta name="description" content="Your description">
+    <meta name="keywords" content="Your,Keywords">
+    <meta name="author" content="ResponsiveWebInc">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-@section('content')
+    <!-- Styles -->
+    <!-- Bootstrap CSS -->
+    <link href="/sheldon/theme/css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery UI -->
+    <link href="/sheldon/theme/css/jquery-ui.css" rel="stylesheet">
 
-<style type="text/css">
+    <!-- jQuery Gritter -->
+    <link href="/sheldon/theme/css/jquery.gritter.css" rel="stylesheet">
+    <!-- Bootstrap Switch -->
+    <link href="/sheldon/theme/css/bootstrap-switch.css" rel="stylesheet">
+    <!-- jQuery Datatables -->
+    <link href="/sheldon/theme/css/jquery.dataTables.css" rel="stylesheet">
+    <!-- Rateit -->
+    <link href="/sheldon/theme/css/rateit.css" rel="stylesheet">
+    <!-- jQuery prettyPhoto -->
+    <link href="/sheldon/theme/css/prettyPhoto.css" rel="stylesheet">
+    <!-- Full calendar -->
+    <link href="/sheldon/theme/css/fullcalendar.css" rel="stylesheet">
+    <!-- Font awesome CSS -->
+    <link href="/sheldon/theme/css/font-awesome.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/sheldon/theme/css/style.css" rel="stylesheet">
 
-body {
-    background-color: #F3F3F3;
-}
+    <!-- moment.js -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
 
-html,body {
-    position: relative;
-    height: 100%;
-}
+    <!-- flipclock styling -->
+    <link rel="stylesheet" type="text/css" href="/assets/FlipClock-master/compiled/flipclock.css">
 
-.login-container{
-    position: relative;
-    width: 300px;
-    height: 488px;
-    margin: 80px auto;
-    padding: 20px 40px 40px;
-    text-align: center;
-    background: #fff;
-    border: 1px solid #ccc;
-}
+</head>
 
-#output{
-    position: absolute;
-    width: 300px;
-    top: -75px;
-    left: 0;
-    color: #fff;
-}
+<body>
 
-#output.alert-success{
-    background: rgb(25, 204, 25);
-}
+    <div class="out-container">
 
-#output.alert-danger{
-    background: rgb(228, 105, 105);
-}
+        <div class="login-page">
+            <div class="container">
 
-.login-container::before,.login-container::after{
-    content: "";
-    position: absolute;
-    width: 100%;height: 100%;
-    top: 3.5px;left: 0;
-    background: #fff;
-    z-index: -1;
-    -webkit-transform: rotateZ(4deg);
-    -moz-transform: rotateZ(4deg);
-    -ms-transform: rotateZ(4deg);
-    border: 1px solid #ccc;
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs nav-justified">
+                  <li class="active"><a href="#login" data-toggle="tab"><i class="fa fa-sign-in"></i> Login</a></li>
+                  <li><a href="#register" data-toggle="tab"><i class="fa fa-pencil"></i> Register</a></li>
+                  <li><a href="#contact" data-toggle="tab"><i class="fa fa-envelope"></i> Contact</a></li>
+                </ul>
 
-}
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <div class="tab-pane fade active in" id="login">
 
-.login-container::after{
-    top: 5px;
-    z-index: -2;
-    -webkit-transform: rotateZ(-2deg);
-     -moz-transform: rotateZ(-2deg);
-      -ms-transform: rotateZ(-2deg);
-
-}
-
-.avatar{
-    background: url(http://images.sodahead.com/polls/002145007/1156654708_450x316_alg_crying_baby_xlarge.jpeg);
-    width: 160px;height: 160px;
-    margin: 10px auto 30px;
-    border-radius: 100%;
-    border: 1.7px solid #F3F3F3;
-    background-size: cover;
-}
-
-.form-box input{
-    width: 100%;
-    padding: 10px;
-    text-align: center;
-    height:40px;
-    border: 1px solid #ccc;;
-    background: #fafafa;
-    transition:0.2s ease-in-out;
-
-}
-
-.form-box input:focus{
-    outline: 0;
-    background: #eee;
-}
-
-.form-box {
-    border-radius: 5px 5px 0 0;
-    text-transform: lowercase;
-}
-
-.form-box {
-    border-radius: 0 0 5px 5px;
-    border-top: 0;
-}
-
-.form-box button.login{
-    margin-top:15px;
-    padding: 10px 20px;
-}
-
-.animated {
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-}
-
-@-webkit-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px);
-    -ms-transform: translateY(20px);
-    transform: translateY(20px);
-  }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-.fadeInUp {
-  -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
-}
-
-</style>
-
-    <div class="container text-center">
-        <div class="login-container btn-group pagination-centered">
-                        
-        <div id="output"></div>
-        <div class="avatar"></div>
-
-            <ul class="nav">
-                <li class="divider-vertical"></li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign In</a>
-                    <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
-                        
-
-                        {{ Form::open(array('action' => 'HomeController@doLogin', 'class' => 'form-inline')) }}
-
-                        {{ Form::label('email', 'Email', array('class' => 'sr-only btn-block')) }}
-                        {{ Form::text('email', null, array('class' => 'form-control', 'placeholder' => 'Enter email')) }}
-
-                        {{ Form::label('password', 'Password', array('class' => 'sr-only btn-block')) }}
-                        {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Enter password')) }}
-
-                        {{ Form::submit('Log In', array('class' => 'btn btn-info btn-block login')) }}
-
+                        <!-- Login form -->
+                        {{ Form::open(array('action' => 'HomeController@doLogin')) }}
+                        <div class="form-group">
+                            {{ Form::label('email', 'Email') }}
+                            {{ Form::text('email', null, array('class' => 'form-control', 'placeholder' => 'Email')) }}
+                        </div>
+                        <div class="form-group">
+                            {{ Form::label('password', 'Password') }}
+                            {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Password')) }}
+                        </div>
+                        {{ Form::submit('Log In', array('class' => 'btn btn-danger btn-sm')) }}
                         {{ Form::close() }}
 
-                        
                     </div>
-                </li>
-                <li class="dropdown">
-                    <a class="dropdown-toggle" href="#" data-toggle="dropdown">Sign Up</a>
-                    <div class="dropdown-menu" style="padding: 15px; padding-bottom: 0px;">
 
-                        {{ Form::open(array('action' => 'UserController@newUser', 'class' => 'form-inline')) }}
 
-                        {{ Form::label('name', 'Name', array('class' => 'sr-only')) }}
-                        {{ Form::text('name', null, array('class' => 'form-control', 'placeholder' => 'Enter name')) }}
+              <div class="tab-pane fade" id="register">
+                <!-- Register form -->
 
-                        {{ Form::label('new_email', 'Email', array('class' => 'sr-only')) }}
-                        {{ Form::text('new_email', null, array('class' => 'form-control', 'placeholder' => 'Enter email')) }}
+                <form role="form" action="index.html">
+                  <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Full Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Password">
+                  </div>
+                  <div class="form-group">
+                    <label for="cpassword">Confirm Password</label>
+                    <input type="cpassword" class="form-control" id="cpassword" placeholder="Confirm Password">
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> Agree <a href="#">Terms & Conditions</a>
+                    </label>
+                  </div>
+                  <button type="submit" class="btn btn-danger btn-sm">Submit</button>
+                  <button type="reset" class="btn btn-black btn-sm">Reset</button>
+                </form>
 
-                        {{ Form::label('password', 'Password', array('class' => 'sr-only')) }}
-                        {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Enter password')) }}
+              </div>
 
-                        {{ Form::submit('Create User', array('class' => 'btn btn-info btn-block')) }}
 
-                        {{ Form::close() }}
-                    </div>
-                </li>
-            </ul>
+              <div class="tab-pane fade" id="contact">
+
+                <!-- Contact Form -->
+
+                <form role="form" action="index.html">
+                  <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="text" class="form-control" id="email" placeholder="Email">
+                  </div>
+                  <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea rows="3" class="form-control"></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-danger btn-sm">Submit</button>
+                  <button type="reset" class="btn btn-black btn-sm">Reset</button>
+                </form>
+
+              </div>
+            </div>
+
         </div>
-    </div>
-@stop
+     </div>
+
+  </div>
+
+
+  <!-- Javascript files -->
+  <!-- jQuery -->
+  <script src="/sheldon/theme/js/jquery.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="/sheldon/theme/js/bootstrap.min.js"></script>
+  <!-- Respond JS for IE8 -->
+  <script src="/sheldon/theme/js/respond.min.js"></script>
+  <!-- HTML5 Support for IE -->
+  <script src="/sheldon/theme/js/html5shiv.js"></script>
+
+</body>
+</html>
