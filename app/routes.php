@@ -20,6 +20,8 @@ Route::get('/logout', 'HomeController@logout');
 
 
 // Add new profiles
+Route::post('/new-user', 'UserController@newUser');
+
 Route::get('/add-baby', 'UserController@showCreateBaby');
 
 Route::post('/add-baby', 'UserController@newBaby');
