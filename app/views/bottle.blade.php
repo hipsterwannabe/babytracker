@@ -98,6 +98,7 @@
     var startBottle = null;
     var stopBottle = null;
     var flipClock = null;
+    var bottleLength = null;
     $(document).ready(function() {
         // Flipclock Timer
         flipClock = $('#bottleTimer').FlipClock({
@@ -109,22 +110,19 @@
                 startBottle = moment();
                 $(this).removeClass("btn btn-primary").addClass("btn btn-danger");
                 $(this).text("End Feeding");
-                console.log(startBottle);
                 $("#beginTime").val(startBottle);
-                // Flipclock Timer
+                // Start TImer
                 flipClock.start();
             } else if (startBottle !== null && stopBottle == null) {
-                // logs time of stopBottle, disables button
+                // Logs time of stopBottle, disables button
                 stopBottle = moment();
                 $(this).text("Tummy's Full!");
                 $(this).attr("disabled", "disabled");
-                console.log(stopBottle);
                 $("#endTime").val(stopBottle);
-                //stop the flipclock timer
+                // Stop Timer
                 flipClock.stop();
-                var bottleLength = stopBottle.diff(startBottle);
+                bottleLength = stopBottle.diff(startBottle);
                 $("#feedingLength").val(bottleLength);
-                console.log(bottleLength);
             }
         });
     });
