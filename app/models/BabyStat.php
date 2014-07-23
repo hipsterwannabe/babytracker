@@ -1,7 +1,7 @@
 <?php
 
 
-class Weight extends BaseModel {
+class BabyStat extends BaseModel {
 
     public function baby()
     {
