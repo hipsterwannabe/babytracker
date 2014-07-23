@@ -79,12 +79,3 @@ Route::get('/about', function()
    return View::make('about');
 });
 
-Route::get('/baby-stats', function()
-{
-    return View::make('baby-stats');
-});
-
-Route::get('/buttons', function()
-{
-    return View::make('buttons');
-});
