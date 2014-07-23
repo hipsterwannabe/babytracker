@@ -120,7 +120,7 @@
                 flipClock.stop();
                 timeLeft = stopLeft.diff(startLeft);
                 totalTime = timeLeft;
-                $("feedingLength").val(totalTime);
+                $("#feedingLength").val(totalTime);
                 $("#rightButton").removeClass("invisible").addClass("btn btn-primary");
                 $("#rightButton").text("Switch Sides.");
                 $(document).on('click', "#rightButton", function() {
@@ -141,7 +141,7 @@
                         flipClock.stop();
                         timeRight = stopRight.diff(startRight);
                         totalTime = timeRight + timeLeft;
-                        $("feedingLength").val(totalTime);
+                        $("#feedingLength").val(totalTime);
                     }
                 });
             }
@@ -167,7 +167,7 @@
                 flipClock.stop();
                 timeRight = stopRight.diff(startRight);
                 totalTime = timeRight;
-                $("feedingLength").val(totalTime);
+                $("#feedingLength").val(totalTime);
                 $("#leftButton").removeClass("invisible").addClass("btn btn-primary");
                 $("#leftButton").text("Switch Sides.");
                 $(document).on('click', "#leftButton", function() {
@@ -188,7 +188,7 @@
                         flipClock.stop();
                         timeLeft = stopLeft.diff(startLeft);
                         totalTime = timeRight + timeLeft;
-                        $("feedingLength").val(totalTime);
+                        $("#feedingLength").val(totalTime);
                     }
                 });
             }
