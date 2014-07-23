@@ -169,16 +169,17 @@ class EventController extends BaseController {
         $feedings = $baby->feedings;
 
         foreach ($feedings as $feeding) {
-            if ($feedings->bottle){
-                array_push($feedingData, "['" . date('Y-m-d H:i:s', strtotime($feedings->start_bottle)) . "'," . time_to_decimal($feedings->bottle_length) . "]");
-            } elseif ($feedings->breast) {
-                if (($feedings->start_left) < ($feedings->start_right)) {
-                array_push($feedingData, "['" . date('Y-m-d H:i:s', strtotime($feedings->start_right)) . "'," . time_to_decimal($feedings->nursing_time) . "]");
+            if ($feeding->bottle){
+                array_push($feedingData, "['" . date('Y-m-d H:i:s', strtotime($feeding->start_bottle)) . "'," . time_to_decimal($feedings->bottle_length) . "]");
+            } elseif ($feeding->breast) {
+                if (($feeding->start_left) < ($feeding->start_right)) {
+                    array_push($feedingData, "['" . date('Y-m-d H:i:s', strtotime($feeding->start_right)) . "'," . time_to_decimal($feedings->nursing_time) . "]");
                 } else {
-                    array_push($feedingData, "['" . date('Y-m-d H:i:s', strtotime($feedings->start_left)) . "'," . time_to_decimal($feedings->nursing_time) . "]");
+                    array_push($feedingData, "['" . date('Y-m-d H:i:s', strtotime($feeding->start_left)) . "'," . time_to_decimal($feedings->nursing_time) . "]");
                 }
             }
         }
+
         //  building changing dats for graph
         $diaperData = array();
         $diapers = $baby->diapers;
