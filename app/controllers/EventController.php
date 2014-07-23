@@ -170,9 +170,13 @@ class EventController extends BaseController {
 
         foreach ($feedings as $feeding) {
             if ($feedings->bottle){
-                $feedingData[] = "['" . date('Y-m-d H:i:s', strtotime($feedings->start_bottle)) . "'," . time_to_decimal($feedings->bottle_length) . "]";
-            } else {
-
+                array_push($feedingData, "['" . date('Y-m-d H:i:s', strtotime($feedings->start_bottle)) . "'," . time_to_decimal($feedings->bottle_length) . "]");
+            } elseif ($feedings->breast) {
+                if (($feedings->start_left) < ($feedings->start_right)) {
+                array_push($feedingData, "['" . date('Y-m-d H:i:s', strtotime($feedings->start_right)) . "'," . time_to_decimal($feedings->nursing_time) . "]");
+                } else {
+                    array_push($feedingData, "['" . date('Y-m-d H:i:s', strtotime($feedings->start_left)) . "'," . time_to_decimal($feedings->nursing_time) . "]");
+                }
             }
         }
         //  building changing dats for graph
