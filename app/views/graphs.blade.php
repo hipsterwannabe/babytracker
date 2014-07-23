@@ -51,7 +51,6 @@
 	    });
 
 	});
-
 	//diaper chart
 	$(function () { 
 	    $('#diaperContainer').highcharts({
@@ -79,7 +78,7 @@
 			    shared: true,
 			},
 			series: [{
-				data: [{{ $diaperData}}]
+				data: [{{ $diaperData }}]
 			}]
 	    });
 	});

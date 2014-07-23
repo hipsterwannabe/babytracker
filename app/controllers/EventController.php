@@ -179,25 +179,32 @@ class EventController extends BaseController {
         $feedings = $baby->feedings;
 
         foreach ($feedings as $feeding) {
-            if ($feedings->bottle){
-                $feedingData[] = "['" . date('Y-m-d H:i:s', strtotime($feedings->start_bottle)) . "'," . time_to_decimal($feedings->bottle_length) . "]";
-            } else {
-
+            if ($feeding->bottle){
+                array_push($feedingData, "['" . date('Y-m-d H:i:s', strtotime($feeding->start_bottle)) . "'," . time_to_decimal($feeding->bottle_length) . "]");
+            } elseif ($feeding->breast) {
+                if (($feeding->start_left) < ($feeding->start_right)) {
+                    array_push($feedingData, "['" . date('Y-m-d H:i:s', strtotime($feeding->start_right)) . "'," . time_to_decimal($feeding->nursing_time) . "]");
+                } else {
+                    array_push($feedingData, "['" . date('Y-m-d H:i:s', strtotime($feeding->start_left)) . "'," . time_to_decimal($feeding->nursing_time) . "]");
+                }
             }
         }
+        $feedingData = join($feedingData, ',');
+
         //  building changing dats for graph
         $diaperData = array();
         $diapers = $baby->diapers;
 
         foreach ($diapers as $diaper) {
-            if (number_one && number_two){
-                $diaperData[] = "['3', '" . date('Y-m-d H:i:s', strtotime($diapers->created_at)) . "]";
-            } elseif (number_one){
-                $diaperData[] = "['1', '" . date('Y-m-d H:i:s', strtotime($diapers->created_at)) . "]";
-            } elseif (number_two) {
-                $diaperData[] = "['2', '" . date('Y-m-d H:i:s', strtotime($diapers->created_at)) . "]";
+            if ($diaper->number_one && $diaper->number_two){
+                array_push($diaperData, "['3', '" . date('Y-m-d H:i:s', strtotime($diaper->created_at)) . "']");
+            } elseif ($diaper->number_one){
+                array_push($diaperData, "['1', '" . date('Y-m-d H:i:s', strtotime($diaper->created_at)) . "']");
+            } elseif ($diaper->number_two) {
+                array_push($diaperData, "['2', '" . date('Y-m-d H:i:s', strtotime($diaper->created_at)) . "']");
             }
         }
+        $diaperData = join($diaperData, ',');
         $data = array(
             'baby' => $baby,
             'napData' => $napData,
