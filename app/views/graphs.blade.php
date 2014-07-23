@@ -52,6 +52,7 @@
 
 	});
 	//diaper chart
+	var diaperLabels = [" ", "Wet", "Dirty", "Both"];
 	$(function () { 
 	    $('#diaperContainer').highcharts({
 	        title: {
@@ -69,7 +70,15 @@
 	        yAxis: {
 	            title: {
 	                text: 'Type of Change'
-	            }
+	            },
+	            labels: {
+		            formatter: function() {
+		                return diaperLabels[this.value];
+		            },
+		        },
+	            tickInterval: 1,
+	            floor: 1,
+	            ceiling: 3
 	        },
 	        tooltip: {
 			    backgroundColor: '#FCFFC5',
@@ -116,34 +125,10 @@
 			    borderWidth: 3,
 			    shared: true,
 			},
+			series: [{
+				data: [{{ $feedingData }}]
+			}]
 	    });
 	});
-
-		// $(document).ready(function () { 
-		//     $('#diaperContainer').highcharts({
-		//         chart: {
-		//             type: 'bar'
-		//         },
-		//         title: {
-		//             text: 'Fruit Consumption'
-		//         },
-		//         xAxis: {
-		//             categories: ['Apples', 'Bananas', 'Oranges']
-		//         },
-		//         yAxis: {
-		//             title: {
-		//                 text: 'Fruit eaten'
-		//             }
-		//         },
-		//         series: [{
-		//             name: 'Jane',
-		//             data: [1, 0, 4]
-		//         }, {
-		//             name: 'John',
-		//             data: [5, 7, 3]
-		//         }]
-		//     });
-
-		// });
 	</script>
 @stop
