@@ -4,22 +4,6 @@
 
 <div class="container">
 
-    <!-- Event Sidebar -->
-    <div class="col-lg-3">
-        <div class="row">
-            <img src="{{{ $baby->img_path }}}" alt="">
-        </div>
-
-        <div class="row">
-            <h2>{{{ $baby->name }}}</h2>
-        </div>
-
-        <div class="row">
-            <h4>{{{ $baby->birth_date }}}</h4>
-        </div>
-    </div>
-    <!-- Event Sidebar -->
-
     <div class="col-lg-offset-1 col-lg-8">
 
         <div class="row">
