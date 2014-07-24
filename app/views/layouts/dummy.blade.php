@@ -33,6 +33,8 @@
         <link href="/sheldon/theme/css/font-awesome.min.css" rel="stylesheet">
         <!-- Custom CSS -->
         <link href="/sheldon/theme/css/style.css" rel="stylesheet">
+        <!-- flipclock styling -->
+        <link rel="stylesheet" type="text/css" href="/assets/FlipClock-master/compiled/flipclock.css">
 
         <!--[if IE]>
             <link rel="stylesheet" type="text/css" href="css/style-ie.css" />
@@ -40,6 +42,9 @@
 
         <!-- Favicon -->
         <link rel="shortcut icon" href="#">
+
+        @yield('topscript')
+
     </head>
 
     <body>
@@ -78,42 +83,17 @@
                          <!-- Main navigation. Refer Notes.txt files for reference. -->
 
                          <!-- Use the class "current" in main menu to hightlight current main menu -->
-                         <li><a href="index.html"><i class="fa fa-desktop"></i> Dashboard</a></li>
+                         <li><a href="{{{ action('EventController@showCharts', $baby->id) }}}"><i class="fa fa-bar-chart-o"></i> Charts</a></li>
                          <li><a href="widgets.html"><i class="fa fa-folder-open"></i> Widgets</a></li>
-                         <li><a href="charts.html"><i class="fa fa-bar-chart-o"></i> Charts</a></li>
-
-                         <li class="has_submenu">
-                             <a href="#">
-                                 <i class="fa fa-file"></i> Pages
-                                 <!-- Icon to show dropdown -->
-                                 <span class="caret pull-right"></span>
-                             </a>
-                             <!-- Sub navigation -->
-                             <ul>
-                                 <!-- Use the class "active" in sub menu to hightlight current sub menu -->
-                                 <li><a href="errorlog.html"><i class="fa fa-angle-double-right"></i> ErrorLog</a></li>
-                                 <li><a href="gallery.html"><i class="fa fa-angle-double-right"></i> Gallery</a></li>
-                                 <li><a href="profile.html"><i class="fa fa-angle-double-right"></i> Profile</a></li>
-                                 <li><a href="ui.html"><i class="fa fa-angle-double-right"></i> UI</a></li>
-                                 <li><a href="calendar.html"><i class="fa fa-angle-double-right"></i> Calendar</a></li>
-                                 <li><a href="invoice.html"><i class="fa fa-angle-double-right"></i> Invoice</a></li>
-                                 <li><a href="media.html"><i class="fa fa-angle-double-right"></i> Media</a></li>
-                                 <li><a href="posts.html"><i class="fa fa-angle-double-right"></i> Posts</a></li>
-                                 <li><a href="statement.html"><i class="fa fa-angle-double-right"></i> Statement</a></li>
-                             </ul>
-                         </li>
-
                          <li><a href="extensions.html"><i class="fa fa-cog"></i> Extensions</a></li>
                          <li><a href="form.html"><i class="fa fa-list-alt"></i> Form</a></li>
                          <li><a href="tables.html"><i class="fa fa-table"></i> Tables</a></li>
                          <li><a href="users.html"><i class="fa fa-user"></i> Users</a></li>
 
                      </ul>
-                  </div>
-                  <!-- Sidebar navigation ends -->
+                  </div> <!-- Sidebar navigation ends -->
 
-            </div>
-            <!-- Sidebar ends -->
+            </div> <!-- Sidebar ends -->
 
             <!-- Mainbar starts -->
             <div class="mainbar">
@@ -184,6 +164,8 @@
       <script src="/sheldon/theme/js/html5shiv.js"></script>
       <!-- Custom JS -->
       <script src="/sheldon/theme/js/custom.js"></script>
+
+        @yield('bottomscript')
 
 
     </body>
