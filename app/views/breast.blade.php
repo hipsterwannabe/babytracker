@@ -1,83 +1,76 @@
-@extends('layouts.master')
+@extends('layouts.dummy')
 
 @section('content')
 
 <div class="container">
 
-    <!-- Event Sidebar -->
-    <div class="col-lg-3">
-        <div class="row">
-            <img src="{{{ $baby->img_path }}}" alt="">
-        </div>
+    <div class="page-content page-form">
 
-        <div class="row">
-            <h2>{{{ $baby->name }}}</h2>
-        </div>
-    </div>
-    <!-- Event Sidebar -->
-
-    <div class="col-lg-offset-1 col-lg-8">
-
-        <div class="row">
-            <div class="col-lg-4">
+        <div class="widget">
+            <div class="widget-head">
                 <h3>Nursing Session</h3>
             </div>
+
+            <div class="widget-body">
+
+                <div class="form-group">
+                    <div class="col-lg-offset-1 col-lg-10">
+                        <div id="feedingTimer"></div>
+                        <div id="leftTimer"></div>
+                        <div id="rightTimer"></div>
+                    </div>
+                </div>
+
+                {{ Form::open(array('action' => array('EventController@doBreast', $baby->id), 'class' => 'form-horizontal')) }}
+
+                <div class="form-group">
+                    <div class="col-lg-offset-2 col-lg-10">
+                        <!-- refactored to have one start/stop button -->
+                        {{ Form::button('Start Left', array('class' => 'btn btn-success', 'id' => 'leftButton')) }}
+                        <!-- refactored to have one start/stop button -->
+                        {{ Form::button('Start Right', array('class' => 'btn btn-success', 'id' => 'rightButton')) }}
+                        <!-- switch sides button, invisible at first -->
+                        {{ Form::button('Switch Sides', array('class' => 'invisible', 'id' => 'switchSides')) }}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    {{ Form::label('notes', 'Notes', array('class' => 'col-lg-2 control-label')) }}
+                    <div class="col-lg-10">
+                        {{ Form::textarea('notes', null, array('class' => 'form-control', 'rows' => '3', 'placeholder' => 'feeding notes...')) }}
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <!-- Hidden inputs for start and end times -->
+                    {{ Form::hidden('start_left', null, array('id' => 'beginLeft')) }}
+                    {{ Form::hidden('end_left', null, array('id' => 'endLeft')) }}
+
+                    {{ Form::hidden('start_right', null, array('id' => 'beginRight')) }}
+                    {{ Form::hidden('end_right', null, array('id' => 'endRight')) }}
+
+                    {{ Form::hidden('length', null, array('id' => 'feedingLength')) }}
+                </div>
+
+                <div class="form-group">
+                    <div class="col-lg-offset-2 col-lg-10">
+                        {{ Form::submit('Submit', array('class' => 'btn btn-success')) }}
+                    </div>
+                </div>
+
+                {{ Form::close() }}
+
+           </div>
+
+           <div class="widget-foot">
+
+           </div>
+
         </div>
 
-        <div class="well well-sm">
+    </div>
 
-            <div id="feedingTimer" style="display: inline-block"></div>
-            <div id="leftTimer" style="display: inline-block"></div>
-            <div id="rightTimer" style="display: inline-block"></div>
-
-            {{ Form::open(array('action' => array('EventController@doBreast', $baby->id))) }}
-
-            <!-- refactored to have one start/stop button -->
-            {{ Form::button('Start Left', array('class' => 'btn btn-primary', 'id' => 'leftButton')) }}
-            <!-- refactored to have one start/stop button -->
-            {{ Form::button('Start Right', array('class' => 'btn btn-primary', 'id' => 'rightButton')) }}
-            <!-- switch sides button, invisible at first -->
-            {{ Form::button('Switch Sides', array('class' => 'invisible', 'id' => 'switchSides')) }}
-
-            <hr>
-
-            <div class="row">
-                <div class="form-group">
-                    <div class="col-lg-1">
-                        {{ Form::label('notes', 'Notes:') }}
-                    </div>
-                    <div class="col-lg-6">
-                        {{ Form::textarea('notes', null, array('class' => 'form-control', 'rows' => '3', 'cols' => '6', 'placeholder' => 'feeding notes...')) }}
-                    </div>
-                </div>
-            </div>
-
-            <!-- Hidden inputs for start and end times -->
-            {{ Form::hidden('start_left', null, array('id' => 'beginLeft')) }}
-            {{ Form::hidden('end_left', null, array('id' => 'endLeft')) }}
-
-            {{ Form::hidden('start_right', null, array('id' => 'beginRight')) }}
-            {{ Form::hidden('end_right', null, array('id' => 'endRight')) }}
-
-            {{ Form::hidden('length', null, array('id' => 'feedingLength')) }}
-
-            <hr>
-
-            <div class="row">
-                <div class="form-group">
-                    <div class="col-lg-offset-1 col-lg-1">
-                        {{ Form::submit('Submit', array('class' => 'btn btn-info'))}}
-                    </div>
-                </div>
-            </div>
-
-            {{ Form::close() }}
-
-        </div> <!-- Well -->
-
-    </div> <!-- Column -->
-
-</div> <!-- Container -->
+</div>
 
 @stop
 
@@ -104,8 +97,8 @@
             if (startLeft == null && stopLeft == null && startRight == null && stopRight == null) {
                 startLeft = moment();
                 // make right side button invisible
-                $("#rightButton").removeClass("btn btn-primary").addClass("invisible");
-                $(this).removeClass("btn btn-primary").addClass("btn btn-danger");
+                $("#rightButton").removeClass("btn btn-success").addClass("invisible");
+                $(this).removeClass("btn btn-success").addClass("btn btn-danger");
                 $(this).text("Stop Left Side.");
                 $("#beginLeft").val(startLeft);
                 // Flipclock Timer
@@ -121,13 +114,13 @@
                 timeLeft = stopLeft.diff(startLeft);
                 totalTime = timeLeft;
                 $("#feedingLength").val(totalTime);
-                $("#rightButton").removeClass("invisible").addClass("btn btn-primary");
+                $("#rightButton").removeClass("invisible").addClass("btn btn-success");
                 $("#rightButton").text("Switch Sides.");
                 $(document).on('click', "#rightButton", function() {
                     if (startRight == null && stopRight == null) {
                         $("#leftButton").hide;
                         startRight = moment();
-                        $(this).removeClass("btn btn-primary").addClass("btn btn-danger");
+                        $(this).removeClass("btn btn-success").addClass("btn btn-danger");
                         $(this).text("Stop Right Side.");
                         $("#beginRight").val(startRight);
                         // Restart timer
@@ -151,9 +144,9 @@
             if (startLeft == null && stopLeft == null && startRight == null && stopRight == null) {
                 startRight = moment();
                 // Make leftt side button invisible
-                $("#leftButton").removeClass("btn btn-primary").addClass("invisible");
+                $("#leftButton").removeClass("btn btn-success").addClass("invisible");
                 // Changes class of clicked right button
-                $(this).removeClass("btn-primary").addClass("btn-danger");
+                $(this).removeClass("btn-success").addClass("btn-danger");
                 $(this).text("Stop Right Side.");
                 $("#beginRight").val(startRight);
                 flipClock.start();
@@ -168,13 +161,13 @@
                 timeRight = stopRight.diff(startRight);
                 totalTime = timeRight;
                 $("#feedingLength").val(totalTime);
-                $("#leftButton").removeClass("invisible").addClass("btn btn-primary");
+                $("#leftButton").removeClass("invisible").addClass("btn btn-success");
                 $("#leftButton").text("Switch Sides.");
                 $(document).on('click', "#leftButton", function() {
                     if (startLeft == null && stopLeft == null) {
                         $("#rightButton").hide;
                         startLeft = moment();
-                        $(this).removeClass("btn btn-primary").addClass("btn btn-danger");
+                        $(this).removeClass("btn btn-success").addClass("btn btn-danger");
                         $(this).text("Stop Left Side.");
                         $("#beginLeft").val(startLeft);
                         // Restart Timer
