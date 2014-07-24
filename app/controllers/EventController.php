@@ -192,11 +192,15 @@ class EventController extends BaseController {
         // building feeding data for graph
 
         $feedingData = array();
-        $feedings = $baby->feedings;
+        $feedings = $baby->feedings()->orderBy('created_at', 'ASC')->get();
 
         foreach ($feedings as $feeding) {
             if ($feeding->bottle){
-                array_push($feedingData, "['" . date('Y-m-d H:i:s', strtotime($feeding->start_bottle)) . "'," . time_to_decimal($feeding->bottle_length) . "]");
+                array_push($feedingData, [
+                        $feeding->start_bottle->timestamp * 1000,
+                        $feeding->stop_bottle->diffInSeconds($feeding->start_bottle)
+                    ];
+                );
             } elseif ($feeding->breast) {
                 if (($feeding->start_left) < ($feeding->start_right)) {
                     array_push($feedingData, "['" . date('Y-m-d H:i:s', strtotime($feeding->start_right)) . "'," . time_to_decimal($feeding->nursing_time) . "]");
