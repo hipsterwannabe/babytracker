@@ -87,11 +87,11 @@
 
                          <!-- Use the class "current" in main menu to hightlight current main menu -->
                          <li><a href="{{{ action('EventController@showCharts', $baby->id) }}}"><i class="fa fa-bar-chart-o"></i> Charts</a></li>
-                         <li><a href="widgets.html"><i class="fa fa-folder-open"></i> Widgets</a></li>
-                         <li><a href="extensions.html"><i class="fa fa-cog"></i> Extensions</a></li>
-                         <li><a href="form.html"><i class="fa fa-list-alt"></i> Form</a></li>
-                         <li><a href="tables.html"><i class="fa fa-table"></i> Tables</a></li>
-                         <li><a href="users.html"><i class="fa fa-user"></i> Users</a></li>
+                         <li><a href="{{{ action('EventController@showDiaper', $baby->id) }}}"><i class="fa fa-folder-open"></i> Diaper</a></li>
+                         <li><a href="{{{ action('EventController@showBreast', $baby->id) }}}"><i class="fa fa-cog"></i> Nurse</a></li>
+                         <li><a href="{{{ action('EventController@showBottle', $baby->id) }}}"><i class="fa fa-list-alt"></i> Bottle</a></li>
+                         <li><a href="{{{ action('EventController@showNap', $baby->id) }}}"><i class="fa fa-table"></i> Sleep</a></li>
+                         <li><a href="{{{ action('EventController@showStats', $baby->id) }}}"><i class="fa fa-user"></i> Growth Stats</a></li>
 
                      </ul>
                   </div> <!-- Sidebar navigation ends -->
@@ -103,6 +103,22 @@
 
                 <!-- Black block starts -->
                 <div class="blue-block">
+                    @if (Session::has('successMessage'))
+                        <div class="alert alert-success" role="alert">
+                            {{{ Session::get('successMessage') }}}
+                            <button type="button" class="close" data-dismiss="alert">
+                                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                            </button>
+                        </div>
+                    @endif
+                    @if (Session::has('errorMessage'))
+                        <div class="alert alert-danger" role="alert">
+                            {{{ Session::get('errorMessage') }}}
+                            <button type="button" class="close" data-dismiss="alert">
+                                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                            </button>
+                        </div>
+                    @endif
                     <div class="page-title">
                         <h3 class="pull-left"><i class="fa fa-desktop"></i> {{{ Auth::user()->name }}} <span>Let's chart!</span></h3>
                         <div class="breads pull-right">
