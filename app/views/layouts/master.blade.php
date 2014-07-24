@@ -137,7 +137,6 @@
                 @yield('content')
                 <!-- Content ends -->
 
-
             </div>
             <!-- Mainbar ends -->
 
