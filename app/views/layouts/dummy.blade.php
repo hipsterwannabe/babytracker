@@ -36,6 +36,9 @@
         <!-- flipclock styling -->
         <link rel="stylesheet" type="text/css" href="/assets/FlipClock-master/compiled/flipclock.css">
 
+      <!-- moment.js -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
+
         <!--[if IE]>
             <link rel="stylesheet" type="text/css" href="css/style-ie.css" />
         <![endif]-->
@@ -127,6 +130,17 @@
 
       <!-- Scroll to top -->
       <span class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span>
+
+          <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="/assets/js/classie.js"></script>
+    <script src="/assets/js/bootstrap.min.js"></script>
+    <script src="/assets/js/smoothscroll.js"></script>
+    <script src="/assets/js/jquery.stellar.min.js"></script>
+    <script src="/assets/js/fancybox/jquery.fancybox.js"></script>
+    <script src="/assets/js/main.js"></script>
 
       <!-- Javascript files -->
       <!-- jQuery -->
