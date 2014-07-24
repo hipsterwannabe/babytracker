@@ -106,10 +106,22 @@ class EventController extends BaseController {
         $breast->baby_id = $id;
 
         $breast->breast = true;
-        $breast->start_left = date('Y-m-d H:i:s', strtotime(Input::get('start_left')));
-        $breast->stop_left = date('Y-m-d H:i:s', strtotime(Input::get('end_left')));
-        $breast->start_right = date('Y-m-d H:i:s', strtotime(Input::get('start_right')));
-        $breast->stop_right = date('Y-m-d H:i:s', strtotime(Input::get('end_right')));
+        if (Input::has('start_left'))
+        {
+            $breast->start_left = date('Y-m-d H:i:s', strtotime(Input::get('start_left')));
+        }
+        if (Input::has('end_left'))
+        {
+            $breast->stop_left = date('Y-m-d H:i:s', strtotime(Input::get('end_left')));
+        }
+        if (Input::has('start_right'))
+        {
+            $breast->start_right = date('Y-m-d H:i:s', strtotime(Input::get('start_right')));
+        }
+        if (Input::has('end_right'))
+        {
+            $breast->stop_right = date('Y-m-d H:i:s', strtotime(Input::get('end_right')));
+        }
         $length = Input::get('length');
         $breast->nursing_time = $length / 1000;
         $breast->notes = Input::get('notes');
@@ -232,7 +244,7 @@ class EventController extends BaseController {
                     $feeding->stop_right->diffInSeconds($feeding->start_right)
                     ]
                 );
-            }                
+            }
         }
 
         //  building changing data for graph
@@ -256,7 +268,7 @@ class EventController extends BaseController {
                     ]);
             }
         }
-        
+
         $data = array(
             'baby' => $baby,
             'napData' => $napData,
