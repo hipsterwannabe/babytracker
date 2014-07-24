@@ -52,8 +52,8 @@ class UserController extends BaseController {
             $baby->addUploadedImage(Input::file('image'));
             $baby->save();
 
-            $maxHeight = 200;
-            $maxWidth = 200;
+            $maxHeight = 150;
+            $maxWidth = 150;
 
             $newHeight = 0;
             $newWidth = 0;
