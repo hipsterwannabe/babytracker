@@ -7,7 +7,7 @@
 
         <div class="widget">
             <div class="widget-head">
-                <h5>DIaper Change</h5>
+                <h3>Diaper Change</h3>
             </div>
             <div class="widget-body">
                 {{ Form::open(array('action' => array('EventController@doDiaper', $baby->id), 'class' => 'form-horizontal')) }}
