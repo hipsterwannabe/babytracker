@@ -195,21 +195,44 @@ class EventController extends BaseController {
         $feedings = $baby->feedings()->orderBy('created_at', 'ASC')->get();
 
         foreach ($feedings as $feeding) {
+            // grabbing bottle data
             if ($feeding->bottle){
                 array_push($feedingData, [
                         $feeding->start_bottle->timestamp * 1000,
                         $feeding->stop_bottle->diffInSeconds($feeding->start_bottle)
-                    ];
+                    ]
                 );
             } elseif ($feeding->breast) {
-                if (($feeding->start_left) < ($feeding->start_right)) {
-                    array_push($feedingData, "['" . date('Y-m-d H:i:s', strtotime($feeding->start_right)) . "'," . time_to_decimal($feeding->nursing_time) . "]");
-                } else {
-                    array_push($feedingData, "['" . date('Y-m-d H:i:s', strtotime($feeding->start_left)) . "'," . time_to_decimal($feeding->nursing_time) . "]");
+                //grabbing nursing data
+                if (isset($feeding->start_left) && isset($feeding->start_right)) {
+                        if (($feeding->start_left) < ($feeding->start_right)) {
+                            array_push($feedingData, [
+                                $feeding->start_left->timestamp * 1000,
+                                $feeding->stop_right->diffInSeconds($feeding->start_left)
+                                ]
+                            );
+                    } else {
+                        array_push($feedingData, [
+                            $feeding->start_right->timestamp * 1000,
+                            $feeding->stop_left->diffInSeconds($feeding->start_right)
+                            ]
+                        );
+                    }
                 }
-            }
+            } elseif (isset($feeding->start_left)) {
+                array_push($feedingData, [
+                    $feeding->start_left->timestamp * 1000,
+                    $feeding->stop_left->diffInSeconds($feeding->start_left)
+                    ]
+                );
+            } elseif (isset($feeding->start_right)) {
+                array_push($feedingData, [
+                    $feeding->start_right->timestamp * 1000,
+                    $feeding->stop_right->diffInSeconds($feeding->start_right)
+                    ]
+                );
+            }                
         }
-        $feedingData = join($feedingData, ',');
 
         //  building changing data for graph
         $diaperData = array();

@@ -106,7 +106,7 @@
 			    shared: true,
 			},
 			series: [{
-				data: [{{ $feedingData }}]
+				data: [{{ json_encode($feedingData, JSON_NUMERIC_CHECK) }}]
 			}]
 	    });
 	});
