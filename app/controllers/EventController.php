@@ -178,15 +178,17 @@ class EventController extends BaseController {
         }
         // building nap data for graph
         $napData = array();
-        $naps = $baby->naps;
 
+        $naps = $baby->naps()->orderBy('start', 'ASC')->get();
         foreach ($naps as $nap)
         {
-
-            $napData[] = "['" . date('Y-m-d H:i:s', strtotime($nap->start)) . "'," . time_to_decimal($nap->length) . "]";
+            $napData[] = [
+                $nap->start->timestamp * 1000,
+                $nap->end->diffInSeconds($nap->start)
+            ];
         }
-
-        $napData = join($napData, ',');
+        // $firstNap = array_first($napData)
+        // $napData = join($napData, ',');
         // building feeding data for graph
 
         $feedingData = array();

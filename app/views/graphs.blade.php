@@ -19,36 +19,14 @@
 @section('bottomscript')
 	<script src="http://code.highcharts.com/highcharts.js"></script>
 	<script type="text/javascript">
-	$(function () { 
+	$(function () {
 		//nap chart
 	    $('#napContainer').highcharts({
-	        title: {
-	        	text: 'Nap Chart'
-	        },
-	        chart: {
-	            type: 'line'
-	        },
 	        xAxis: {
-	        	type: 'datetime',
-	            title: {
-	                text: 'Time of Nap'
-	            }
+	        	type: 'datetime'
 	        },
-	        yAxis: {
-	            title: {
-	                text: 'Nap Length'
-	            },
-	            floor: 0,
-	        },
-	        tooltip: {
-			    backgroundColor: '#FCFFC5',
-			    borderColor: 'black',
-			    borderRadius: 10,
-			    borderWidth: 3,
-			    shared: true,
-			},
 			series: [{
-	        	data: [{{ $napData }}]
+	        	data: {{ json_encode($napData, JSON_NUMERIC_CHECK) }}
 			}]
 	    });
 
