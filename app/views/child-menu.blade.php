@@ -14,15 +14,15 @@
 
                     <!-- Nav tabs -->
                     <ul class="nav nav-tabs">
-                        <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
-                        <li><a href="#update" data-toggle="tab">Update Profile</a></li>
+                        <li class="active"><a href="#profile{{{$baby->id}}}" data-toggle="tab">Profile</a></li>
+                        <li><a href="#update{{{$baby->id}}}" data-toggle="tab">Update Profile</a></li>
                     </ul>
 
                     <!-- Tab panes -->
                     <div class="tab-content">
 
                         <!-- Profile tab -->
-                        <div class="tab-pane fade active in" id="profile">
+                        <div class="tab-pane fade active in" id="profile{{{$baby->id}}}">
                             <h4>{{{ $baby->name }}}'s Profile</h4>
 
                             <div class="row">
@@ -52,7 +52,7 @@
                         </div>
 
                         <!-- Update profile tab -->
-                        <div class="tab-pane fade" id="update">
+                        <div class="tab-pane fade" id="update{{{$baby->id}}}">
                             <h4>Update Profile</h4>
 
                             {{ Form::open(array('action' => array('UserController@updateBaby', $baby->id), 'class' => 'form-horizontal', 'files' => true)) }}
