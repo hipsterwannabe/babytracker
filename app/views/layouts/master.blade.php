@@ -1,90 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>ChartBabe</title>
+        <!-- Description, Keywords and Author -->
+        <meta name="description" content="Your description">
+        <meta name="keywords" content="Your,Keywords">
+        <meta name="author" content="ResponsiveWebInc">
 
-    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>BabyTracker</title>
+        <!-- Styles -->
+        <!-- Bootstrap CSS -->
+        <link href="/sheldon/theme/css/bootstrap.min.css" rel="stylesheet">
+        <!-- jQuery UI -->
+        <link href="/sheldon/theme/css/jquery-ui.css" rel="stylesheet">
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="/bootstrap-src/dist/css/bootstrap.css">
-    <style> body{padding-top: 70px;} </style>
 
-    <!-- moment.js -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
 
-    <!-- Bootstrap stylesheet -->
-    <link rel="stylesheet" href="/bootstrap-src/dist/css/bootstrap-theme.min.css">
 
-    <!-- flipclock styling -->
-    <link rel="stylesheet" type="text/css" href="/assets/FlipClock-master/compiled/flipclock.css">
+        <!-- jQuery Gritter -->
+        <link href="/sheldon/theme/css/jquery.gritter.css" rel="stylesheet">
+        <!-- Bootstrap Switch -->
+        <link href="/sheldon/theme/css/bootstrap-switch.css" rel="stylesheet">
+        <!-- jQuery Datatables -->
+        <link href="/sheldon/theme/css/jquery.dataTables.css" rel="stylesheet">
+        <!-- Rateit -->
+        <link href="/sheldon/theme/css/rateit.css" rel="stylesheet">
+        <!-- jQuery prettyPhoto -->
+        <link href="/sheldon/theme/css/prettyPhoto.css" rel="stylesheet">
+        <!-- Full calendar -->
+        <link href="/sheldon/theme/css/fullcalendar.css" rel="stylesheet">
+        <!-- Font awesome CSS -->
+        <link href="/sheldon/theme/css/font-awesome.min.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="/sheldon/theme/css/style.css" rel="stylesheet">
+        <!-- flipclock styling -->
+        <link rel="stylesheet" type="text/css" href="/assets/FlipClock-master/compiled/flipclock.css">
 
-    @yield('topscript')
+      <!-- moment.js -->
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
 
-</head>
+        <!--[if IE]>
+            <link rel="stylesheet" type="text/css" href="css/style-ie.css" />
+        <![endif]-->
 
-<body data-spy="scroll" data-offset="0" data-target="#theMenu">
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="#">
 
-    <div class="container">
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="/menu">Dashboard</a>
-                    <a class="navbar-brand" href="/about">About Us</a>
-                </div>
+        @yield('topscript')
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        @if (Auth::check())
-                            <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{ Auth::user()->name }}<span class="caret"></span></a>
-                                <ul class="dropdown-menu" role="menu">
-                                    @foreach ( Auth::user()->babies as $baby)
-                                        <li><a href="/menu/{{$baby->id}}" >{{ $baby->name }}</a></li>
-                                    @endforeach
-                                    <li class="divider"></li>
-                                    <li><a href="{{{ action('UserController@showCreateBaby') }}}">Add Baby</a></li>
-                                    <li class="divider"></li>
-                                    <li><a href="{{{ action('HomeController@logout') }}}">Logout</a></li>
-                                </ul>
-                            </li>
+    </head>
+
+    <body>
+
+      <div class="out-container">
+         <div class="outer">
+            <!-- Sidebar starts -->
+            <div class="sidebar">
+                  <!-- Logo starts -->
+                  <div class="logo">
+                     <h1><a href="#">ChartBabe</a></h1>
+                  </div>
+                  <!-- Logo ends -->
+
+                  <!-- Sidebar buttons starts -->
+                  <div class="sidebar-buttons text-center">
+                     <!-- User button -->
+                     <div class="btn-group">
+                       <a href="{{{ action('UserController@showCreateBaby') }}}" class="btn btn-black btn-xs" ><i class="fa fa-user"></i></a>
+                       <a href="{{{ action('UserController@showCreateBaby') }}}" class="btn btn-danger btn-xs">Add Baby</a>
+                     </div>
+                     <!-- Logout button -->
+                     <div class="btn-group">
+                       <a href="{{{ action('HomeController@logout') }}}" class="btn btn-black btn-xs"><i class="fa fa-power-off"></i></a>
+                       <a href="{{{ action('HomeController@logout') }}}" class="btn btn-danger btn-xs">Logout</a>
+                     </div>
+                  </div>
+                  <!-- Sidebar buttons ends -->
+
+                  <!-- Sidebar navigation starts -->
+
+                  <div class="sidebar-dropdown"><a href="#">Navigation</a></div>
+
+                  <div class="sidey">
+                     <ul class="nav">
+                         <!-- Main navigation. Refer Notes.txt files for reference. -->
+
+                        @if (isset($baby))
+                            <!-- Use the class "current" in main menu to hightlight current main menu -->
+                            <li><a href="{{{ action('EventController@showCharts', $baby->id) }}}"><i class="fa fa-bar-chart-o"></i> Charts</a></li>
+                            <li><a href="{{{ action('EventController@showDiaper', $baby->id) }}}"><i class="fa fa-folder-open"></i> Diaper</a></li>
+                            <li><a href="{{{ action('EventController@showBreast', $baby->id) }}}"><i class="fa fa-cog"></i> Nurse</a></li>
+                            <li><a href="{{{ action('EventController@showBottle', $baby->id) }}}"><i class="fa fa-list-alt"></i> Bottle</a></li>
+                            <li><a href="{{{ action('EventController@showNap', $baby->id) }}}"><i class="fa fa-table"></i> Sleep</a></li>
+                            <li><a href="{{{ action('EventController@showStats', $baby->id) }}}"><i class="fa fa-user"></i> Growth Stats</a></li>
                         @endif
-                    </ul>
-                </div><!-- /.navbar-collapse -->
-            </div><!-- /.container -->
-        </nav>
 
-        @if (Session::has('successMessage'))
-            <div class="alert alert-success" role="alert">
-                {{{ Session::get('successMessage') }}}
-                <button type="button" class="close" data-dismiss="alert">
-                    <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                </button>
+                     </ul>
+                  </div> <!-- Sidebar navigation ends -->
+
+            </div> <!-- Sidebar ends -->
+
+            <!-- Mainbar starts -->
+            <div class="mainbar">
+
+                <!-- Black block starts -->
+                <div class="blue-block">
+                    @if (Session::has('successMessage'))
+                        <div class="alert alert-success" role="alert">
+                            {{{ Session::get('successMessage') }}}
+                            <button type="button" class="close" data-dismiss="alert">
+                                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                            </button>
+                        </div>
+                    @endif
+                    @if (Session::has('errorMessage'))
+                        <div class="alert alert-danger" role="alert">
+                            {{{ Session::get('errorMessage') }}}
+                            <button type="button" class="close" data-dismiss="alert">
+                                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                            </button>
+                        </div>
+                    @endif
+                    <div class="page-title">
+                        <h3 class="pull-left"><i class="fa fa-desktop"></i> {{{ Auth::user()->name }}} <span>Let's chart!</span></h3>
+                        <div class="breads pull-right">
+                            <a href="#">Home </a>/ <a href="#">Pages </a>/ Title
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <!-- Black block ends -->
+
+                <!-- Content starts -->
+                @yield('content')
+                <!-- Content ends -->
+
+
             </div>
-        @endif
-        @if (Session::has('errorMessage'))
-            <div class="alert alert-danger" role="alert">
-                {{{ Session::get('errorMessage') }}}
-                <button type="button" class="close" data-dismiss="alert">
-                    <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                </button>
-            </div>
-        @endif
+            <!-- Mainbar ends -->
 
-        @yield('content')
-
-    </div>
+            <div class="clearfix"></div>
+         </div>
+      </div>
 
 
-    <!-- Bootstrap core JavaScript
+
+      <!-- Scroll to top -->
+      <span class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span>
+
+          <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
@@ -94,7 +160,54 @@
     <script src="/assets/js/jquery.stellar.min.js"></script>
     <script src="/assets/js/fancybox/jquery.fancybox.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/fancybox/modernizr.custom.js"></script>
 
-    @yield('bottomscript')
-</body>
+      <!-- Javascript files -->
+      <!-- jQuery -->
+      <script src="/sheldon/theme/js/jquery.js"></script>
+      <!-- Bootstrap JS -->
+      <script src="/sheldon/theme/js/bootstrap.min.js"></script>
+      <!-- Sparkline for Mini charts -->
+      <script src="/sheldon/theme/js/sparkline.js"></script>
+      <!-- jQuery UI -->
+      <script src="/sheldon/theme/js/jquery-ui.min.js"></script>
+
+      <!-- jQuery flot -->
+      <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="js/excanvas.min.js"></script><![endif]-->
+      <script src="/sheldon/theme/js/jquery.flot.min.js"></script>
+      <script src="/sheldon/theme/js/jquery.flot.pie.min.js"></script>
+      <script src="/sheldon/theme/js/jquery.flot.resize.min.js"></script>
+
+      <!-- jQuery Knob -->
+      <script src="/sheldon/theme/js/jquery.knob.js"></script>
+      <!-- jQuery Data Tables -->
+      <script src="/sheldon/theme/js/jquery.dataTables.min.js"></script>
+      <!-- jQuery Knob -->
+      <script src="/sheldon/theme/js/bootstrap-switch.min.js"></script>
+      <!-- jQuery Knob -->
+      <script src="/sheldon/theme/js/jquery.rateit.min.js"></script>
+      <!-- jQuery prettyPhoto -->
+      <script src="/sheldon/theme/js/jquery.prettyPhoto.js"></script>
+      <!-- jquery slim scroll -->
+      <script src="/sheldon/theme/js/jquery.slimscroll.min.js"></script>
+      <!-- jQuery full calendar -->
+      <script src="/sheldon/theme/js/fullcalendar.min.js"></script>
+      <!-- Respond JS for IE8 -->
+      <script src="/sheldon/theme/js/respond.min.js"></script>
+      <!-- HTML5 Support for IE -->
+      <script src="/sheldon/theme/js/html5shiv.js"></script>
+      <!-- Custom JS -->
+      <script src="/sheldon/theme/js/custom.js"></script>
+
+      <!-- Custom Progress Buttons JS -->
+      <script src="/sheldon/theme/js/classie.js"></script>
+      <!-- Custom Progress Buttons JS -->
+      <script src="/sheldon/theme/js/modernizr.custom.js"></script>
+      <!-- Custom Progress Buttons JS -->
+      <script src="/sheldon/theme/js/progressButton.js"></script>
+
+        @yield('bottomscript')
+
+
+    </body>
 </html>
