@@ -85,13 +85,15 @@
                      <ul class="nav">
                          <!-- Main navigation. Refer Notes.txt files for reference. -->
 
-                         <!-- Use the class "current" in main menu to hightlight current main menu -->
-                         <li><a href="{{{ action('EventController@showCharts', $baby->id) }}}"><i class="fa fa-bar-chart-o"></i> Charts</a></li>
-                         <li><a href="{{{ action('EventController@showDiaper', $baby->id) }}}"><i class="fa fa-folder-open"></i> Diaper</a></li>
-                         <li><a href="{{{ action('EventController@showBreast', $baby->id) }}}"><i class="fa fa-cog"></i> Nurse</a></li>
-                         <li><a href="{{{ action('EventController@showBottle', $baby->id) }}}"><i class="fa fa-list-alt"></i> Bottle</a></li>
-                         <li><a href="{{{ action('EventController@showNap', $baby->id) }}}"><i class="fa fa-table"></i> Sleep</a></li>
-                         <li><a href="{{{ action('EventController@showStats', $baby->id) }}}"><i class="fa fa-user"></i> Growth Stats</a></li>
+                        @if (isset($baby))
+                            <!-- Use the class "current" in main menu to hightlight current main menu -->
+                            <li><a href="{{{ action('EventController@showCharts', $baby->id) }}}"><i class="fa fa-bar-chart-o"></i> Charts</a></li>
+                            <li><a href="{{{ action('EventController@showDiaper', $baby->id) }}}"><i class="fa fa-folder-open"></i> Diaper</a></li>
+                            <li><a href="{{{ action('EventController@showBreast', $baby->id) }}}"><i class="fa fa-cog"></i> Nurse</a></li>
+                            <li><a href="{{{ action('EventController@showBottle', $baby->id) }}}"><i class="fa fa-list-alt"></i> Bottle</a></li>
+                            <li><a href="{{{ action('EventController@showNap', $baby->id) }}}"><i class="fa fa-table"></i> Sleep</a></li>
+                            <li><a href="{{{ action('EventController@showStats', $baby->id) }}}"><i class="fa fa-user"></i> Growth Stats</a></li>
+                        @endif
 
                      </ul>
                   </div> <!-- Sidebar navigation ends -->
