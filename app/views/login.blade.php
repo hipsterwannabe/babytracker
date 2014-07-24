@@ -48,6 +48,24 @@
         <div class="login-page">
             <div class="container">
 
+                    <!-- Sessions messages -->
+                    @if (Session::has('successMessage'))
+                        <div class="alert alert-success" role="alert">
+                            {{{ Session::get('successMessage') }}}
+                            <button type="button" class="close" data-dismiss="alert">
+                                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                            </button>
+                        </div>
+                    @endif
+                    @if (Session::has('errorMessage'))
+                        <div class="alert alert-danger" role="alert">
+                            {{{ Session::get('errorMessage') }}}
+                            <button type="button" class="close" data-dismiss="alert">
+                                <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
+                            </button>
+                        </div>
+                    @endif
+
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs nav-justified">
                   <li class="active"><a href="#login" data-toggle="tab"><i class="fa fa-sign-in"></i> Login</a></li>
@@ -69,66 +87,62 @@
                             {{ Form::label('password', 'Password') }}
                             {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Password')) }}
                         </div>
+
                         {{ Form::submit('Log In', array('class' => 'btn btn-danger btn-sm')) }}
                         {{ Form::close() }}
 
                     </div>
 
 
-              <div class="tab-pane fade" id="register">
-                <!-- Register form -->
+                    <div class="tab-pane fade" id="register">
+                    <!-- Register form -->
 
-                <form role="form" action="index.html">
-                  <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Full Name">
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="text" class="form-control" id="email" placeholder="Email">
-                  </div>
-                  <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" placeholder="Password">
-                  </div>
-                  <div class="form-group">
-                    <label for="cpassword">Confirm Password</label>
-                    <input type="cpassword" class="form-control" id="cpassword" placeholder="Confirm Password">
-                  </div>
-                  <div class="checkbox">
-                    <label>
-                      <input type="checkbox"> Agree <a href="#">Terms & Conditions</a>
-                    </label>
-                  </div>
-                  <button type="submit" class="btn btn-danger btn-sm">Submit</button>
-                  <button type="reset" class="btn btn-black btn-sm">Reset</button>
-                </form>
+                        {{ Form::open(array('action' => 'UserController@newUser')) }}
+                        <div class="form-group">
+                            {{ Form::label('name', 'Name') }}
+                            {{ Form::text('name', null, array('class' => 'form-control', 'placeholder' => 'Name')) }}
+                        </div>
+                        <div class="form-group">
+                            {{ Form::label('new_email', 'Email') }}
+                            {{ Form::text('new_email', null, array('class' => 'form-control', 'placeholder' => 'Email')) }}
+                        </div>
+                        <div class="form-group">
+                            {{ Form::label('password', 'Password') }}
+                            {{ Form::password('password', array('class' => 'form-control', 'placeholder' => 'Password')) }}
+                        </div>
+                        <div class="form-group">
+                            {{ Form::label('cpassword', 'Confirm Password') }}
+                            {{ Form::password('cpassword', array('class' => 'form-control', 'placeholder' => 'Confirm Password')) }}
+                        </div>
 
-              </div>
+                        {{ Form::submit('Create User', array('class' => 'btn btn-danger btn-sm')) }}
+                        {{ Form::close() }}
+
+                    </div>
 
 
-              <div class="tab-pane fade" id="contact">
+                      <div class="tab-pane fade" id="contact">
 
-                <!-- Contact Form -->
+                        <!-- Contact Form -->
 
-                <form role="form" action="index.html">
-                  <div class="form-group">
-                    <label for="name">Name</label>
-                    <input type="text" class="form-control" id="name" placeholder="Name">
-                  </div>
-                  <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="text" class="form-control" id="email" placeholder="Email">
-                  </div>
-                  <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea rows="3" class="form-control"></textarea>
-                  </div>
-                  <button type="submit" class="btn btn-danger btn-sm">Submit</button>
-                  <button type="reset" class="btn btn-black btn-sm">Reset</button>
-                </form>
+                        <form role="form" action="index.html">
+                          <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Name">
+                          </div>
+                          <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" placeholder="Email">
+                          </div>
+                          <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea rows="3" class="form-control"></textarea>
+                          </div>
+                          <button type="submit" class="btn btn-danger btn-sm">Submit</button>
+                          <button type="reset" class="btn btn-black btn-sm">Reset</button>
+                        </form>
 
-              </div>
+                      </div>
             </div>
 
         </div>

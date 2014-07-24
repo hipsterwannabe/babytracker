@@ -17,7 +17,14 @@ class UserController extends BaseController {
         $user = new User();
         $user->name = Input::get('name');
         $user->email = Input::get('new_email');
-        $user->password = Hash::make(Input::get('password'));
+
+        if (Input::get('password') == Input::get('cpassword')) {
+            $user->password = Hash::make(Input::get('password'));
+        } else {
+            Session::flash('errorMessage', "Passwords don't match.");
+            return Redirect::action('HomeController@showLogin');
+        }
+
         $user->save();
         Auth::login($user);
 
