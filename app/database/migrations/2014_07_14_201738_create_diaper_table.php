@@ -18,8 +18,8 @@ class CreateDiaperTable extends Migration {
             $table->integer('baby_id')->unsigned();
             $table->boolean('number_one')->nullable();
             $table->boolean('number_two')->nullable();
-            $table->integer('consistency')->nullable();
-            $table->integer('color')->nullable();
+            $table->text('consistency')->nullable();
+            $table->text('color')->nullable();
             $table->boolean('leak')->nullable();
             $table->text('notes')->nullable();
             $table->timestamps();

@@ -22,14 +22,14 @@
                 <div class="form-group">
                     {{ Form::label('consistency', 'Texture', array('class' => 'col-lg-2 control-label')) }}
                     <div class="col-lg-10">
-                        {{ Form::select('consistency', array('0' => '-----', '1' => 'Loose', '2' => 'Seedy', '3' => 'Thick', '4' => 'Sticky', '5' => 'Chunky', '6' => 'Hard' ), null, array('class' => 'form-control')) }}
+                        {{ Form::select('consistency', array('0' => '-----', 'Loose' => 'Loose', 'Seedy' => 'Seedy', 'Thick' => 'Thick', 'Sticky' => 'Sticky', 'Chunky' => 'Chunky', 'Hard' => 'Hard' ), null, array('class' => 'form-control')) }}
                     </div>
                 </div>
 
                 <div class="form-group">
                     {{ Form::label('color', 'Color', array('class' => 'col-lg-2 control-label')) }}
                     <div class="col-lg-10">
-                        {{ Form::select('color', array('0' => '-----',  '1' => 'White', '2' => 'Beige', '3' => 'Light Green', '4' => 'Dark Green', '5' => 'Light Brown', '6' => 'Dark Brown' ), null, array('class' => 'form-control')) }}
+                        {{ Form::select('color', array('0' => '-----',  'White' => 'White', 'Beige' => 'Beige', 'Light Green' => 'Light Green', 'Dark Green' => 'Dark Green', 'Light Brown' => 'Light Brown', 'Dark Brown' => 'Dark Brown' ), null, array('class' => 'form-control')) }}
                     </div>
                 </div>
 
@@ -65,6 +65,69 @@
            </div>
 
         </div>
+
+    </div>
+
+    <div class="widget">
+
+        <div class="widget-head">
+            <h3>Diaper Log</h3>
+        </div>
+
+        <div class="widget-body no-padd">
+
+            <div class="table-responsive">
+
+                <table class="table table-hover table-bordered ">
+                    <thead>
+                        <tr>
+                            <th>Date/Time</th>
+                            <th>Diaper</th>
+                            <th>Consistency</th>
+                            <th>Color</th>
+                            <th>Leak</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    @foreach (Auth::user()->babies as $baby)
+                        @Foreach ($baby->diapers as $diaper)
+                            @if ($diaper->baby_id == $baby->id)
+                                <tr>
+                                    <td>{{{ $diaper->created_at }}}</td>
+                                    @if ($diaper->number_one == 1 && $diaper->number_two == 1)
+                                        <td>Both</td>
+                                    @elseif ($diaper->number_two == 1 && $diaper->number_one == null)
+                                        <td>Dirty</td>
+                                    @else ($diaper->number_one == 1 && $diaper->number_two == null)
+                                        <td>Wet</td>
+                                    @endif
+                                    @if (isset($diaper->consistency))
+                                        <td>{{{ $diaper->consistency }}}</td>
+                                    @else
+                                        <td>N/A</td>
+                                    @endif
+                                    @if (isset($diaper->color))
+                                        <td>{{{ $diaper->color }}}</td>
+                                    @else
+                                        <td>N/A</td>
+                                    @endif
+                                    @if (isset($diaper->leak))
+                                        <td>Yes</td>
+                                    @else
+                                        <td>No</td>
+                                    @endif
+                                    <td>{{{ $diaper->notes }}}</td>
+                                </tr>
+                            @endif
+                        @endforeach
+                    @endforeach
+                    </tbody>
+                </table>
+
+            </div>
+
+       </div>
 
     </div>
 
