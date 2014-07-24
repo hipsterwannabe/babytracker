@@ -7,4 +7,9 @@ class Nap extends BaseModel {
         return $this->belongsTo('Baby');
     }
 
+
+    public function getDates()
+    {
+    	return array('start', 'end', 'created_at', 'updated_at');
+    }
 }
