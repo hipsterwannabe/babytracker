@@ -70,6 +70,61 @@
 
     </div>
 
+
+
+
+    <div class="widget">
+       <div class="widget-head">
+          <h5>Table #1</h5>
+       </div>
+       <div class="widget-body no-padd">
+            <div class="table-responsive">
+              <table class="table table-hover table-bordered ">
+               <thead>
+                 <tr>
+                   <th>Time</th>
+                   <th>Length</th>
+                   <th>Side</th>
+                   <th>Notes</th>
+                 </tr>
+               </thead>
+               <tbody>
+                @foreach (Auth::user()->babies as $baby)
+                    @foreach ($baby->feedings as $feeding)
+                        @if ($feeding->breast == 1)
+                            @if ($feeding->baby_id == $baby->id)
+                            <tr>
+                                <td>{{{ $feeding->created_at }}}</td>
+
+                                <td>{{{ $feeding->nursing_time }}}</td>
+
+                                @if (isset($feeding->start_left) && isset($feeding->start_right))
+                                    <td>Both</td>
+
+                                @elseif (isset($feeding->start_left) && ($feeding->start_right == null))
+                                    <td>Left</td>
+
+                                @elseif (($feeding->start_left == null) && isset($feeding->start_right))
+                                    <td>Right</td>
+                                @endif
+
+                                <td>{{{ $feeding->notes }}}</td>
+                            </tr>
+                            @endif
+                        @endif
+                    @endforeach
+                @endforeach
+               </tbody>
+             </table>
+         
+         </div>
+    </div>
+
+
+
+
+
+
 </div>
 
 @stop
