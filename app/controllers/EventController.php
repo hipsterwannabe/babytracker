@@ -236,18 +236,26 @@ class EventController extends BaseController {
 
         //  building changing data for graph
         $diaperData = array();
-        $diapers = $baby->diapers;
+
+        $diapers = $baby->diapers()->orderBy('created_at', 'ASC')->get();
 
         foreach ($diapers as $diaper) {
             if ($diaper->number_one && $diaper->number_two){
-                array_push($diaperData, "['" . date('Y-m-d H:i:s', strtotime($diaper->created_at)) . "', 3]");
+                array_push($diaperData, [
+                    $diaper->created_at->timestamp * 1000, 3
+                    ]
+                );
             } elseif ($diaper->number_one){
-                array_push($diaperData, "['" . date('Y-m-d H:i:s', strtotime($diaper->created_at)) . "', 1]");
+                array_push($diaperData, [
+                    $diaper->created_at->timestamp * 1000, 1
+                    ]);
             } elseif ($diaper->number_two) {
-                array_push($diaperData, "['" . date('Y-m-d H:i:s', strtotime($diaper->created_at)) . "', 2]");
+                array_push($diaperData, [
+                    $diaper->created_at->timestamp * 1000, 2
+                    ]);
             }
         }
-        $diaperData = join($diaperData, ',');
+        
         $data = array(
             'baby' => $baby,
             'napData' => $napData,
