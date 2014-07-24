@@ -14,7 +14,7 @@
 
     <!-- Styles -->
     <!-- Bootstrap CSS -->
-    <link href="sheldon/theme/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/sheldon/theme/css/bootstrap.min.css" rel="stylesheet">
     <!-- jQuery UI -->
     <link href="/sheldon/theme/css/jquery-ui.css" rel="stylesheet">
 

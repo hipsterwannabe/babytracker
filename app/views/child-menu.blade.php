@@ -1,39 +1,113 @@
-@extends('layouts.master')
+@extends('layouts.dummy')
 
 @section('content')
 
 <div class="container">
 
-    <h1>Select Child:</h1>
+    <div class="page-content">
 
-    <br>
+        @foreach ( Auth::user()->babies as $baby)
 
-    @foreach ( Auth::user()->babies as $baby)
-        <div class="col-lg-4">
-            <div class="row">
-                <img src="{{{ $baby->img_path }}}" alt="{{{ $baby->name }}}">
-            </div>
-            <br>
-            <div class="row">
-                @if ($baby->gender == 'Boy')
-                    <a href="/menu/{{$baby->id}}" class="btn btn-success btn-lg" role="button">{{ $baby->name }}</a>
-                @else
-                    <a href="/menu/{{$baby->id}}" class="btn btn-info btn-lg" role="button">{{ $baby->name }}</a>
-                @endif
-            </div>
-        </div>
-    @endforeach
+            <div class="page-content page-profile">
 
-    <div class="col-lg-4">
-        <div class="row">
-            <img src="/baby_profiles/7-red_panda.jpg" alt="Add Baby">
-        </div>
-        <br>
-        <div class="row">
-            <a href="{{{ action('UserController@showCreateBaby', Auth::id()) }}}" class="btn btn-danger btn-lg" role="button">Add Baby</a>
-        </div>
-    </div>
+                <div class="page-tabs">
 
-</div>
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a href="#profile" data-toggle="tab">Profile</a></li>
+                        <li><a href="#update" data-toggle="tab">Update Profile</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+
+                        <!-- Profile tab -->
+                        <div class="tab-pane fade active in" id="profile">
+                            <h4>{{{ $baby->name }}}'s Profile</h4>
+
+                            <div class="row">
+                                <div class="col-md-3 col-sm-3 text-center">
+                                    <!-- Profile pic -->
+                                    <a href="/menu/{{$baby->id}}"><img src="{{{ $baby->img_path }}}" class="img-thumbnail img-circle img-responsive" alt="" /></a>
+                                </div>
+                                <div class="col-md-9 col-sm-9">
+                                    <!-- Profile details -->
+                                    <table class="table table-bordered">
+                                        <tr>
+                                            <td class="active"><strong>Name</strong></td>
+                                            <td>{{{ $baby->name }}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="active"><strong>Birth Date</strong></td>
+                                            <td>{{{ $baby->birth_date }}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="active"><strong>Gender</strong></td>
+                                            <td>{{{ $baby->gender }}}</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Update profile tab -->
+                        <div class="tab-pane fade" id="update">
+                            <h4>Update Profile</h4>
+
+                            {{ Form::open(array('action' => array('UserController@updateBaby', $baby->id), 'class' => 'form-horizontal', 'files' => true)) }}
+                            <!-- Name -->
+                            <div class="form-group">
+                                {{ Form::label('name', 'Name', array('class' => 'control-label col-lg-2')) }}
+                                <div class="col-lg-6">
+                                    {{ Form::text('name', null, array('class' => 'form-control')) }}
+                                </div>
+                            </div>
+                            <!-- Photo -->
+                            <div class="form-group">
+                                {{ Form::label('image', 'Image', array('class' => 'control-label col-lg-2')) }}
+                                <div class="col-lg-6">
+                                    {{ Form::file('image') }}
+                                </div>
+                            </div>
+                            <!-- Gender -->
+                            <div class="form-group">
+                                {{ Form::label('gender', 'Gender', array('class' => 'control-label col-lg-2')) }}
+                                <div class="col-lg-6">
+                                    <select name="gender" id="gender" class="form-control">
+                                        <option value="">--- Please Select ---</option>
+                                        <option value="Boy">Boy</option>
+                                        <option value="Girl">Girl</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Birth Date -->
+                            <div class="form-group">
+                                {{ Form::label('birth_date', 'Birth Date', array('class' => 'control-label col-lg-2')) }}
+                                <div class="col-lg-6">
+                                    {{ Form::text('birth_date', null, array('placeholder' => 'YYYY-MM-DD', 'class' => 'form-control')) }}
+                                </div>
+                            </div>
+                            <!-- Submit Button -->
+                            <div class="form-group">
+                                <!-- Buttons -->
+                                <div class="col-lg-6 col-lg-offset-2">
+                                    {{ Form::submit('Submit', array('class' => 'btn btn-info')) }}
+                                </div>
+                            </div>
+                            {{ Form::close() }}
+                        </div>
+
+                    </div> <!-- Tab Content -->
+
+                </div> <!-- Page Tabs -->
+
+            </div> <!-- Page Content Page Profile -->
+
+        @endforeach
+
+    </div> <!-- Page Content -->
+
+</div> <!-- Container -->
 
 @stop
