@@ -100,7 +100,7 @@
 			    shared: true,
 			},
 			series: [{
-				data: {{ json_encode($feedingData, JSON_NUMERIC_CHECK) }}
+				data: [{{ json_encode($bottleData, JSON_NUMERIC_CHECK) }}, {{ json_encode($nursingData, JSON_NUMERIC_CHECK) }}]
 			}]
 	    });
 	});

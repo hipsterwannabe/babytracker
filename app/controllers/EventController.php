@@ -191,13 +191,14 @@ class EventController extends BaseController {
         // $napData = join($napData, ',');
         // building feeding data for graph
 
-        $feedingData = array();
+        $bottleData = array();
+        $nursingData = array();
         $feedings = $baby->feedings()->orderBy('created_at', 'ASC')->get();
 
         foreach ($feedings as $feeding) {
             // grabbing bottle data
             if ($feeding->bottle){
-                array_push($feedingData, [
+                array_push($bottleData, [
                         $feeding->start_bottle->timestamp * 1000,
                         $feeding->stop_bottle->diffInSeconds($feeding->start_bottle)
                     ]
@@ -206,13 +207,13 @@ class EventController extends BaseController {
                 //grabbing nursing data
                 if (isset($feeding->start_left) && isset($feeding->start_right)) {
                         if (($feeding->start_left) < ($feeding->start_right)) {
-                            array_push($feedingData, [
+                            array_push($nursingData, [
                                 $feeding->start_left->timestamp * 1000,
                                 $feeding->stop_right->diffInSeconds($feeding->start_left)
                                 ]
                             );
                     } else {
-                        array_push($feedingData, [
+                        array_push($nursingData, [
                             $feeding->start_right->timestamp * 1000,
                             $feeding->stop_left->diffInSeconds($feeding->start_right)
                             ]
@@ -220,13 +221,13 @@ class EventController extends BaseController {
                     }
                 }
             } elseif (isset($feeding->start_left)) {
-                array_push($feedingData, [
+                array_push($nursingData, [
                     $feeding->start_left->timestamp * 1000,
                     $feeding->stop_left->diffInSeconds($feeding->start_left)
                     ]
                 );
             } elseif (isset($feeding->start_right)) {
-                array_push($feedingData, [
+                array_push($nursingData, [
                     $feeding->start_right->timestamp * 1000,
                     $feeding->stop_right->diffInSeconds($feeding->start_right)
                     ]
@@ -259,7 +260,8 @@ class EventController extends BaseController {
         $data = array(
             'baby' => $baby,
             'napData' => $napData,
-            'feedingData' => $feedingData,
+            'bottleData' => $bottleData,
+            'nursingData' => $nursingData,
             'diaperData' => $diaperData
         );
 
