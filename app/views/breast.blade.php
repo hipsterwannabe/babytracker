@@ -54,7 +54,7 @@
 
                 <div class="form-group">
                     <div class="col-lg-offset-2 col-lg-10">
-                        {{ Form::submit('Submit', array('class' => 'btn btn-success')) }}
+                        {{ Form::submit('Submit', array('class' => 'btn btn-warning')) }}
                     </div>
                 </div>
 
