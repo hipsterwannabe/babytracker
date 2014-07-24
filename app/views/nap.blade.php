@@ -1,35 +1,59 @@
-@extends('layouts.master')
-
-@section('topscript')
-
-<link rel="stylesheet" type="text/css" href="/assets/FlipClock-master/compiled/flipclock.css">
-
-@stop
+@extends('layouts.dummy')
 
 @section('content')
 
 <div class="container">
+    <div class="page-content page-form">
 
-    <h1>Naptime</h1>
+        <div class="widget">
+            <div class="widget-head">
+                <h3>Nap Time</h3>
+            </div>
+            <div class="widget-body">
 
-    <div class="col-md-10" id="napTimer"></div>
+                <div class="form-group">
+                    <div class="col-lg-offset-1 col-lg-10">
+                        <div id="napTimer"></div>
+                    </div>
+                </div>
 
-    {{ Form::open(array('action' => array('EventController@doNap', $baby->id))) }}
+                {{ Form::open(array('action' => array('EventController@doNap', $baby->id), 'class' => 'form-horizontal')) }}
 
-    {{ Form::button('Start', array('class' => 'btn btn-primary', 'id' => 'timer')) }}
+                <!-- Hidden inputs to assign time values -->
+                {{ Form::hidden('start_nap', null, array('id' => 'beginTime')) }}
+                {{ Form::hidden('end_nap', null, array('id' => 'endTime')) }}
+                {{ Form::hidden('length', null, array('id' => 'napLength')) }}
 
-    {{ Form::label('notes', 'Notes') }}
-    {{ Form::textarea('notes', null, array('placeholder' => 'Nap notes...')) }}
+                <div class="form-group">
+                    <div class="col-lg-offset-2 col-lg-10">
+                        {{ Form::button('Start', array('class' => 'btn btn-success', 'id' => 'timer')) }}
+                    </div>
+                </div>
 
-    {{ Form::hidden('start_nap', null, array('id' => 'beginTime')) }}
+                <div class="form-group">
+                    {{ Form::label('notes', 'Notes', array('class' => 'col-lg-2 control-label')) }}
+                    <div class="col-lg-10">
+                        {{ Form::textarea('notes', null, array('class' => 'form-control', 'rows' => '3', 'placeholder' => 'nap notes...')) }}
+                    </div>
+                </div>
 
-    {{ Form::hidden('end_nap', null, array('id' => 'endTime')) }}
+                <div class="form-group">
+                    <div class="col-lg-offset-2 col-lg-10">
+                        {{ Form::submit('Submit', array('class' => 'btn btn-warning')) }}
+                    </div>
+                </div>
 
-    {{ Form::hidden('length', null, array('id' => 'napLength')) }}
+                {{ Form::close() }}
 
-    {{ Form::submit('Submit', array('class' => ('btn btn-primary'))) }}
+           </div>
 
-    {{ Form::close() }}
+           <div class="widget-foot">
+
+           </div>
+
+        </div>
+
+    </div>
 
 </div>
 
