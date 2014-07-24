@@ -63,7 +63,75 @@
 
     </div>
 
+
+    <!-- ---------------------------------------------------- -->
+
+
+    <div class="widget">
+       <div class="widget-head">
+          <h5>Table #1</h5>
+       </div>
+       <div class="widget-body no-padd">
+            <div class="table-responsive">
+              <table class="table table-hover table-bordered ">
+               <thead>
+                 <tr>
+                   <th>Time</th>
+                   <th>Length</th>
+                   <th>Ounces</th>
+                   <th>Notes</th>
+                 </tr>
+               </thead>
+               <tbody>
+                @foreach (Auth::user()->babies as $baby)
+                    @foreach ($baby->feedings as $feeding)
+                        @if ($feeding->bottle == 1)
+                            @if ($feeding->baby_id == $baby->id)
+                            <tr>
+                                <td>{{{ $feeding->created_at }}}</td>
+                                <td>{{{ $feeding->bottle_length }}}</td>
+                                <td>{{{ $feeding->bottle_ounces }}}</td>
+                                <td>{{{ $feeding->notes }}}</td>
+                            </tr>
+                            @endif
+                        @endif
+                    @endforeach
+                @endforeach
+               </tbody>
+             </table>
+         
+         </div>
+       </div>
+       
+       <div class="widget-foot">
+        
+          <ul class="pagination pull-right">
+            <li><a href="#">&laquo;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">&raquo;</a></li>
+          </ul>
+           
+           <div class="clearfix"></div>
+       </div>
+       
+    </div>
+
+
+
+
+
 </div>
+
+
+
+
+
+
+
 
 @stop
 
