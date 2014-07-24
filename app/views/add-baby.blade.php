@@ -2,77 +2,63 @@
 
 @section('content')
 
-    <!-- Event Sidebar -->
+<div class="container">
+    <div class="page-content page-form">
 
-    <div class="col-lg-offset-1 col-lg-8">
-
-        <div class="row">
-            <div class="col-lg-4">
-                <h3>Child Details</h3>
+        <div class="widget">
+            <div class="widget-head">
+                <h3>Add Baby</h3>
             </div>
-        </div>
+            <div class="widget-body">
+                {{ Form::open(array('class' => 'form-horizontal', 'action' => array('UserController@newBaby'), 'files' => true)) }}
 
-        <div class="well well-sm">
-
-            {{ Form::open(array('action' => array('UserController@newBaby'), 'files' => true)) }}
-
-            <div class="row">
                 <div class="form-group">
-                    <div class="col-lg-1">
-                        {{ Form::label('name', 'Name: ') }}
-                    </div>
-                    <div class="col-lg-6">
-                        {{ Form::text('name', null, array('placeholder' => 'Baby name...')) }}<br>
+                    {{ Form::label('name', 'Name', array('class' => 'col-lg-2 control-label')) }}
+                    <div class="col-lg-10">
+                        {{ Form::text('name', null, array('class' => 'form-control', 'placeholder' => 'Baby name...')) }}
                     </div>
                 </div>
-            </div>
 
-            <div class="row">
                 <div class="form-group">
-                    <div class="col-lg-1">
-                        {{ Form::label('image', 'Image: ') }} 
-                    </div>
-                    <div class="col-lg-6">
+                    {{ Form::label('image', 'Image', array('class' => 'col-lg-2 control-label')) }}
+                    <div class="col-lg-10">
                         {{ Form::file('image') }}
                     </div>
                 </div>
-            </div>
 
-            <div class="row">
                 <div class="form-group">
-                    <div class="col-lg-1" >
-                        {{ Form::label('gender', 'Gender:') }}
-                    </div>
-                    <div class="col-lg-6">
-                        {{ Form::select('gender', array('Boy' => 'Boy', 'Girl' => 'Girl')) }}<br>
+                    {{ Form::label('gender', 'Gender', array('class' => 'col-lg-2 control-label')) }}
+                    <div class="col-lg-10">
+                        {{ Form::select('gender', array('Boy' => 'Boy', 'Girl' => 'Girl'), null, array('class' => 'form-control')) }}
                     </div>
                 </div>
-            </div>
 
-            <div class="row">
+
                 <div class="form-group">
-                    <div class="col-lg-1">
-                        {{ Form::label('birth_date', 'Birthday: ') }}
-                    </div>
-                    <div class="col-lg-6">
-                        {{ Form::text('birth_date', null, array('placeholder' => 'YYYY-MM-DD')) }}<br>
+                    {{ Form::label('birth_date', 'Birthday', array('class' => 'col-lg-2 control-label')) }}
+                    <div class="col-lg-10">
+                        {{ Form::text('birth_date', null, array('class' => 'form-control', 'placeholder' => 'YYYY-MM-DD')) }}
                     </div>
                 </div>
-            </div>
 
-            <br>
-
-            <div class="row">
                 <div class="form-group">
-                    <div class="col-lg-offset-1 col-lg-1">
-                        {{ Form::submit('Submit', array('class' => 'btn btn-info')) }}
+                    <div class="col-lg-offset-2 col-lg-10">
+                        {{ Form::submit('Submit', array('class' => 'btn btn-warning')) }}
                     </div>
                 </div>
-            </div>
 
-            {{ Form::close() }}
+                {{ Form::close() }}
 
-        </div> <!-- well -->
-    </div> <!-- column -->
+           </div>
+
+           <div class="widget-foot">
+
+           </div>
+
+        </div>
+
+    </div>
+
+</div>
 
 @stop
