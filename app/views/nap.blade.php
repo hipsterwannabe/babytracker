@@ -52,7 +52,30 @@
            </div>
 
         </div>
-
+        <div class="widget-body no-padd">
+            <div class="table-responsive">
+              <table class="table table-hover table-bordered ">
+               <thead>
+                 <tr>
+                   <th>Date/Time</th>
+                   <th>Length of Nap</th>
+                   <th>Notes</th>
+                 </tr>
+               </thead>
+               <tbody>
+                @foreach (Auth::user()->babies as $baby)
+                    @foreach ($baby->naps as $nap)
+                     <tr>
+                       <td>{{ $nap->start }}</td>
+                       <td>{{ $nap->length }}</td>
+                       <td>{{ $nap->notes }}</td>
+                     </tr> 
+                     @endforeach
+                @endforeach   
+               </tbody>
+             </table>
+         
+         </div>
     </div>
 
 </div>
