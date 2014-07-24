@@ -19,6 +19,12 @@
 
                 {{ Form::open(array('action' => array('EventController@doBottle', $baby->id), 'class' => 'form-horizontal')) }}
 
+                <!-- Hidden inputs to assign time values -->
+                {{ Form::hidden('start_bottle', null, array('id' => 'beginTime')) }}
+                {{ Form::hidden('end_bottle', null, array('id' => 'endTime')) }}
+
+                {{ Form::hidden('length', null, array('id' => 'feedingLength')) }}
+
                 <div class="form-group">
                     <div class="col-lg-offset-2 col-lg-10">
                         {{ Form::button('Start', array('class' => 'btn btn-success', 'id' => 'timer')) }}
