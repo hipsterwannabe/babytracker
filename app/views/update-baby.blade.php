@@ -30,7 +30,7 @@
             <div class="row">
                 <div class="form-group">
                     <div class="col-lg-1">
-                        {{ Form::label('image', 'Image: ') }} 
+                        {{ Form::label('image', 'Image: ') }}
                     </div>
                     <div class="col-lg-6">
                         {{ Form::file('image') }}
