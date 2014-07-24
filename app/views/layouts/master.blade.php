@@ -17,6 +17,8 @@
         <link href="/sheldon/theme/css/jquery-ui.css" rel="stylesheet">
 
 
+
+
         <!-- jQuery Gritter -->
         <link href="/sheldon/theme/css/jquery.gritter.css" rel="stylesheet">
         <!-- Bootstrap Switch -->
@@ -66,7 +68,7 @@
                   <div class="sidebar-buttons text-center">
                      <!-- User button -->
                      <div class="btn-group">
-                       <a href="{{{ action('UserController@showCreateBaby') }}}" class="btn btn-black btn-xs"><i class="fa fa-user"></i></a>
+                       <a href="{{{ action('UserController@showCreateBaby') }}}" class="btn btn-black btn-xs" ><i class="fa fa-user"></i></a>
                        <a href="{{{ action('UserController@showCreateBaby') }}}" class="btn btn-danger btn-xs">Add Baby</a>
                      </div>
                      <!-- Logout button -->
@@ -157,6 +159,7 @@
     <script src="/assets/js/jquery.stellar.min.js"></script>
     <script src="/assets/js/fancybox/jquery.fancybox.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/fancybox/modernizr.custom.js"></script>
 
       <!-- Javascript files -->
       <!-- jQuery -->
@@ -194,6 +197,13 @@
       <script src="/sheldon/theme/js/html5shiv.js"></script>
       <!-- Custom JS -->
       <script src="/sheldon/theme/js/custom.js"></script>
+
+      <!-- Custom Progress Buttons JS -->
+      <script src="/sheldon/theme/js/classie.js"></script>
+      <!-- Custom Progress Buttons JS -->
+      <script src="/sheldon/theme/js/modernizr.custom.js"></script>
+      <!-- Custom Progress Buttons JS -->
+      <script src="/sheldon/theme/js/progressButton.js"></script>
 
         @yield('bottomscript')
 
