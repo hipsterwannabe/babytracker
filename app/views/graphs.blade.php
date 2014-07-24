@@ -32,12 +32,18 @@
             	}
 	        },
 	        yAxis: {
+	        	//pointInterval: 24 * 3600 * 1000,
+	        	//tickInterval: 24 * 3600 *1000,
 	        	floor: 0,
-	        	type: 'datetime', //y-axis will be in milliseconds
+	        	//type: 'datetime', 
 	        	dateTimeLabelFormats: {
+	        		millisecond: '%H:%M:%S.%L',
 	        		second: '%H:%M:%S',
+		            minute: '%H:%M:%S',
+		            hour: '%H:%M:%S',
+		            
 	        	},
-	        	pointInterval: 3600 * 1000
+	        	showFirstLabel: false,
 	        },
 		    series: [{
 		        data: {{ json_encode($napData, JSON_NUMERIC_CHECK) }}
@@ -50,7 +56,7 @@
 
 	    $('#diaperContainer').highcharts({
 	        title: { text: 'Diaper Chart' },
-	        chart: { type: 'line' },
+	        chart: { type: 'scatter' },
 	        xAxis: {
 	        	type: 'datetime',
 	            title: { text: 'Time of Diaper Change' }
