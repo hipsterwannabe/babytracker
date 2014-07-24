@@ -79,3 +79,7 @@ Route::get('/about', function()
    return View::make('about');
 });
 
+Route::get('/dummy', function()
+{
+    return View::make('dummy');
+});
