@@ -178,47 +178,84 @@ class EventController extends BaseController {
         }
         // building nap data for graph
         $napData = array();
-        $naps = $baby->naps;
 
+        $naps = $baby->naps()->orderBy('start', 'ASC')->get();
         foreach ($naps as $nap)
         {
-
-            $napData[] = "['" . date('Y-m-d H:i:s', strtotime($nap->start)) . "'," . time_to_decimal($nap->length) . "]";
+            $napData[] = [
+                $nap->start->timestamp * 1000,
+                $nap->end->diffInSeconds($nap->start)
+            ];
         }
-
-        $napData = join($napData, ',');
+        // $firstNap = array_first($napData)
+        // $napData = join($napData, ',');
         // building feeding data for graph
 
         $feedingData = array();
-        $feedings = $baby->feedings;
+        $feedings = $baby->feedings()->orderBy('created_at', 'ASC')->get();
 
         foreach ($feedings as $feeding) {
+            // grabbing bottle data
             if ($feeding->bottle){
-                array_push($feedingData, "['" . date('Y-m-d H:i:s', strtotime($feeding->start_bottle)) . "'," . time_to_decimal($feeding->bottle_length) . "]");
+                array_push($feedingData, [
+                        $feeding->start_bottle->timestamp * 1000,
+                        $feeding->stop_bottle->diffInSeconds($feeding->start_bottle)
+                    ]
+                );
             } elseif ($feeding->breast) {
-                if (($feeding->start_left) < ($feeding->start_right)) {
-                    array_push($feedingData, "['" . date('Y-m-d H:i:s', strtotime($feeding->start_right)) . "'," . time_to_decimal($feeding->nursing_time) . "]");
-                } else {
-                    array_push($feedingData, "['" . date('Y-m-d H:i:s', strtotime($feeding->start_left)) . "'," . time_to_decimal($feeding->nursing_time) . "]");
+                //grabbing nursing data
+                if (isset($feeding->start_left) && isset($feeding->start_right)) {
+                        if (($feeding->start_left) < ($feeding->start_right)) {
+                            array_push($feedingData, [
+                                $feeding->start_left->timestamp * 1000,
+                                $feeding->stop_right->diffInSeconds($feeding->start_left)
+                                ]
+                            );
+                    } else {
+                        array_push($feedingData, [
+                            $feeding->start_right->timestamp * 1000,
+                            $feeding->stop_left->diffInSeconds($feeding->start_right)
+                            ]
+                        );
+                    }
                 }
-            }
+            } elseif (isset($feeding->start_left)) {
+                array_push($feedingData, [
+                    $feeding->start_left->timestamp * 1000,
+                    $feeding->stop_left->diffInSeconds($feeding->start_left)
+                    ]
+                );
+            } elseif (isset($feeding->start_right)) {
+                array_push($feedingData, [
+                    $feeding->start_right->timestamp * 1000,
+                    $feeding->stop_right->diffInSeconds($feeding->start_right)
+                    ]
+                );
+            }                
         }
-        $feedingData = join($feedingData, ',');
 
         //  building changing data for graph
         $diaperData = array();
-        $diapers = $baby->diapers;
+
+        $diapers = $baby->diapers()->orderBy('created_at', 'ASC')->get();
 
         foreach ($diapers as $diaper) {
             if ($diaper->number_one && $diaper->number_two){
-                array_push($diaperData, "['" . date('Y-m-d H:i:s', strtotime($diaper->created_at)) . "', 3]");
+                array_push($diaperData, [
+                    $diaper->created_at->timestamp * 1000, 3
+                    ]
+                );
             } elseif ($diaper->number_one){
-                array_push($diaperData, "['" . date('Y-m-d H:i:s', strtotime($diaper->created_at)) . "', 1]");
+                array_push($diaperData, [
+                    $diaper->created_at->timestamp * 1000, 1
+                    ]);
             } elseif ($diaper->number_two) {
-                array_push($diaperData, "['" . date('Y-m-d H:i:s', strtotime($diaper->created_at)) . "', 2]");
+                array_push($diaperData, [
+                    $diaper->created_at->timestamp * 1000, 2
+                    ]);
             }
         }
-        $diaperData = join($diaperData, ',');
+        
         $data = array(
             'baby' => $baby,
             'napData' => $napData,

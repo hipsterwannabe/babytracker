@@ -131,8 +131,6 @@
                 </div>
                 <!-- Black block ends -->
 
-
-
                 <!-- Content starts -->
                 @yield('content')
                 <!-- Content ends -->

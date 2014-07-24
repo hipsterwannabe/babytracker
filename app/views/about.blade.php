@@ -39,7 +39,7 @@
 					<div class="caption">
 					<h3>Danny Jimenez</h3>
 					<h5>"Gif Coordinator"</h5>
-					<p>Wee-wee doodoo doo yaya pewie doodoo ga. Ga stinky gaga gaagaa ya. Laa yaya yaya ya goo gaagaa laa doo doodoo gaga gaga ga. Laalaa gaga ga dada doo da dada doo ya laalaa. Owie dada googoo ya doo googoo yaya gaagaa gaagaa yaya googoo ga. Goo da laa gaagaa yaya gaga laalaa dada doo din-din doggy laa. Laalaa ya doo gaagaa mama binkie .</p>
+					<p>As the comic relief and provider of positive energy, my part in this project was that much greater. My natural focus on user interface and experience, keeping simplicity as our focus was key to creating a great experience for new parents. </p>
 					<div class="row center">
 						<a href="#" class="fa fa-5x fa-twitter"></a>
 						<a href="#" class="fa fa-5x fa-linkedin-square"></a>
