@@ -7,7 +7,7 @@ Designed by : http://responsivewebinc.com
 /* Basic CSS starts */
 
 body{
-   background:#ead5b6;
+   background:#b3b3b1;
    font-family:"Open Sans", sans-serif;
    font-size:13px;
    line-height:23px;
@@ -373,7 +373,7 @@ table th{
 }
 
 .sidebar .sidebar-dropdown a{
-	color: #fff !important;  
+	color: #fff !important;
 	width:100%;
 	max-width:100px;
 	background: #343434;
@@ -383,7 +383,7 @@ table th{
 	font-size: 11px;
 	display: block;
 	border-top: 1px solid #666;
-	border-bottom: 1px solid #333; 
+	border-bottom: 1px solid #333;
 	margin:0 auto;
 	margin-top:-5px;
 	margin-bottom:15px;
@@ -456,15 +456,15 @@ table th{
    font-size:12px;
 }
 
-.sidebar-search form input::-webkit-input-placeholder { 
+.sidebar-search form input::-webkit-input-placeholder {
     color:#deaab0;
 }
 
-.sidebar-search form input::-moz-placeholder { 
+.sidebar-search form input::-moz-placeholder {
     color:#deaab0;
 }
 
-.sidebar-search form input::-ms-input-placeholder { 
+.sidebar-search form input::-ms-input-placeholder {
     color:#deaab0;
 }
 
@@ -908,7 +908,7 @@ table th{
 }
 
 .hero-block-one .hero-arrow-block{
-	background: #fff;	
+	background: #fff;
 	border:1px solid #ddd;
 	padding:3px 7px;
 	position: relative;
@@ -969,7 +969,7 @@ table th{
 /* Hero block two */
 
 .hero-block-two{
-	background: #fff;	
+	background: #fff;
 	border:1px solid #ddd;
 	margin-right:20px;
 	margin-top:17px;
@@ -977,7 +977,7 @@ table th{
 	border-radius:7px;
 	width:190px;
 	float:left;
-}	
+}
 
 .hero-block-two h5{
 	color:#999;
@@ -1000,7 +1000,7 @@ table th{
 	text-transform:uppercase;
 }
 
-.hero-block-two i{ 
+.hero-block-two i{
 	text-align:center;
 	font-size:21px;
 	display:inline-block;
@@ -1049,7 +1049,7 @@ table th{
 	margin:6px 0px 2px 0px;
 	width:105px;
 	padding:0px;
-}	
+}
 
 .hero-block-three .hero-ecg-right a{
 	margin-top:6px;
@@ -1089,7 +1089,7 @@ table th{
 	margin-top:7px;
 	margin-right:10px;
 	color:#fff;
-}	
+}
 
 .blue-block .page-title a, .blue-block .page-title a:hover{
 	color:#fff;
@@ -1098,7 +1098,7 @@ table th{
 
 /* Blue block with TV */
 
-.blue-block .bb-tv{	
+.blue-block .bb-tv{
 	background:#fafafa;
 	border:2px solid #fff;
 	border-radius:5px;
@@ -1182,7 +1182,7 @@ table th{
 
 .blue-block .status-list{
 	background: #fafafa;
-	border:2px solid #fff;	
+	border:2px solid #fff;
 	border-radius:5px;
 	padding:7px 9px;
 }
@@ -1226,7 +1226,7 @@ table th{
 
 .blue-block .quick-widget{
 	background: #fafafa;
-	border:2px solid #fff;	
+	border:2px solid #fff;
 	border-radius:5px;
 	padding:6px 7px;
 	font-size:19px;
@@ -1304,7 +1304,7 @@ table th{
 
 .blue-block .quick-update .qu-buttons{
 	padding:7px 10px;
-	background: #fafafa;	
+	background: #fafafa;
 	border-bottom-left-radius:4px;
 	border-bottom-right-radius:4px;
 }
@@ -1344,7 +1344,7 @@ table th{
 	height:115px !important;
 	overflow:hidden;
 	text-align:center;
-}	
+}
 
 .blue-knob-block .knoby h6{
 	font-family:"Open Sans", sans-serif;
@@ -1419,7 +1419,7 @@ table th{
 
 .widget {
   margin-top: 10px;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
   background: #fff;
 }
 
@@ -1676,7 +1676,7 @@ table th{
 .chat-widget .by-me .chat-content{
     background: #fcfcfc;
 	margin-left: 70px;
-	position: relative; 
+	position: relative;
 	border: 1px solid #ddd;
 	padding: 5px 10px;
 	border-radius: 5px;
@@ -1685,36 +1685,36 @@ table th{
 	color:#777;
 }
 
-.chat-widget .by-me .chat-content:after, .chat-widget .by-me .chat-content:before { 
-	right: 100%; 
-	border: solid transparent; 
-	content: " "; 
-	height: 0; 
-	width: 0; 
-	position: absolute; 
-	pointer-events: none; 
-} 
+.chat-widget .by-me .chat-content:after, .chat-widget .by-me .chat-content:before {
+	right: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
 
-.chat-widget .by-me .chat-content:after { 
-	border-color: rgba(255, 255, 255, 0); 
-	border-right-color: #fff; 
-	border-width: 6px; 
-	top: 30%; 
-	margin-top: -10px; 
-} 
+.chat-widget .by-me .chat-content:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-right-color: #fff;
+	border-width: 6px;
+	top: 30%;
+	margin-top: -10px;
+}
 
-.chat-widget .by-me .chat-content:before { 
-	border-color: rgba(238, 238, 238, 0); 
-	border-right-color: #ccc; 
-	border-width: 7px; 
-	top: 30%; 
-	margin-top: -11px; 
+.chat-widget .by-me .chat-content:before {
+	border-color: rgba(238, 238, 238, 0);
+	border-right-color: #ccc;
+	border-width: 7px;
+	top: 30%;
+	margin-top: -11px;
 }
 
 .chat-widget .by-other .chat-content{
-	background: #fcfcfc;	
+	background: #fcfcfc;
 	margin-right: 70px;
-	position: relative; 
+	position: relative;
 	border: 1px solid #ddd;
 	padding: 5px 10px;
 	border-radius: 5px;
@@ -1896,7 +1896,7 @@ table th{
 .activity-widget  li{
 	font-size:12px;
 	padding:6px 10px;
-    background-color: #fff;	
+    background-color: #fff;
     border-bottom: 1px solid #ddd;
 }
 
@@ -1971,7 +1971,7 @@ table th{
 }
 
 .extensions-widget .ext-details h6 span{
-	
+
 }
 
 .extensions-widget .ext-details p{
@@ -2005,7 +2005,7 @@ table th{
 
 .page-content .nav-tabs{
    border-bottom:0px;
-} 
+}
 
 .page-content .nav-tabs li{
    border:0px !important;
@@ -2027,7 +2027,7 @@ table th{
    -moz-transition: background 0.7s ease;
    -o-transition: background 0.7s ease;
    -ms-transition: background 0.7s ease;
-   transition: background 0.7s ease;   
+   transition: background 0.7s ease;
 }
 
 .page-content .nav-tabs li:first-child  a{
@@ -2045,7 +2045,7 @@ table th{
    -moz-transition: background 0.7s ease;
    -o-transition: background 0.7s ease;
    -ms-transition: background 0.7s ease;
-   transition: background 0.7s ease;   
+   transition: background 0.7s ease;
 }
 
 .page-content .nav-tabs li.active a{
@@ -2234,8 +2234,8 @@ table th{
    border-radius:5px;
 }
 
-.page-gallery #gallery a, 
-.page-gallery #gallery a:visited, 
+.page-gallery #gallery a,
+.page-gallery #gallery a:visited,
 .page-gallery #gallery a:hover{
    color:#666;
    text-decoration:none;
@@ -2284,26 +2284,26 @@ table th{
     height:120px; float:left; margin:15px
 }
 
-.ui-slider .ui-slider-handle { 
-	position: absolute; 
-	z-index: 2; 
-	width: 1.1em; 
-	height: 1.1em; 
-	cursor: default; 
+.ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 1.1em;
+	height: 1.1em;
+	cursor: default;
 	background: #fafafa !important;
-	border: 1px solid #ccc !important; 
+	border: 1px solid #ccc !important;
 }
 
-.ui-slider-horizontal { 
-	height: .5em; 
-	border: 0px solid #eee !important; 
+.ui-slider-horizontal {
+	height: .5em;
+	border: 0px solid #eee !important;
 	background: #dfdfdf !important;
 }
 
-.ui-slider-vertical { 
-	height: 100px; 
+.ui-slider-vertical {
+	height: 100px;
 	width: 0.5em;
-	border: 0px solid #fff !important; 
+	border: 0px solid #fff !important;
 	background: #dfdfdf !important;
 }
 
@@ -2315,32 +2315,32 @@ table th{
 .slider-red .ui-widget-header{
 	background: #dd514c !important;
 	border-color: #dd514c !important;
-}	
+}
 
 .slider-blue .ui-widget-header{
 	background: #36a5c6 !important;
 	border-color: #36a5c6 !important;
-}	
+}
 
 .slider-green .ui-widget-header{
 	background: #44c636 !important;
 	border-color: #44c636 !important;
-}	
+}
 
 .slider-yellow .ui-widget-header{
 	background: #fcd419 !important;
 	border-color: #fcd419 !important;
-}	
+}
 
 .slider-orange .ui-widget-header{
 	background: #fc9419 !important;
 	border-color: #fc9419 !important;
-}	
+}
 
 .slider-violet .ui-widget-header{
 	background: #9919fc !important;
 	border-color: #9919fc !important;
-}	
+}
 
 /* Toggle button */
 
@@ -2379,7 +2379,7 @@ table th{
 .page-calendar .fc-event {
 	background-color: #51bfd2;
 	border-color: #3aa8bc;
-}	
+}
 
 .page-calendar .fc-button{
 	border:1px solid #ddd;
@@ -2413,11 +2413,11 @@ table th{
 }
 
 .page-calendar .fc-content {
-	background: #fff;	
+	background: #fff;
 }
 
 .page-calendar .fc-content td:hover{
-	background: #f3f3f3;	
+	background: #f3f3f3;
 }
 
 .page-calendar .fc-widget-content{
@@ -2622,7 +2622,7 @@ table th{
 
 .login-page .nav-tabs{
    border-bottom:0px;
-} 
+}
 
 .login-page .nav-tabs li{
    border:0px !important;
@@ -2650,7 +2650,7 @@ table th{
    -moz-transition: background 0.7s ease;
    -o-transition: background 0.7s ease;
    -ms-transition: background 0.7s ease;
-   transition: background 0.7s ease;   
+   transition: background 0.7s ease;
    font-size:15px !important;
    font-weight:600;
    text-transform:uppercase;
@@ -2672,7 +2672,7 @@ table th{
    -moz-transition: background 0.7s ease;
    -o-transition: background 0.7s ease;
    -ms-transition: background 0.7s ease;
-   transition: background 0.7s ease;   
+   transition: background 0.7s ease;
 }
 
 .login-page .nav-tabs li.active a{
@@ -2884,7 +2884,7 @@ table th{
 
 .quick-slide .quick-content .nav-tabs{
    border-bottom:0px;
-} 
+}
 
 .quick-slide .quick-content .nav-tabs li{
    border:0px !important;
@@ -2906,7 +2906,7 @@ table th{
    -moz-transition: background 0.7s ease;
    -o-transition: background 0.7s ease;
    -ms-transition: background 0.7s ease;
-   transition: background 0.7s ease;   
+   transition: background 0.7s ease;
 }
 
 .quick-slide .quick-content .nav-tabs li:first-child  a{
@@ -2924,7 +2924,7 @@ table th{
    -moz-transition: background 0.7s ease;
    -o-transition: background 0.7s ease;
    -ms-transition: background 0.7s ease;
-   transition: background 0.7s ease;   
+   transition: background 0.7s ease;
 }
 
 .quick-slide .quick-content .nav-tabs li.active a{
@@ -2976,19 +2976,19 @@ table th{
    line-height:16px;
 }
 
-.quick-slide .ui-slider .ui-slider-handle { 
-	position: absolute; 
-	z-index: 2; 
-	width: 1.1em; 
-	height: 1.1em; 
-	cursor: pointer; 
+.quick-slide .ui-slider .ui-slider-handle {
+	position: absolute;
+	z-index: 2;
+	width: 1.1em;
+	height: 1.1em;
+	cursor: pointer;
 	background: #fafafa !important;
-	border: 1px solid #ccc !important; 
+	border: 1px solid #ccc !important;
 }
 
-.quick-slide .ui-slider-horizontal { 
-	height: .5em; 
-	border: 0px solid #eee !important; 
+.quick-slide .ui-slider-horizontal {
+	height: .5em;
+	border: 0px solid #eee !important;
 	background: #e9e9e9 !important;
 }
 
@@ -2999,13 +2999,13 @@ table th{
 
 .quick-slide .slider-color .ui-widget-header{
 	background: #47b7cb !important;
-}	
+}
 
 .quick-slide .quick-server-status .table{
    margin:0px;
 }
 
-.quick-slide .quick-server-status .table td{ 
+.quick-slide .quick-server-status .table td{
    border-top:0px;
    border-bottom:1px dashed #e6e6e6;
    padding:10px 0px 10px 0px;
@@ -3059,7 +3059,7 @@ table th{
 
 .status-slide{
 	position: fixed;
-	top: 28%;	
+	top: 28%;
 	right: -282px;
 	z-index:1000;
 }
@@ -3326,7 +3326,7 @@ table th{
 	color:#8c8c8c;
 	font-size:13px;
 	font-weight:600;
-}	
+}
 
 .noty-content .panel-heading h4 a:hover{
 	text-decoration:none;
@@ -3484,7 +3484,7 @@ table th{
 	.outer{
 		border:0px;
 	}
-   .quick-slide .tab-item .btn-group.pull-right, 
+   .quick-slide .tab-item .btn-group.pull-right,
    .quick-slide .tab-item .quick-buttons.pull-right{
       float:none !important;
       display:block;
