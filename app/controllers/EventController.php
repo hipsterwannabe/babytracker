@@ -13,10 +13,6 @@ class EventController extends BaseController {
         $this->beforeFilter(function($route) {
             $babyId = $route->getParameter('id');
 
-            // look up baby by ID
-            // check that baby->user->id == Auth::id()
-            // if not, kick that hacker out
-
             $baby = Baby::findOrFail($babyId);
             if ($baby->user->id != Auth::id()) {
                 Session::flash('errorMessage', "You don't have access to that.");

@@ -22,10 +22,10 @@
 
     <div class="col-lg-4">
         <div class="btn-group-vertical">
+            <a href="{{{ action('EventController@showNap', $baby->id) }}}" class="btn btn-primary btn-lg" role="button">Nap</a>
             <a href="{{{ action('EventController@showDiaper', $baby->id) }}}" class="btn btn-primary btn-lg" role="button">Diaper</a>
             <a href="{{{ action('EventController@showBottle', $baby->id) }}}" class="btn btn-primary btn-lg" role="button">Bottle</a>
             <a href="{{{ action('EventController@showBreast', $baby->id) }}}" class="btn btn-primary btn-lg" role="button">Nurse</a>
-            <a href="{{{ action('EventController@showNap', $baby->id) }}}" class="btn btn-primary btn-lg" role="button">Sleep</a>
             <a href="{{{ action('EventController@showStats', $baby->id) }}}" class="btn btn-info btn-lg" role="button">Growth Stats</a>
             <a href="{{{ action('EventController@showCharts', $baby->id) }}}" class="btn btn-info btn-lg" role="button">Charts</a>
         </div>

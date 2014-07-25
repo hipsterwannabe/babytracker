@@ -15,21 +15,31 @@ class UserController extends BaseController {
     public function newUser()
     {
         $user = new User();
-        $user->name = Input::get('name');
-        $user->email = Input::get('new_email');
+        $validator = Validator::make(Input::all(), User::$rules);
 
-        if (Input::get('password') == Input::get('cpassword')) {
-            $user->password = Hash::make(Input::get('password'));
-        } else {
-            Session::flash('errorMessage', "Passwords don't match.");
-            return Redirect::action('HomeController@showLogin')->withInput();
+        if ($validator->fails())
+        {
+            Session::flash('errorMessage', "Account couldn't be registered");
+            return Redirect::back()->withInput()->withErrors($validator);
         }
+        else{
 
-        $user->save();
-        Auth::login($user);
+            $user->name = Input::get('name');
+            $user->email = Input::get('new_email');
 
-        Session::flash('successMessage', "$user->name has been created successfully.");
-        return View::make('new-user-menu')->with('user', $user);
+            if (Input::get('password') == Input::get('cpassword')) {
+                $user->password = Hash::make(Input::get('password'));
+            } else {
+                Session::flash('errorMessage', "Passwords don't match.");
+                return Redirect::action('HomeController@showLogin')->withInput();
+            }
+
+            $user->save();
+            Auth::login($user);
+
+            Session::flash('successMessage', "$user->name has been created successfully.");
+            return View::make('new-user-menu')->with('user', $user);
+        }
     }
 
     public function showCreateBaby()

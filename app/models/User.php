@@ -28,4 +28,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	    return $this->hasMany('Baby');
 	}
 
+    public static $rules = [
+        'name' => 'required|max:100',
+        'email' => 'required|unique|max:10000',
+        'password' => 'required|unique:users|max:2000'
+    ];
+
 }
