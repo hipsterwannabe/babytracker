@@ -92,6 +92,7 @@
 <script type="text/javascript" src="/assets/FlipClock-master/compiled/flipclock.js"></script>
 
 <script>
+
     // Initialize values
     var startNap = null;
     var stopNap = null;

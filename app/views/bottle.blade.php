@@ -120,22 +120,12 @@
        
     </div>
 
-
-
-
-
 </div>
-
-
-
-
-
-
-
 
 @stop
 
 @section('bottomscript')
+
 <script type="text/javascript" src="/assets/FlipClock-master/compiled/flipclock.js"></script>
 
 <script>
@@ -173,4 +163,9 @@
     });
 
 </script>
+
+<script src="http://code.highcharts.com/highcharts.js"></script>
+
+
 @stop
+
