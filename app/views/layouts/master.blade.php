@@ -126,7 +126,9 @@
                     <div class="page-title">
                         <h3 class="pull-left"><i class="fa fa-desktop"></i> {{{ Auth::user()->name }}} <span>Let's chart!</span></h3>
                         <div class="breads pull-right">
-                            <a href="#">Home </a>/ <a href="#">Pages </a>/ Title
+                            @foreach ( Auth::user()->babies as $baby)
+                                <a href="/menu/{{$baby->id}}" >{{ $baby->name }}/</a>
+                            @endforeach
                         </div>
                         <div class="clearfix"></div>
                     </div>
