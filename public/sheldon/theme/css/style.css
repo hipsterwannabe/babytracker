@@ -362,7 +362,7 @@ table th{
    display:block;
    position:absolute;
    height:100%;
-   min-height:1700px;
+   min-height:700px;
    z-index:100;
 }
 
@@ -761,7 +761,7 @@ table th{
 .mainbar{
    position:relative;
    width:auto;
-   min-height:1700px;
+   min-height:1000px;
    margin-left:250px;
    background:#fff;
 }

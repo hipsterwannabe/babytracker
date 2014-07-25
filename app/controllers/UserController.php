@@ -107,7 +107,9 @@ class UserController extends BaseController {
     {
         $baby = Baby::find($id);
         Input::old('name');
-        Input::old('username');
+        Input::old('gender');
+        Input::old('birth_date');
+        Input::old('img_path');
         return View::make('add-baby')->with('baby', $baby);
     }
 
