@@ -56,7 +56,39 @@
            </div>
 
         </div>
-
+        <div class="widget">
+            <div class="widget-head">
+              <h3>Growth Log</h3>
+           </div>
+            <div class="widget-body no-padd">
+                <div class="table-responsive">
+                  <table class="table table-hover table-bordered ">
+                   <thead>
+                     <tr>
+                       <th>Date/Time</th>
+                       <th>Pounds</th>
+                       <th>Ounces</th>
+                       <th>Length</th>
+                       <th>Head Circumference</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                    @foreach (Auth::user()->babies as $baby)
+                        @foreach ($baby->baby_stats as $baby_stat)
+                         <tr>
+                           <td>{{ $baby_stat->created_at }}</td>
+                           <td>{{ $baby_stat->pounds }}</td>
+                           <td>{{ $baby_stat->ounces }}</td>
+                           <td>{{ $baby_stat->length }}</td>
+                           <td>{{ $baby_stat->head }}</td>
+                         </tr> 
+                         @endforeach
+                    @endforeach   
+                   </tbody>
+                 </table>
+             
+             </div>
+        </div>
     </div>
 
 </div>
