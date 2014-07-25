@@ -104,14 +104,27 @@
 	        chart: { type: 'line', },
 	        xAxis: {
 	        	type: 'datetime',
-	            title: { text: 'Time of Feeding' }
+	            title: { text: 'Time of Feeding' },
+	            dateTimeLabelFormats: {
+                	day: '%e. %b'
+            	}
 	        },
-	        yAxis: [{ //--- Primary yAxis
+	        yAxis: [{
+	        	floor: 0,
+	        	//--- Primary yAxis
 			    title: { text: 'Length of Nursing Time' }
 			}, { //--- Secondary yAxis
 			    title: { text: 'Length of Bottle Time' },
 			    opposite: true
-			}],
+			},
+				type: 'datetime', 
+	        	dateTimeLabelFormats: {
+	        		millisecond: '%H:%M:%S.%L',
+	        		second: '%H:%M:%S',
+		            minute: '%H:%M:%S',
+		            hour: '%H:%M',        
+	        },
+	        ],
 	        tooltip: {
 			    backgroundColor: '#FCFFC5',
 			    borderColor: 'black',
@@ -120,13 +133,13 @@
 			    shared: true,
 			},
 			series: [{
-				//name: 'Bottle',
-				data: [{{ json_encode($bottleData, JSON_NUMERIC_CHECK) }}]
-			// }
-			// ,{
-			// 	//name: 'Nursing',
-			// 	data: [{{ json_encode($nursingData, JSON_NUMERIC_CHECK) }}]
-			// }
+				name: 'Bottle',
+				data: {{ json_encode($bottleData, JSON_NUMERIC_CHECK) }}
+			}
+			,{
+				name: 'Nursing',
+				data: {{ json_encode($nursingData, JSON_NUMERIC_CHECK) }}
+			
 			}]
 	    });
 	});
