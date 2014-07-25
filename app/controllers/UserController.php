@@ -109,6 +109,7 @@ class UserController extends BaseController {
             $image->clear();
             $image->destroy();
         }
+
         Session::flash('successMessage', "$baby->name has been added successfully.");
         return Redirect::action('EventController@showMenu', $baby->id);
     }
@@ -120,6 +121,7 @@ class UserController extends BaseController {
         Input::old('gender');
         Input::old('birth_date');
         Input::old('img_path');
+
         return View::make('add-baby')->with('baby', $baby);
     }
 
@@ -188,7 +190,8 @@ class UserController extends BaseController {
 
         Session::flash('successMessage', "$baby->name has been updated successfully.");
         return Redirect::action('EventController@showMenu', $id);
-        }
+
+    }
 
 
 }

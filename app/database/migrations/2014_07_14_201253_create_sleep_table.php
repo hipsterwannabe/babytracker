@@ -5,14 +5,14 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateSleepTable extends Migration {
 
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up()
-	{
-		Schema::create('naps', function($table)
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('naps', function($table)
         {
             $table->increments('id');
             $table->integer('baby_id')->unsigned();
@@ -21,16 +21,16 @@ class CreateSleepTable extends Migration {
             $table->text('notes')->nullable();
             $table->timestamps();
         });
-	}
+    }
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
-	{
-		Schema::drop('nap');
-	}
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('nap');
+    }
 
 }
