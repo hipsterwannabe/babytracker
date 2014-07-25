@@ -36,7 +36,7 @@
             	}
 	        },
 	        yAxis: {
-	        	title: {text: 'Length of Nap (in minutes)'},
+	        	title: {text: 'Length of Nap (in hours)'},
 	        	pointInterval: 3600,
 	        	//tickInterval: 1800,
 	        	floor: 0,
@@ -51,11 +51,20 @@
 	        	showFirstLabel: false,
 	        	labels:{
 		           formatter: function(){
-		                var minutes = ""
+		                var minutes = "";
+		                var hours = "";
+		                var remainder = "";
+		                if (this.value >= 3600){
+		                	hours = Highcharts.numberFormat((this.value / 3600), 1); 
+		                	// remainder = Highcharts.numberFormat((this.value % 3600), 0);
+		                	// minutes = Highcharts.numberFormat((remainder / 60), 0),
+		                	return hours;
+						} 
 		                if (this.value > 59){
-		                    minutes = Highcharts.numberFormat((this.value/60), 0)
+		                    minutes = Highcharts.numberFormat((this.value/60), 0);
+		                    return minutes;
 		                }
-		                return minutes;
+		                
 		            }
 		       }
 	        },
@@ -111,20 +120,20 @@
 	        },
 	        yAxis: [{
 	        	floor: 0,
+	        	pointInterval: 3600,
 	        	//--- Primary yAxis
-			    title: { text: 'Length of Nursing Time' }
-			}, { //--- Secondary yAxis
-			    title: { text: 'Length of Bottle Time' },
-			    opposite: true
-			},
+			    title: { text: 'Length of Nursing Time (in hours)' }, 
+			     //--- Secondary yAxis
+			    title: { text: 'Length of Bottle Time (in hours)' },
+			    opposite: true,
 				type: 'datetime', 
 	        	dateTimeLabelFormats: {
 	        		millisecond: '%H:%M:%S.%L',
 	        		second: '%H:%M:%S',
 		            minute: '%H:%M:%S',
-		            hour: '%H:%M',        
-	        },
-	        ],
+		            hour: '%H:%M'
+	        	}
+			}],
 	        tooltip: {
 			    backgroundColor: '#FCFFC5',
 			    borderColor: 'black',
@@ -132,6 +141,24 @@
 			    borderWidth: 3,
 			    shared: true,
 			},
+			labels:{
+		           formatter: function(){
+		                var minutes = "";
+		                var hours = "";
+		                var remainder = "";
+		                if (this.value >= 3600){
+		                	hours = Highcharts.numberFormat((this.value / 3600), 1); 
+		                	// remainder = Highcharts.numberFormat((this.value % 3600), 0);
+		                	// minutes = Highcharts.numberFormat((remainder / 60), 0),
+		                	return hours;
+						} 
+		                if (this.value > 59){
+		                    minutes = Highcharts.numberFormat((this.value/60), 0);
+		                    return minutes;
+		                }
+		                
+		            }
+		       },
 			series: [{
 				name: 'Bottle',
 				data: {{ json_encode($bottleData, JSON_NUMERIC_CHECK) }}
