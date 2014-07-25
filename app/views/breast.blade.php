@@ -116,9 +116,14 @@
                 @endforeach
                </tbody>
              </table>
-         
          </div>
     </div>
+
+       <div class="widget-foot">
+           <div class="clearfix"></div>
+       </div>
+
+</div>
 
 
 

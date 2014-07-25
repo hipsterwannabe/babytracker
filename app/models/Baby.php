@@ -28,6 +28,10 @@ class Baby extends BaseModel {
     {
         return $this->hasMany('Diaper');
     }
+    public function babystats()
+    {
+        return $this->hasMany('BabyStat');
+    }
 }
 
 

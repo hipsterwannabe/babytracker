@@ -73,14 +73,18 @@
                            <td>{{ $nap->start }}</td>
                            <td>{{ $nap->length }}</td>
                            <td>{{ $nap->notes }}</td>
-                         </tr> 
+                         </tr>
                          @endforeach
-                    @endforeach   
+                    @endforeach
                    </tbody>
                  </table>
-             
+
              </div>
         </div>
+
+       <div class="widget-foot">
+           <div class="clearfix"></div>
+       </div>
     </div>
 
 </div>
