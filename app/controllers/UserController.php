@@ -22,7 +22,7 @@ class UserController extends BaseController {
             $user->password = Hash::make(Input::get('password'));
         } else {
             Session::flash('errorMessage', "Passwords don't match.");
-            return Redirect::action('HomeController@showLogin');
+            return Redirect::action('HomeController@showLogin')->withInput();
         }
 
         $user->save();

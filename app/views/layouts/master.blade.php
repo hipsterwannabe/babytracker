@@ -90,10 +90,10 @@
                         @if (isset($baby))
                             <!-- Use the class "current" in main menu to hightlight current main menu -->
                             <li><a href="{{{ action('EventController@showCharts', $baby->id) }}}"><i class="fa fa-bar-chart-o"></i> Charts</a></li>
-                            <li><a href="{{{ action('EventController@showDiaper', $baby->id) }}}"><i class="fa fa-folder-open"></i> Diaper</a></li>
-                            <li><a href="{{{ action('EventController@showBreast', $baby->id) }}}"><i class="fa fa-cog"></i> Nurse</a></li>
-                            <li><a href="{{{ action('EventController@showBottle', $baby->id) }}}"><i class="fa fa-list-alt"></i> Bottle</a></li>
-                            <li><a href="{{{ action('EventController@showNap', $baby->id) }}}"><i class="fa fa-table"></i> Sleep</a></li>
+                            <li><a href="{{{ action('EventController@showDiaper', $baby->id) }}}"><i class="fa fa-circle"></i> Diaper</a></li>
+                            <li><a href="{{{ action('EventController@showBreast', $baby->id) }}}"><i class="fa fa-square"></i> Nurse</a></li>
+                            <li><a href="{{{ action('EventController@showBottle', $baby->id) }}}"><i class="fa fa-star"></i> Bottle</a></li>
+                            <li><a href="{{{ action('EventController@showNap', $baby->id) }}}"><i class="fa fa-cloud"></i> Sleep</a></li>
                             <li><a href="{{{ action('EventController@showStats', $baby->id) }}}"><i class="fa fa-user"></i> Growth Stats</a></li>
                         @endif
 
