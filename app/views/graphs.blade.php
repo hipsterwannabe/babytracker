@@ -66,7 +66,7 @@
 		});
 
 		//diaper chart
-		var diaperLabels = [" ", "Wet", "Dirty", "Both"];
+		var diaperLabels = [" ", "Wet", "Both", "Dirty"];
 
 	    $('#diaperContainer').highcharts({
 	        title: { text: 'Diaper Chart' },
@@ -120,11 +120,13 @@
 			    shared: true,
 			},
 			series: [{
-				name: 'Bottle',
+				//name: 'Bottle',
 				data: [{{ json_encode($bottleData, JSON_NUMERIC_CHECK) }}]
-			},{
-				name: 'Nursing',
-				data: [{{ json_encode($nursingData, JSON_NUMERIC_CHECK) }}]
+			// }
+			// ,{
+			// 	//name: 'Nursing',
+			// 	data: [{{ json_encode($nursingData, JSON_NUMERIC_CHECK) }}]
+			// }
 			}]
 	    });
 	});
