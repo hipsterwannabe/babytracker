@@ -2,7 +2,7 @@
 
 @section('content')
 
-	<h1>Here is {{ $baby->name }} stats</h1>
+	<h1>Charts for {{ $baby->name }}, babe</h1>
 
 	<!-- nap graph -->
 	<div id="napContainer" style="width:90%; height:300px;"></div>
