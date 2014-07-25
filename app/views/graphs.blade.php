@@ -91,6 +91,7 @@
 		                return diaperLabels[this.value];
 		            },
 		        },
+		        showFirstLabel: false,
 	            tickInterval: 1,
 	            floor: 1,
 	            ceiling: 3

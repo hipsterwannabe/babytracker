@@ -55,7 +55,7 @@
 				<div class="caption">
 					<h3>Greg Vallejo</h3>
 					<h5>"Snacks Coordinator"</h5>
-					<p>I have no kids, but I've enjoyed working on this project. Not only have I put my code and design skills to the test, but I've learned a lot about what new mothers face.</p>
+					<p>I have no kids, but I've enjoyed working on this project. Not only have I put my code and design skills to the test, but I've learned a lot about what new parents face. I believe this app will help parents ease into a new phase of their lives.</p>
 					<div class="row center">
 						<a href="http://twitter.com/Greg_Vallejo" class="fa fa-5x fa-twitter"></a>
 						<a href="https://www.linkedin.com/in/gregvallejo" class="fa fa-5x fa-linkedin-square"></a>
