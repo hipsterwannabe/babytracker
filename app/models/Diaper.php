@@ -6,10 +6,12 @@ class Diaper extends BaseModel {
     {
         return $this->belongsTo('Baby');
     }
+
     public function getDates()
     {
-    	return array('created_at', 'updated_at');
+        return array('created_at', 'updated_at');
     }
+
 }
 
 ?>

@@ -3,6 +3,7 @@
 @section('content')
 
 <div class="container">
+
     <div class="page-content page-form">
 
         <div class="widget">
@@ -10,7 +11,6 @@
                 <h3>Bottle Feeding</h3>
             </div>
             <div class="widget-body">
-
                 <div class="form-group">
                     <div class="col-lg-offset-1 col-lg-10">
                         <div id="bottleTimer"></div>
@@ -53,59 +53,55 @@
 
                 {{ Form::close() }}
 
-           </div>
+            </div>
 
-           <div class="widget-foot">
-
-           </div>
+            <div class="widget-foot"></div>
 
         </div>
 
     </div>
 
     <div class="widget">
-       <div class="widget-head">
-          <h3>Bottle Feedings Log</h3>
-       </div>
-       <div class="widget-body no-padd">
+        <div class="widget-head">
+            <h3>Bottle Feedings Log</h3>
+        </div>
+        <div class="widget-body no-padd">
             <div class="table-responsive">
-              <table class="table table-hover table-bordered ">
-               <thead>
-                 <tr>
-                   <th>Time</th>
-                   <th>Length</th>
-                   <th>Ounces</th>
-                   <th>Notes</th>
-                 </tr>
-               </thead>
-               <tbody>
-                @foreach (Auth::user()->babies as $baby)
-                    @foreach ($baby->feedings as $feeding)
-                        @if ($feeding->bottle == 1)
-                            @if ($feeding->baby_id == $baby->id)
-                            <tr>
-                                <td>{{{ $feeding->created_at }}}</td>
-                                <td>{{{ $feeding->bottle_length }}}</td>
-                                <td>{{{ $feeding->bottle_ounces }}}</td>
-                                <td>{{{ $feeding->notes }}}</td>
-                            </tr>
-                            @endif
-                        @endif
-                    @endforeach
-                @endforeach
-               </tbody>
-             </table>
+                <table class="table table-hover table-bordered ">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Length</th>
+                            <th>Ounces</th>
+                            <th>Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (Auth::user()->babies as $baby)
+                            @foreach ($baby->feedings as $feeding)
+                                @if ($feeding->bottle == 1)
+                                    @if ($feeding->baby_id == $baby->id)
+                                        <tr>
+                                            <td>{{{ $feeding->created_at }}}</td>
+                                            <td>{{{ $feeding->bottle_length }}}</td>
+                                            <td>{{{ $feeding->bottle_ounces }}}</td>
+                                            <td>{{{ $feeding->notes }}}</td>
+                                        </tr>
+                                    @endif
+                                @endif
+                            @endforeach
+                        @endforeach
+                    </tbody>
+                </table>
 
-         </div>
-       </div>
+            </div>
+        </div>
 
-       <div class="widget-foot">
-           <div class="clearfix"></div>
-       </div>
+        <div class="widget-foot"></div>
 
     </div>
 
-</div>
+</div> <!-- Container -->
 
 @stop
 
