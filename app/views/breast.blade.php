@@ -75,7 +75,7 @@
 
     <div class="widget">
        <div class="widget-head">
-          <h5>Table #1</h5>
+          <h3>Nursing Log</h3>
        </div>
        <div class="widget-body no-padd">
             <div class="table-responsive">

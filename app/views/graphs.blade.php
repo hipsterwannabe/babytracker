@@ -20,6 +20,10 @@
 	<script src="http://code.highcharts.com/highcharts.js"></script>
 	<script type="text/javascript">
 	$(function () {
+		$(function convertTime($seconds){
+			//try to convert seconds to hh:mm:ss
+
+		})
 		//nap chart
 	    $('#napContainer').highcharts({
 	        title: {
@@ -32,12 +36,37 @@
             	}
 	        },
 	        yAxis: {
+	        	title: {text: 'Length of Nap (in hours)'},
+	        	pointInterval: 3600,
+	        	//tickInterval: 1800,
 	        	floor: 0,
-	        	type: 'datetime', //y-axis will be in milliseconds
+	        	type: 'datetime', 
 	        	dateTimeLabelFormats: {
+	        		millisecond: '%H:%M:%S.%L',
 	        		second: '%H:%M:%S',
+		            minute: '%H:%M:%S',
+		            hour: '%H:%M',
+		            
 	        	},
-	        	pointInterval: 3600 * 1000
+	        	showFirstLabel: false,
+	        	labels:{
+		           formatter: function(){
+		                var minutes = "";
+		                var hours = "";
+		                var remainder = "";
+		                if (this.value >= 3600){
+		                	hours = Highcharts.numberFormat((this.value / 3600), 1); 
+		                	// remainder = Highcharts.numberFormat((this.value % 3600), 0);
+		                	// minutes = Highcharts.numberFormat((remainder / 60), 0),
+		                	return hours;
+						} 
+		                if (this.value > 59){
+		                    minutes = Highcharts.numberFormat((this.value/60), 0);
+		                    return minutes;
+		                }
+		                
+		            }
+		       }
 	        },
 		    series: [{
 		        data: {{ json_encode($napData, JSON_NUMERIC_CHECK) }}
@@ -46,11 +75,11 @@
 		});
 
 		//diaper chart
-		var diaperLabels = [" ", "Wet", "Dirty", "Both"];
+		var diaperLabels = [" ", "Wet", "Both", "Dirty"];
 
 	    $('#diaperContainer').highcharts({
 	        title: { text: 'Diaper Chart' },
-	        chart: { type: 'line' },
+	        chart: { type: 'scatter' },
 	        xAxis: {
 	        	type: 'datetime',
 	            title: { text: 'Time of Diaper Change' }
@@ -84,13 +113,26 @@
 	        chart: { type: 'line', },
 	        xAxis: {
 	        	type: 'datetime',
-	            title: { text: 'Time of Feeding' }
+	            title: { text: 'Time of Feeding' },
+	            dateTimeLabelFormats: {
+                	day: '%e. %b'
+            	}
 	        },
-	        yAxis: [{ //--- Primary yAxis
-			    title: { text: 'Length of Nursing Time' }
-			}, { //--- Secondary yAxis
-			    title: { text: 'Length of Bottle Time' },
-			    opposite: true
+	        yAxis: [{
+	        	floor: 0,
+	        	pointInterval: 3600,
+	        	//--- Primary yAxis
+			    title: { text: 'Length of Nursing Time (in hours)' }, 
+			     //--- Secondary yAxis
+			    title: { text: 'Length of Bottle Time (in hours)' },
+			    opposite: true,
+				type: 'datetime', 
+	        	dateTimeLabelFormats: {
+	        		millisecond: '%H:%M:%S.%L',
+	        		second: '%H:%M:%S',
+		            minute: '%H:%M:%S',
+		            hour: '%H:%M'
+	        	}
 			}],
 	        tooltip: {
 			    backgroundColor: '#FCFFC5',
@@ -99,8 +141,32 @@
 			    borderWidth: 3,
 			    shared: true,
 			},
+			labels:{
+		           formatter: function(){
+		                var minutes = "";
+		                var hours = "";
+		                var remainder = "";
+		                if (this.value >= 3600){
+		                	hours = Highcharts.numberFormat((this.value / 3600), 1); 
+		                	// remainder = Highcharts.numberFormat((this.value % 3600), 0);
+		                	// minutes = Highcharts.numberFormat((remainder / 60), 0),
+		                	return hours;
+						} 
+		                if (this.value > 59){
+		                    minutes = Highcharts.numberFormat((this.value/60), 0);
+		                    return minutes;
+		                }
+		                
+		            }
+		       },
 			series: [{
-				data: [{{ json_encode($bottleData, JSON_NUMERIC_CHECK) }}, {{ json_encode($nursingData, JSON_NUMERIC_CHECK) }}]
+				name: 'Bottle',
+				data: {{ json_encode($bottleData, JSON_NUMERIC_CHECK) }}
+			}
+			,{
+				name: 'Nursing',
+				data: {{ json_encode($nursingData, JSON_NUMERIC_CHECK) }}
+			
 			}]
 	    });
 	});

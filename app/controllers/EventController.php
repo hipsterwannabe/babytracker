@@ -251,7 +251,7 @@ class EventController extends BaseController {
         foreach ($diapers as $diaper) {
             if ($diaper->number_one && $diaper->number_two){
                 array_push($diaperData, [
-                    $diaper->created_at->timestamp * 1000, 3
+                    $diaper->created_at->timestamp * 1000, 2
                     ]
                 );
             } elseif ($diaper->number_one){
@@ -260,7 +260,7 @@ class EventController extends BaseController {
                     ]);
             } elseif ($diaper->number_two) {
                 array_push($diaperData, [
-                    $diaper->created_at->timestamp * 1000, 2
+                    $diaper->created_at->timestamp * 1000, 3
                     ]);
             }
         }

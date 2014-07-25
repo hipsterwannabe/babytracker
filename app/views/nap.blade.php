@@ -52,30 +52,35 @@
            </div>
 
         </div>
-        <div class="widget-body no-padd">
-            <div class="table-responsive">
-              <table class="table table-hover table-bordered ">
-               <thead>
-                 <tr>
-                   <th>Date/Time</th>
-                   <th>Length of Nap</th>
-                   <th>Notes</th>
-                 </tr>
-               </thead>
-               <tbody>
-                @foreach (Auth::user()->babies as $baby)
-                    @foreach ($baby->naps as $nap)
+        <div class="widget">
+            <div class="widget-head">
+              <h3>Nap Log</h3>
+           </div>
+            <div class="widget-body no-padd">
+                <div class="table-responsive">
+                  <table class="table table-hover table-bordered ">
+                   <thead>
                      <tr>
-                       <td>{{ $nap->start }}</td>
-                       <td>{{ $nap->length }}</td>
-                       <td>{{ $nap->notes }}</td>
-                     </tr> 
-                     @endforeach
-                @endforeach   
-               </tbody>
-             </table>
-         
-         </div>
+                       <th>Date/Time</th>
+                       <th>Length of Nap</th>
+                       <th>Notes</th>
+                     </tr>
+                   </thead>
+                   <tbody>
+                    @foreach (Auth::user()->babies as $baby)
+                        @foreach ($baby->naps as $nap)
+                         <tr>
+                           <td>{{ $nap->start }}</td>
+                           <td>{{ $nap->length }}</td>
+                           <td>{{ $nap->notes }}</td>
+                         </tr> 
+                         @endforeach
+                    @endforeach   
+                   </tbody>
+                 </table>
+             
+             </div>
+        </div>
     </div>
 
 </div>
@@ -87,6 +92,7 @@
 <script type="text/javascript" src="/assets/FlipClock-master/compiled/flipclock.js"></script>
 
 <script>
+
     // Initialize values
     var startNap = null;
     var stopNap = null;
