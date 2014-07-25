@@ -62,7 +62,7 @@ class EventController extends BaseController {
         $diaper->save();
 
         Session::flash('successMessage', 'Diaper change charted.');
-        return Redirect::action('EventController@showMenu', $id);
+        return Redirect::action('EventController@showCharts', $id);
     }
 
     public function showBottle($id)
@@ -86,7 +86,7 @@ class EventController extends BaseController {
         $bottle->save();
 
         Session::flash('successMessage', 'Bottle feeding charted.');
-        return Redirect::action('EventController@showMenu', $id);
+        return Redirect::action('EventController@showCharts', $id);
 
     }
 
@@ -125,7 +125,7 @@ class EventController extends BaseController {
 
 
         Session::flash('successMessage', 'Nursing session charted.');
-        return Redirect::action('EventController@showMenu', $id);
+        return Redirect::action('EventController@showCharts', $id);
 
     }
 
@@ -148,7 +148,7 @@ class EventController extends BaseController {
         $nap->save();
 
         Session::flash('successMessage', 'Nap charted.');
-        return Redirect::action('EventController@showMenu', $id);
+        return Redirect::action('EventController@showCharts', $id);
 
     }
 
@@ -171,7 +171,7 @@ class EventController extends BaseController {
         $stat->save();
 
         Session::flash('successMessage', 'Growth charted.');
-        return Redirect::action('EventController@showMenu', $id);
+        return Redirect::action('EventController@showCharts', $id);
     }
 
     public function showCharts($id)

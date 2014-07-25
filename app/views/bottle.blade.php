@@ -63,13 +63,9 @@
 
     </div>
 
-
-    <!-- ---------------------------------------------------- -->
-
-
     <div class="widget">
        <div class="widget-head">
-          <h5>Table #1</h5>
+          <h3>Bottle Feedings Log</h3>
        </div>
        <div class="widget-body no-padd">
             <div class="table-responsive">
@@ -99,25 +95,14 @@
                 @endforeach
                </tbody>
              </table>
-         
+
          </div>
        </div>
-       
+
        <div class="widget-foot">
-        
-          <ul class="pagination pull-right">
-            <li><a href="#">&laquo;</a></li>
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li><a href="#">&raquo;</a></li>
-          </ul>
-           
            <div class="clearfix"></div>
        </div>
-       
+
     </div>
 
 </div>

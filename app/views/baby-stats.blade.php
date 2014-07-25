@@ -75,18 +75,20 @@
                    <tbody>
                     @foreach (Auth::user()->babies as $baby)
                         @foreach ($baby->baby_stats as $baby_stat)
-                         <tr>
-                           <td>{{ $baby_stat->created_at }}</td>
-                           <td>{{ $baby_stat->pounds }}</td>
-                           <td>{{ $baby_stat->ounces }}</td>
-                           <td>{{ $baby_stat->length }}</td>
-                           <td>{{ $baby_stat->head }}</td>
-                         </tr> 
+                            @if ($baby_stat->baby_id == $baby->id)
+                               <tr>
+                                 <td>{{ $baby_stat->created_at }}</td>
+                                 <td>{{ $baby_stat->pounds }}</td>
+                                 <td>{{ $baby_stat->ounces }}</td>
+                                 <td>{{ $baby_stat->length }}</td>
+                                 <td>{{ $baby_stat->head }}</td>
+                               </tr>
+                              @endif
                          @endforeach
-                    @endforeach   
+                    @endforeach
                    </tbody>
                  </table>
-             
+
              </div>
         </div>
     </div>
