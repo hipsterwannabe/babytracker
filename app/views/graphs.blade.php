@@ -20,6 +20,10 @@
 	<script src="http://code.highcharts.com/highcharts.js"></script>
 	<script type="text/javascript">
 	$(function () {
+		$(function convertTime($seconds){
+			//try to convert seconds to hh:mm:ss
+
+		})
 		//nap chart
 	    $('#napContainer').highcharts({
 	        title: {
@@ -32,18 +36,28 @@
             	}
 	        },
 	        yAxis: {
-	        	//pointInterval: 24 * 3600 * 1000,
-	        	//tickInterval: 24 * 3600 *1000,
+	        	title: {text: 'Length of Nap (in minutes)'},
+	        	pointInterval: 3600,
+	        	//tickInterval: 1800,
 	        	floor: 0,
-	        	//type: 'datetime', 
+	        	type: 'datetime', 
 	        	dateTimeLabelFormats: {
 	        		millisecond: '%H:%M:%S.%L',
 	        		second: '%H:%M:%S',
 		            minute: '%H:%M:%S',
-		            hour: '%H:%M:%S',
+		            hour: '%H:%M',
 		            
 	        	},
 	        	showFirstLabel: false,
+	        	labels:{
+		           formatter: function(){
+		                var minutes = ""
+		                if (this.value > 59){
+		                    minutes = Highcharts.numberFormat((this.value/60), 0)
+		                }
+		                return minutes;
+		            }
+		       }
 	        },
 		    series: [{
 		        data: {{ json_encode($napData, JSON_NUMERIC_CHECK) }}
@@ -106,7 +120,11 @@
 			    shared: true,
 			},
 			series: [{
-				data: [{{ json_encode($bottleData, JSON_NUMERIC_CHECK) }}, {{ json_encode($nursingData, JSON_NUMERIC_CHECK) }}]
+				name: 'Bottle',
+				data: [{{ json_encode($bottleData, JSON_NUMERIC_CHECK) }}]
+			},{
+				name: 'Nursing',
+				data: [{{ json_encode($nursingData, JSON_NUMERIC_CHECK) }}]
 			}]
 	    });
 	});
