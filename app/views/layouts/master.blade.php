@@ -16,9 +16,6 @@
         <!-- jQuery UI -->
         <link href="/sheldon/theme/css/jquery-ui.css" rel="stylesheet">
 
-
-
-
         <!-- jQuery Gritter -->
         <link href="/sheldon/theme/css/jquery.gritter.css" rel="stylesheet">
         <!-- Bootstrap Switch -->
@@ -38,8 +35,8 @@
         <!-- flipclock styling -->
         <link rel="stylesheet" type="text/css" href="/assets/FlipClock-master/compiled/flipclock.css">
 
-      <!-- moment.js -->
-      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
+        <!-- moment.js -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js"></script>
 
         <!--[if IE]>
             <link rel="stylesheet" type="text/css" href="css/style-ie.css" />
