@@ -63,9 +63,6 @@
 
                     <!-- Sidebar buttons starts -->
                     <div class="sidebar-buttons text-center">
-                        <div class="btn-group">
-                            <a href="/about" class="btn btn-danger btn-xs">About Us</a>
-                        </div>
                         <!-- User button -->
                         <div class="btn-group">
                             <a href="{{{ action('UserController@showCreateBaby') }}}" class="btn btn-black btn-xs" ><i class="fa fa-user"></i></a>
@@ -75,6 +72,10 @@
                         <div class="btn-group">
                             <a href="{{{ action('HomeController@logout') }}}" class="btn btn-black btn-xs"><i class="fa fa-power-off"></i></a>
                             <a href="{{{ action('HomeController@logout') }}}" class="btn btn-danger btn-xs">Logout</a>
+                        </div>
+                        <!-- About Us -->
+                        <div class="btn-group">
+                            <a href="/about" class="btn btn-danger btn-xs">About Us</a>
                         </div>
                     </div>
                     <!-- Sidebar buttons ends -->
