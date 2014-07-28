@@ -60,7 +60,7 @@
                         <div class="tab-pane fade" id="update{{{$baby->id}}}">
                             <h4>Update Profile</h4>
 
-                            {{ Form::open(array('action' => array('UserController@updateBaby', $baby->id), 'class' => 'form-horizontal', 'files' => true)) }}
+                            {{ Form::model($baby, array('action' => array('UserController@updateBaby', $baby->id), 'class' => 'form-horizontal', 'files' => true)) }}
                             <!-- Name -->
                             <div class="form-group">
                                 {{ Form::label('name', 'Name', array('class' => 'control-label col-lg-2')) }}

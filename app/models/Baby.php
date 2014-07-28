@@ -4,6 +4,15 @@ class Baby extends BaseModel {
 
     protected $imgDir = 'baby_profiles';
 
+    protected $table = 'babies';
+
+    public static $rules = [
+        'name' => 'required|max:100',
+        'gender' => 'required|max:10000',
+        'birth_date' => 'required|max:10000',
+        'image' => 'image|max:2000'
+    ];
+
     public function user()
     {
         return $this->belongsTo('User');
