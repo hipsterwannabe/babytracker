@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>ChartBabe | Login</title>
     <!-- Description, Keywords and Author -->
-    <meta name="description" content="Your description">
-    <meta name="keywords" content="Your,Keywords">
+    <meta name="description" content="Ditch the pen and paper. Log in and let's chart, babe!">
+    <meta name="keywords" content="baby,tracker,charting,app,new,mom">
     <meta name="author" content="Ashley Webb, Greg Vallejo, Danny Jimenez">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -45,7 +45,11 @@
 
     <div class="out-container">
 
-        <h1>ChartBabe</h1>
+        <div class="col-lg-offset-3 col-lg-6">
+        <div class="">
+            <img src="/images/logo.png" alt="ChartBabe" style="padding-left: 40px; padding-top: 30px;">
+        </div>
+
 
         <div class="login-page">
             <div class="container">
