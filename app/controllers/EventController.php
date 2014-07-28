@@ -25,7 +25,7 @@ class EventController extends BaseController {
     public function showMenu($id)
     {
         $baby = Baby::findOrFail($id);
-        return View::make('menu')->with('baby', $baby);
+        return View::make('child-menu')->with('baby', $baby);
     }
 
     public function showDiaper($id)

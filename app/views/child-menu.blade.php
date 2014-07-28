@@ -27,8 +27,13 @@
 
                             <div class="row">
                                 <div class="col-md-3 col-sm-3 text-center">
-                                    <!-- Profile pic -->
-                                    <a href="/menu/{{$baby->id}}"><img src="{{{ $baby->img_path }}}" class="img-thumbnail img-circle img-responsive" alt="" /></a>
+                                    <div class="row">
+                                        <!-- Profile pic -->
+                                        <a href="/graphs/{{$baby->id}}"><img src="{{{ $baby->img_path }}}" class="img-thumbnail img-circle img-responsive" /></a>
+                                    </div>
+                                    <div class="row">
+                                        <a href="/graphs/{{$baby->id}}" class="btn btn-info">Select</a>
+                                    </div>
                                 </div>
                                 <div class="col-md-9 col-sm-9">
                                     <!-- Profile details -->
@@ -55,7 +60,7 @@
                         <div class="tab-pane fade" id="update{{{$baby->id}}}">
                             <h4>Update Profile</h4>
 
-                            {{ Form::open(array('action' => array('UserController@updateBaby', $baby->id), 'class' => 'form-horizontal', 'files' => true)) }}
+                            {{ Form::model($baby, array('action' => array('UserController@updateBaby', $baby->id), 'class' => 'form-horizontal', 'files' => true)) }}
                             <!-- Name -->
                             <div class="form-group">
                                 {{ Form::label('name', 'Name', array('class' => 'control-label col-lg-2')) }}
