@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <title>ChartBabe | Login</title>
     <!-- Description, Keywords and Author -->
-    <meta name="description" content="Your description">
-    <meta name="keywords" content="Your,Keywords">
+    <meta name="description" content="Ditch the pen and paper. Log in and let's chart, babe!">
+    <meta name="keywords" content="baby,tracker,charting,app,new,mom">
     <meta name="author" content="Ashley Webb, Greg Vallejo, Danny Jimenez">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
