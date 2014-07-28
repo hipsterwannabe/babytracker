@@ -44,9 +44,6 @@
 <body>
 
     <div class="out-container">
-
-        <h1>ChartBabe</h1>
-
         <div class="login-page">
             <div class="container">
 
