@@ -4,9 +4,9 @@
         <meta charset="utf-8">
         <title>ChartBabe</title>
         <!-- Description, Keywords and Author -->
-        <meta name="description" content="Your description">
-        <meta name="keywords" content="Your,Keywords">
-        <meta name="author" content="ResponsiveWebInc">
+        <meta name="description" content="Ditch the pen and paper. Log in and let's chart, babe!">
+        <meta name="keywords" content="baby,tracker,charting,app,new,mom">
+        <meta name="author" content="Ashley Webb, Greg Vallejo, Danny Jimenez">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -57,15 +57,12 @@
                 <div class="sidebar">
                     <!-- Logo starts -->
                     <div class="logo">
-                        <h1><a href="/about">ChartBabe</a></h1>
+                        <img src="/images/logo.png" alt="ChartBabe" style="width: 225px;">
                     </div>
                     <!-- Logo ends -->
 
                     <!-- Sidebar buttons starts -->
                     <div class="sidebar-buttons text-center">
-                        <div class="btn-group">
-                            <a href="/about" class="btn btn-danger btn-xs">About Us</a>
-                        </div>
                         <!-- User button -->
                         <div class="btn-group">
                             <a href="{{{ action('UserController@showCreateBaby') }}}" class="btn btn-black btn-xs" ><i class="fa fa-user"></i></a>
@@ -75,6 +72,10 @@
                         <div class="btn-group">
                             <a href="{{{ action('HomeController@logout') }}}" class="btn btn-black btn-xs"><i class="fa fa-power-off"></i></a>
                             <a href="{{{ action('HomeController@logout') }}}" class="btn btn-danger btn-xs">Logout</a>
+                        </div>
+                        <!-- About Us -->
+                        <div class="btn-group">
+                            <a href="/about" class="btn btn-danger btn-xs">About Us</a>
                         </div>
                     </div>
                     <!-- Sidebar buttons ends -->
@@ -95,6 +96,7 @@
                                 <li><a href="{{{ action('EventController@showBottle', $baby->id) }}}"><i class="fa fa-star"></i> Bottle</a></li>
                                 <li><a href="{{{ action('EventController@showStats', $baby->id) }}}"><i class="fa fa-user"></i> Growth Stats</a></li>
                                 <li><a href="{{{ action('EventController@showCharts', $baby->id) }}}"><i class="fa fa-bar-chart-o"></i> Charts</a></li>
+                                <li><a href="{{{ action('EventController@showMenu', $baby->id) }}}"><i class="fa fa-chevron-left"></i> Return to Menu</a></li>
                             @endif
 
                         </ul>
