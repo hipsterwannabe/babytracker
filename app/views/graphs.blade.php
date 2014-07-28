@@ -36,7 +36,7 @@
                 }
             },
             yAxis: {
-                title: {text: 'Length of Nap (in hours)'},
+                title: {text: 'Length of Nap (in minutes)'},
                 pointInterval: 3600,
                 //tickInterval: 1800,
                 floor: 0,
@@ -122,7 +122,9 @@
 			    title: { text: 'Length of Bottle Time (in hours)' },
 			    opposite: true,
 	        	floor: 0,
+	        	ceiling: 14400,
 	        	pointInterval: 3600,
+	        	showFirstLabel: false,
 				type: 'datetime', 
 	        	dateTimeLabelFormats: {
 	        		//millisecond: '%H:%M:%S.%L',
