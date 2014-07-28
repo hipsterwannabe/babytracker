@@ -7,9 +7,9 @@ This app was built as a final project for the "Badlands" cohort of [Codeup](http
 
 ## The ChartBabe Team
 
-[Ashley Leona Webb](http://ashwebb.com)
-[Danny Jimenez](http://dannyalxndr.com)
-[Greg Vallejo](http://gregvallejo.com)
+-[Ashley Leona Webb](http://ashwebb.com)
+-[Danny Jimenez](http://dannyalxndr.com)
+-[Greg Vallejo](http://gregvallejo.com)
 
 
 
