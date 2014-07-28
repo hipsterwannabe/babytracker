@@ -63,6 +63,9 @@
 
                     <!-- Sidebar buttons starts -->
                     <div class="sidebar-buttons text-center">
+                        <div class="btn-group">
+                            <a href="/about" class="btn btn-danger btn-xs">About Us</a>
+                        </div>
                         <!-- User button -->
                         <div class="btn-group">
                             <a href="{{{ action('UserController@showCreateBaby') }}}" class="btn btn-black btn-xs" ><i class="fa fa-user"></i></a>
