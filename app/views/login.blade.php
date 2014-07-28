@@ -45,8 +45,9 @@
 
     <div class="out-container">
 
-        <div class="col-lg-offset-4 col-lg-4">
-            <!-- image/logo will go here -->
+        <div class="col-lg-offset-3 col-lg-6">
+        <div class="">
+            <img src="/images/logo.png" alt="ChartBabe" style="padding-left: 40px; padding-top: 30px;">
         </div>
 
 

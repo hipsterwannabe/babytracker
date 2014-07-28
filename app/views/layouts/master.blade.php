@@ -57,7 +57,7 @@
                 <div class="sidebar">
                     <!-- Logo starts -->
                     <div class="logo">
-                        <h1><a href="/about">ChartBabe</a></h1>
+                        <img src="/images/logo.png" alt="ChartBabe" style="width: 225px;">
                     </div>
                     <!-- Logo ends -->
 
@@ -75,7 +75,6 @@
                         </div>
                         <!-- About Us -->
                         <div class="btn-group">
-                            <a href="/about" class="btn btn-black btn-xs" ><i class="fa fa-group"></i></a>
                             <a href="/about" class="btn btn-danger btn-xs">About Us</a>
                         </div>
                     </div>
