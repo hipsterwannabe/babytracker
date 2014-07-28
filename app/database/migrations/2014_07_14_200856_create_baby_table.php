@@ -5,14 +5,14 @@ use Illuminate\Database\Migrations\Migration;
 
 class CreateBabyTable extends Migration {
 
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up()
-	{
-		Schema::create('babies', function($table)
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('babies', function($table)
         {
             $table->increments('id');
             $table->string('name', 100);
@@ -20,16 +20,16 @@ class CreateBabyTable extends Migration {
             $table->date('birth_date');
             $table->timestamps();
         });
-	}
+    }
 
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down()
-	{
-		Schema::drop('babies');
-	}
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::drop('babies');
+    }
 
 }

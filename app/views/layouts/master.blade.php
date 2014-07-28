@@ -57,12 +57,15 @@
                 <div class="sidebar">
                     <!-- Logo starts -->
                     <div class="logo">
-                        <h1><a href="#">ChartBabe</a></h1>
+                        <h1><a href="/about">ChartBabe</a></h1>
                     </div>
                     <!-- Logo ends -->
 
                     <!-- Sidebar buttons starts -->
                     <div class="sidebar-buttons text-center">
+                        <div class="btn-group">
+                            <a href="/about" class="btn btn-danger btn-xs">About Us</a>
+                        </div>
                         <!-- User button -->
                         <div class="btn-group">
                             <a href="{{{ action('UserController@showCreateBaby') }}}" class="btn btn-black btn-xs" ><i class="fa fa-user"></i></a>
@@ -122,9 +125,9 @@
                         @endif
                         <div class="page-title">
                             <h3 class="pull-left"><i class="fa fa-desktop"></i> {{{ Auth::user()->name }}} <span>Let's chart!</span></h3>
-                            <div class="breads pull-right">
+                            <div class="breads pull-right"> | <!-- Pipe for styling -->
                                 @foreach ( Auth::user()->babies as $baby)
-                                    <a href="/graphs/{{$baby->id}}" >{{ $baby->name }}/</a>
+                                    <a href="/charts/{{$baby->id}}" >{{ $baby->name }} |</a>
                                 @endforeach
                             </div>
                             <div class="clearfix"></div>
@@ -142,8 +145,6 @@
                 <div class="clearfix"></div>
             </div>
         </div>
-
-
 
         <!-- Scroll to top -->
         <span class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span>

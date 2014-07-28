@@ -68,9 +68,9 @@
 
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs nav-justified">
-                  <li class="active"><a href="#login" data-toggle="tab"><i class="fa fa-sign-in"></i> Login</a></li>
-                  <li><a href="#register" data-toggle="tab"><i class="fa fa-pencil"></i> Register</a></li>
-                  <li><a href="#contact" data-toggle="tab"><i class="fa fa-envelope"></i> Contact</a></li>
+                    <li class="active"><a href="#login" data-toggle="tab"><i class="fa fa-sign-in"></i> Login</a></li>
+                    <li><a href="#register" data-toggle="tab"><i class="fa fa-pencil"></i> Register</a></li>
+                    <li><a href="#contact" data-toggle="tab"><i class="fa fa-envelope"></i> Contact</a></li>
                 </ul>
 
                 <!-- Tab panes -->
@@ -150,15 +150,15 @@
   </div> <!-- Out-container -->
 
 
-  <!-- Javascript files -->
-  <!-- jQuery -->
-  <script src="/sheldon/theme/js/jquery.js"></script>
-  <!-- Bootstrap JS -->
-  <script src="/sheldon/theme/js/bootstrap.min.js"></script>
-  <!-- Respond JS for IE8 -->
-  <script src="/sheldon/theme/js/respond.min.js"></script>
-  <!-- HTML5 Support for IE -->
-  <script src="/sheldon/theme/js/html5shiv.js"></script>
+    <!-- Javascript files -->
+    <!-- jQuery -->
+    <script src="/sheldon/theme/js/jquery.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/sheldon/theme/js/bootstrap.min.js"></script>
+    <!-- Respond JS for IE8 -->
+    <script src="/sheldon/theme/js/respond.min.js"></script>
+    <!-- HTML5 Support for IE -->
+    <script src="/sheldon/theme/js/html5shiv.js"></script>
 
 </body>
 </html>

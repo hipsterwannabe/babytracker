@@ -49,11 +49,11 @@
 
                 {{ Form::close() }}
 
-           </div>
+            </div>
 
-           <div class="widget-foot">
+            <div class="widget-foot">
 
-           </div>
+            </div>
 
         </div>
 

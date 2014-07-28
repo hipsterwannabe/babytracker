@@ -58,15 +58,13 @@
 
                 {{ Form::close() }}
 
-           </div>
+            </div>
 
-           <div class="widget-foot">
-
-           </div>
+            <div class="widget-foot"></div>
 
         </div>
 
-    </div>
+    </div> <!-- Page-content page-form -->
 
     <div class="widget">
 
@@ -127,10 +125,12 @@
 
             </div>
 
-       </div>
+        </div>
+
+        <div class="widget-foot"></div>
 
     </div>
 
-</div>
+</div> <!-- Container -->
 
 @stop

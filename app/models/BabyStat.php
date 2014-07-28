@@ -7,6 +7,7 @@ class BabyStat extends BaseModel {
     {
         return $this->belongsTo('Baby');
     }
+
 }
 
 ?>
