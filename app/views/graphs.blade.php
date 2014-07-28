@@ -13,7 +13,7 @@
 	<!-- spacer -->
 	<div id="container" style="width:90%; height:10px;"></div>
 	<!-- feeding graph -->
-	<div id="feedingContainer" style="width:90%; height:300px;"></div>
+	<div id="feedingContainer" style="width:80%; height:300px;"></div>
 @stop
 
 @section('bottomscript')
@@ -91,7 +91,7 @@
 		                return diaperLabels[this.value];
 		            },
 		        },
-		        showFirstLabel: false,
+		        showFirstLabel: true,
 	            tickInterval: 1,
 	            floor: 1,
 	            ceiling: 3
@@ -115,21 +115,19 @@
 	        xAxis: {
 	        	type: 'datetime',
 	            title: { text: 'Time of Feeding' },
-	            dateTimeLabelFormats: {
-                	day: '%e. %b'
-            	}
+	            dateTimeLabelFormats: {day: '%e. %b'}
 	        },
 	        yAxis: [{
-	        	floor: 0,
-	        	pointInterval: 3600,
 	        	//--- Primary yAxis
 			    title: { text: 'Length of Nursing Time (in hours)' }, 
 			     //--- Secondary yAxis
 			    title: { text: 'Length of Bottle Time (in hours)' },
 			    opposite: true,
+	        	floor: 0,
+	        	pointInterval: 3600,
 				type: 'datetime', 
 	        	dateTimeLabelFormats: {
-	        		millisecond: '%H:%M:%S.%L',
+	        		//millisecond: '%H:%M:%S.%L',
 	        		second: '%H:%M:%S',
 		            minute: '%H:%M:%S',
 		            hour: '%H:%M'
@@ -157,7 +155,6 @@
 		                    minutes = Highcharts.numberFormat((this.value/60), 0);
 		                    return minutes;
 		                }
-		                
 		            }
 		       },
 			series: [{
