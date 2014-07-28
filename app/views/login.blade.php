@@ -2,11 +2,11 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>ChartBabe|Login</title>
+    <title>ChartBabe | Login</title>
     <!-- Description, Keywords and Author -->
     <meta name="description" content="Your description">
     <meta name="keywords" content="Your,Keywords">
-    <meta name="author" content="ResponsiveWebInc">
+    <meta name="author" content="Ashley Webb, Greg Vallejo, Danny Jimenez">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -45,26 +45,11 @@
 
     <div class="out-container">
 
+        <h1>ChartBabe</h1>
+
         <div class="login-page">
             <div class="container">
 
-                <!-- Sessions messages -->
-                @if (Session::has('successMessage'))
-                    <div class="alert alert-success" role="alert">
-                        {{{ Session::get('successMessage') }}}
-                        <button type="button" class="close" data-dismiss="alert">
-                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                        </button>
-                    </div>
-                @endif
-                @if (Session::has('errorMessage'))
-                    <div class="alert alert-danger" role="alert">
-                        {{{ Session::get('errorMessage') }}}
-                        <button type="button" class="close" data-dismiss="alert">
-                            <span aria-hidden="true">&times;</span><span class="sr-only">Close</span>
-                        </button>
-                    </div>
-                @endif
 
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs nav-justified">
@@ -141,13 +126,13 @@
                             <button type="reset" class="btn btn-black btn-sm">Reset</button>
                         </form>
 
-                  </div>
-            </div> <!-- Tab content -->
+                    </div>
+                </div> <!-- Tab content -->
 
-        </div> <!-- Container -->
-     </div> <!-- Log in page -->
+            </div> <!-- Container -->
+        </div> <!-- Log in page -->
 
-  </div> <!-- Out-container -->
+    </div> <!-- Out-container -->
 
 
     <!-- Javascript files -->

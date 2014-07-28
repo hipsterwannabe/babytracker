@@ -65,6 +65,13 @@
             </div>
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <a href="/menu" class="btn btn-warning"><i class="fa fa-chevron-left"></i> Return to Menu</a>
+        </div>
+    </div>
+
 </div>
 
 @stop

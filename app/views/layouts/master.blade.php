@@ -6,7 +6,7 @@
         <!-- Description, Keywords and Author -->
         <meta name="description" content="Your description">
         <meta name="keywords" content="Your,Keywords">
-        <meta name="author" content="ResponsiveWebInc">
+        <meta name="author" content="Ashley Webb, Greg Vallejo, Danny Jimenez">
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -96,6 +96,7 @@
                                 <li><a href="{{{ action('EventController@showBottle', $baby->id) }}}"><i class="fa fa-star"></i> Bottle</a></li>
                                 <li><a href="{{{ action('EventController@showStats', $baby->id) }}}"><i class="fa fa-user"></i> Growth Stats</a></li>
                                 <li><a href="{{{ action('EventController@showCharts', $baby->id) }}}"><i class="fa fa-bar-chart-o"></i> Charts</a></li>
+                                <li><a href="{{{ action('EventController@showMenu', $baby->id) }}}"><i class="fa fa-chevron-left"></i> Return to Menu</a></li>
                             @endif
 
                         </ul>
