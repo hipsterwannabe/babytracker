@@ -75,6 +75,7 @@
                         </div>
                         <!-- About Us -->
                         <div class="btn-group">
+                            <a href="/about" class="btn btn-black btn-xs" ><i class="fa fa-group"></i></a>
                             <a href="/about" class="btn btn-danger btn-xs">About Us</a>
                         </div>
                     </div>
