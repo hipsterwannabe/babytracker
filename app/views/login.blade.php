@@ -44,6 +44,12 @@
 <body>
 
     <div class="out-container">
+
+        <div class="col-lg-offset-4 col-lg-4">
+            <!-- image/logo will go here -->
+        </div>
+
+
         <div class="login-page">
             <div class="container">
 
