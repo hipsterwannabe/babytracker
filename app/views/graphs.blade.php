@@ -40,6 +40,7 @@
                 pointInterval: 3600,
                 //tickInterval: 1800,
                 floor: 0,
+                ceiling: 43200,
                 type: 'datetime',
                 dateTimeLabelFormats: {
                     millisecond: '%H:%M:%S.%L',
@@ -117,10 +118,10 @@
 	        },
 	        yAxis: [{
 	        	//--- Primary yAxis
-			    title: { text: 'Length of Nursing Time (in hours)' }, 
+			    title: { text: 'Length of Feeding Time (in hours)' }, 
 			     //--- Secondary yAxis
-			    title: { text: 'Length of Bottle Time (in hours)' },
-			    opposite: true,
+			    // title: { text: 'Length of Bottle Time (in hours)' },
+			    // opposite: true,
 	        	floor: 0,
 	        	ceiling: 14400,
 	        	pointInterval: 3600,
