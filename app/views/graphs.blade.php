@@ -69,6 +69,7 @@
                 }
             },
             series: [{
+            	name: 'Nap',
                 data: {{ json_encode($napData, JSON_NUMERIC_CHECK) }}
             }]
         });
@@ -103,6 +104,7 @@
 			    shared: true,
 			},
 			series: [{
+				name: 'Diaper Change',
 				data: {{ json_encode($diaperData, JSON_NUMERIC_CHECK) }}
 			}]
 	    });
@@ -122,13 +124,13 @@
 			     //--- Secondary yAxis
 			    // title: { text: 'Length of Bottle Time (in hours)' },
 			    // opposite: true,
-	        	floor: 0,
+				floor: 0,
 	        	ceiling: 14400,
 	        	pointInterval: 3600,
 	        	showFirstLabel: false,
-				type: 'datetime', 
+				//type: 'datetime',
 	        	dateTimeLabelFormats: {
-	        		//millisecond: '%H:%M:%S.%L',
+	        		millisecond: '%H:%M:%S.%L',
 	        		second: '%H:%M:%S',
 		            minute: '%H:%M:%S',
 		            hour: '%H:%M'

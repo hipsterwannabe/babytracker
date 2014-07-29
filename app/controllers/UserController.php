@@ -39,7 +39,7 @@ class UserController extends BaseController {
             Auth::login($user);
 
             Session::flash('successMessage', "$user->name has been created successfully.");
-            return View::make('new-user-menu')->with('user', $user);
+            return Redirect::action('UserController@showCreateBaby')->with('user', $user);
         }
     }
 
