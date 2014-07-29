@@ -35,7 +35,7 @@
                             Chart Babe is my brain child. It was born from my frustration with
                             other charting apps that I tried with my son. I wanted to give new mothers
                             an easy way to keep track of this vital information, as becoming a mom is
-                            stressful and and usually involves a noteworthy amount of sleep deprivation.
+                            stressful and usually involves a noteworthy amount of sleep deprivation.
                         </p>
                         <hr>
                         <div class="row center">
