@@ -19,7 +19,7 @@
     <div class="row">
         <div class="col-md-4">
             <div class="thumbnail">
-                <img src="/images/ashley3.jpg" alt="..." class="img-responsive img-circle headshot3">
+                <img src="/images/ashley3.jpg" data-alt-src="/images/ashley-baby.jpg" class="img-responsive img-circle headshot3" alt="Ashley Webb">
                 <div class="caption">
                     <h3>Ashley Webb</h3>
                     <h5>"Project Manager"</h5>
@@ -35,7 +35,7 @@
 
         <div class="col-md-4">
             <div class="thumbnail">
-                <img src="/images/danny.jpg" alt="...">
+                <img src="/images/danny.jpg" alt="Danny Jimenez">
                     <div class="caption">
                     <h3>Danny Jimenez</h3>
                     <h5>"Gif Coordinator"</h5>
@@ -51,7 +51,7 @@
 
         <div class="col-md-4">
             <div class="thumbnail">
-                <img src="/images/greg_02.jpg" data-alt-src="/images/babygreg.jpg" class="img-responsive img-circle headshot3" alt="...">
+                <img src="/images/greg_02.jpg" data-alt-src="/images/babygreg.jpg" class="img-responsive img-circle headshot3" alt="Greg Vallego">
                 <div class="caption">
                     <h3>Greg Vallejo</h3>
                     <h5>"Snacks Coordinator"</h5>
