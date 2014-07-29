@@ -36,7 +36,7 @@
                 }
             },
             yAxis: {
-                title: {text: 'Length of Nap (in hours)'},
+                title: {text: 'Length of Nap (in minutes)'},
                 pointInterval: 3600,
                 //tickInterval: 1800,
                 floor: 0,
@@ -68,6 +68,7 @@
                 }
             },
             series: [{
+            	name: 'Nap',
                 data: {{ json_encode($napData, JSON_NUMERIC_CHECK) }}
             }]
         });
@@ -102,6 +103,7 @@
 			    shared: true,
 			},
 			series: [{
+				name: 'Diaper Change',
 				data: {{ json_encode($diaperData, JSON_NUMERIC_CHECK) }}
 			}]
 	    });
@@ -117,15 +119,15 @@
 	        },
 	        yAxis: [{
 	        	//--- Primary yAxis
-			    title: { text: 'Length of Nursing Time (in hours)' }, 
+			    //title: { text: 'Length of Nursing Time (in hours)' }, 
 			     //--- Secondary yAxis
-			    title: { text: 'Length of Bottle Time (in hours)' },
-			    opposite: true,
+			    title: { text: 'Length of Feeding (in hours)' },
+			    //opposite: true,
 	        	floor: 0,
 	        	pointInterval: 3600,
-				type: 'datetime', 
+				//type: 'datetime', 
 	        	dateTimeLabelFormats: {
-	        		//millisecond: '%H:%M:%S.%L',
+	        		millisecond: '%H:%M:%S.%L',
 	        		second: '%H:%M:%S',
 		            minute: '%H:%M:%S',
 		            hour: '%H:%M'
