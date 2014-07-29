@@ -77,7 +77,7 @@
                     <img src="/images/greg_02.jpg" data-alt-src="/images/Greg-baby.jpg" class="img-responsive img-circle headshot3" alt="Greg Vallego">
                     <div class="caption">
                         <h3>Greg Vallejo</h3>
-                        <h5>[ Snacks Coordinator ]</h5>
+                        <h5>[ Chart Warrior ]</h5>
                         <p>
                             I have no kids, but I've enjoyed working on this project. Not only have I put
                             my code and design skills to the test, but I've learned a lot about what new
