@@ -2,9 +2,10 @@
 
 @section('content')
 
-	<h1>Charts for {{ $baby->name }}, babe</h1>
+	
 <div class="out-container">
 	<div class="container">
+		<h1>Charts for {{ $baby->name }}, babe</h1>
 	<!-- nap graph -->
 		<div id="napContainer" style="width:90%; height:300px;"></div>
 		<!-- spacer -->
@@ -23,10 +24,10 @@
 <script src="http://code.highcharts.com/highcharts.js"></script>
 <script type="text/javascript">
     $(function () {
-        $(function convertTime($seconds){
-            //try to convert seconds to hh:mm:ss
+        //try to convert seconds to hh:mm:ss
+        var convertTime = function(seconds) {
 
-        })
+        };
         //nap chart
         $('#napContainer').highcharts({
             title: {
@@ -39,16 +40,16 @@
                 }
             },
             yAxis: {
-                title: {text: 'Length of Nap (in minutes)'},
+                title: {text: 'Length of Nap (in hours)'},
                 pointInterval: 3600,
                 //tickInterval: 1800,
                 floor: 0,
                 ceiling: 43200,
                 type: 'datetime',
                 dateTimeLabelFormats: {
-                    millisecond: '%H:%M:%S.%L',
-                    second: '%H:%M:%S',
-                    minute: '%H:%M:%S',
+                    millisecond: '%H:%M',
+                    second: '%H:%M',
+                    minute: '%H:%M',
                     hour: '%H:%M',
 
                 },
@@ -70,6 +71,18 @@
                         }
                     }
                 }
+            },
+            tooltip: {
+            	formatter: function() {
+            		var seconds = this.y;
+            		var hours = Math.floor(seconds / 3600);
+            		var remainder = seconds % 3600;
+            		var minutes = Math.floor(remainder / 60);
+            		if (minutes < 10) {
+            			minutes = '0' + minutes;
+            		}
+            		return hours + ":" + minutes;
+            	}
             },
             series: [{
             	name: 'Nap',
@@ -123,19 +136,19 @@
 	        },
 	        yAxis: [{
 	        	//--- Primary yAxis
-			    title: { text: 'Length of Feeding Time (in hours)' }, 
+			    title: { text: 'Length of Feeding Time' }, 
 			     //--- Secondary yAxis
 			    // title: { text: 'Length of Bottle Time (in hours)' },
 			    // opposite: true,
 				floor: 0,
 	        	ceiling: 14400,
-	        	pointInterval: 3600,
+	        	//pointInterval: 3600,
 	        	showFirstLabel: false,
 				//type: 'datetime',
 	        	dateTimeLabelFormats: {
-	        		millisecond: '%H:%M:%S.%L',
-	        		second: '%H:%M:%S',
-		            minute: '%H:%M:%S',
+	        		millisecond: '%H:%M',
+	        		second: '%H:%M',
+		            minute: '%H:%M',
 		            hour: '%H:%M'
 	        	}
 			}],
@@ -145,23 +158,33 @@
 			    borderRadius: 10,
 			    borderWidth: 3,
 			    shared: true,
+			    formatter: function() {
+            		var seconds = this.y;
+            		var hours = Math.floor(seconds / 3600);
+            		var remainder = seconds % 3600;
+            		var minutes = Math.floor(remainder / 60);
+            		if (minutes < 10) {
+            			minutes = '0' + minutes;
+            		}
+            		return hours + ":" + minutes;
+            	}
 			},
 			labels:{
-		           formatter: function(){
-		                var minutes = "";
-		                var hours = "";
-		                var remainder = "";
-		                if (this.value >= 3600){
-		                	hours = Highcharts.numberFormat((this.value / 3600), 1); 
-		                	// remainder = Highcharts.numberFormat((this.value % 3600), 0);
-		                	// minutes = Highcharts.numberFormat((remainder / 60), 0),
-		                	return hours;
-						} 
-		                if (this.value > 59){
-		                    minutes = Highcharts.numberFormat((this.value/60), 0);
-		                    return minutes;
-		                }
-		            }
+		    //        formatter: function(){
+		    //             var minutes = "";
+		    //             var hours = "";
+		    //             var remainder = "";
+		    //             if (this.value >= 3600){
+		    //             	hours = Highcharts.numberFormat((this.value / 3600), 1); 
+		    //             	// remainder = Highcharts.numberFormat((this.value % 3600), 0);
+		    //             	// minutes = Highcharts.numberFormat((remainder / 60), 0),
+		    //             	return hours;
+						// } 
+		    //             if (this.value > 59){
+		    //                 minutes = Highcharts.numberFormat((this.value/60), 0);
+		    //                 return minutes;
+		    //             }
+		    //         }
 		       },
 			series: [{
 				name: 'Bottle',
