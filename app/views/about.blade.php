@@ -37,6 +37,7 @@
                             an easy way to keep track of this vital information, as becoming a mom is
                             stressful and and usually involves a noteworthy amount of sleep deprivation.
                         </p>
+                        <hr>
                         <div class="row center">
                             <a href="https://twitter.com/AshleyLeonaWebb" class="fa fa-5x fa-twitter"></a>
                             <a href="http://www.linkedin.com/in/ashleyleonawebb/" class="fa fa-5x fa-linkedin-square"></a>
@@ -58,6 +59,9 @@
                             keeping simplicity as our focus was key to creating a great experience for new
                             parents.
                         </p>
+                        <br>
+                        <br>
+                        <hr>
                         <div class="row center">
                             <a href="https://twitter.com/dannyalxndr" class="fa fa-5x fa-twitter"></a>
                             <a href="http://www.linkedin.com/in/dannyalxndr" class="fa fa-5x fa-linkedin-square"></a>
@@ -79,6 +83,9 @@
                             parents face. I believe this app will help parents ease into a new phase of
                             their lives.
                         </p>
+                        <br>
+                        <br>
+                        <hr>
                         <div class="row center">
                             <a href="http://twitter.com/Greg_Vallejo" class="fa fa-5x fa-twitter"></a>
                             <a href="https://www.linkedin.com/in/gregvallejo" class="fa fa-5x fa-linkedin-square"></a>
@@ -91,7 +98,7 @@
 
         <div class="row">
             <div class="col-md-4">
-                <a href="/menu" class="btn btn-warning"><i class="fa fa-chevron-left"></i> Return to Menu</a>
+                <a href="/menu" class="btn btn-lg btn-warning"><i class="fa fa-chevron-left"></i> Return to Menu</a>
             </div>
         </div>
 
