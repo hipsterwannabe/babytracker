@@ -3,17 +3,20 @@
 @section('content')
 
 	<h1>Charts for {{ $baby->name }}, babe</h1>
-
-<!-- nap graph -->
-<div id="napContainer" style="width:90%; height:300px;"></div>
-<!-- spacer -->
-<div id="container" style="width:90%; height:10px;"></div>
-<!-- diaper graph -->
-<div id="diaperContainer" style="width:90%; height:300px;"></div>
-<!-- spacer -->
-<div id="container" style="width:90%; height:10px;"></div>
-<!-- feeding graph -->
-<div id="feedingContainer" style="width:90%; height:300px;"></div>
+<div class="out-container">
+	<div class="container">
+	<!-- nap graph -->
+		<div id="napContainer" style="width:90%; height:300px;"></div>
+		<!-- spacer -->
+		<div id="container" style="width:90%; height:10px;"></div>
+		<!-- diaper graph -->
+		<div id="diaperContainer" style="width:90%; height:300px;"></div>
+		<!-- spacer -->
+		<div id="container" style="width:90%; height:10px;"></div>
+		<!-- feeding graph -->
+		<div id="feedingContainer" style="width:90%; height:300px;"></div>
+	</div>
+</div>
 @stop
 
 @section('bottomscript')
@@ -36,10 +39,11 @@
                 }
             },
             yAxis: {
-                title: {text: 'Length of Nap (in hours)'},
+                title: {text: 'Length of Nap (in minutes)'},
                 pointInterval: 3600,
                 //tickInterval: 1800,
                 floor: 0,
+                ceiling: 43200,
                 type: 'datetime',
                 dateTimeLabelFormats: {
                     millisecond: '%H:%M:%S.%L',
@@ -68,6 +72,7 @@
                 }
             },
             series: [{
+            	name: 'Nap',
                 data: {{ json_encode($napData, JSON_NUMERIC_CHECK) }}
             }]
         });
@@ -102,6 +107,7 @@
 			    shared: true,
 			},
 			series: [{
+				name: 'Diaper Change',
 				data: {{ json_encode($diaperData, JSON_NUMERIC_CHECK) }}
 			}]
 	    });
@@ -117,15 +123,17 @@
 	        },
 	        yAxis: [{
 	        	//--- Primary yAxis
-			    title: { text: 'Length of Nursing Time (in hours)' }, 
+			    title: { text: 'Length of Feeding Time (in hours)' }, 
 			     //--- Secondary yAxis
-			    title: { text: 'Length of Bottle Time (in hours)' },
-			    opposite: true,
-	        	floor: 0,
+			    // title: { text: 'Length of Bottle Time (in hours)' },
+			    // opposite: true,
+				floor: 0,
+	        	ceiling: 14400,
 	        	pointInterval: 3600,
-				type: 'datetime', 
+	        	showFirstLabel: false,
+				//type: 'datetime',
 	        	dateTimeLabelFormats: {
-	        		//millisecond: '%H:%M:%S.%L',
+	        		millisecond: '%H:%M:%S.%L',
 	        		second: '%H:%M:%S',
 		            minute: '%H:%M:%S',
 		            hour: '%H:%M'

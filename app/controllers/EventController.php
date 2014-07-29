@@ -142,7 +142,7 @@ class EventController extends BaseController {
 
         $nap->start = date('Y-m-d H:i:s', strtotime(Input::get('start_nap')));
         $nap->end = date('Y-m-d H:i:s', strtotime(Input::get('end_nap')));
-        $length = Input::get('length');
+        $length = Input::get('napLength');
         $nap->length = $length / 1000;
         $nap->notes = Input::get('notes');
         $nap->save();
