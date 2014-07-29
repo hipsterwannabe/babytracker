@@ -35,7 +35,7 @@
 
         <div class="col-md-4">
             <div class="thumbnail">
-                <img src="/images/danny.jpg" alt="...">
+                <img src="/images/danny.jpg" data-alt-src="/images/young_danny.jpg" class="img-responsive headshot3" alt="...">
                     <div class="caption">
                     <h3>Danny Jimenez</h3>
                     <h5>"Gif Coordinator"</h5>
