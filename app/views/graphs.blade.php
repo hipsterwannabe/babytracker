@@ -3,17 +3,20 @@
 @section('content')
 
 	<h1>Charts for {{ $baby->name }}, babe</h1>
-
-<!-- nap graph -->
-<div id="napContainer" style="width:90%; height:300px;"></div>
-<!-- spacer -->
-<div id="container" style="width:90%; height:10px;"></div>
-<!-- diaper graph -->
-<div id="diaperContainer" style="width:90%; height:300px;"></div>
-<!-- spacer -->
-<div id="container" style="width:90%; height:10px;"></div>
-<!-- feeding graph -->
-<div id="feedingContainer" style="width:90%; height:300px;"></div>
+<div class="out-container">
+	<div class="container">
+	<!-- nap graph -->
+		<div id="napContainer" style="width:90%; height:300px;"></div>
+		<!-- spacer -->
+		<div id="container" style="width:90%; height:10px;"></div>
+		<!-- diaper graph -->
+		<div id="diaperContainer" style="width:90%; height:300px;"></div>
+		<!-- spacer -->
+		<div id="container" style="width:90%; height:10px;"></div>
+		<!-- feeding graph -->
+		<div id="feedingContainer" style="width:90%; height:300px;"></div>
+	</div>
+</div>
 @stop
 
 @section('bottomscript')
