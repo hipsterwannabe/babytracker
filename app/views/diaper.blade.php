@@ -95,19 +95,15 @@
                                     <td>{{{ $diaper->created_at }}}</td>
                                     @if ($diaper->number_one == 1 && $diaper->number_two == 1)
                                         <td>Both</td>
+                                        <td>{{{ $diaper->consistency }}}</td>
+                                        <td>{{{ $diaper->color }}}</td>
                                     @elseif ($diaper->number_two == 1 && $diaper->number_one == null)
                                         <td>Dirty</td>
+                                        <td>{{{ $diaper->consistency }}}</td>
+                                        <td>{{{ $diaper->color }}}</td>
                                     @else ($diaper->number_one == 1 && $diaper->number_two == null)
                                         <td>Wet</td>
-                                    @endif
-                                    @if (isset($diaper->consistency))
-                                        <td>{{{ $diaper->consistency }}}</td>
-                                    @else
                                         <td>N/A</td>
-                                    @endif
-                                    @if (isset($diaper->color))
-                                        <td>{{{ $diaper->color }}}</td>
-                                    @else
                                         <td>N/A</td>
                                     @endif
                                     @if (isset($diaper->leak))
